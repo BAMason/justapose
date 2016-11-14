@@ -10,17 +10,17 @@ const createUser = (newUsers) => {
 
 /* READ */
 const readUser = (id) => {
-  return knex(`users`).select(`*`).first().where(`id`, id);
+  return knex(`users`).select(`*`).first().where(`google_id`, id);
 };
 
 /* UPDATE */
 const updateUser = (id, changes) => {
-  return knex(`users`).where(`id`, id).update(changes);
+  return knex(`users`).returning(`*`).where(`google_id`, id).update(changes);
 };
 
 /* DELETE */
 const deleteUser = (id) => {
-  return knex(`users`).where(`id`, id).del();
+  return knex(`users`).where(`google_id`, id).del();
 };
 
 /* LIST */

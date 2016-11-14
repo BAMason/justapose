@@ -10,7 +10,10 @@ const logger = require(`morgan`);
 const cookieSession = require(`cookie-session`);
 const cookieParser = require(`cookie-parser`);
 const bodyParser = require(`body-parser`);
+const passport = require(`passport`);
+const GoogleStrategy = require(`passport-google-oauth20`);
 const api = require(`./routes/api`);
+const db = require(`./db/queries/users`);
 
 const app = express();
 
@@ -24,6 +27,45 @@ app.use(cookieSession({
   secret: process.env.SECRET,
   httpOnly: false,
 }));
+app.use(passport.initialize());
+
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((obj, done) => {
+  done(null, obj);
+});
+
+passport.use(
+  new GoogleStrategy({
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: `${process.env.HOST}/api/auth/google/callback`,
+  },
+  (accessToken, refreshToken, profile, done) => {
+    const user = {
+      google_token: accessToken,
+      google_id: profile.id,
+      display_name: profile.displayName,
+    };
+
+    db.readUser(user.google_id)
+    .then((result) => {
+      if (result) {
+        db.updateUser(user.google_id, { google_token: user.google_token })
+        .then((updated) => done(null, updated))
+        .catch((e) => console.warn(e));
+      }
+      else {
+        db.createUser(user)
+        .then((newb) => done(null, newb[0]))
+        .catch((err) => console.warn(err));
+      }
+    })
+    .catch((error) => console.warn(error));
+  })
+);
 
 app.use(`/api`, api);
 

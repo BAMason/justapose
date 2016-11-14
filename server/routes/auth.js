@@ -1,19 +1,15 @@
 'use strict';
 
-const db = require(`../db/queries/users`);
-const bcrypt = require(`bcrypt`);
-const express = require(`express`); /* eslint-disable new-cap */
-const router = express.Router();    /* eslint-enable new-cap */
+const passport = require(`passport`);
+const express = require(`express`);         /* eslint-disable new-cap */
+const router = express.Router();            /* eslint-enable new-cap */
 
-/* JOIN */
-router.post(`/new`, (req, res, next) => {
-  // const newUser = req.body;
-});
-
-/* LOGIN */
-router.post(`/`, (req, res, next) => {
-  // const user = req.body;
-});
+/* LOGIN VIA GOOGLE */
+router.get(`/google`, passport.authenticate(`google`, { scope: [`profile`] }));
+router.get(`/google/callback`,
+  passport.authenticate(`google`, { failureRedirect: `/` }),
+  (req, res) => { res.redirect(`/`); }  /* TODO redirect to calendar */
+);
 
 /* LOGOUT */
 router.delete(`/`, (req, res, next) => {

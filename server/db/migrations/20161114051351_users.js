@@ -4,10 +4,9 @@ exports.up = (knex) => {
   return knex.schema.dropTableIfExists(`users`).then(() => {
     return knex.schema.createTable(`users`, (table) => {
       table.increments();
-      table.string(`username`).notNullable().unique();
-      table.string(`email`).notNullable().unique();
-      table.string(`fb_id`).notNullable();
-      table.string(`fb_token`).notNullable();
+      table.string(`display_name`).notNullable().unique();
+      table.string(`google_id`).notNullable();
+      table.string(`google_token`).notNullable();
       table.timestamps(true, true);
     });
   });
