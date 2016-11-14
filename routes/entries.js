@@ -2,14 +2,23 @@
 
 const db = require(`../db/queries/entries`);
 const express = require(`express`);         /* eslint-disable new-cap */
+const fs = require(`fs`);
+const cloudinary = require('cloudinary');
 const router = express.Router();            /* eslint-enable new-cap */
 
 /* CREATE */
 router.post(`/`, (req, res, next) => {
-  const newEntry = req.body;
-  db.createEntry(newEntry)
-  .then(() => res.sendStatus(200))
-  .catch((err) => next(err));
+  const filePath = req.files.photoUpload.path
+
+  cloudinary.uploader.upload(filePath, result => {
+    console.log(result);
+  });
+
+  res.send(`Hooray!!`)
+
+  // db.createEntry(newEntry)
+  // .then(() => res.sendStatus(200))
+  // .catch((err) => next(err));
 });
 
 /* READ */
