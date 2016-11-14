@@ -10,6 +10,7 @@ const logger = require(`morgan`);
 const cookieSession = require(`cookie-session`);
 const cookieParser = require(`cookie-parser`);
 const bodyParser = require(`body-parser`);
+const cloudinary = require('cloudinary');
 const api = require(`./routes/api`);
 
 const app = express();
@@ -21,9 +22,15 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, `../client`)));
 app.use(cookieSession({
   name: `session`,
-  secret: process.env.SECRET,
+  secret: process.env.SESSION.SECRET,
   httpOnly: false,
 }));
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD.NAME,
+  api_key: process.env.CLOUD.KEY,
+  api_secret: process.env.CLOUD.SECRET
+});
 
 app.use(`/api`, api);
 
