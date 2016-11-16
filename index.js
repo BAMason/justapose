@@ -5,7 +5,6 @@ import App from './modules/App'
 import Calendar from './modules/Calendar'
 import Entry from './modules/Entry'
 import Home from './modules/Home'
-import Login from './modules/Login'
 import Photos from './modules/Photos'
 
 
