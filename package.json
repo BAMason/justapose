@@ -10,6 +10,7 @@
     "heroku-postbuild": "knex migrate:latest --knexfile ./server/knexfile.js"
   },
   "dependencies": {
+    "axios": "^0.15.2",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
     "cookie-session": "^2.0.0-alpha.2",
