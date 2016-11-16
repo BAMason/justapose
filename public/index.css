@@ -1,15 +1,29 @@
 /*** MATERIALIZE STICKY FOOTER ***/
+
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 main {
-  flex: 1 0 auto;
+    flex: 1 0 auto;
 }
+
+
 /* END FOOTER */
 
 .active {
-  color: green;
+    color: green;
+}
+
+.rc-calendar-selected-day {
+    /*background-color: blue;*/
+    border-radius: 50px;
+    border: 2px solid black;
+}
+
+.rc-calendar-input {
+    text-align: center;
+    font-weight: bold;
 }
