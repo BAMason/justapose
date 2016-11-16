@@ -9,3 +9,7 @@ main {
   flex: 1 0 auto;
 }
 /* END FOOTER */
+
+.active {
+  color: green;
+}
