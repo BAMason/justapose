@@ -16,7 +16,6 @@ render((
       <Route path="/calendar" component={Calendar}>
         <Route path="/calendar/:entry" component={Entry}/>
       </Route>
-      <Route path="/login" component={Login}/>
       <Route path="/photos" component={Photos}/>
     </Route>
   </Router>

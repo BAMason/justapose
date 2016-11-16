@@ -8,13 +8,13 @@ const router = express.Router();            /* eslint-enable new-cap */
 router.get(`/google`, passport.authenticate(`google`, { scope: [`profile`] }));
 router.get(`/google/callback`,
   passport.authenticate(`google`, { failureRedirect: `/` }),
-  (req, res) => { res.redirect(`/`); }  /* TODO redirect to calendar */
+  (req, res) => { res.redirect(`/`); }
 );
 
 /* LOGOUT */
-router.delete(`/`, (req, res, next) => {
+router.get(`/logout`, (req, res, next) => {
   req.session = null;
-  res.sendStatus(200);
+  res.redirect(`/`);
 });
 
 module.exports = router;

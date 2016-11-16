@@ -58,19 +58,15 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _About = __webpack_require__(229);
+	var _Calendar = __webpack_require__(229);
 
-	var _About2 = _interopRequireDefault(_About);
+	var _Calendar2 = _interopRequireDefault(_Calendar);
 
-	var _Repos = __webpack_require__(230);
+	var _Entry = __webpack_require__(230);
 
-	var _Repos2 = _interopRequireDefault(_Repos);
+	var _Entry2 = _interopRequireDefault(_Entry);
 
-	var _Repo = __webpack_require__(231);
-
-	var _Repo2 = _interopRequireDefault(_Repo);
-
-	var _Home = __webpack_require__(232);
+	var _Home = __webpack_require__(231);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
@@ -85,10 +81,9 @@
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
 	    _react2.default.createElement(
 	      _reactRouter.Route,
-	      { path: '/repos', component: _Repos2.default },
-	      _react2.default.createElement(_reactRouter.Route, { path: '/repos/:userName/:repoName', component: _Repo2.default })
-	    ),
-	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default })
+	      { path: '/calendar', component: _Calendar2.default },
+	      _react2.default.createElement(_reactRouter.Route, { path: '/calendar/:entry', component: _Entry2.default })
+	    )
 	  )
 	), document.getElementById('app'));
 
@@ -26409,17 +26404,26 @@
 	          null,
 	          _react2.default.createElement(
 	            _NavLink2.default,
-	            { to: '/about' },
-	            'About'
+	            { to: '/calendar' },
+	            'Calendar'
 	          )
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          null,
 	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/repos' },
-	            'Repos'
+	            'a',
+	            { href: '/api/auth/google' },
+	            'Login with Google'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { href: '/api/auth/logout' },
+	            'Logout'
 	          )
 	        )
 	      ),
@@ -26470,15 +26474,37 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _NavLink = __webpack_require__(228);
+
+	var _NavLink2 = _interopRequireDefault(_NavLink);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'About',
+	  displayName: 'Calendar',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      'About'
+	      _react2.default.createElement(
+	        'h2',
+	        null,
+	        'Calendar'
+	      ),
+	      _react2.default.createElement(
+	        'ul',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          null,
+	          _react2.default.createElement(
+	            _NavLink2.default,
+	            { to: '/calendar/entry' },
+	            'Calendar Entry'
+	          )
+	        )
+	      ),
+	      this.props.children
 	    );
 	  }
 	});
@@ -26497,14 +26523,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _NavLink = __webpack_require__(228);
-
-	var _NavLink2 = _interopRequireDefault(_NavLink);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
-	  displayName: 'Repos',
+	  displayName: 'Entry',
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
@@ -26512,68 +26534,14 @@
 	      _react2.default.createElement(
 	        'h2',
 	        null,
-	        'Repos'
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/repos/reactjs/react-router' },
-	            'React Router'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/repos/facebook/react' },
-	            'React'
-	          )
-	        )
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
-
-/***/ },
-/* 231 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Repo',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        this.props.params.repoName
+	        this.props.params.entry
 	      )
 	    );
 	  }
 	});
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
