@@ -7,7 +7,7 @@
     "start:dev": "webpack-dev-server --inline --content-base public --history-api-fallback",
     "start:prod": "webpack && node ./bin/www",
     "knex": "knex",
-    "heroku-postbuild": "knex migrate:latest --knexfile ./server/knexfile.js"
+    "heroku-postbuild": "knex migrate:latest"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
