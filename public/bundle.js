@@ -46336,16 +46336,14 @@
 
 	    _this.state = { postures: [], filter: '' };
 
+	    var dataObj = {};
+
 	    _axios2.default.get('/api/postures').then(function (data) {
-	      return data.data.map(function (each) {
-	        return _react2.default.createElement(
-	          'option',
-	          { key: each.id },
-	          each.name
-	        );
+	      data.data.forEach(function (each) {
+	        dataObj[each.name] = null;
 	      });
-	    }).then(function (eles) {
-	      _this.setState({ postures: eles });
+	    }).then(function () {
+	      _this.setState({ postures: dataObj });
 	    }).catch(function (err) {
 	      return console.error(err);
 	    });
@@ -46355,22 +46353,22 @@
 	  _createClass(Photos, [{
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+
 	      $(document).ready(function () {
-	        $('select').material_select();
+	        $('input.autocomplete').autocomplete({
+	          data: _this2.state.postures
+	        });
 	      });
 
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
 	        _react2.default.createElement(
-	          'select',
-	          null,
-	          this.state.postures
-	        ),
-	        _react2.default.createElement(
-	          'span',
-	          null,
-	          this.state.filter
+	          'label',
+	          { htmlFor: 'autocomplete-input' },
+	          'Posture'
 	        )
 	      );
 	    }

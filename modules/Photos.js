@@ -6,28 +6,28 @@ class Photos extends React.Component {
     super(props);
     this.state = { postures: [], filter: `` };
 
+    const dataObj = {};
+
     axios.get(`/api/postures`)
     .then((data) => {
-      return data.data.map((each) => {
-        return <option key={each.id}>{each.name}</option>;
-      });
+      data.data.forEach((each) => { dataObj[each.name] = null; });
     })
-    .then((eles) => {
-      this.setState({ postures: eles });
+    .then(() => {
+      this.setState({ postures: dataObj });
     })
     .catch((err) => console.error(err));
   }
 
   render() {
     $(document).ready(() => {
-      $(`select`).material_select();
+      $(`input.autocomplete`).autocomplete({
+        data: this.state.postures,
+      });
     });
 
     return <div>
-      <select>
-        {this.state.postures}
-      </select>
-      <span>{this.state.filter}</span>
+      <input type="text" id="autocomplete-input" className="autocomplete" />
+      <label htmlFor="autocomplete-input">Posture</label>
     </div>;
   }
 }
