@@ -26414,15 +26414,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'ul',
-<<<<<<< HEAD
 	        { role: 'nav', className: 'main-nav' },
-=======
-<<<<<<< HEAD
-	        { role: 'nav' },
-=======
-	        { role: 'nav', className: 'main-nav' },
->>>>>>> change color of navbar and footer
->>>>>>> fix merge conflicts
 	        _react2.default.createElement(
 	          'li',
 	          null,
@@ -26456,15 +26448,7 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: '/api/auth/google' },
-<<<<<<< HEAD
 	            'Google Login'
-=======
-<<<<<<< HEAD
-	            'Login with Google'
-=======
-	            'Google Login'
->>>>>>> change color of navbar and footer
->>>>>>> fix merge conflicts
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26546,15 +26530,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'h2',
-<<<<<<< HEAD
 	        { className: 'calendarTitle' },
-=======
-<<<<<<< HEAD
-	        null,
-=======
-	        { className: 'calendarTitle' },
->>>>>>> change color of navbar and footer
->>>>>>> fix merge conflicts
 	        'Calendar'
 	      ),
 	      _react2.default.createElement(
