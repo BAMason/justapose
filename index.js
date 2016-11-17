@@ -5,6 +5,8 @@ import App from './modules/App'
 import Calendar from './modules/Calendar'
 import Entry from './modules/Entry'
 import Home from './modules/Home'
+import Photos from './modules/Photos'
+
 
 render((
   <Router history={browserHistory}>
@@ -13,6 +15,7 @@ render((
       <Route path="/calendar" component={Calendar}>
         <Route path="/calendar/:entry" component={Entry}/>
       </Route>
+      <Route path="/photos" component={Photos}/>
     </Route>
   </Router>
 ), document.getElementById('app'))
