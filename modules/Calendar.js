@@ -17,8 +17,3 @@ export default React.createClass({
     )
   }
 })
-
-
-
-
-// ReactDOM.render(<Calendar />, container);

@@ -1,22 +1,118 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
-export default React.createClass ({
-// var Type = React.createClass ({
+// export default React.createClass ({
+let BasicInputBox = React.createClass ({
   render: function() {
+
+    $(document).ready(function() {
+       $('select').material_select();
+     });
+
     return(
         <div className="input-field col s12">
-          <select value={this.props.label}>
+          <select onChange={this.props.valChange} value= {this.props.val}>
             <option value="" disabled>Type</option>
             <option value="New Moon">New Moon</option>
             <option value="Full Moon">Full Moon</option>
             <option value="Rest">Rest</option>
             <option value="Practice">Practice</option>
           </select>
-          <label>Type</label>
+          <label>{this.props.label}</label>
         </div>
     )
   }
 })
+
+let CommentBox = React.createClass ({
+  render: function() {
+
+    $(document).ready(function() {
+       $('select').material_select();
+     });
+
+    return(
+      <div className="input-field col s12">
+        <select onChange={this.props.valChange} value= {this.props.val}>
+          <option value="suna">Sun A</option>
+          <option value="sunb">Sun B</option>
+          <option value="3">3</option>
+          </select>
+          <label>How far did you get?</label>
+        </div>
+    )
+  }
+})
+
+export default React.createClass ({
+// var Contact = React.createClass({
+    getInitialState: function(){
+      return {}
+    },
+
+    submit: function (e){
+      var self
+
+      e.preventDefault()
+      self = this
+
+      console.log(this.state);
+
+      var data = {
+        name: this.state.name,
+        email: this.state.email,
+        comment: this.state.comment
+      }
+
+      console.log('data is', data);
+
+      // Submit form via jQuery/AJAX
+      // $.ajax({
+      //   type: 'POST',
+      //   url: '/some/url',
+      //   data: data
+      // })
+      // .done(function(data) {
+      //   self.clearForm()
+      // })
+      // .fail(function(jqXhr) {
+      //   console.log('failed to register');
+      // });
+
+    },
+
+    clearForm: function() {
+      this.setState({
+        name: "",
+        email: "",
+        comment: ""
+      });
+    },
+
+    nameChange: function(e){
+      this.setState({name: e.target.value})
+    },
+
+    emailChange: function(e){
+     this.setState({email: e.target.value})
+    },
+
+    commentChange: function(e){
+      this.setState({comment: e.target.value})
+    },
+
+    render: function(){
+       return (
+        <form onSubmit={this.submit} >
+          <BasicInputBox label="Name:" valChange={this.nameChange} val={this.state.name}/>
+          {/* <BasicInputBox label="Email:" valChange={this.emailChange} val={this.state.email}/> */}
+          <CommentBox valChange={this.commentChange} val={this.state.comment}/>
+          <button type="submit">Submit</button>
+        </form>
+      );
+    }
+});
+
 
 
 // export default React.createClass({
