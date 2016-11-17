@@ -1,46 +1,35 @@
-import React from 'react'
-import axios from 'axios'
+import React from 'react';
+import axios from 'axios';
 
-const postures = [`Bakasana`, `Malasana`, `Utanasana`, `Chaturunga Dandasana`].map((name, index) => {
-  return <option key={index}>{name}</option>
-})
-
-export default class Photos extends React.Component {
+class Photos extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this.state = { postures: [], filter: `` };
 
-    // const postures = axios()
-    // const postures = [`Bakasana`, `Malasana`, `Utanasana`, `Chaturunga Dandasana`]
-
-    // this.props = { postures: postures }
-
-    this.state = {
-      posture: ''
-    }
-
-    this.handlePosture = this.handlePosture.bind(this)
-
-  // const RenderPostures = () => {
-  //
-  //   return postures.map((name, index) => {
-  //     return <option key={index}>{name}</option>
-  //   })
-  // }
-
-  }
-
-
-  handlePosture(e) {
-    this.setState({ posture: e.target.value })
+    axios.get(`/api/postures`)
+    .then((data) => {
+      return data.data.map((each) => {
+        return <option key={each.id}>{each.name}</option>;
+      });
+    })
+    .then((eles) => {
+      this.setState({ postures: eles });
+    })
+    .catch((err) => console.error(err));
   }
 
   render() {
-    return (
-      <div>
-        <select value={this.state.posture} onChange={this.handlePosture.bind(this)}>
-          {postures}
-        </select>
-      </div>
-    )
+    $(document).ready(() => {
+      $(`select`).material_select();
+    });
+
+    return <div>
+      <select>
+        {this.state.postures}
+      </select>
+      <span>{this.state.filter}</span>
+    </div>;
   }
 }
+
+module.exports = Photos;
