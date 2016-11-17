@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.15.2",
     "body-parser": "~1.15.2",
+    "cloudinary": "^1.4.4",
     "cookie-parser": "~1.4.3",
     "cookie-session": "^2.0.0-alpha.2",
     "debug": "~2.2.0",
@@ -28,7 +29,8 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^3.0.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "webpack": "^1.13.3"
   },
   "engines": {
     "node": "7.1.0"
