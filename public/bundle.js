@@ -26414,7 +26414,11 @@
 	      null,
 	      _react2.default.createElement(
 	        'ul',
+<<<<<<< HEAD
 	        { role: 'nav' },
+=======
+	        { role: 'nav', className: 'main-nav' },
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	        _react2.default.createElement(
 	          'li',
 	          null,
@@ -26448,7 +26452,11 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: '/api/auth/google' },
+<<<<<<< HEAD
 	            'Login with Google'
+=======
+	            'Google Login'
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26530,7 +26538,11 @@
 	      null,
 	      _react2.default.createElement(
 	        'h2',
+<<<<<<< HEAD
 	        null,
+=======
+	        { className: 'calendarTitle' },
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	        'Calendar'
 	      ),
 	      _react2.default.createElement(
@@ -46174,7 +46186,11 @@
 /* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 	"use strict";
+=======
+	'use strict';
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -46187,6 +46203,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = _react2.default.createClass({
+<<<<<<< HEAD
 	  displayName: "Entry",
 
 	  // var Type = React.createClass ({
@@ -46227,11 +46244,117 @@
 	        "label",
 	        null,
 	        "Type"
+=======
+	  displayName: 'Entry',
+
+	  getInitialState: function getInitialState() {
+	    return {
+	      type: 'test',
+	      series: '',
+	      notes: '',
+	      posture: ''
+	    };
+	  },
+
+	  handleChange: function handleChange(event) {
+	    // event.preventDefault()
+	    console.log('event.target.value', event.target.value);
+	    this.setState({ type: event.target.value });
+	  },
+
+	  handleSubmit: function handleSubmit(event) {
+	    event.preventDefault();
+
+	    console.log('i was submitted');
+	    this.setState({ type: 'my type state just changed!!!' });
+	    console.log('this.state', this.state);
+
+	    var data = {
+	      type: this.state.type,
+	      // date: this.state.date,
+	      series: this.state.series,
+	      notes: this.state.notes,
+	      photo: this.state.photo,
+	      posture: this.state.posture
+	    };
+
+	    // submit form via ajax
+	    // $.ajax({
+	    //   type: 'POST',
+	    //   utl: '/api/entries',
+	    //   data: data
+	    // })
+	    // .done(function(data) {
+	    //   self.clearForm()
+	    // })
+	    // .fail(function() {
+	    //   console.log('Failed to send');
+	    // })
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'h2',
+	        null,
+	        this.props.params.entry
+	      ),
+	      _react2.default.createElement(
+	        'form',
+	        { onSubmit: this.handleSubmit },
+	        _react2.default.createElement(
+	          'label',
+	          null,
+	          this.state.type
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'input-field col s12' },
+	          _react2.default.createElement(
+	            'select',
+	            { value: this.state.type, onChange: this.handleChange },
+	            _react2.default.createElement(
+	              'option',
+	              { value: '', disabled: true },
+	              'Type'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'New Moon' },
+	              'New Moon'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'Full Moon' },
+	              'Full Moon'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'Rest' },
+	              'Rest'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              { value: 'Practice' },
+	              'Practice'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'label',
+	            null,
+	            'Type'
+	          )
+	        ),
+	        _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	      )
 	    );
 	  }
 	});
 
+<<<<<<< HEAD
 	// export default React.createClass({
 	// getInitialState: function() {
 	//   return {
@@ -46350,6 +46473,8 @@
 	//   }
 	// })
 
+=======
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 /***/ },
 /* 458 */
 /***/ function(module, exports, __webpack_require__) {
@@ -46383,6 +46508,13 @@
 
 	'use strict';
 
+<<<<<<< HEAD
+=======
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
@@ -46393,10 +46525,13 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
+<<<<<<< HEAD
 	var _reactCookie = __webpack_require__(485);
 
 	var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
+=======
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46405,12 +46540,24 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+<<<<<<< HEAD
+=======
+	var postures = ['Bakasana', 'Malasana', 'Utanasana', 'Chaturunga Dandasana'].map(function (name, index) {
+	  return _react2.default.createElement(
+	    'option',
+	    { key: index },
+	    name
+	  );
+	});
+
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	var Photos = function (_React$Component) {
 	  _inherits(Photos, _React$Component);
 
 	  function Photos(props) {
 	    _classCallCheck(this, Photos);
 
+<<<<<<< HEAD
 	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
 
 	    _this.state = { postures: [], photos: [] };
@@ -46427,10 +46574,33 @@
 	    }).catch(function (err) {
 	      return console.error(err);
 	    });
+=======
+	    // const postures = axios()
+	    // const postures = [`Bakasana`, `Malasana`, `Utanasana`, `Chaturunga Dandasana`]
+
+	    // this.props = { postures: postures }
+
+	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
+
+	    _this.state = {
+	      posture: ''
+	    };
+
+	    _this.handlePosture = _this.handlePosture.bind(_this);
+
+	    // const RenderPostures = () => {
+	    //
+	    //   return postures.map((name, index) => {
+	    //     return <option key={index}>{name}</option>
+	    //   })
+	    // }
+
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	    return _this;
 	  }
 
 	  _createClass(Photos, [{
+<<<<<<< HEAD
 	    key: 'getPhotos',
 	    value: function getPhotos(list) {
 	      var elements = list.map(function (photo, index) {
@@ -46458,10 +46628,16 @@
 	      var posture = $('#autocomplete-input').val();
 
 	      this.getEntries(userId, posture);
+=======
+	    key: 'handlePosture',
+	    value: function handlePosture(e) {
+	      this.setState({ posture: e.target.value });
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+<<<<<<< HEAD
 	      var _this3 = this;
 
 	      $(document).ready(function () {
@@ -46470,10 +46646,13 @@
 	        });
 	      });
 
+=======
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
+<<<<<<< HEAD
 	          'label',
 	          { htmlFor: 'autocomplete-input' },
 	          'Posture'
@@ -46489,6 +46668,11 @@
 	          'div',
 	          { className: 'row' },
 	          this.state.photos
+=======
+	          'select',
+	          { value: this.state.posture, onChange: this.handlePosture.bind(this) },
+	          postures
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 	        )
 	      );
 	    }
@@ -46497,7 +46681,11 @@
 	  return Photos;
 	}(_react2.default.Component);
 
+<<<<<<< HEAD
 	module.exports = Photos;
+=======
+	exports.default = Photos;
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 
 /***/ },
 /* 460 */
@@ -47980,6 +48168,7 @@
 	};
 
 
+<<<<<<< HEAD
 /***/ },
 /* 485 */
 /***/ function(module, exports, __webpack_require__) {
@@ -48295,5 +48484,7 @@
 	}
 
 
+=======
+>>>>>>> 52287faef02268658d511e8ba822e2fe4acb0041
 /***/ }
 /******/ ]);
