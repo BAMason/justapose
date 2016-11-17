@@ -54,7 +54,7 @@ class Photos extends React.Component {
     return <div>
       <label htmlFor="autocomplete-input">Posture</label>
       <input type="text" id="autocomplete-input" className="autocomplete" />
-      <br /><button onClick={this.handleSubmit} className="btn">Get Photos</button>
+      <br /><button onClick={this.handleSubmit} className="btn buttons">Get Photos</button>
       <div className="row">
         {this.state.photos}
       </div>
