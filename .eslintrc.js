@@ -20,6 +20,13 @@ module.exports = {
     "one-var": ["error", { "initialized": "never" }],
     "no-unused-expressions": ["error", { "allowTernary": true }],
     "max-params": ["error", 4],
-    "comma-dangle": ["error", "always-multiline"]
-  }
+    "comma-dangle": ["error", "always-multiline"],
+  },
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 };

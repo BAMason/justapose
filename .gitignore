@@ -30,3 +30,6 @@ node_modules
 npm-debug.log
 
 .env
+
+#bundle, remove for production
+./public/bundle.js
