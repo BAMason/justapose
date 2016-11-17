@@ -26414,7 +26414,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'ul',
-	        { role: 'nav' },
+	        { role: 'nav', className: 'main-nav' },
 	        _react2.default.createElement(
 	          'li',
 	          null,
@@ -26448,7 +26448,7 @@
 	          _react2.default.createElement(
 	            'a',
 	            { href: '/api/auth/google' },
-	            'Login with Google'
+	            'Google Login'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26530,7 +26530,7 @@
 	      null,
 	      _react2.default.createElement(
 	        'h2',
-	        null,
+	        { className: 'calendarTitle' },
 	        'Calendar'
 	      ),
 	      _react2.default.createElement(

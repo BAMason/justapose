@@ -15,17 +15,30 @@ main {
 /* END FOOTER */
 
 .active {
-    color: #5c575a;
+    color: #444453;
 }
 
 a {
-  color: #88876a
+  color: #88876a;
+}
+
+.calendarTitle {
+  color: #444453;
+}
+
+.rc-calendar:focus {
+  outline: none;
+}
+
+.rc-calendar-date,
+.rc-calendar-column-header-inner {
+  color: #444453;
 }
 
 .rc-calendar-selected-day {
     /*background-color: blue;*/
     border-radius: 50px;
-    border: 2px solid black;
+    border: 2px solid #444453;
 }
 
 .rc-calendar-input {
@@ -37,6 +50,8 @@ a {
   font-size: .75rem;
 }
 
-NavLink {
-  color: blue;
+.main-nav li {
+  display: inline-block;
+  padding: 1%;
+
 }
