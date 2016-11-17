@@ -26556,6 +26556,8 @@
 	  }
 	});
 
+	// ReactDOM.render(<Calendar />, container);
+
 /***/ },
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
@@ -46172,7 +46174,7 @@
 /* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -46182,171 +46184,49 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(32);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// export default React.createClass ({
-	var BasicInputBox = _react2.default.createClass({
-	  displayName: 'BasicInputBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: '', disabled: true },
-	          'Type'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'New Moon' },
-	          'New Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Full Moon' },
-	          'Full Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Rest' },
-	          'Rest'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Practice' },
-	          'Practice'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        this.props.label
-	      )
-	    );
-	  }
-	});
-
-	var CommentBox = _react2.default.createClass({
-	  displayName: 'CommentBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'suna' },
-	          'Sun A'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'sunb' },
-	          'Sun B'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: '3' },
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'How far did you get?'
-	      )
-	    );
-	  }
-	});
-
 	exports.default = _react2.default.createClass({
-	  displayName: 'Entry',
+	  displayName: "Entry",
 
-	  // var Contact = React.createClass({
-	  getInitialState: function getInitialState() {
-	    return {};
-	  },
-
-	  submit: function submit(e) {
-	    var self;
-
-	    e.preventDefault();
-	    self = this;
-
-	    console.log(this.state);
-
-	    var data = {
-	      name: this.state.name,
-	      email: this.state.email,
-	      comment: this.state.comment
-	    };
-
-	    console.log('data is', data);
-
-	    // Submit form via jQuery/AJAX
-	    // $.ajax({
-	    //   type: 'POST',
-	    //   url: '/some/url',
-	    //   data: data
-	    // })
-	    // .done(function(data) {
-	    //   self.clearForm()
-	    // })
-	    // .fail(function(jqXhr) {
-	    //   console.log('failed to register');
-	    // });
-	  },
-
-	  clearForm: function clearForm() {
-	    this.setState({
-	      name: "",
-	      email: "",
-	      comment: ""
-	    });
-	  },
-
-	  nameChange: function nameChange(e) {
-	    this.setState({ name: e.target.value });
-	  },
-
-	  emailChange: function emailChange(e) {
-	    this.setState({ email: e.target.value });
-	  },
-
-	  commentChange: function commentChange(e) {
-	    this.setState({ comment: e.target.value });
-	  },
-
+	  // var Type = React.createClass ({
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'form',
-	      { onSubmit: this.submit },
-	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
-	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
+	      "div",
+	      { className: "input-field col s12" },
 	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
+	        "select",
+	        { value: this.props.label },
+	        _react2.default.createElement(
+	          "option",
+	          { value: "", disabled: true },
+	          "Type"
+	        ),
+	        _react2.default.createElement(
+	          "option",
+	          { value: "New Moon" },
+	          "New Moon"
+	        ),
+	        _react2.default.createElement(
+	          "option",
+	          { value: "Full Moon" },
+	          "Full Moon"
+	        ),
+	        _react2.default.createElement(
+	          "option",
+	          { value: "Rest" },
+	          "Rest"
+	        ),
+	        _react2.default.createElement(
+	          "option",
+	          { value: "Practice" },
+	          "Practice"
+	        )
+	      ),
+	      _react2.default.createElement(
+	        "label",
+	        null,
+	        "Type"
 	      )
 	    );
 	  }
@@ -46602,7 +46482,7 @@
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'button',
-	          { onClick: this.handleSubmit, className: 'btn' },
+	          { onClick: this.handleSubmit, className: 'btn buttons' },
 	          'Get Photos'
 	        ),
 	        _react2.default.createElement(
