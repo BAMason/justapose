@@ -4,6 +4,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #e7d3b3;
 }
 
 main {
@@ -14,7 +15,11 @@ main {
 /* END FOOTER */
 
 .active {
-    color: green;
+    color: #5c575a;
+}
+
+a {
+  color: #88876a
 }
 
 .rc-calendar-selected-day {
