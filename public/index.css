@@ -27,3 +27,7 @@ main {
     text-align: center;
     font-weight: bold;
 }
+
+.input-field label {
+  font-size: .75rem;
+}
