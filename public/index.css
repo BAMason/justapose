@@ -36,3 +36,7 @@ a {
 .input-field label {
   font-size: .75rem;
 }
+
+NavLink {
+  color: blue;
+}
