@@ -46602,7 +46602,7 @@
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'button',
-	          { onClick: this.handleSubmit, className: 'btn' },
+	          { onClick: this.handleSubmit, className: 'btn buttons' },
 	          'Get Photos'
 	        ),
 	        _react2.default.createElement(
