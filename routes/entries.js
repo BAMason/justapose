@@ -15,6 +15,7 @@ const router = express.Router();
 
 /* CREATE */
 router.post(`/`, (req, res, next) => {
+  console.log(`reqbody`, req.body);
   const form = new formidable.IncomingForm();
   const save = (newEntry) => {
     db.createEntry(newEntry)
@@ -23,6 +24,7 @@ router.post(`/`, (req, res, next) => {
   };
 
   form.parse(req, (err, fields, files) => {
+    console.log(`formidable`, fields, files);
     if (err) { next(err); }
     if (files.photo) {
       cloudinary.uploader.upload(files.photo.path, (result) => {

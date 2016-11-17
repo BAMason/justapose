@@ -12,9 +12,8 @@ render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
-      <Route path="/calendar" component={Calendar}>
-        <Route path="/calendar/:entry" component={Entry}/>
-      </Route>
+      <Route path="/calendar" component={Calendar} />
+      <Route path="/calendar/:entry" component={Entry}/>
       <Route path="/photos" component={Photos}/>
     </Route>
   </Router>
