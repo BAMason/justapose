@@ -29,7 +29,7 @@ const listEntries = () => {
   .innerJoin(`users`, `users.id`, `entries.user_id`)
   .innerJoin(`postures`, `postures.id`, `entries.posture_id`)
   .innerJoin(`types`, `types.id`, `entries.type_id`)
-  .select([`entries.id`, `entries.user_id`, `types.name`, `sun_a`,
+  .select([`date`, `entries.id`, `entries.user_id`, `types.name`, `sun_a`,
     `sun_b`, `standing`, `primary`, `secondary`, `backbends`, `finishing`,
     `closing`, `photo`, `postures.name`, `notes`])
   .orderBy(`entries.created_at`, `asc`);

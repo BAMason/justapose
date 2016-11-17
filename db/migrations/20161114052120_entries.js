@@ -4,6 +4,7 @@ exports.up = (knex) => {
   return knex.schema.dropTableIfExists(`entries`).then(() => {
     return knex.schema.createTable(`entries`, (table) => {
       table.increments();
+      table.string('date').notNullable();
       table.integer(`user_id`).notNullable().references(`users.id`).onDelete(`Cascade`);
       table.integer(`type_id`).notNullable().references(`types.id`);
       table.boolean(`sun_a`).notNullable().defaultTo(false);

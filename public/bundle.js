@@ -62,15 +62,15 @@
 
 	var _Calendar2 = _interopRequireDefault(_Calendar);
 
-	var _Entry = __webpack_require__(457);
+	var _Entry = __webpack_require__(482);
 
 	var _Entry2 = _interopRequireDefault(_Entry);
 
-	var _Home = __webpack_require__(458);
+	var _Home = __webpack_require__(483);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Photos = __webpack_require__(459);
+	var _Photos = __webpack_require__(484);
 
 	var _Photos2 = _interopRequireDefault(_Photos);
 
@@ -26520,10 +26520,43 @@
 
 	var _NavLink2 = _interopRequireDefault(_NavLink);
 
+	var _axios = __webpack_require__(457);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	_axios2.default.get('/api/entries').then(function (data) {
+
+	  var dates = [];
+	  var dataArr = data.data;
+	  console.log('data array', dataArr);
+	  console.log('data array 0', dataArr[0]);
+	  console.log('data array 0 date is', dataArr[0].date);
+	  console.log('data array 1 date is', dataArr[1].date);
+	  for (var i = 0; i < dataArr.length; i++) {
+	    dates.push(dataArr[i].date);
+	  }
+	  console.log('dates', dates);
+	}).catch(function (err) {
+	  console.log('err', err);;
+	});
 
 	exports.default = _react2.default.createClass({
 	  displayName: 'Calendar',
+
+
+	  // $.ajax({
+	  //   method: GET,
+	  //   url: '/entries',
+	  // })
+	  // .success(function(data) {
+	  //   console.log('success', data);
+	  // })
+	  // .fail(() => {
+	  //   console.log('i failed');
+	  // })
+
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
@@ -46172,303 +46205,7 @@
 /* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(32);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// export default React.createClass ({
-	var BasicInputBox = _react2.default.createClass({
-	  displayName: 'BasicInputBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: '', disabled: true },
-	          'Type'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'New Moon' },
-	          'New Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Full Moon' },
-	          'Full Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Rest' },
-	          'Rest'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Practice' },
-	          'Practice'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        this.props.label
-	      )
-	    );
-	  }
-	});
-
-	var CommentBox = _react2.default.createClass({
-	  displayName: 'CommentBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'suna' },
-	          'Sun A'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'sunb' },
-	          'Sun B'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: '3' },
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'How far did you get?'
-	      )
-	    );
-	  }
-	});
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Entry',
-
-	  // var Contact = React.createClass({
-	  getInitialState: function getInitialState() {
-	    return {};
-	  },
-
-	  submit: function submit(e) {
-	    var self;
-
-	    e.preventDefault();
-	    self = this;
-
-	    console.log(this.state);
-
-	    var data = {
-	      name: this.state.name,
-	      email: this.state.email,
-	      comment: this.state.comment
-	    };
-
-	    console.log('data is', data);
-
-	    // Submit form via jQuery/AJAX
-	    // $.ajax({
-	    //   type: 'POST',
-	    //   url: '/some/url',
-	    //   data: data
-	    // })
-	    // .done(function(data) {
-	    //   self.clearForm()
-	    // })
-	    // .fail(function(jqXhr) {
-	    //   console.log('failed to register');
-	    // });
-	  },
-
-	  clearForm: function clearForm() {
-	    this.setState({
-	      name: "",
-	      email: "",
-	      comment: ""
-	    });
-	  },
-
-	  nameChange: function nameChange(e) {
-	    this.setState({ name: e.target.value });
-	  },
-
-	  emailChange: function emailChange(e) {
-	    this.setState({ email: e.target.value });
-	  },
-
-	  commentChange: function commentChange(e) {
-	    this.setState({ comment: e.target.value });
-	  },
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'form',
-	      { onSubmit: this.submit },
-	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
-	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
-	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
-	      )
-	    );
-	  }
-	});
-
-	// export default React.createClass({
-	// getInitialState: function() {
-	//   return {
-	//     type: 'test',
-	//     series: '',
-	//     notes: '',
-	//     posture: ''
-	//       }
-	// },
-	//
-	// handleChange: function(event) {
-	//   // event.preventDefault()
-	//   console.log('event.target.value', event.target.value);
-	//   this.setState({type: event.target.value})
-	// },
-	//
-	// handleSubmit:function (event) {
-	//   event.preventDefault()
-	//
-	//   console.log('i was submitted')
-	//   this.setState({type: 'my type state just changed!!!'})
-	//   console.log('this.state', this.state);
-	//
-	//   let data = {
-	//     type: this.state.type,
-	//     // date: this.state.date,
-	//     series: this.state.series,
-	//     notes: this.state.notes,
-	//     photo: this.state.photo,
-	//     posture: this.state.posture
-	//   }
-	//
-	//   // submit form via ajax
-	//   // $.ajax({
-	//   //   type: 'POST',
-	//   //   utl: '/api/entries',
-	//   //   data: data
-	//   // })
-	//   // .done(function(data) {
-	//   //   self.clearForm()
-	//   // })
-	//   // .fail(function() {
-	//   //   console.log('Failed to send');
-	//   // })
-	//
-	// },
-	//
-	//   render:function() {
-	//     return (
-	//       <div>
-	//         <h2>{this.props.params.entry}</h2>
-	//       <form onSubmit={this.handleSubmit}>
-	//         <label>{this.state.type}</label>
-	//         <div className="input-field col s12">
-	//           <select value={this.state.type} onChange={this.handleChange}>
-	//             <option value="" disabled>Type</option>
-	//             <option value="New Moon">New Moon</option>
-	//             <option value="Full Moon">Full Moon</option>
-	//             <option value="Rest">Rest</option>
-	//             <option value="Practice">Practice</option>
-	//           </select>
-	//           <label>Type</label>
-	//         </div>
-	// {/*
-	//         <div className="row">
-	//           <div className="input-field col s12">
-	//             <input value="Need a date" readOnly={true} id="date" type="text" className="validate"/>
-	//             <label className="active" htmlFor="date">Date</label>
-	//           </div>
-	//         </div>
-	//
-	//         <div className="input-field col s12">
-	//           <select  value={this.state.series} onChange={this.handleChange}>
-	//             <option value="suna">Sun A</option>
-	//             <option value="sunb">Sun B</option>
-	//             <option value="3">3</option>
-	//           </select>
-	//           <label>How far did you get?</label>
-	//         </div>
-	//
-	//         <div className="row col s12">
-	//               <div className="row">
-	//                 <div className="input-field col s12">
-	//                   <textarea value={this.state.notes} onChange={this.handleChange} id="notes" className="materialize-textarea"></textarea>
-	//                   <label htmlFor="notes">Notes</label>
-	//                 </div>
-	//               </div>
-	//           </div>
-	//
-	//             <div className="file-field input-field">
-	//               <div className="btn">
-	//                 <span>Photo</span>
-	//                 <input type="file" accept="image/*" capture="camera"/>
-	//               </div>
-	//               <div className="file-path-wrapper">
-	//                 <input className="file-path validate" type="text"/>
-	//               </div>
-	//             </div>
-	//
-	//           <div className="input-field col s12">
-	//             <select value={this.state.posture} onChange={this.handleChange}>
-	//               <option value="posture">Posture</option>
-	//               <option value="bakasana">Bakasana</option>
-	//               <option value="2">Option 2</option>
-	//               <option value="3">Option 3</option>
-	//             </select>
-	//             <label>Posture</label>
-	//           </div> */}
-	//
-	//           <input type="submit" value="Submit" />
-	//
-	//         </form>
-	//
-	//       </div>
-	//     )
-	//   }
-	// })
+	module.exports = __webpack_require__(458);
 
 /***/ },
 /* 458 */
@@ -46476,164 +46213,9 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Home',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'Home'
-	    );
-	  }
-	});
-
-/***/ },
-/* 459 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _axios = __webpack_require__(460);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	var _reactCookie = __webpack_require__(485);
-
-	var _reactCookie2 = _interopRequireDefault(_reactCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Photos = function (_React$Component) {
-	  _inherits(Photos, _React$Component);
-
-	  function Photos(props) {
-	    _classCallCheck(this, Photos);
-
-	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
-
-	    _this.state = { postures: [], photos: [] };
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
-
-	    var dataObj = {};
-
-	    _axios2.default.get('/api/postures').then(function (data) {
-	      data.data.forEach(function (each) {
-	        dataObj[each.name] = null;
-	      });
-	    }).then(function () {
-	      _this.setState({ postures: dataObj });
-	    }).catch(function (err) {
-	      return console.error(err);
-	    });
-	    return _this;
-	  }
-
-	  _createClass(Photos, [{
-	    key: 'getPhotos',
-	    value: function getPhotos(list) {
-	      var elements = list.map(function (photo, index) {
-	        return _react2.default.createElement('img', { key: index, src: photo.photo, alt: photo.name, className: 'col s12' });
-	      });
-	      this.setState({ photos: elements });
-	    }
-	  }, {
-	    key: 'getEntries',
-	    value: function getEntries(uID, pose) {
-	      var _this2 = this;
-
-	      _axios2.default.get('/api/entries').then(function (data) {
-	        return data.data.filter(function (each) {
-	          return each.user_id === uID && each.name === pose;
-	        });
-	      }).then(function (matches) {
-	        _this2.getPhotos(matches);
-	      });
-	    }
-	  }, {
-	    key: 'handleSubmit',
-	    value: function handleSubmit(event) {
-	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
-	      var posture = $('#autocomplete-input').val();
-
-	      this.getEntries(userId, posture);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      $(document).ready(function () {
-	        $('input.autocomplete').autocomplete({
-	          data: _this3.state.postures
-	        });
-	      });
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'label',
-	          { htmlFor: 'autocomplete-input' },
-	          'Posture'
-	        ),
-	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.handleSubmit, className: 'btn' },
-	          'Get Photos'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          this.state.photos
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Photos;
-	}(_react2.default.Component);
-
-	module.exports = Photos;
-
-/***/ },
-/* 460 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(461);
-
-/***/ },
-/* 461 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var utils = __webpack_require__(462);
-	var bind = __webpack_require__(463);
-	var Axios = __webpack_require__(464);
+	var utils = __webpack_require__(459);
+	var bind = __webpack_require__(460);
+	var Axios = __webpack_require__(461);
 
 	/**
 	 * Create an instance of Axios
@@ -46666,15 +46248,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(482);
-	axios.CancelToken = __webpack_require__(483);
-	axios.isCancel = __webpack_require__(479);
+	axios.Cancel = __webpack_require__(479);
+	axios.CancelToken = __webpack_require__(480);
+	axios.isCancel = __webpack_require__(476);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(484);
+	axios.spread = __webpack_require__(481);
 
 	module.exports = axios;
 
@@ -46683,12 +46265,12 @@
 
 
 /***/ },
-/* 462 */
+/* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(463);
+	var bind = __webpack_require__(460);
 
 	/*global toString:true*/
 
@@ -46988,7 +46570,7 @@
 
 
 /***/ },
-/* 463 */
+/* 460 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47005,17 +46587,17 @@
 
 
 /***/ },
-/* 464 */
+/* 461 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(465);
-	var utils = __webpack_require__(462);
-	var InterceptorManager = __webpack_require__(476);
-	var dispatchRequest = __webpack_require__(477);
-	var isAbsoluteURL = __webpack_require__(480);
-	var combineURLs = __webpack_require__(481);
+	var defaults = __webpack_require__(462);
+	var utils = __webpack_require__(459);
+	var InterceptorManager = __webpack_require__(473);
+	var dispatchRequest = __webpack_require__(474);
+	var isAbsoluteURL = __webpack_require__(477);
+	var combineURLs = __webpack_require__(478);
 
 	/**
 	 * Create a new instance of Axios
@@ -47096,13 +46678,13 @@
 
 
 /***/ },
-/* 465 */
+/* 462 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(462);
-	var normalizeHeaderName = __webpack_require__(466);
+	var utils = __webpack_require__(459);
+	var normalizeHeaderName = __webpack_require__(463);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -47119,10 +46701,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(467);
+	    adapter = __webpack_require__(464);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(467);
+	    adapter = __webpack_require__(464);
 	  }
 	  return adapter;
 	}
@@ -47189,12 +46771,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 466 */
+/* 463 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -47207,18 +46789,18 @@
 
 
 /***/ },
-/* 467 */
+/* 464 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(462);
-	var settle = __webpack_require__(468);
-	var buildURL = __webpack_require__(471);
-	var parseHeaders = __webpack_require__(472);
-	var isURLSameOrigin = __webpack_require__(473);
-	var createError = __webpack_require__(469);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(474);
+	var utils = __webpack_require__(459);
+	var settle = __webpack_require__(465);
+	var buildURL = __webpack_require__(468);
+	var parseHeaders = __webpack_require__(469);
+	var isURLSameOrigin = __webpack_require__(470);
+	var createError = __webpack_require__(466);
+	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(471);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -47314,7 +46896,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(475);
+	      var cookies = __webpack_require__(472);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -47391,12 +46973,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 468 */
+/* 465 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(469);
+	var createError = __webpack_require__(466);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -47422,12 +47004,12 @@
 
 
 /***/ },
-/* 469 */
+/* 466 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(470);
+	var enhanceError = __webpack_require__(467);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -47445,7 +47027,7 @@
 
 
 /***/ },
-/* 470 */
+/* 467 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47470,12 +47052,12 @@
 
 
 /***/ },
-/* 471 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -47544,12 +47126,12 @@
 
 
 /***/ },
-/* 472 */
+/* 469 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	/**
 	 * Parse headers into an object
@@ -47587,12 +47169,12 @@
 
 
 /***/ },
-/* 473 */
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -47661,7 +47243,7 @@
 
 
 /***/ },
-/* 474 */
+/* 471 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47703,12 +47285,12 @@
 
 
 /***/ },
-/* 475 */
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -47762,12 +47344,12 @@
 
 
 /***/ },
-/* 476 */
+/* 473 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -47820,15 +47402,15 @@
 
 
 /***/ },
-/* 477 */
+/* 474 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
-	var transformData = __webpack_require__(478);
-	var isCancel = __webpack_require__(479);
-	var defaults = __webpack_require__(465);
+	var utils = __webpack_require__(459);
+	var transformData = __webpack_require__(475);
+	var isCancel = __webpack_require__(476);
+	var defaults = __webpack_require__(462);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -47905,12 +47487,12 @@
 
 
 /***/ },
-/* 478 */
+/* 475 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(462);
+	var utils = __webpack_require__(459);
 
 	/**
 	 * Transform the data for a request or a response
@@ -47931,7 +47513,7 @@
 
 
 /***/ },
-/* 479 */
+/* 476 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47942,7 +47524,7 @@
 
 
 /***/ },
-/* 480 */
+/* 477 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47962,7 +47544,7 @@
 
 
 /***/ },
-/* 481 */
+/* 478 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47980,7 +47562,7 @@
 
 
 /***/ },
-/* 482 */
+/* 479 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48005,12 +47587,12 @@
 
 
 /***/ },
-/* 483 */
+/* 480 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(482);
+	var Cancel = __webpack_require__(479);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -48068,7 +47650,7 @@
 
 
 /***/ },
-/* 484 */
+/* 481 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48099,6 +47681,457 @@
 	  };
 	};
 
+
+/***/ },
+/* 482 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// export default React.createClass ({
+	var BasicInputBox = _react2.default.createClass({
+	  displayName: 'BasicInputBox',
+
+	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'input-field col s12' },
+	      _react2.default.createElement(
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
+	        _react2.default.createElement(
+	          'option',
+	          { value: '', disabled: true },
+	          'Type'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'New Moon' },
+	          'New Moon'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Full Moon' },
+	          'Full Moon'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Rest' },
+	          'Rest'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Practice' },
+	          'Practice'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'label',
+	        null,
+	        this.props.label
+	      )
+	    );
+	  }
+	});
+
+	var CommentBox = _react2.default.createClass({
+	  displayName: 'CommentBox',
+
+	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'input-field col s12' },
+	      _react2.default.createElement(
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'suna' },
+	          'Sun A'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'sunb' },
+	          'Sun B'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: '3' },
+	          '3'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'label',
+	        null,
+	        'How far did you get?'
+	      )
+	    );
+	  }
+	});
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Entry',
+
+	  // var Contact = React.createClass({
+	  getInitialState: function getInitialState() {
+	    return {};
+	  },
+
+	  submit: function submit(e) {
+	    var self;
+
+	    e.preventDefault();
+	    self = this;
+
+	    console.log(this.state);
+
+	    var data = {
+	      name: this.state.name,
+	      email: this.state.email,
+	      comment: this.state.comment
+	    };
+
+	    console.log('data is', data);
+
+	    // Submit form via jQuery/AJAX
+	    // $.ajax({
+	    //   type: 'POST',
+	    //   url: '/some/url',
+	    //   data: data
+	    // })
+	    // .done(function(data) {
+	    //   self.clearForm()
+	    // })
+	    // .fail(function(jqXhr) {
+	    //   console.log('failed to register');
+	    // });
+	  },
+
+	  clearForm: function clearForm() {
+	    this.setState({
+	      name: "",
+	      email: "",
+	      comment: ""
+	    });
+	  },
+
+	  nameChange: function nameChange(e) {
+	    this.setState({ name: e.target.value });
+	  },
+
+	  emailChange: function emailChange(e) {
+	    this.setState({ email: e.target.value });
+	  },
+
+	  commentChange: function commentChange(e) {
+	    this.setState({ comment: e.target.value });
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'form',
+	      { onSubmit: this.submit },
+	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
+	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
+	      _react2.default.createElement(
+	        'button',
+	        { type: 'submit' },
+	        'Submit'
+	      )
+	    );
+	  }
+	});
+
+	// export default React.createClass({
+	// getInitialState: function() {
+	//   return {
+	//     type: 'test',
+	//     series: '',
+	//     notes: '',
+	//     posture: ''
+	//       }
+	// },
+	//
+	// handleChange: function(event) {
+	//   // event.preventDefault()
+	//   console.log('event.target.value', event.target.value);
+	//   this.setState({type: event.target.value})
+	// },
+	//
+	// handleSubmit:function (event) {
+	//   event.preventDefault()
+	//
+	//   console.log('i was submitted')
+	//   this.setState({type: 'my type state just changed!!!'})
+	//   console.log('this.state', this.state);
+	//
+	//   let data = {
+	//     type: this.state.type,
+	//     // date: this.state.date,
+	//     series: this.state.series,
+	//     notes: this.state.notes,
+	//     photo: this.state.photo,
+	//     posture: this.state.posture
+	//   }
+	//
+	//   // submit form via ajax
+	//   // $.ajax({
+	//   //   type: 'POST',
+	//   //   utl: '/api/entries',
+	//   //   data: data
+	//   // })
+	//   // .done(function(data) {
+	//   //   self.clearForm()
+	//   // })
+	//   // .fail(function() {
+	//   //   console.log('Failed to send');
+	//   // })
+	//
+	// },
+	//
+	//   render:function() {
+	//     return (
+	//       <div>
+	//         <h2>{this.props.params.entry}</h2>
+	//       <form onSubmit={this.handleSubmit}>
+	//         <label>{this.state.type}</label>
+	//         <div className="input-field col s12">
+	//           <select value={this.state.type} onChange={this.handleChange}>
+	//             <option value="" disabled>Type</option>
+	//             <option value="New Moon">New Moon</option>
+	//             <option value="Full Moon">Full Moon</option>
+	//             <option value="Rest">Rest</option>
+	//             <option value="Practice">Practice</option>
+	//           </select>
+	//           <label>Type</label>
+	//         </div>
+	// {/*
+	//         <div className="row">
+	//           <div className="input-field col s12">
+	//             <input value="Need a date" readOnly={true} id="date" type="text" className="validate"/>
+	//             <label className="active" htmlFor="date">Date</label>
+	//           </div>
+	//         </div>
+	//
+	//         <div className="input-field col s12">
+	//           <select  value={this.state.series} onChange={this.handleChange}>
+	//             <option value="suna">Sun A</option>
+	//             <option value="sunb">Sun B</option>
+	//             <option value="3">3</option>
+	//           </select>
+	//           <label>How far did you get?</label>
+	//         </div>
+	//
+	//         <div className="row col s12">
+	//               <div className="row">
+	//                 <div className="input-field col s12">
+	//                   <textarea value={this.state.notes} onChange={this.handleChange} id="notes" className="materialize-textarea"></textarea>
+	//                   <label htmlFor="notes">Notes</label>
+	//                 </div>
+	//               </div>
+	//           </div>
+	//
+	//             <div className="file-field input-field">
+	//               <div className="btn">
+	//                 <span>Photo</span>
+	//                 <input type="file" accept="image/*" capture="camera"/>
+	//               </div>
+	//               <div className="file-path-wrapper">
+	//                 <input className="file-path validate" type="text"/>
+	//               </div>
+	//             </div>
+	//
+	//           <div className="input-field col s12">
+	//             <select value={this.state.posture} onChange={this.handleChange}>
+	//               <option value="posture">Posture</option>
+	//               <option value="bakasana">Bakasana</option>
+	//               <option value="2">Option 2</option>
+	//               <option value="3">Option 3</option>
+	//             </select>
+	//             <label>Posture</label>
+	//           </div> */}
+	//
+	//           <input type="submit" value="Submit" />
+	//
+	//         </form>
+	//
+	//       </div>
+	//     )
+	//   }
+	// })
+
+/***/ },
+/* 483 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Home',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      'Home'
+	    );
+	  }
+	});
+
+/***/ },
+/* 484 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _axios = __webpack_require__(457);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _reactCookie = __webpack_require__(485);
+
+	var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Photos = function (_React$Component) {
+	  _inherits(Photos, _React$Component);
+
+	  function Photos(props) {
+	    _classCallCheck(this, Photos);
+
+	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
+
+	    _this.state = { postures: [], photos: [] };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+
+	    var dataObj = {};
+
+	    _axios2.default.get('/api/postures').then(function (data) {
+	      data.data.forEach(function (each) {
+	        dataObj[each.name] = null;
+	      });
+	    }).then(function () {
+	      _this.setState({ postures: dataObj });
+	    }).catch(function (err) {
+	      return console.error(err);
+	    });
+	    return _this;
+	  }
+
+	  _createClass(Photos, [{
+	    key: 'getPhotos',
+	    value: function getPhotos(list) {
+	      var elements = list.map(function (photo, index) {
+	        return _react2.default.createElement('img', { key: index, src: photo.photo, alt: photo.name, className: 'col s12' });
+	      });
+	      this.setState({ photos: elements });
+	    }
+	  }, {
+	    key: 'getEntries',
+	    value: function getEntries(uID, pose) {
+	      var _this2 = this;
+
+	      _axios2.default.get('/api/entries').then(function (data) {
+	        return data.data.filter(function (each) {
+	          return each.user_id === uID && each.name === pose;
+	        });
+	      }).then(function (matches) {
+	        _this2.getPhotos(matches);
+	      });
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(event) {
+	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
+	      var posture = $('#autocomplete-input').val();
+
+	      this.getEntries(userId, posture);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      $(document).ready(function () {
+	        $('input.autocomplete').autocomplete({
+	          data: _this3.state.postures
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'label',
+	          { htmlFor: 'autocomplete-input' },
+	          'Posture'
+	        ),
+	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'button',
+	          { onClick: this.handleSubmit, className: 'btn' },
+	          'Get Photos'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          this.state.photos
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Photos;
+	}(_react2.default.Component);
+
+	module.exports = Photos;
 
 /***/ },
 /* 485 */
