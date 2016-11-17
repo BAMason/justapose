@@ -50,29 +50,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactDom = __webpack_require__(34);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _App = __webpack_require__(227);
-
-	var _App2 = _interopRequireDefault(_App);
-
-	var _Calendar = __webpack_require__(229);
-
-	var _Calendar2 = _interopRequireDefault(_Calendar);
-
-	var _Entry = __webpack_require__(451);
-
-	var _Entry2 = _interopRequireDefault(_Entry);
-
-	var _Home = __webpack_require__(452);
-
-	var _Home2 = _interopRequireDefault(_Home);
-
-	var _Photos = __webpack_require__(453);
-=======
 	var _reactDom = __webpack_require__(32);
 
 	var _reactRouter = __webpack_require__(178);
@@ -94,7 +71,6 @@
 	var _Home2 = _interopRequireDefault(_Home);
 
 	var _Photos = __webpack_require__(459);
->>>>>>> change to bundle.js
 
 	var _Photos2 = _interopRequireDefault(_Photos);
 
@@ -137,10 +113,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule React
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -148,17 +120,6 @@
 	var _assign = __webpack_require__(4);
 
 	var ReactChildren = __webpack_require__(5);
-<<<<<<< HEAD
-	var ReactComponent = __webpack_require__(17);
-	var ReactPureComponent = __webpack_require__(20);
-	var ReactClass = __webpack_require__(21);
-	var ReactDOMFactories = __webpack_require__(26);
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypes = __webpack_require__(31);
-	var ReactVersion = __webpack_require__(32);
-
-	var onlyChild = __webpack_require__(33);
-=======
 	var ReactComponent = __webpack_require__(18);
 	var ReactPureComponent = __webpack_require__(21);
 	var ReactClass = __webpack_require__(22);
@@ -168,7 +129,6 @@
 	var ReactVersion = __webpack_require__(30);
 
 	var onlyChild = __webpack_require__(31);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var createElement = ReactElement.createElement;
@@ -176,11 +136,7 @@
 	var cloneElement = ReactElement.cloneElement;
 
 	if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	  var ReactElementValidator = __webpack_require__(27);
-=======
 	  var ReactElementValidator = __webpack_require__(25);
->>>>>>> change to bundle.js
 	  createElement = ReactElementValidator.createElement;
 	  createFactory = ReactElementValidator.createFactory;
 	  cloneElement = ReactElementValidator.cloneElement;
@@ -526,10 +482,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactChildren
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -538,11 +490,7 @@
 	var ReactElement = __webpack_require__(9);
 
 	var emptyFunction = __webpack_require__(12);
-<<<<<<< HEAD
-	var traverseAllChildren = __webpack_require__(14);
-=======
 	var traverseAllChildren = __webpack_require__(15);
->>>>>>> change to bundle.js
 
 	var twoArgumentPooler = PooledClass.twoArgumentPooler;
 	var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -573,13 +521,8 @@
 	PooledClass.addPoolingTo(ForEachBookKeeping, twoArgumentPooler);
 
 	function forEachSingleChild(bookKeeping, child, name) {
-<<<<<<< HEAD
-	  var func = bookKeeping.func;
-	  var context = bookKeeping.context;
-=======
 	  var func = bookKeeping.func,
 	      context = bookKeeping.context;
->>>>>>> change to bundle.js
 
 	  func.call(context, child, bookKeeping.count++);
 	}
@@ -631,17 +574,10 @@
 	PooledClass.addPoolingTo(MapBookKeeping, fourArgumentPooler);
 
 	function mapSingleChildIntoContext(bookKeeping, child, childKey) {
-<<<<<<< HEAD
-	  var result = bookKeeping.result;
-	  var keyPrefix = bookKeeping.keyPrefix;
-	  var func = bookKeeping.func;
-	  var context = bookKeeping.context;
-=======
 	  var result = bookKeeping.result,
 	      keyPrefix = bookKeeping.keyPrefix,
 	      func = bookKeeping.func,
 	      context = bookKeeping.context;
->>>>>>> change to bundle.js
 
 
 	  var mappedChild = func.call(context, child, bookKeeping.count++);
@@ -741,11 +677,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule PooledClass
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -838,11 +770,8 @@
 	 * @param {Function} pooler Customizable pooler.
 	 */
 	var addPoolingTo = function (CopyConstructor, pooler) {
-<<<<<<< HEAD
-=======
 	  // Casting as any so that flow ignores the actual implementation and trusts
 	  // it to match the type we declared
->>>>>>> change to bundle.js
 	  var NewKlass = CopyConstructor;
 	  NewKlass.instancePool = [];
 	  NewKlass.getPooled = pooler || DEFAULT_POOLER;
@@ -877,10 +806,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule reactProdInvariant
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 	'use strict';
@@ -979,10 +904,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactElement
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -995,13 +916,7 @@
 	var canDefineProperty = __webpack_require__(13);
 	var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-<<<<<<< HEAD
-	// The Symbol used to tag the ReactElement type. If there is no native Symbol
-	// nor polyfill, then a plain number is used for performance.
-	var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
-=======
 	var REACT_ELEMENT_TYPE = __webpack_require__(14);
->>>>>>> change to bundle.js
 
 	var RESERVED_PROPS = {
 	  key: true,
@@ -1105,10 +1020,6 @@
 	    // This can be replaced with a WeakMap once they are implemented in
 	    // commonly used development environments.
 	    element._store = {};
-<<<<<<< HEAD
-	    var shadowChildren = Array.isArray(props.children) ? props.children.slice(0) : props.children;
-=======
->>>>>>> change to bundle.js
 
 	    // To make comparing ReactElements easier for testing purposes, we make
 	    // the validation flag non-enumerable (where possible, which should
@@ -1128,15 +1039,6 @@
 	        writable: false,
 	        value: self
 	      });
-<<<<<<< HEAD
-	      Object.defineProperty(element, '_shadowChildren', {
-	        configurable: false,
-	        enumerable: false,
-	        writable: false,
-	        value: shadowChildren
-	      });
-=======
->>>>>>> change to bundle.js
 	      // Two elements created in two different places should be considered
 	      // equal for testing purposes and therefore we hide it from enumeration.
 	      Object.defineProperty(element, '_source', {
@@ -1148,10 +1050,6 @@
 	    } else {
 	      element._store.validated = false;
 	      element._self = self;
-<<<<<<< HEAD
-	      element._shadowChildren = shadowChildren;
-=======
->>>>>>> change to bundle.js
 	      element._source = source;
 	    }
 	    if (Object.freeze) {
@@ -1206,14 +1104,11 @@
 	    for (var i = 0; i < childrenLength; i++) {
 	      childArray[i] = arguments[i + 2];
 	    }
-<<<<<<< HEAD
-=======
 	    if (process.env.NODE_ENV !== 'production') {
 	      if (Object.freeze) {
 	        Object.freeze(childArray);
 	      }
 	    }
->>>>>>> change to bundle.js
 	    props.children = childArray;
 	  }
 
@@ -1340,11 +1235,6 @@
 	  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
 	};
 
-<<<<<<< HEAD
-	ReactElement.REACT_ELEMENT_TYPE = REACT_ELEMENT_TYPE;
-
-=======
->>>>>>> change to bundle.js
 	module.exports = ReactElement;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
@@ -1360,11 +1250,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactCurrentOwner
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -1375,10 +1261,6 @@
 	 * The current owner is the component who should own any components that are
 	 * currently being constructed.
 	 */
-<<<<<<< HEAD
-
-=======
->>>>>>> change to bundle.js
 	var ReactCurrentOwner = {
 
 	  /**
@@ -1518,11 +1400,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule canDefineProperty
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -1530,10 +1408,7 @@
 	var canDefineProperty = false;
 	if (process.env.NODE_ENV !== 'production') {
 	  try {
-<<<<<<< HEAD
-=======
 	    // $FlowFixMe https://github.com/facebook/flow/issues/285
->>>>>>> change to bundle.js
 	    Object.defineProperty({}, 'x', { get: function () {} });
 	    canDefineProperty = true;
 	  } catch (x) {
@@ -1546,8 +1421,6 @@
 
 /***/ },
 /* 14 */
-<<<<<<< HEAD
-=======
 /***/ function(module, exports) {
 
 	/**
@@ -1572,7 +1445,6 @@
 
 /***/ },
 /* 15 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1583,10 +1455,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule traverseAllChildren
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -1594,34 +1462,23 @@
 	var _prodInvariant = __webpack_require__(7);
 
 	var ReactCurrentOwner = __webpack_require__(10);
-<<<<<<< HEAD
-	var ReactElement = __webpack_require__(9);
-
-	var getIteratorFn = __webpack_require__(15);
-	var invariant = __webpack_require__(8);
-	var KeyEscapeUtils = __webpack_require__(16);
-=======
 	var REACT_ELEMENT_TYPE = __webpack_require__(14);
 
 	var getIteratorFn = __webpack_require__(16);
 	var invariant = __webpack_require__(8);
 	var KeyEscapeUtils = __webpack_require__(17);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var SEPARATOR = '.';
 	var SUBSEPARATOR = ':';
 
 	/**
-<<<<<<< HEAD
-=======
 	 * This is inlined from ReactElement since this file is shared between
 	 * isomorphic and renderers. We could extract this to a
 	 *
 	 */
 
 	/**
->>>>>>> change to bundle.js
 	 * TODO: Test that a single child and an array with one item have the same key
 	 * pattern.
 	 */
@@ -1662,14 +1519,10 @@
 	    children = null;
 	  }
 
-<<<<<<< HEAD
-	  if (children === null || type === 'string' || type === 'number' || ReactElement.isValidElement(children)) {
-=======
 	  if (children === null || type === 'string' || type === 'number' ||
 	  // The following is inlined from ReactElement. This means we can optimize
 	  // some checks. React Fiber also inlines this logic for similar purposes.
 	  type === 'object' && children.$$typeof === REACT_ELEMENT_TYPE) {
->>>>>>> change to bundle.js
 	    callback(traverseContext, children,
 	    // If it's the only child, treat the name as if it was wrapped in an array
 	    // so that it's consistent if the number of children grows.
@@ -1772,11 +1625,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 15 */
-=======
 /* 16 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -1787,10 +1636,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getIteratorFn
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -1825,11 +1670,7 @@
 	module.exports = getIteratorFn;
 
 /***/ },
-<<<<<<< HEAD
-/* 16 */
-=======
 /* 17 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -1840,10 +1681,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule KeyEscapeUtils
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -1896,11 +1733,7 @@
 	module.exports = KeyEscapeUtils;
 
 /***/ },
-<<<<<<< HEAD
-/* 17 */
-=======
 /* 18 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -1911,27 +1744,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _prodInvariant = __webpack_require__(7);
 
-<<<<<<< HEAD
-	var ReactNoopUpdateQueue = __webpack_require__(18);
-
-	var canDefineProperty = __webpack_require__(13);
-	var emptyObject = __webpack_require__(19);
-=======
 	var ReactNoopUpdateQueue = __webpack_require__(19);
 
 	var canDefineProperty = __webpack_require__(13);
 	var emptyObject = __webpack_require__(20);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
 
@@ -2034,11 +1856,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 18 */
-=======
 /* 19 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2049,10 +1867,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactNoopUpdateQueue
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -2143,11 +1957,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 19 */
-=======
 /* 20 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2172,11 +1982,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 20 */
-=======
 /* 21 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2187,27 +1993,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactPureComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var ReactComponent = __webpack_require__(17);
-	var ReactNoopUpdateQueue = __webpack_require__(18);
-
-	var emptyObject = __webpack_require__(19);
-=======
 	var ReactComponent = __webpack_require__(18);
 	var ReactNoopUpdateQueue = __webpack_require__(19);
 
 	var emptyObject = __webpack_require__(20);
->>>>>>> change to bundle.js
 
 	/**
 	 * Base class helpers for the updating state of a component.
@@ -2233,11 +2028,7 @@
 	module.exports = ReactPureComponent;
 
 /***/ },
-<<<<<<< HEAD
-/* 21 */
-=======
 /* 22 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2248,10 +2039,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactClass
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -2259,21 +2046,6 @@
 	var _prodInvariant = __webpack_require__(7),
 	    _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var ReactComponent = __webpack_require__(17);
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypeLocations = __webpack_require__(22);
-	var ReactPropTypeLocationNames = __webpack_require__(24);
-	var ReactNoopUpdateQueue = __webpack_require__(18);
-
-	var emptyObject = __webpack_require__(19);
-	var invariant = __webpack_require__(8);
-	var keyMirror = __webpack_require__(23);
-	var keyOf = __webpack_require__(25);
-	var warning = __webpack_require__(11);
-
-	var MIXINS_KEY = keyOf({ mixins: null });
-=======
 	var ReactComponent = __webpack_require__(18);
 	var ReactElement = __webpack_require__(9);
 	var ReactPropTypeLocationNames = __webpack_require__(23);
@@ -2290,36 +2062,11 @@
 	function identity(fn) {
 	  return fn;
 	}
->>>>>>> change to bundle.js
 
 	/**
 	 * Policies that describe methods in `ReactClassInterface`.
 	 */
-<<<<<<< HEAD
-	var SpecPolicy = keyMirror({
-	  /**
-	   * These methods may be defined only once by the class specification or mixin.
-	   */
-	  DEFINE_ONCE: null,
-	  /**
-	   * These methods may be defined by both the class specification and mixins.
-	   * Subsequent definitions will be chained. These methods must return void.
-	   */
-	  DEFINE_MANY: null,
-	  /**
-	   * These methods are overriding the base class.
-	   */
-	  OVERRIDE_BASE: null,
-	  /**
-	   * These methods are similar to DEFINE_MANY, except we assume they return
-	   * objects. We try to merge the keys of the return values of all the mixed in
-	   * functions. If there is a key conflict we throw.
-	   */
-	  DEFINE_MANY_MERGED: null
-	});
-=======
 
->>>>>>> change to bundle.js
 
 	var injectedMixins = [];
 
@@ -2353,11 +2100,7 @@
 	   * @type {array}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  mixins: SpecPolicy.DEFINE_MANY,
-=======
 	  mixins: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * An object containing properties and methods that should be defined on
@@ -2366,11 +2109,7 @@
 	   * @type {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  statics: SpecPolicy.DEFINE_MANY,
-=======
 	  statics: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Definition of prop types for this component.
@@ -2378,11 +2117,7 @@
 	   * @type {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  propTypes: SpecPolicy.DEFINE_MANY,
-=======
 	  propTypes: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Definition of context types for this component.
@@ -2390,11 +2125,7 @@
 	   * @type {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  contextTypes: SpecPolicy.DEFINE_MANY,
-=======
 	  contextTypes: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Definition of context types this component sets for its children.
@@ -2402,11 +2133,7 @@
 	   * @type {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  childContextTypes: SpecPolicy.DEFINE_MANY,
-=======
 	  childContextTypes: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  // ==== Definition methods ====
 
@@ -2420,11 +2147,7 @@
 	   * @return {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  getDefaultProps: SpecPolicy.DEFINE_MANY_MERGED,
-=======
 	  getDefaultProps: 'DEFINE_MANY_MERGED',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked once before the component is mounted. The return value will be used
@@ -2440,21 +2163,13 @@
 	   * @return {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  getInitialState: SpecPolicy.DEFINE_MANY_MERGED,
-=======
 	  getInitialState: 'DEFINE_MANY_MERGED',
->>>>>>> change to bundle.js
 
 	  /**
 	   * @return {object}
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  getChildContext: SpecPolicy.DEFINE_MANY_MERGED,
-=======
 	  getChildContext: 'DEFINE_MANY_MERGED',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Uses props from `this.props` and state from `this.state` to render the
@@ -2472,11 +2187,7 @@
 	   * @nosideeffects
 	   * @required
 	   */
-<<<<<<< HEAD
-	  render: SpecPolicy.DEFINE_ONCE,
-=======
 	  render: 'DEFINE_ONCE',
->>>>>>> change to bundle.js
 
 	  // ==== Delegate methods ====
 
@@ -2487,11 +2198,7 @@
 	   *
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentWillMount: SpecPolicy.DEFINE_MANY,
-=======
 	  componentWillMount: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked when the component has been mounted and has a DOM representation.
@@ -2503,11 +2210,7 @@
 	   * @param {DOMElement} rootNode DOM element representing the component.
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentDidMount: SpecPolicy.DEFINE_MANY,
-=======
 	  componentDidMount: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked before the component receives new props.
@@ -2528,11 +2231,7 @@
 	   * @param {object} nextProps
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentWillReceiveProps: SpecPolicy.DEFINE_MANY,
-=======
 	  componentWillReceiveProps: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked while deciding if the component should be updated as a result of
@@ -2554,11 +2253,7 @@
 	   * @return {boolean} True if the component should update.
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  shouldComponentUpdate: SpecPolicy.DEFINE_ONCE,
-=======
 	  shouldComponentUpdate: 'DEFINE_ONCE',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked when the component is about to update due to a transition from
@@ -2575,11 +2270,7 @@
 	   * @param {ReactReconcileTransaction} transaction
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentWillUpdate: SpecPolicy.DEFINE_MANY,
-=======
 	  componentWillUpdate: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked when the component's DOM representation has been updated.
@@ -2593,11 +2284,7 @@
 	   * @param {DOMElement} rootNode DOM element representing the component.
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentDidUpdate: SpecPolicy.DEFINE_MANY,
-=======
 	  componentDidUpdate: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invoked when the component is about to be removed from its parent and have
@@ -2610,11 +2297,7 @@
 	   *
 	   * @optional
 	   */
-<<<<<<< HEAD
-	  componentWillUnmount: SpecPolicy.DEFINE_MANY,
-=======
 	  componentWillUnmount: 'DEFINE_MANY',
->>>>>>> change to bundle.js
 
 	  // ==== Advanced methods ====
 
@@ -2628,11 +2311,7 @@
 	   * @internal
 	   * @overridable
 	   */
-<<<<<<< HEAD
-	  updateComponent: SpecPolicy.OVERRIDE_BASE
-=======
 	  updateComponent: 'OVERRIDE_BASE'
->>>>>>> change to bundle.js
 
 	};
 
@@ -2658,21 +2337,13 @@
 	  },
 	  childContextTypes: function (Constructor, childContextTypes) {
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      validateTypeDef(Constructor, childContextTypes, ReactPropTypeLocations.childContext);
-=======
 	      validateTypeDef(Constructor, childContextTypes, 'childContext');
->>>>>>> change to bundle.js
 	    }
 	    Constructor.childContextTypes = _assign({}, Constructor.childContextTypes, childContextTypes);
 	  },
 	  contextTypes: function (Constructor, contextTypes) {
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      validateTypeDef(Constructor, contextTypes, ReactPropTypeLocations.context);
-=======
 	      validateTypeDef(Constructor, contextTypes, 'context');
->>>>>>> change to bundle.js
 	    }
 	    Constructor.contextTypes = _assign({}, Constructor.contextTypes, contextTypes);
 	  },
@@ -2689,11 +2360,7 @@
 	  },
 	  propTypes: function (Constructor, propTypes) {
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      validateTypeDef(Constructor, propTypes, ReactPropTypeLocations.prop);
-=======
 	      validateTypeDef(Constructor, propTypes, 'prop');
->>>>>>> change to bundle.js
 	    }
 	    Constructor.propTypes = _assign({}, Constructor.propTypes, propTypes);
 	  },
@@ -2702,10 +2369,6 @@
 	  },
 	  autobind: function () {} };
 
-<<<<<<< HEAD
-	// noop
-=======
->>>>>>> change to bundle.js
 	function validateTypeDef(Constructor, typeDef, location) {
 	  for (var propName in typeDef) {
 	    if (typeDef.hasOwnProperty(propName)) {
@@ -2721,20 +2384,12 @@
 
 	  // Disallow overriding of base class methods unless explicitly allowed.
 	  if (ReactClassMixin.hasOwnProperty(name)) {
-<<<<<<< HEAD
-	    !(specPolicy === SpecPolicy.OVERRIDE_BASE) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.', name) : _prodInvariant('73', name) : void 0;
-=======
 	    !(specPolicy === 'OVERRIDE_BASE') ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to override `%s` from your class specification. Ensure that your method names do not overlap with React methods.', name) : _prodInvariant('73', name) : void 0;
->>>>>>> change to bundle.js
 	  }
 
 	  // Disallow defining methods more than once unless explicitly allowed.
 	  if (isAlreadyDefined) {
-<<<<<<< HEAD
-	    !(specPolicy === SpecPolicy.DEFINE_MANY || specPolicy === SpecPolicy.DEFINE_MANY_MERGED) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('74', name) : void 0;
-=======
 	    !(specPolicy === 'DEFINE_MANY' || specPolicy === 'DEFINE_MANY_MERGED') ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClassInterface: You are attempting to define `%s` on your component more than once. This conflict may be due to a mixin.', name) : _prodInvariant('74', name) : void 0;
->>>>>>> change to bundle.js
 	  }
 	}
 
@@ -2800,15 +2455,6 @@
 	          var specPolicy = ReactClassInterface[name];
 
 	          // These cases should already be caught by validateMethodOverride.
-<<<<<<< HEAD
-	          !(isReactClassMethod && (specPolicy === SpecPolicy.DEFINE_MANY_MERGED || specPolicy === SpecPolicy.DEFINE_MANY)) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.', specPolicy, name) : _prodInvariant('77', specPolicy, name) : void 0;
-
-	          // For methods which are defined more than once, call the existing
-	          // methods before calling the new property, merging if appropriate.
-	          if (specPolicy === SpecPolicy.DEFINE_MANY_MERGED) {
-	            proto[name] = createMergedResultFunction(proto[name], property);
-	          } else if (specPolicy === SpecPolicy.DEFINE_MANY) {
-=======
 	          !(isReactClassMethod && (specPolicy === 'DEFINE_MANY_MERGED' || specPolicy === 'DEFINE_MANY')) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactClass: Unexpected spec policy %s for key %s when mixing in component specs.', specPolicy, name) : _prodInvariant('77', specPolicy, name) : void 0;
 
 	          // For methods which are defined more than once, call the existing
@@ -2816,7 +2462,6 @@
 	          if (specPolicy === 'DEFINE_MANY_MERGED') {
 	            proto[name] = createMergedResultFunction(proto[name], property);
 	          } else if (specPolicy === 'DEFINE_MANY') {
->>>>>>> change to bundle.js
 	            proto[name] = createChainedFunction(proto[name], property);
 	          }
 	        } else {
@@ -3011,14 +2656,10 @@
 	   * @public
 	   */
 	  createClass: function (spec) {
-<<<<<<< HEAD
-	    var Constructor = function (props, context, updater) {
-=======
 	    // To keep our warnings more understandable, we'll use a little hack here to
 	    // ensure that Constructor.name !== 'Constructor'. This makes sure we don't
 	    // unnecessarily identify a class without displayName as 'Constructor'.
 	    var Constructor = identity(function (props, context, updater) {
->>>>>>> change to bundle.js
 	      // This constructor gets overridden by mocks. The argument is used
 	      // by mocks to assert on what gets mounted.
 
@@ -3053,11 +2694,7 @@
 	      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
 
 	      this.state = initialState;
-<<<<<<< HEAD
-	    };
-=======
 	    });
->>>>>>> change to bundle.js
 	    Constructor.prototype = new ReactClassComponent();
 	    Constructor.prototype.constructor = Constructor;
 	    Constructor.prototype.__reactAutoBindPairs = [];
@@ -3113,96 +2750,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 22 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactPropTypeLocations
-	 */
-
-	'use strict';
-
-	var keyMirror = __webpack_require__(23);
-
-	var ReactPropTypeLocations = keyMirror({
-	  prop: null,
-	  context: null,
-	  childContext: null
-	});
-
-	module.exports = ReactPropTypeLocations;
-
-/***/ },
-=======
->>>>>>> change to bundle.js
 /* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
-<<<<<<< HEAD
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @typechecks static-only
-	 */
-
-	'use strict';
-
-	var invariant = __webpack_require__(8);
-
-	/**
-	 * Constructs an enumeration with keys equal to their value.
-	 *
-	 * For example:
-	 *
-	 *   var COLORS = keyMirror({blue: null, red: null});
-	 *   var myColor = COLORS.blue;
-	 *   var isColorValid = !!COLORS[myColor];
-	 *
-	 * The last line could not be performed if the values of the generated enum were
-	 * not equal to their keys.
-	 *
-	 *   Input:  {key1: val1, key2: val2}
-	 *   Output: {key1: key1, key2: key2}
-	 *
-	 * @param {object} obj
-	 * @return {object}
-	 */
-	var keyMirror = function keyMirror(obj) {
-	  var ret = {};
-	  var key;
-	  !(obj instanceof Object && !Array.isArray(obj)) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'keyMirror(...): Argument must be an object.') : invariant(false) : void 0;
-	  for (key in obj) {
-	    if (!obj.hasOwnProperty(key)) {
-	      continue;
-	    }
-	    ret[key] = key;
-	  }
-	  return ret;
-	};
-
-	module.exports = keyMirror;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-=======
->>>>>>> change to bundle.js
 	 * Copyright 2013-present, Facebook, Inc.
 	 * All rights reserved.
 	 *
@@ -3210,11 +2761,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactPropTypeLocationNames
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -3233,50 +2780,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 25 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	/**
-	 * Copyright (c) 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 */
-
-	/**
-	 * Allows extraction of a minified key. Let's the build system minify keys
-	 * without losing the ability to dynamically use key strings as values
-	 * themselves. Pass in an object with a single key/val pair and it will return
-	 * you the string key of that single record. Suppose you want to grab the
-	 * value for a key 'className' inside of an object. Key/val minification may
-	 * have aliased that key to be 'xa12'. keyOf({className: null}) will return
-	 * 'xa12' in that case. Resolve keys you want to use once at startup time, then
-	 * reuse those resolutions.
-	 */
-	var keyOf = function keyOf(oneKeyObj) {
-	  var key;
-	  for (key in oneKeyObj) {
-	    if (!oneKeyObj.hasOwnProperty(key)) {
-	      continue;
-	    }
-	    return key;
-	  }
-	  return null;
-	};
-
-	module.exports = keyOf;
-
-/***/ },
-/* 26 */
-=======
 /* 24 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3287,10 +2791,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMFactories
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -3304,11 +2804,7 @@
 	 */
 	var createDOMFactory = ReactElement.createFactory;
 	if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	  var ReactElementValidator = __webpack_require__(27);
-=======
 	  var ReactElementValidator = __webpack_require__(25);
->>>>>>> change to bundle.js
 	  createDOMFactory = ReactElementValidator.createFactory;
 	}
 
@@ -3459,11 +2955,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 27 */
-=======
 /* 25 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3474,10 +2966,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactElementValidator
-=======
->>>>>>> change to bundle.js
 	 */
 
 	/**
@@ -3490,16 +2978,6 @@
 	'use strict';
 
 	var ReactCurrentOwner = __webpack_require__(10);
-<<<<<<< HEAD
-	var ReactComponentTreeHook = __webpack_require__(28);
-	var ReactElement = __webpack_require__(9);
-	var ReactPropTypeLocations = __webpack_require__(22);
-
-	var checkReactTypeSpec = __webpack_require__(29);
-
-	var canDefineProperty = __webpack_require__(13);
-	var getIteratorFn = __webpack_require__(15);
-=======
 	var ReactComponentTreeHook = __webpack_require__(26);
 	var ReactElement = __webpack_require__(9);
 
@@ -3507,7 +2985,6 @@
 
 	var canDefineProperty = __webpack_require__(13);
 	var getIteratorFn = __webpack_require__(16);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	function getDeclarationErrorAddendum() {
@@ -3631,11 +3108,7 @@
 	  }
 	  var name = componentClass.displayName || componentClass.name;
 	  if (componentClass.propTypes) {
-<<<<<<< HEAD
-	    checkReactTypeSpec(componentClass.propTypes, element.props, ReactPropTypeLocations.prop, name, element, null);
-=======
 	    checkReactTypeSpec(componentClass.propTypes, element.props, 'prop', name, element, null);
->>>>>>> change to bundle.js
 	  }
 	  if (typeof componentClass.getDefaultProps === 'function') {
 	    process.env.NODE_ENV !== 'production' ? warning(componentClass.getDefaultProps.isReactClassApproved, 'getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.') : void 0;
@@ -3714,11 +3187,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 28 */
-=======
 /* 26 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -3729,11 +3198,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactComponentTreeHook
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -3776,109 +3241,6 @@
 	// Set.prototype.keys
 	Set.prototype != null && typeof Set.prototype.keys === 'function' && isNative(Set.prototype.keys);
 
-<<<<<<< HEAD
-	var itemMap;
-	var rootIDSet;
-
-	var itemByKey;
-	var rootByKey;
-
-	if (canUseCollections) {
-	  itemMap = new Map();
-	  rootIDSet = new Set();
-	} else {
-	  itemByKey = {};
-	  rootByKey = {};
-	}
-
-	var unmountedIDs = [];
-
-	// Use non-numeric keys to prevent V8 performance issues:
-	// https://github.com/facebook/react/pull/7232
-	function getKeyFromID(id) {
-	  return '.' + id;
-	}
-	function getIDFromKey(key) {
-	  return parseInt(key.substr(1), 10);
-	}
-
-	function get(id) {
-	  if (canUseCollections) {
-	    return itemMap.get(id);
-	  } else {
-	    var key = getKeyFromID(id);
-	    return itemByKey[key];
-	  }
-	}
-
-	function remove(id) {
-	  if (canUseCollections) {
-	    itemMap['delete'](id);
-	  } else {
-	    var key = getKeyFromID(id);
-	    delete itemByKey[key];
-	  }
-	}
-
-	function create(id, element, parentID) {
-	  var item = {
-	    element: element,
-	    parentID: parentID,
-	    text: null,
-	    childIDs: [],
-	    isMounted: false,
-	    updateCount: 0
-	  };
-
-	  if (canUseCollections) {
-	    itemMap.set(id, item);
-	  } else {
-	    var key = getKeyFromID(id);
-	    itemByKey[key] = item;
-	  }
-	}
-
-	function addRoot(id) {
-	  if (canUseCollections) {
-	    rootIDSet.add(id);
-	  } else {
-	    var key = getKeyFromID(id);
-	    rootByKey[key] = true;
-	  }
-	}
-
-	function removeRoot(id) {
-	  if (canUseCollections) {
-	    rootIDSet['delete'](id);
-	  } else {
-	    var key = getKeyFromID(id);
-	    delete rootByKey[key];
-	  }
-	}
-
-	function getRegisteredIDs() {
-	  if (canUseCollections) {
-	    return Array.from(itemMap.keys());
-	  } else {
-	    return Object.keys(itemByKey).map(getIDFromKey);
-	  }
-	}
-
-	function getRootIDs() {
-	  if (canUseCollections) {
-	    return Array.from(rootIDSet.keys());
-	  } else {
-	    return Object.keys(rootByKey).map(getIDFromKey);
-	  }
-	}
-
-	function purgeDeep(id) {
-	  var item = get(id);
-	  if (item) {
-	    var childIDs = item.childIDs;
-
-	    remove(id);
-=======
 	if (canUseCollections) {
 	  var itemMap = new Map();
 	  var rootIDSet = new Set();
@@ -3955,17 +3317,12 @@
 	    var childIDs = item.childIDs;
 
 	    removeItem(id);
->>>>>>> change to bundle.js
 	    childIDs.forEach(purgeDeep);
 	  }
 	}
 
 	function describeComponentFrame(name, source, ownerName) {
-<<<<<<< HEAD
-	  return '\n    in ' + name + (source ? ' (at ' + source.fileName.replace(/^.*[\\\/]/, '') + ':' + source.lineNumber + ')' : ownerName ? ' (created by ' + ownerName + ')' : '');
-=======
 	  return '\n    in ' + (name || 'Unknown') + (source ? ' (at ' + source.fileName.replace(/^.*[\\\/]/, '') + ':' + source.lineNumber + ')' : ownerName ? ' (created by ' + ownerName + ')' : '');
->>>>>>> change to bundle.js
 	}
 
 	function getDisplayName(element) {
@@ -3994,21 +3351,13 @@
 
 	var ReactComponentTreeHook = {
 	  onSetChildren: function (id, nextChildIDs) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
 	    !item ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
->>>>>>> change to bundle.js
 	    item.childIDs = nextChildIDs;
 
 	    for (var i = 0; i < nextChildIDs.length; i++) {
 	      var nextChildID = nextChildIDs[i];
-<<<<<<< HEAD
-	      var nextChild = get(nextChildID);
-=======
 	      var nextChild = getItem(nextChildID);
->>>>>>> change to bundle.js
 	      !nextChild ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected hook events to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('140') : void 0;
 	      !(nextChild.childIDs != null || typeof nextChild.element !== 'object' || nextChild.element == null) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected onSetChildren() to fire for a container child before its parent includes it in onSetChildren().') : _prodInvariant('141') : void 0;
 	      !nextChild.isMounted ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected onMountComponent() to fire for the child before its parent includes it in onSetChildren().') : _prodInvariant('71') : void 0;
@@ -4016,22 +3365,12 @@
 	        nextChild.parentID = id;
 	        // TODO: This shouldn't be necessary but mounting a new root during in
 	        // componentWillMount currently causes not-yet-mounted components to
-<<<<<<< HEAD
-	        // be purged from our tree data so their parent ID is missing.
-=======
 	        // be purged from our tree data so their parent id is missing.
->>>>>>> change to bundle.js
 	      }
 	      !(nextChild.parentID === id) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Expected onBeforeMountComponent() parent and onSetChildren() to be consistent (%s has parents %s and %s).', nextChildID, nextChild.parentID, id) : _prodInvariant('142', nextChildID, nextChild.parentID, id) : void 0;
 	    }
 	  },
 	  onBeforeMountComponent: function (id, element, parentID) {
-<<<<<<< HEAD
-	    create(id, element, parentID);
-	  },
-	  onBeforeUpdateComponent: function (id, element) {
-	    var item = get(id);
-=======
 	    var item = {
 	      element: element,
 	      parentID: parentID,
@@ -4044,7 +3383,6 @@
 	  },
 	  onBeforeUpdateComponent: function (id, element) {
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    if (!item || !item.isMounted) {
 	      // We may end up here as a result of setState() in componentWillUnmount().
 	      // In this case, ignore the element.
@@ -4053,12 +3391,8 @@
 	    item.element = element;
 	  },
 	  onMountComponent: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
 	    !item ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Item must have been set') : _prodInvariant('144') : void 0;
->>>>>>> change to bundle.js
 	    item.isMounted = true;
 	    var isRoot = item.parentID === 0;
 	    if (isRoot) {
@@ -4066,11 +3400,7 @@
 	    }
 	  },
 	  onUpdateComponent: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    if (!item || !item.isMounted) {
 	      // We may end up here as a result of setState() in componentWillUnmount().
 	      // In this case, ignore the element.
@@ -4079,11 +3409,7 @@
 	    item.updateCount++;
 	  },
 	  onUnmountComponent: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    if (item) {
 	      // We need to check if it exists.
 	      // `item` might not exist if it is inside an error boundary, and a sibling
@@ -4111,26 +3437,15 @@
 	    unmountedIDs.length = 0;
 	  },
 	  isMounted: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    return item ? item.isMounted : false;
 	  },
 	  getCurrentStackAddendum: function (topElement) {
 	    var info = '';
 	    if (topElement) {
-<<<<<<< HEAD
-	      var type = topElement.type;
-	      var name = typeof type === 'function' ? type.displayName || type.name : type;
-	      var owner = topElement._owner;
-	      info += describeComponentFrame(name || 'Unknown', topElement._source, owner && owner.getName());
-=======
 	      var name = getDisplayName(topElement);
 	      var owner = topElement._owner;
 	      info += describeComponentFrame(name, topElement._source, owner && owner.getName());
->>>>>>> change to bundle.js
 	    }
 
 	    var currentOwner = ReactCurrentOwner.current;
@@ -4148,11 +3463,7 @@
 	    return info;
 	  },
 	  getChildIDs: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    return item ? item.childIDs : [];
 	  },
 	  getDisplayName: function (id) {
@@ -4163,11 +3474,7 @@
 	    return getDisplayName(element);
 	  },
 	  getElement: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    return item ? item.element : null;
 	  },
 	  getOwnerID: function (id) {
@@ -4178,19 +3485,11 @@
 	    return element._owner._debugID;
 	  },
 	  getParentID: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-	    return item ? item.parentID : null;
-	  },
-	  getSource: function (id) {
-	    var item = get(id);
-=======
 	    var item = getItem(id);
 	    return item ? item.parentID : null;
 	  },
 	  getSource: function (id) {
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    var element = item ? item.element : null;
 	    var source = element != null ? element._source : null;
 	    return source;
@@ -4206,34 +3505,20 @@
 	    }
 	  },
 	  getUpdateCount: function (id) {
-<<<<<<< HEAD
-	    var item = get(id);
-=======
 	    var item = getItem(id);
->>>>>>> change to bundle.js
 	    return item ? item.updateCount : 0;
 	  },
 
 
-<<<<<<< HEAD
-	  getRegisteredIDs: getRegisteredIDs,
-
-	  getRootIDs: getRootIDs
-=======
 	  getRootIDs: getRootIDs,
 	  getRegisteredIDs: getItemIDs
->>>>>>> change to bundle.js
 	};
 
 	module.exports = ReactComponentTreeHook;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 29 */
-=======
 /* 27 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4244,23 +3529,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule checkReactTypeSpec
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _prodInvariant = __webpack_require__(7);
 
-<<<<<<< HEAD
-	var ReactPropTypeLocationNames = __webpack_require__(24);
-	var ReactPropTypesSecret = __webpack_require__(30);
-=======
 	var ReactPropTypeLocationNames = __webpack_require__(23);
 	var ReactPropTypesSecret = __webpack_require__(28);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
@@ -4273,11 +3549,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-<<<<<<< HEAD
-	  ReactComponentTreeHook = __webpack_require__(28);
-=======
 	  ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	}
 
 	var loggedTypeFailures = {};
@@ -4319,11 +3591,7 @@
 
 	        if (process.env.NODE_ENV !== 'production') {
 	          if (!ReactComponentTreeHook) {
-<<<<<<< HEAD
-	            ReactComponentTreeHook = __webpack_require__(28);
-=======
 	            ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	          }
 	          if (debugID !== null) {
 	            componentStackInfo = ReactComponentTreeHook.getStackAddendumByID(debugID);
@@ -4342,11 +3610,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 30 */
-=======
 /* 28 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -4357,11 +3621,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactPropTypesSecret
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -4371,11 +3631,7 @@
 	module.exports = ReactPropTypesSecret;
 
 /***/ },
-<<<<<<< HEAD
-/* 31 */
-=======
 /* 29 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4386,28 +3642,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactPropTypes
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var ReactElement = __webpack_require__(9);
-<<<<<<< HEAD
-	var ReactPropTypeLocationNames = __webpack_require__(24);
-	var ReactPropTypesSecret = __webpack_require__(30);
-
-	var emptyFunction = __webpack_require__(12);
-	var getIteratorFn = __webpack_require__(15);
-=======
 	var ReactPropTypeLocationNames = __webpack_require__(23);
 	var ReactPropTypesSecret = __webpack_require__(28);
 
 	var emptyFunction = __webpack_require__(12);
 	var getIteratorFn = __webpack_require__(16);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	/**
@@ -4522,11 +3766,7 @@
 	      if (secret !== ReactPropTypesSecret && typeof console !== 'undefined') {
 	        var cacheKey = componentName + ':' + propName;
 	        if (!manualPropTypeCallCache[cacheKey]) {
-<<<<<<< HEAD
-	          process.env.NODE_ENV !== 'production' ? warning(false, 'You are manually calling a React.PropTypes validation ' + 'function for the `%s` prop on `%s`. This is deprecated ' + 'and will not work in the next major version. You may be ' + 'seeing this warning due to a third-party PropTypes library. ' + 'See https://fb.me/react-warning-dont-call-proptypes for details.', propFullName, componentName) : void 0;
-=======
 	          process.env.NODE_ENV !== 'production' ? warning(false, 'You are manually calling a React.PropTypes validation ' + 'function for the `%s` prop on `%s`. This is deprecated ' + 'and will not work in production with the next major version. ' + 'You may be seeing this warning due to a third-party PropTypes ' + 'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.', propFullName, componentName) : void 0;
->>>>>>> change to bundle.js
 	          manualPropTypeCallCache[cacheKey] = true;
 	        }
 	      }
@@ -4534,14 +3774,10 @@
 	    if (props[propName] == null) {
 	      var locationName = ReactPropTypeLocationNames[location];
 	      if (isRequired) {
-<<<<<<< HEAD
-	        return new PropTypeError('Required ' + locationName + ' `' + propFullName + '` was not specified in ' + ('`' + componentName + '`.'));
-=======
 	        if (props[propName] === null) {
 	          return new PropTypeError('The ' + locationName + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
 	        }
 	        return new PropTypeError('The ' + locationName + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
->>>>>>> change to bundle.js
 	      }
 	      return null;
 	    } else {
@@ -4834,11 +4070,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 32 */
-=======
 /* 30 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -4849,25 +4081,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactVersion
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	module.exports = '15.3.2';
-
-/***/ },
-/* 33 */
-=======
 	module.exports = '15.4.0';
 
 /***/ },
 /* 31 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4878,10 +4099,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule onlyChild
-=======
->>>>>>> change to bundle.js
 	 */
 	'use strict';
 
@@ -4914,28 +4131,16 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 34 */
-=======
 /* 32 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	module.exports = __webpack_require__(35);
-
-
-/***/ },
-/* 35 */
-=======
 	module.exports = __webpack_require__(33);
 
 
 /***/ },
 /* 33 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -4946,28 +4151,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOM
-=======
->>>>>>> change to bundle.js
 	 */
 
 	/* globals __REACT_DEVTOOLS_GLOBAL_HOOK__*/
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactDefaultInjection = __webpack_require__(39);
-	var ReactMount = __webpack_require__(162);
-	var ReactReconciler = __webpack_require__(59);
-	var ReactUpdates = __webpack_require__(56);
-	var ReactVersion = __webpack_require__(32);
-
-	var findDOMNode = __webpack_require__(167);
-	var getHostComponentFromComposite = __webpack_require__(168);
-	var renderSubtreeIntoContainer = __webpack_require__(169);
-=======
 	var ReactDOMComponentTree = __webpack_require__(34);
 	var ReactDefaultInjection = __webpack_require__(38);
 	var ReactMount = __webpack_require__(166);
@@ -4978,7 +4167,6 @@
 	var findDOMNode = __webpack_require__(172);
 	var getHostComponentFromComposite = __webpack_require__(173);
 	var renderSubtreeIntoContainer = __webpack_require__(174);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	ReactDefaultInjection.inject();
@@ -4996,10 +4184,6 @@
 
 	// Inject the runtime into a devtools global hook regardless of browser.
 	// Allows for debugging when the hook is injected on the page.
-<<<<<<< HEAD
-	/* eslint-enable camelcase */
-=======
->>>>>>> change to bundle.js
 	if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== 'undefined' && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.inject === 'function') {
 	  __REACT_DEVTOOLS_GLOBAL_HOOK__.inject({
 	    ComponentTree: {
@@ -5022,11 +4206,7 @@
 	}
 
 	if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	  var ExecutionEnvironment = __webpack_require__(49);
-=======
 	  var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 	  if (ExecutionEnvironment.canUseDOM && window.top === window.self) {
 
 	    // First check if devtools is not installed
@@ -5050,11 +4230,7 @@
 
 	    var expectedFeatures = [
 	    // shims
-<<<<<<< HEAD
-	    Array.isArray, Array.prototype.every, Array.prototype.forEach, Array.prototype.indexOf, Array.prototype.map, Date.now, Function.prototype.bind, Object.keys, String.prototype.split, String.prototype.trim];
-=======
 	    Array.isArray, Array.prototype.every, Array.prototype.forEach, Array.prototype.indexOf, Array.prototype.map, Date.now, Function.prototype.bind, Object.keys, String.prototype.trim];
->>>>>>> change to bundle.js
 
 	    for (var i = 0; i < expectedFeatures.length; i++) {
 	      if (!expectedFeatures[i]) {
@@ -5067,13 +4243,6 @@
 
 	if (process.env.NODE_ENV !== 'production') {
 	  var ReactInstrumentation = __webpack_require__(62);
-<<<<<<< HEAD
-	  var ReactDOMUnknownPropertyHook = __webpack_require__(170);
-	  var ReactDOMNullInputValuePropHook = __webpack_require__(171);
-
-	  ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
-	  ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
-=======
 	  var ReactDOMUnknownPropertyHook = __webpack_require__(175);
 	  var ReactDOMNullInputValuePropHook = __webpack_require__(176);
 	  var ReactDOMInvalidARIAHook = __webpack_require__(177);
@@ -5081,18 +4250,13 @@
 	  ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
 	  ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
 	  ReactInstrumentation.debugTool.addHook(ReactDOMInvalidARIAHook);
->>>>>>> change to bundle.js
 	}
 
 	module.exports = ReactDOM;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 36 */
-=======
 /* 34 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5103,25 +4267,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMComponentTree
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var DOMProperty = __webpack_require__(37);
-	var ReactDOMComponentFlags = __webpack_require__(38);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var DOMProperty = __webpack_require__(36);
 	var ReactDOMComponentFlags = __webpack_require__(37);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -5296,9 +4449,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 37 */
-=======
 /* 35 */
 /***/ function(module, exports) {
 
@@ -5343,7 +4493,6 @@
 
 /***/ },
 /* 36 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -5354,19 +4503,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DOMProperty
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -5532,11 +4673,6 @@
 	  /**
 	   * Mapping from lowercase property names to the properly cased version, used
 	   * to warn in the case of missing properties. Available only in __DEV__.
-<<<<<<< HEAD
-	   * @type {Object}
-	   */
-	  getPossibleStandardName: process.env.NODE_ENV !== 'production' ? {} : null,
-=======
 	   *
 	   * autofocus is predefined, because adding it to the property whitelist
 	   * causes unintended side effects.
@@ -5544,7 +4680,6 @@
 	   * @type {Object}
 	   */
 	  getPossibleStandardName: process.env.NODE_ENV !== 'production' ? { autofocus: 'autoFocus' } : null,
->>>>>>> change to bundle.js
 
 	  /**
 	   * All of the isCustomAttribute() functions that have been injected.
@@ -5572,11 +4707,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 38 */
-=======
 /* 37 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -5587,10 +4718,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMComponentFlags
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -5602,11 +4729,7 @@
 	module.exports = ReactDOMComponentFlags;
 
 /***/ },
-<<<<<<< HEAD
-/* 39 */
-=======
 /* 38 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5617,34 +4740,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDefaultInjection
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var BeforeInputEventPlugin = __webpack_require__(40);
-	var ChangeEventPlugin = __webpack_require__(55);
-	var DefaultEventPluginOrder = __webpack_require__(73);
-	var EnterLeaveEventPlugin = __webpack_require__(74);
-	var HTMLDOMPropertyConfig = __webpack_require__(79);
-	var ReactComponentBrowserEnvironment = __webpack_require__(80);
-	var ReactDOMComponent = __webpack_require__(94);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactDOMEmptyComponent = __webpack_require__(133);
-	var ReactDOMTreeTraversal = __webpack_require__(134);
-	var ReactDOMTextComponent = __webpack_require__(135);
-	var ReactDefaultBatchingStrategy = __webpack_require__(136);
-	var ReactEventListener = __webpack_require__(137);
-	var ReactInjection = __webpack_require__(140);
-	var ReactReconcileTransaction = __webpack_require__(141);
-	var SVGDOMPropertyConfig = __webpack_require__(149);
-	var SelectEventPlugin = __webpack_require__(150);
-	var SimpleEventPlugin = __webpack_require__(151);
-=======
 	var ARIADOMPropertyConfig = __webpack_require__(39);
 	var BeforeInputEventPlugin = __webpack_require__(40);
 	var ChangeEventPlugin = __webpack_require__(55);
@@ -5664,7 +4763,6 @@
 	var SVGDOMPropertyConfig = __webpack_require__(153);
 	var SelectEventPlugin = __webpack_require__(154);
 	var SimpleEventPlugin = __webpack_require__(155);
->>>>>>> change to bundle.js
 
 	var alreadyInjected = false;
 
@@ -5702,10 +4800,7 @@
 
 	  ReactInjection.HostComponent.injectTextComponentClass(ReactDOMTextComponent);
 
-<<<<<<< HEAD
-=======
 	  ReactInjection.DOMProperty.injectDOMPropertyConfig(ARIADOMPropertyConfig);
->>>>>>> change to bundle.js
 	  ReactInjection.DOMProperty.injectDOMPropertyConfig(HTMLDOMPropertyConfig);
 	  ReactInjection.DOMProperty.injectDOMPropertyConfig(SVGDOMPropertyConfig);
 
@@ -5724,8 +4819,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-=======
 /* 39 */
 /***/ function(module, exports) {
 
@@ -5804,7 +4897,6 @@
 	module.exports = ARIADOMPropertyConfig;
 
 /***/ },
->>>>>>> change to bundle.js
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -5816,32 +4908,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule BeforeInputEventPlugin
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPropagators = __webpack_require__(42);
-	var ExecutionEnvironment = __webpack_require__(49);
-	var FallbackCompositionState = __webpack_require__(50);
-	var SyntheticCompositionEvent = __webpack_require__(52);
-	var SyntheticInputEvent = __webpack_require__(54);
-
-	var keyOf = __webpack_require__(25);
-
-=======
 	var EventPropagators = __webpack_require__(41);
 	var ExecutionEnvironment = __webpack_require__(48);
 	var FallbackCompositionState = __webpack_require__(49);
 	var SyntheticCompositionEvent = __webpack_require__(52);
 	var SyntheticInputEvent = __webpack_require__(54);
 
->>>>>>> change to bundle.js
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 	var START_KEYCODE = 229;
 
@@ -5874,42 +4950,10 @@
 	var SPACEBAR_CODE = 32;
 	var SPACEBAR_CHAR = String.fromCharCode(SPACEBAR_CODE);
 
-<<<<<<< HEAD
-	var topLevelTypes = EventConstants.topLevelTypes;
-
-=======
->>>>>>> change to bundle.js
 	// Events and their corresponding property names.
 	var eventTypes = {
 	  beforeInput: {
 	    phasedRegistrationNames: {
-<<<<<<< HEAD
-	      bubbled: keyOf({ onBeforeInput: null }),
-	      captured: keyOf({ onBeforeInputCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topCompositionEnd, topLevelTypes.topKeyPress, topLevelTypes.topTextInput, topLevelTypes.topPaste]
-	  },
-	  compositionEnd: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCompositionEnd: null }),
-	      captured: keyOf({ onCompositionEndCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topCompositionEnd, topLevelTypes.topKeyDown, topLevelTypes.topKeyPress, topLevelTypes.topKeyUp, topLevelTypes.topMouseDown]
-	  },
-	  compositionStart: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCompositionStart: null }),
-	      captured: keyOf({ onCompositionStartCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topCompositionStart, topLevelTypes.topKeyDown, topLevelTypes.topKeyPress, topLevelTypes.topKeyUp, topLevelTypes.topMouseDown]
-	  },
-	  compositionUpdate: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCompositionUpdate: null }),
-	      captured: keyOf({ onCompositionUpdateCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topCompositionUpdate, topLevelTypes.topKeyDown, topLevelTypes.topKeyPress, topLevelTypes.topKeyUp, topLevelTypes.topMouseDown]
-=======
 	      bubbled: 'onBeforeInput',
 	      captured: 'onBeforeInputCapture'
 	    },
@@ -5935,7 +4979,6 @@
 	      captured: 'onCompositionUpdateCapture'
 	    },
 	    dependencies: ['topBlur', 'topCompositionUpdate', 'topKeyDown', 'topKeyPress', 'topKeyUp', 'topMouseDown']
->>>>>>> change to bundle.js
 	  }
 	};
 
@@ -5961,19 +5004,11 @@
 	 */
 	function getCompositionEventType(topLevelType) {
 	  switch (topLevelType) {
-<<<<<<< HEAD
-	    case topLevelTypes.topCompositionStart:
-	      return eventTypes.compositionStart;
-	    case topLevelTypes.topCompositionEnd:
-	      return eventTypes.compositionEnd;
-	    case topLevelTypes.topCompositionUpdate:
-=======
 	    case 'topCompositionStart':
 	      return eventTypes.compositionStart;
 	    case 'topCompositionEnd':
 	      return eventTypes.compositionEnd;
 	    case 'topCompositionUpdate':
->>>>>>> change to bundle.js
 	      return eventTypes.compositionUpdate;
 	  }
 	}
@@ -5987,11 +5022,7 @@
 	 * @return {boolean}
 	 */
 	function isFallbackCompositionStart(topLevelType, nativeEvent) {
-<<<<<<< HEAD
-	  return topLevelType === topLevelTypes.topKeyDown && nativeEvent.keyCode === START_KEYCODE;
-=======
 	  return topLevelType === 'topKeyDown' && nativeEvent.keyCode === START_KEYCODE;
->>>>>>> change to bundle.js
 	}
 
 	/**
@@ -6003,18 +5034,6 @@
 	 */
 	function isFallbackCompositionEnd(topLevelType, nativeEvent) {
 	  switch (topLevelType) {
-<<<<<<< HEAD
-	    case topLevelTypes.topKeyUp:
-	      // Command keys insert or clear IME input.
-	      return END_KEYCODES.indexOf(nativeEvent.keyCode) !== -1;
-	    case topLevelTypes.topKeyDown:
-	      // Expect IME keyCode on each keydown. If we get any other
-	      // code we must have exited earlier.
-	      return nativeEvent.keyCode !== START_KEYCODE;
-	    case topLevelTypes.topKeyPress:
-	    case topLevelTypes.topMouseDown:
-	    case topLevelTypes.topBlur:
-=======
 	    case 'topKeyUp':
 	      // Command keys insert or clear IME input.
 	      return END_KEYCODES.indexOf(nativeEvent.keyCode) !== -1;
@@ -6025,7 +5044,6 @@
 	    case 'topKeyPress':
 	    case 'topMouseDown':
 	    case 'topBlur':
->>>>>>> change to bundle.js
 	      // Events are not possible without cancelling IME.
 	      return true;
 	    default:
@@ -6110,15 +5128,9 @@
 	 */
 	function getNativeBeforeInputChars(topLevelType, nativeEvent) {
 	  switch (topLevelType) {
-<<<<<<< HEAD
-	    case topLevelTypes.topCompositionEnd:
-	      return getDataFromCustomEvent(nativeEvent);
-	    case topLevelTypes.topKeyPress:
-=======
 	    case 'topCompositionEnd':
 	      return getDataFromCustomEvent(nativeEvent);
 	    case 'topKeyPress':
->>>>>>> change to bundle.js
 	      /**
 	       * If native `textInput` events are available, our goal is to make
 	       * use of them. However, there is a special case: the spacebar key.
@@ -6141,11 +5153,7 @@
 	      hasSpaceKeypress = true;
 	      return SPACEBAR_CHAR;
 
-<<<<<<< HEAD
-	    case topLevelTypes.topTextInput:
-=======
 	    case 'topTextInput':
->>>>>>> change to bundle.js
 	      // Record the characters to be added to the DOM.
 	      var chars = nativeEvent.data;
 
@@ -6178,11 +5186,7 @@
 	  // If composition event is available, we extract a string only at
 	  // compositionevent, otherwise extract it at fallback events.
 	  if (currentComposition) {
-<<<<<<< HEAD
-	    if (topLevelType === topLevelTypes.topCompositionEnd || !canUseCompositionEvent && isFallbackCompositionEnd(topLevelType, nativeEvent)) {
-=======
 	    if (topLevelType === 'topCompositionEnd' || !canUseCompositionEvent && isFallbackCompositionEnd(topLevelType, nativeEvent)) {
->>>>>>> change to bundle.js
 	      var chars = currentComposition.getData();
 	      FallbackCompositionState.release(currentComposition);
 	      currentComposition = null;
@@ -6192,19 +5196,11 @@
 	  }
 
 	  switch (topLevelType) {
-<<<<<<< HEAD
-	    case topLevelTypes.topPaste:
-	      // If a paste event occurs after a keypress, throw out the input
-	      // chars. Paste events should not lead to BeforeInput events.
-	      return null;
-	    case topLevelTypes.topKeyPress:
-=======
 	    case 'topPaste':
 	      // If a paste event occurs after a keypress, throw out the input
 	      // chars. Paste events should not lead to BeforeInput events.
 	      return null;
 	    case 'topKeyPress':
->>>>>>> change to bundle.js
 	      /**
 	       * As of v27, Firefox may fire keypress events even when no character
 	       * will be inserted. A few possibilities:
@@ -6225,11 +5221,7 @@
 	        return String.fromCharCode(nativeEvent.which);
 	      }
 	      return null;
-<<<<<<< HEAD
-	    case topLevelTypes.topCompositionEnd:
-=======
 	    case 'topCompositionEnd':
->>>>>>> change to bundle.js
 	      return useFallbackCompositionData ? null : nativeEvent.data;
 	    default:
 	      return null;
@@ -6297,111 +5289,6 @@
 /* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule EventConstants
-	 */
-
-	'use strict';
-
-	var keyMirror = __webpack_require__(23);
-
-	var PropagationPhases = keyMirror({ bubbled: null, captured: null });
-
-	/**
-	 * Types of raw signals from the browser caught at the top level.
-	 */
-	var topLevelTypes = keyMirror({
-	  topAbort: null,
-	  topAnimationEnd: null,
-	  topAnimationIteration: null,
-	  topAnimationStart: null,
-	  topBlur: null,
-	  topCanPlay: null,
-	  topCanPlayThrough: null,
-	  topChange: null,
-	  topClick: null,
-	  topCompositionEnd: null,
-	  topCompositionStart: null,
-	  topCompositionUpdate: null,
-	  topContextMenu: null,
-	  topCopy: null,
-	  topCut: null,
-	  topDoubleClick: null,
-	  topDrag: null,
-	  topDragEnd: null,
-	  topDragEnter: null,
-	  topDragExit: null,
-	  topDragLeave: null,
-	  topDragOver: null,
-	  topDragStart: null,
-	  topDrop: null,
-	  topDurationChange: null,
-	  topEmptied: null,
-	  topEncrypted: null,
-	  topEnded: null,
-	  topError: null,
-	  topFocus: null,
-	  topInput: null,
-	  topInvalid: null,
-	  topKeyDown: null,
-	  topKeyPress: null,
-	  topKeyUp: null,
-	  topLoad: null,
-	  topLoadedData: null,
-	  topLoadedMetadata: null,
-	  topLoadStart: null,
-	  topMouseDown: null,
-	  topMouseMove: null,
-	  topMouseOut: null,
-	  topMouseOver: null,
-	  topMouseUp: null,
-	  topPaste: null,
-	  topPause: null,
-	  topPlay: null,
-	  topPlaying: null,
-	  topProgress: null,
-	  topRateChange: null,
-	  topReset: null,
-	  topScroll: null,
-	  topSeeked: null,
-	  topSeeking: null,
-	  topSelectionChange: null,
-	  topStalled: null,
-	  topSubmit: null,
-	  topSuspend: null,
-	  topTextInput: null,
-	  topTimeUpdate: null,
-	  topTouchCancel: null,
-	  topTouchEnd: null,
-	  topTouchMove: null,
-	  topTouchStart: null,
-	  topTransitionEnd: null,
-	  topVolumeChange: null,
-	  topWaiting: null,
-	  topWheel: null
-	});
-
-	var EventConstants = {
-	  topLevelTypes: topLevelTypes,
-	  PropagationPhases: PropagationPhases
-	};
-
-	module.exports = EventConstants;
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-=======
->>>>>>> change to bundle.js
 	/* WEBPACK VAR INJECTION */(function(process) {/**
 	 * Copyright 2013-present, Facebook, Inc.
 	 * All rights reserved.
@@ -6410,25 +5297,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule EventPropagators
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPluginHub = __webpack_require__(43);
-	var EventPluginUtils = __webpack_require__(45);
-
-	var accumulateInto = __webpack_require__(47);
-	var forEachAccumulated = __webpack_require__(48);
-	var warning = __webpack_require__(11);
-
-	var PropagationPhases = EventConstants.PropagationPhases;
-=======
 	var EventPluginHub = __webpack_require__(42);
 	var EventPluginUtils = __webpack_require__(44);
 
@@ -6436,7 +5308,6 @@
 	var forEachAccumulated = __webpack_require__(47);
 	var warning = __webpack_require__(11);
 
->>>>>>> change to bundle.js
 	var getListener = EventPluginHub.getListener;
 
 	/**
@@ -6454,18 +5325,10 @@
 	 * Mutating the event's members allows us to not have to create a wrapping
 	 * "dispatch" object that pairs the event with the listener.
 	 */
-<<<<<<< HEAD
-	function accumulateDirectionalDispatches(inst, upwards, event) {
-	  if (process.env.NODE_ENV !== 'production') {
-	    process.env.NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
-	  }
-	  var phase = upwards ? PropagationPhases.bubbled : PropagationPhases.captured;
-=======
 	function accumulateDirectionalDispatches(inst, phase, event) {
 	  if (process.env.NODE_ENV !== 'production') {
 	    process.env.NODE_ENV !== 'production' ? warning(inst, 'Dispatching inst must not be null') : void 0;
 	  }
->>>>>>> change to bundle.js
 	  var listener = listenerAtPhase(inst, event, phase);
 	  if (listener) {
 	    event._dispatchListeners = accumulateInto(event._dispatchListeners, listener);
@@ -6562,11 +5425,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 43 */
-=======
 /* 42 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6577,24 +5436,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule EventPluginHub
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var EventPluginRegistry = __webpack_require__(44);
-	var EventPluginUtils = __webpack_require__(45);
-	var ReactErrorUtils = __webpack_require__(46);
-
-	var accumulateInto = __webpack_require__(47);
-	var forEachAccumulated = __webpack_require__(48);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var EventPluginRegistry = __webpack_require__(43);
@@ -6603,7 +5448,6 @@
 
 	var accumulateInto = __webpack_require__(46);
 	var forEachAccumulated = __webpack_require__(47);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 
 	/**
@@ -6837,11 +5681,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 44 */
-=======
 /* 43 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -6852,31 +5692,19 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule EventPluginRegistry
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
 	/**
 	 * Injectable ordering of event plugins.
 	 */
-<<<<<<< HEAD
-	var EventPluginOrder = null;
-=======
 	var eventPluginOrder = null;
->>>>>>> change to bundle.js
 
 	/**
 	 * Injectable mapping from names to event plugin modules.
@@ -6889,15 +5717,6 @@
 	 * @private
 	 */
 	function recomputePluginOrdering() {
-<<<<<<< HEAD
-	  if (!EventPluginOrder) {
-	    // Wait until an `EventPluginOrder` is injected.
-	    return;
-	  }
-	  for (var pluginName in namesToPlugins) {
-	    var PluginModule = namesToPlugins[pluginName];
-	    var pluginIndex = EventPluginOrder.indexOf(pluginName);
-=======
 	  if (!eventPluginOrder) {
 	    // Wait until an `eventPluginOrder` is injected.
 	    return;
@@ -6905,24 +5724,15 @@
 	  for (var pluginName in namesToPlugins) {
 	    var pluginModule = namesToPlugins[pluginName];
 	    var pluginIndex = eventPluginOrder.indexOf(pluginName);
->>>>>>> change to bundle.js
 	    !(pluginIndex > -1) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugins that do not exist in the plugin ordering, `%s`.', pluginName) : _prodInvariant('96', pluginName) : void 0;
 	    if (EventPluginRegistry.plugins[pluginIndex]) {
 	      continue;
 	    }
-<<<<<<< HEAD
-	    !PluginModule.extractEvents ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
-	    EventPluginRegistry.plugins[pluginIndex] = PluginModule;
-	    var publishedEvents = PluginModule.eventTypes;
-	    for (var eventName in publishedEvents) {
-	      !publishEventForPlugin(publishedEvents[eventName], PluginModule, eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
-=======
 	    !pluginModule.extractEvents ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Event plugins must implement an `extractEvents` method, but `%s` does not.', pluginName) : _prodInvariant('97', pluginName) : void 0;
 	    EventPluginRegistry.plugins[pluginIndex] = pluginModule;
 	    var publishedEvents = pluginModule.eventTypes;
 	    for (var eventName in publishedEvents) {
 	      !publishEventForPlugin(publishedEvents[eventName], pluginModule, eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Failed to publish event `%s` for plugin `%s`.', eventName, pluginName) : _prodInvariant('98', eventName, pluginName) : void 0;
->>>>>>> change to bundle.js
 	    }
 	  }
 	}
@@ -6935,11 +5745,7 @@
 	 * @return {boolean} True if the event was successfully published.
 	 * @private
 	 */
-<<<<<<< HEAD
-	function publishEventForPlugin(dispatchConfig, PluginModule, eventName) {
-=======
 	function publishEventForPlugin(dispatchConfig, pluginModule, eventName) {
->>>>>>> change to bundle.js
 	  !!EventPluginRegistry.eventNameDispatchConfigs.hasOwnProperty(eventName) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same event name, `%s`.', eventName) : _prodInvariant('99', eventName) : void 0;
 	  EventPluginRegistry.eventNameDispatchConfigs[eventName] = dispatchConfig;
 
@@ -6948,20 +5754,12 @@
 	    for (var phaseName in phasedRegistrationNames) {
 	      if (phasedRegistrationNames.hasOwnProperty(phaseName)) {
 	        var phasedRegistrationName = phasedRegistrationNames[phaseName];
-<<<<<<< HEAD
-	        publishRegistrationName(phasedRegistrationName, PluginModule, eventName);
-=======
 	        publishRegistrationName(phasedRegistrationName, pluginModule, eventName);
->>>>>>> change to bundle.js
 	      }
 	    }
 	    return true;
 	  } else if (dispatchConfig.registrationName) {
-<<<<<<< HEAD
-	    publishRegistrationName(dispatchConfig.registrationName, PluginModule, eventName);
-=======
 	    publishRegistrationName(dispatchConfig.registrationName, pluginModule, eventName);
->>>>>>> change to bundle.js
 	    return true;
 	  }
 	  return false;
@@ -6975,17 +5773,10 @@
 	 * @param {object} PluginModule Plugin publishing the event.
 	 * @private
 	 */
-<<<<<<< HEAD
-	function publishRegistrationName(registrationName, PluginModule, eventName) {
-	  !!EventPluginRegistry.registrationNameModules[registrationName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
-	  EventPluginRegistry.registrationNameModules[registrationName] = PluginModule;
-	  EventPluginRegistry.registrationNameDependencies[registrationName] = PluginModule.eventTypes[eventName].dependencies;
-=======
 	function publishRegistrationName(registrationName, pluginModule, eventName) {
 	  !!EventPluginRegistry.registrationNameModules[registrationName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginHub: More than one plugin attempted to publish the same registration name, `%s`.', registrationName) : _prodInvariant('100', registrationName) : void 0;
 	  EventPluginRegistry.registrationNameModules[registrationName] = pluginModule;
 	  EventPluginRegistry.registrationNameDependencies[registrationName] = pluginModule.eventTypes[eventName].dependencies;
->>>>>>> change to bundle.js
 
 	  if (process.env.NODE_ENV !== 'production') {
 	    var lowerCasedName = registrationName.toLowerCase();
@@ -7031,10 +5822,7 @@
 	   * @type {Object}
 	   */
 	  possibleRegistrationNames: process.env.NODE_ENV !== 'production' ? {} : null,
-<<<<<<< HEAD
-=======
 	  // Trust the developer to only use possibleRegistrationNames in __DEV__
->>>>>>> change to bundle.js
 
 	  /**
 	   * Injects an ordering of plugins (by plugin name). This allows the ordering
@@ -7045,17 +5833,10 @@
 	   * @internal
 	   * @see {EventPluginHub.injection.injectEventPluginOrder}
 	   */
-<<<<<<< HEAD
-	  injectEventPluginOrder: function (InjectedEventPluginOrder) {
-	    !!EventPluginOrder ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
-	    // Clone the ordering so it cannot be dynamically mutated.
-	    EventPluginOrder = Array.prototype.slice.call(InjectedEventPluginOrder);
-=======
 	  injectEventPluginOrder: function (injectedEventPluginOrder) {
 	    !!eventPluginOrder ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject event plugin ordering more than once. You are likely trying to load more than one copy of React.') : _prodInvariant('101') : void 0;
 	    // Clone the ordering so it cannot be dynamically mutated.
 	    eventPluginOrder = Array.prototype.slice.call(injectedEventPluginOrder);
->>>>>>> change to bundle.js
 	    recomputePluginOrdering();
 	  },
 
@@ -7075,17 +5856,10 @@
 	      if (!injectedNamesToPlugins.hasOwnProperty(pluginName)) {
 	        continue;
 	      }
-<<<<<<< HEAD
-	      var PluginModule = injectedNamesToPlugins[pluginName];
-	      if (!namesToPlugins.hasOwnProperty(pluginName) || namesToPlugins[pluginName] !== PluginModule) {
-	        !!namesToPlugins[pluginName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
-	        namesToPlugins[pluginName] = PluginModule;
-=======
 	      var pluginModule = injectedNamesToPlugins[pluginName];
 	      if (!namesToPlugins.hasOwnProperty(pluginName) || namesToPlugins[pluginName] !== pluginModule) {
 	        !!namesToPlugins[pluginName] ? process.env.NODE_ENV !== 'production' ? invariant(false, 'EventPluginRegistry: Cannot inject two different event plugins using the same name, `%s`.', pluginName) : _prodInvariant('102', pluginName) : void 0;
 	        namesToPlugins[pluginName] = pluginModule;
->>>>>>> change to bundle.js
 	        isOrderingDirty = true;
 	      }
 	    }
@@ -7106,15 +5880,6 @@
 	    if (dispatchConfig.registrationName) {
 	      return EventPluginRegistry.registrationNameModules[dispatchConfig.registrationName] || null;
 	    }
-<<<<<<< HEAD
-	    for (var phase in dispatchConfig.phasedRegistrationNames) {
-	      if (!dispatchConfig.phasedRegistrationNames.hasOwnProperty(phase)) {
-	        continue;
-	      }
-	      var PluginModule = EventPluginRegistry.registrationNameModules[dispatchConfig.phasedRegistrationNames[phase]];
-	      if (PluginModule) {
-	        return PluginModule;
-=======
 	    if (dispatchConfig.phasedRegistrationNames !== undefined) {
 	      // pulling phasedRegistrationNames out of dispatchConfig helps Flow see
 	      // that it is not undefined.
@@ -7128,7 +5893,6 @@
 	        if (pluginModule) {
 	          return pluginModule;
 	        }
->>>>>>> change to bundle.js
 	      }
 	    }
 	    return null;
@@ -7139,11 +5903,7 @@
 	   * @private
 	   */
 	  _resetEventPlugins: function () {
-<<<<<<< HEAD
-	    EventPluginOrder = null;
-=======
 	    eventPluginOrder = null;
->>>>>>> change to bundle.js
 	    for (var pluginName in namesToPlugins) {
 	      if (namesToPlugins.hasOwnProperty(pluginName)) {
 	        delete namesToPlugins[pluginName];
@@ -7181,11 +5941,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 45 */
-=======
 /* 44 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7196,24 +5952,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule EventPluginUtils
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var EventConstants = __webpack_require__(41);
-	var ReactErrorUtils = __webpack_require__(46);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var ReactErrorUtils = __webpack_require__(45);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
@@ -7243,19 +5988,6 @@
 	  }
 	};
 
-<<<<<<< HEAD
-	var topLevelTypes = EventConstants.topLevelTypes;
-
-	function isEndish(topLevelType) {
-	  return topLevelType === topLevelTypes.topMouseUp || topLevelType === topLevelTypes.topTouchEnd || topLevelType === topLevelTypes.topTouchCancel;
-	}
-
-	function isMoveish(topLevelType) {
-	  return topLevelType === topLevelTypes.topMouseMove || topLevelType === topLevelTypes.topTouchMove;
-	}
-	function isStartish(topLevelType) {
-	  return topLevelType === topLevelTypes.topMouseDown || topLevelType === topLevelTypes.topTouchStart;
-=======
 	function isEndish(topLevelType) {
 	  return topLevelType === 'topMouseUp' || topLevelType === 'topTouchEnd' || topLevelType === 'topTouchCancel';
 	}
@@ -7265,7 +5997,6 @@
 	}
 	function isStartish(topLevelType) {
 	  return topLevelType === 'topMouseDown' || topLevelType === 'topTouchStart';
->>>>>>> change to bundle.js
 	}
 
 	var validateEventDispatches;
@@ -7441,11 +6172,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 46 */
-=======
 /* 45 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7456,11 +6183,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactErrorUtils
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -7470,32 +6193,18 @@
 	/**
 	 * Call a function while guarding against errors that happens within it.
 	 *
-<<<<<<< HEAD
-	 * @param {?String} name of the guard to use for logging or debugging
-=======
 	 * @param {String} name of the guard to use for logging or debugging
->>>>>>> change to bundle.js
 	 * @param {Function} func The function to invoke
 	 * @param {*} a First argument
 	 * @param {*} b Second argument
 	 */
-<<<<<<< HEAD
-	function invokeGuardedCallback(name, func, a, b) {
-	  try {
-	    return func(a, b);
-=======
 	function invokeGuardedCallback(name, func, a) {
 	  try {
 	    func(a);
->>>>>>> change to bundle.js
 	  } catch (x) {
 	    if (caughtError === null) {
 	      caughtError = x;
 	    }
-<<<<<<< HEAD
-	    return undefined;
-=======
->>>>>>> change to bundle.js
 	  }
 	}
 
@@ -7528,20 +6237,12 @@
 	   */
 	  if (typeof window !== 'undefined' && typeof window.dispatchEvent === 'function' && typeof document !== 'undefined' && typeof document.createEvent === 'function') {
 	    var fakeNode = document.createElement('react');
-<<<<<<< HEAD
-	    ReactErrorUtils.invokeGuardedCallback = function (name, func, a, b) {
-	      var boundFunc = func.bind(null, a, b);
-	      var evtType = 'react-' + name;
-	      fakeNode.addEventListener(evtType, boundFunc, false);
-	      var evt = document.createEvent('Event');
-=======
 	    ReactErrorUtils.invokeGuardedCallback = function (name, func, a) {
 	      var boundFunc = func.bind(null, a);
 	      var evtType = 'react-' + name;
 	      fakeNode.addEventListener(evtType, boundFunc, false);
 	      var evt = document.createEvent('Event');
 	      // $FlowFixMe https://github.com/facebook/flow/issues/2336
->>>>>>> change to bundle.js
 	      evt.initEvent(evtType, false, false);
 	      fakeNode.dispatchEvent(evt);
 	      fakeNode.removeEventListener(evtType, boundFunc, false);
@@ -7553,11 +6254,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 47 */
-=======
 /* 46 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -7568,20 +6265,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule accumulateInto
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -7628,11 +6317,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 48 */
-=======
 /* 47 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -7643,10 +6328,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule forEachAccumulated
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -7671,11 +6352,7 @@
 	module.exports = forEachAccumulated;
 
 /***/ },
-<<<<<<< HEAD
-/* 49 */
-=======
 /* 48 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -7715,11 +6392,7 @@
 	module.exports = ExecutionEnvironment;
 
 /***/ },
-<<<<<<< HEAD
-/* 50 */
-=======
 /* 49 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -7730,21 +6403,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule FallbackCompositionState
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var PooledClass = __webpack_require__(6);
-=======
 	var PooledClass = __webpack_require__(50);
->>>>>>> change to bundle.js
 
 	var getTextContentAccessor = __webpack_require__(51);
 
@@ -7826,8 +6491,6 @@
 	module.exports = FallbackCompositionState;
 
 /***/ },
-<<<<<<< HEAD
-=======
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7957,7 +6620,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
->>>>>>> change to bundle.js
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7969,19 +6631,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getTextContentAccessor
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 
 	var contentKey = null;
 
@@ -8014,10 +6668,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticCompositionEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -8058,21 +6708,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var PooledClass = __webpack_require__(6);
-=======
 	var PooledClass = __webpack_require__(50);
->>>>>>> change to bundle.js
 
 	var emptyFunction = __webpack_require__(12);
 	var warning = __webpack_require__(11);
@@ -8339,10 +6981,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticInputEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -8384,30 +7022,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ChangeEventPlugin
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPluginHub = __webpack_require__(43);
-	var EventPropagators = __webpack_require__(42);
-	var ExecutionEnvironment = __webpack_require__(49);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactUpdates = __webpack_require__(56);
-	var SyntheticEvent = __webpack_require__(53);
-
-	var getEventTarget = __webpack_require__(70);
-	var isEventSupported = __webpack_require__(71);
-	var isTextInputElement = __webpack_require__(72);
-	var keyOf = __webpack_require__(25);
-
-	var topLevelTypes = EventConstants.topLevelTypes;
-=======
 	var EventPluginHub = __webpack_require__(42);
 	var EventPropagators = __webpack_require__(41);
 	var ExecutionEnvironment = __webpack_require__(48);
@@ -8418,22 +7036,14 @@
 	var getEventTarget = __webpack_require__(69);
 	var isEventSupported = __webpack_require__(70);
 	var isTextInputElement = __webpack_require__(71);
->>>>>>> change to bundle.js
 
 	var eventTypes = {
 	  change: {
 	    phasedRegistrationNames: {
-<<<<<<< HEAD
-	      bubbled: keyOf({ onChange: null }),
-	      captured: keyOf({ onChangeCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topChange, topLevelTypes.topClick, topLevelTypes.topFocus, topLevelTypes.topInput, topLevelTypes.topKeyDown, topLevelTypes.topKeyUp, topLevelTypes.topSelectionChange]
-=======
 	      bubbled: 'onChange',
 	      captured: 'onChangeCapture'
 	    },
 	    dependencies: ['topBlur', 'topChange', 'topClick', 'topFocus', 'topInput', 'topKeyDown', 'topKeyUp', 'topSelectionChange']
->>>>>>> change to bundle.js
 	  }
 	};
 
@@ -8498,29 +7108,17 @@
 	}
 
 	function getTargetInstForChangeEvent(topLevelType, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topChange) {
-=======
 	  if (topLevelType === 'topChange') {
->>>>>>> change to bundle.js
 	    return targetInst;
 	  }
 	}
 	function handleEventsForChangeEventIE8(topLevelType, target, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topFocus) {
-=======
 	  if (topLevelType === 'topFocus') {
->>>>>>> change to bundle.js
 	    // stopWatching() should be a noop here but we call it just in case we
 	    // missed a blur event somehow.
 	    stopWatchingForChangeEventIE8();
 	    startWatchingForChangeEventIE8(target, targetInst);
-<<<<<<< HEAD
-	  } else if (topLevelType === topLevelTypes.topBlur) {
-=======
 	  } else if (topLevelType === 'topBlur') {
->>>>>>> change to bundle.js
 	    stopWatchingForChangeEventIE8();
 	  }
 	}
@@ -8618,11 +7216,7 @@
 	 * If a `change` event should be fired, returns the target's ID.
 	 */
 	function getTargetInstForInputEvent(topLevelType, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topInput) {
-=======
 	  if (topLevelType === 'topInput') {
->>>>>>> change to bundle.js
 	    // In modern browsers (i.e., not IE8 or IE9), the input event is exactly
 	    // what we want so fall through here and trigger an abstract event
 	    return targetInst;
@@ -8630,11 +7224,7 @@
 	}
 
 	function handleEventsForInputEventIE(topLevelType, target, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topFocus) {
-=======
 	  if (topLevelType === 'topFocus') {
->>>>>>> change to bundle.js
 	    // In IE8, we can capture almost all .value changes by adding a
 	    // propertychange handler and looking for events with propertyName
 	    // equal to 'value'
@@ -8650,22 +7240,14 @@
 	    // missed a blur event somehow.
 	    stopWatchingForValueChange();
 	    startWatchingForValueChange(target, targetInst);
-<<<<<<< HEAD
-	  } else if (topLevelType === topLevelTypes.topBlur) {
-=======
 	  } else if (topLevelType === 'topBlur') {
->>>>>>> change to bundle.js
 	    stopWatchingForValueChange();
 	  }
 	}
 
 	// For IE8 and IE9.
 	function getTargetInstForInputEventIE(topLevelType, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topSelectionChange || topLevelType === topLevelTypes.topKeyUp || topLevelType === topLevelTypes.topKeyDown) {
-=======
 	  if (topLevelType === 'topSelectionChange' || topLevelType === 'topKeyUp' || topLevelType === 'topKeyDown') {
->>>>>>> change to bundle.js
 	    // On the selectionchange event, the target is just document which isn't
 	    // helpful for us so just check activeElement instead.
 	    //
@@ -8694,11 +7276,7 @@
 	}
 
 	function getTargetInstForClickEvent(topLevelType, targetInst) {
-<<<<<<< HEAD
-	  if (topLevelType === topLevelTypes.topClick) {
-=======
 	  if (topLevelType === 'topClick') {
->>>>>>> change to bundle.js
 	    return targetInst;
 	  }
 	}
@@ -8769,24 +7347,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactUpdates
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var CallbackQueue = __webpack_require__(57);
-	var PooledClass = __webpack_require__(6);
-	var ReactFeatureFlags = __webpack_require__(58);
-	var ReactReconciler = __webpack_require__(59);
-	var Transaction = __webpack_require__(69);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
@@ -8795,7 +7359,6 @@
 	var ReactFeatureFlags = __webpack_require__(58);
 	var ReactReconciler = __webpack_require__(59);
 	var Transaction = __webpack_require__(68);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -8848,11 +7411,7 @@
 	  /* useCreateElement */true);
 	}
 
-<<<<<<< HEAD
-	_assign(ReactUpdatesFlushTransaction.prototype, Transaction.Mixin, {
-=======
 	_assign(ReactUpdatesFlushTransaction.prototype, Transaction, {
->>>>>>> change to bundle.js
 	  getTransactionWrappers: function () {
 	    return TRANSACTION_WRAPPERS;
 	  },
@@ -8868,11 +7427,7 @@
 	  perform: function (method, scope, a) {
 	    // Essentially calls `this.reconcileTransaction.perform(method, scope, a)`
 	    // with this transaction's wrappers around it.
-<<<<<<< HEAD
-	    return Transaction.Mixin.perform.call(this, this.reconcileTransaction.perform, this.reconcileTransaction, method, scope, a);
-=======
 	    return Transaction.perform.call(this, this.reconcileTransaction.perform, this.reconcileTransaction, method, scope, a);
->>>>>>> change to bundle.js
 	  }
 	});
 
@@ -8880,11 +7435,7 @@
 
 	function batchedUpdates(callback, a, b, c, d, e) {
 	  ensureInjected();
-<<<<<<< HEAD
-	  batchingStrategy.batchedUpdates(callback, a, b, c, d, e);
-=======
 	  return batchingStrategy.batchedUpdates(callback, a, b, c, d, e);
->>>>>>> change to bundle.js
 	}
 
 	/**
@@ -8930,11 +7481,7 @@
 	    if (ReactFeatureFlags.logTopLevelRenders) {
 	      var namedComponent = component;
 	      // Duck type TopLevelWrapper. This is probably always true.
-<<<<<<< HEAD
-	      if (component._currentElement.props === component._renderedComponent._currentElement) {
-=======
 	      if (component._currentElement.type.isReactTopLevelWrapper) {
->>>>>>> change to bundle.js
 	        namedComponent = component._renderedComponent;
 	      }
 	      markerName = 'React update: ' + namedComponent.getName();
@@ -9056,27 +7603,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule CallbackQueue
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var PooledClass = __webpack_require__(6);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var PooledClass = __webpack_require__(50);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -9091,14 +7627,6 @@
 	 * @implements PooledClass
 	 * @internal
 	 */
-<<<<<<< HEAD
-	function CallbackQueue() {
-	  this._callbacks = null;
-	  this._contexts = null;
-	}
-
-	_assign(CallbackQueue.prototype, {
-=======
 
 	var CallbackQueue = function () {
 	  function CallbackQueue(arg) {
@@ -9108,7 +7636,6 @@
 	    this._contexts = null;
 	    this._arg = arg;
 	  }
->>>>>>> change to bundle.js
 
 	  /**
 	   * Enqueues a callback to be invoked when `notifyAll` is invoked.
@@ -9117,14 +7644,6 @@
 	   * @param {?object} context Context to call `callback` with.
 	   * @internal
 	   */
-<<<<<<< HEAD
-	  enqueue: function (callback, context) {
-	    this._callbacks = this._callbacks || [];
-	    this._contexts = this._contexts || [];
-	    this._callbacks.push(callback);
-	    this._contexts.push(context);
-	  },
-=======
 
 
 	  CallbackQueue.prototype.enqueue = function enqueue(callback, context) {
@@ -9133,7 +7652,6 @@
 	    this._contexts = this._contexts || [];
 	    this._contexts.push(context);
 	  };
->>>>>>> change to bundle.js
 
 	  /**
 	   * Invokes all enqueued callbacks and clears the queue. This is invoked after
@@ -9141,12 +7659,6 @@
 	   *
 	   * @internal
 	   */
-<<<<<<< HEAD
-	  notifyAll: function () {
-	    var callbacks = this._callbacks;
-	    var contexts = this._contexts;
-	    if (callbacks) {
-=======
 
 
 	  CallbackQueue.prototype.notifyAll = function notifyAll() {
@@ -9154,34 +7666,15 @@
 	    var contexts = this._contexts;
 	    var arg = this._arg;
 	    if (callbacks && contexts) {
->>>>>>> change to bundle.js
 	      !(callbacks.length === contexts.length) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Mismatched list of contexts in callback queue') : _prodInvariant('24') : void 0;
 	      this._callbacks = null;
 	      this._contexts = null;
 	      for (var i = 0; i < callbacks.length; i++) {
-<<<<<<< HEAD
-	        callbacks[i].call(contexts[i]);
-=======
 	        callbacks[i].call(contexts[i], arg);
->>>>>>> change to bundle.js
 	      }
 	      callbacks.length = 0;
 	      contexts.length = 0;
 	    }
-<<<<<<< HEAD
-	  },
-
-	  checkpoint: function () {
-	    return this._callbacks ? this._callbacks.length : 0;
-	  },
-
-	  rollback: function (len) {
-	    if (this._callbacks) {
-	      this._callbacks.length = len;
-	      this._contexts.length = len;
-	    }
-	  },
-=======
 	  };
 
 	  CallbackQueue.prototype.checkpoint = function checkpoint() {
@@ -9194,41 +7687,22 @@
 	      this._contexts.length = len;
 	    }
 	  };
->>>>>>> change to bundle.js
 
 	  /**
 	   * Resets the internal queue.
 	   *
 	   * @internal
 	   */
-<<<<<<< HEAD
-	  reset: function () {
-	    this._callbacks = null;
-	    this._contexts = null;
-	  },
-=======
 
 
 	  CallbackQueue.prototype.reset = function reset() {
 	    this._callbacks = null;
 	    this._contexts = null;
 	  };
->>>>>>> change to bundle.js
 
 	  /**
 	   * `PooledClass` looks for this.
 	   */
-<<<<<<< HEAD
-	  destructor: function () {
-	    this.reset();
-	  }
-
-	});
-
-	PooledClass.addPoolingTo(CallbackQueue);
-
-	module.exports = CallbackQueue;
-=======
 
 
 	  CallbackQueue.prototype.destructor = function destructor() {
@@ -9239,7 +7713,6 @@
 	}();
 
 	module.exports = PooledClass.addPoolingTo(CallbackQueue);
->>>>>>> change to bundle.js
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
@@ -9254,10 +7727,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactFeatureFlags
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -9284,10 +7753,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactReconciler
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -9461,11 +7926,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactRef
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -9493,11 +7954,7 @@
 	}
 
 	ReactRef.attachRefs = function (instance, element) {
-<<<<<<< HEAD
-	  if (element === null || element === false) {
-=======
 	  if (element === null || typeof element !== 'object') {
->>>>>>> change to bundle.js
 	    return;
 	  }
 	  var ref = element.ref;
@@ -9519,21 +7976,6 @@
 	  // is made. It probably belongs where the key checking and
 	  // instantiateReactComponent is done.
 
-<<<<<<< HEAD
-	  var prevEmpty = prevElement === null || prevElement === false;
-	  var nextEmpty = nextElement === null || nextElement === false;
-
-	  return (
-	    // This has a few false positives w/r/t empty components.
-	    prevEmpty || nextEmpty || nextElement.ref !== prevElement.ref ||
-	    // If owner changes but we have an unchanged function ref, don't update refs
-	    typeof nextElement.ref === 'string' && nextElement._owner !== prevElement._owner
-	  );
-	};
-
-	ReactRef.detachRefs = function (instance, element) {
-	  if (element === null || element === false) {
-=======
 	  var prevRef = null;
 	  var prevOwner = null;
 	  if (prevElement !== null && typeof prevElement === 'object') {
@@ -9555,7 +7997,6 @@
 
 	ReactRef.detachRefs = function (instance, element) {
 	  if (element === null || typeof element !== 'object') {
->>>>>>> change to bundle.js
 	    return;
 	  }
 	  var ref = element.ref;
@@ -9578,26 +8019,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactOwner
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
 	/**
-<<<<<<< HEAD
-=======
 	 * @param {?object} object
 	 * @return {boolean} True if `object` is a valid owner.
 	 * @final
@@ -9607,7 +8038,6 @@
 	}
 
 	/**
->>>>>>> change to bundle.js
 	 * ReactOwners are capable of storing references to owned components.
 	 *
 	 * All components are capable of //being// referenced by owner components, but
@@ -9638,19 +8068,6 @@
 	 * @class ReactOwner
 	 */
 	var ReactOwner = {
-<<<<<<< HEAD
-
-	  /**
-	   * @param {?object} object
-	   * @return {boolean} True if `object` is a valid owner.
-	   * @final
-	   */
-	  isValidOwner: function (object) {
-	    return !!(object && typeof object.attachRef === 'function' && typeof object.detachRef === 'function');
-	  },
-
-=======
->>>>>>> change to bundle.js
 	  /**
 	   * Adds a component by ref to an owner component.
 	   *
@@ -9661,11 +8078,7 @@
 	   * @internal
 	   */
 	  addComponentAsRefTo: function (component, ref, owner) {
-<<<<<<< HEAD
-	    !ReactOwner.isValidOwner(owner) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('119') : void 0;
-=======
 	    !isValidOwner(owner) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('119') : void 0;
->>>>>>> change to bundle.js
 	    owner.attachRef(ref, component);
 	  },
 
@@ -9679,11 +8092,7 @@
 	   * @internal
 	   */
 	  removeComponentAsRefFrom: function (component, ref, owner) {
-<<<<<<< HEAD
-	    !ReactOwner.isValidOwner(owner) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'removeComponentAsRefFrom(...): Only a ReactOwner can have refs. You might be removing a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('120') : void 0;
-=======
 	    !isValidOwner(owner) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'removeComponentAsRefFrom(...): Only a ReactOwner can have refs. You might be removing a ref to a component that was not created inside a component\'s `render` method, or you have multiple copies of React loaded (details: https://fb.me/react-refs-must-have-owner).') : _prodInvariant('120') : void 0;
->>>>>>> change to bundle.js
 	    var ownerPublicInstance = owner.getPublicInstance();
 	    // Check that `component`'s owner is still alive and that `component` is still the current ref
 	    // because we do not want to detach the ref if another component stole it.
@@ -9709,20 +8118,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactInstrumentation
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-=======
 	// Trust the developer to only use ReactInstrumentation with a __DEV__ check
 
->>>>>>> change to bundle.js
 	var debugTool = null;
 
 	if (process.env.NODE_ENV !== 'production') {
@@ -9745,29 +8147,17 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDebugTool
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var ReactInvalidSetStateWarningHook = __webpack_require__(64);
 	var ReactHostOperationHistoryHook = __webpack_require__(65);
-<<<<<<< HEAD
-	var ReactComponentTreeHook = __webpack_require__(28);
-	var ReactChildrenMutationWarningHook = __webpack_require__(66);
-	var ExecutionEnvironment = __webpack_require__(49);
-
-	var performanceNow = __webpack_require__(67);
-=======
 	var ReactComponentTreeHook = __webpack_require__(26);
 	var ExecutionEnvironment = __webpack_require__(48);
 
 	var performanceNow = __webpack_require__(66);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var hooks = [];
@@ -9796,19 +8186,11 @@
 	var flushHistory = [];
 	var lifeCycleTimerStack = [];
 	var currentFlushNesting = 0;
-<<<<<<< HEAD
-	var currentFlushMeasurements = null;
-	var currentFlushStartTime = null;
-	var currentTimerDebugID = null;
-	var currentTimerStartTime = null;
-	var currentTimerNestedFlushDuration = null;
-=======
 	var currentFlushMeasurements = [];
 	var currentFlushStartTime = 0;
 	var currentTimerDebugID = null;
 	var currentTimerStartTime = 0;
 	var currentTimerNestedFlushDuration = 0;
->>>>>>> change to bundle.js
 	var currentTimerType = null;
 
 	var lifeCycleTimerHasWarned = false;
@@ -9828,11 +8210,7 @@
 	      updateCount: ReactComponentTreeHook.getUpdateCount(id),
 	      childIDs: ReactComponentTreeHook.getChildIDs(id),
 	      // Text nodes don't have owners but this is close enough.
-<<<<<<< HEAD
-	      ownerID: ownerID || ReactComponentTreeHook.getOwnerID(parentID),
-=======
 	      ownerID: ownerID || parentID && ReactComponentTreeHook.getOwnerID(parentID) || 0,
->>>>>>> change to bundle.js
 	      parentID: parentID
 	    };
 	    return tree;
@@ -9841,21 +8219,12 @@
 
 	function resetMeasurements() {
 	  var previousStartTime = currentFlushStartTime;
-<<<<<<< HEAD
-	  var previousMeasurements = currentFlushMeasurements || [];
-	  var previousOperations = ReactHostOperationHistoryHook.getHistory();
-
-	  if (currentFlushNesting === 0) {
-	    currentFlushStartTime = null;
-	    currentFlushMeasurements = null;
-=======
 	  var previousMeasurements = currentFlushMeasurements;
 	  var previousOperations = ReactHostOperationHistoryHook.getHistory();
 
 	  if (currentFlushNesting === 0) {
 	    currentFlushStartTime = 0;
 	    currentFlushMeasurements = [];
->>>>>>> change to bundle.js
 	    clearHistory();
 	    return;
 	  }
@@ -9876,11 +8245,7 @@
 	}
 
 	function checkDebugID(debugID) {
-<<<<<<< HEAD
-	  var allowRoot = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
-=======
 	  var allowRoot = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
->>>>>>> change to bundle.js
 
 	  if (allowRoot && debugID === 0) {
 	    return;
@@ -9919,13 +8284,8 @@
 	      duration: performanceNow() - currentTimerStartTime - currentTimerNestedFlushDuration
 	    });
 	  }
-<<<<<<< HEAD
-	  currentTimerStartTime = null;
-	  currentTimerNestedFlushDuration = null;
-=======
 	  currentTimerStartTime = 0;
 	  currentTimerNestedFlushDuration = 0;
->>>>>>> change to bundle.js
 	  currentTimerDebugID = null;
 	  currentTimerType = null;
 	}
@@ -9938,32 +8298,18 @@
 	    timerType: currentTimerType
 	  };
 	  lifeCycleTimerStack.push(currentTimer);
-<<<<<<< HEAD
-	  currentTimerStartTime = null;
-	  currentTimerNestedFlushDuration = null;
-=======
 	  currentTimerStartTime = 0;
 	  currentTimerNestedFlushDuration = 0;
->>>>>>> change to bundle.js
 	  currentTimerDebugID = null;
 	  currentTimerType = null;
 	}
 
 	function resumeCurrentLifeCycleTimer() {
-<<<<<<< HEAD
-	  var _lifeCycleTimerStack$ = lifeCycleTimerStack.pop();
-
-	  var startTime = _lifeCycleTimerStack$.startTime;
-	  var nestedFlushStartTime = _lifeCycleTimerStack$.nestedFlushStartTime;
-	  var debugID = _lifeCycleTimerStack$.debugID;
-	  var timerType = _lifeCycleTimerStack$.timerType;
-=======
 	  var _lifeCycleTimerStack$ = lifeCycleTimerStack.pop(),
 	      startTime = _lifeCycleTimerStack$.startTime,
 	      nestedFlushStartTime = _lifeCycleTimerStack$.nestedFlushStartTime,
 	      debugID = _lifeCycleTimerStack$.debugID,
 	      timerType = _lifeCycleTimerStack$.timerType;
->>>>>>> change to bundle.js
 
 	  var nestedFlushDuration = performanceNow() - nestedFlushStartTime;
 	  currentTimerStartTime = startTime;
@@ -9972,8 +8318,6 @@
 	  currentTimerType = timerType;
 	}
 
-<<<<<<< HEAD
-=======
 	var lastMarkTimeStamp = 0;
 	var canUsePerformanceMeasure =
 	// $FlowFixMe https://github.com/facebook/flow/issues/2345
@@ -10028,7 +8372,6 @@
 	  performance.clearMeasures(measurementName);
 	}
 
->>>>>>> change to bundle.js
 	var ReactDebugTool = {
 	  addHook: function (hook) {
 	    hooks.push(hook);
@@ -10081,19 +8424,13 @@
 	  onBeginLifeCycleTimer: function (debugID, timerType) {
 	    checkDebugID(debugID);
 	    emitEvent('onBeginLifeCycleTimer', debugID, timerType);
-<<<<<<< HEAD
-=======
 	    markBegin(debugID, timerType);
->>>>>>> change to bundle.js
 	    beginLifeCycleTimer(debugID, timerType);
 	  },
 	  onEndLifeCycleTimer: function (debugID, timerType) {
 	    checkDebugID(debugID);
 	    endLifeCycleTimer(debugID, timerType);
-<<<<<<< HEAD
-=======
 	    markEnd(debugID, timerType);
->>>>>>> change to bundle.js
 	    emitEvent('onEndLifeCycleTimer', debugID, timerType);
 	  },
 	  onBeginProcessingChildContext: function () {
@@ -10102,15 +8439,9 @@
 	  onEndProcessingChildContext: function () {
 	    emitEvent('onEndProcessingChildContext');
 	  },
-<<<<<<< HEAD
-	  onHostOperation: function (debugID, type, payload) {
-	    checkDebugID(debugID);
-	    emitEvent('onHostOperation', debugID, type, payload);
-=======
 	  onHostOperation: function (operation) {
 	    checkDebugID(operation.instanceID);
 	    emitEvent('onHostOperation', operation);
->>>>>>> change to bundle.js
 	  },
 	  onSetState: function () {
 	    emitEvent('onSetState');
@@ -10124,49 +8455,31 @@
 	    checkDebugID(debugID);
 	    checkDebugID(parentDebugID, true);
 	    emitEvent('onBeforeMountComponent', debugID, element, parentDebugID);
-<<<<<<< HEAD
-	  },
-	  onMountComponent: function (debugID) {
-	    checkDebugID(debugID);
-=======
 	    markBegin(debugID, 'mount');
 	  },
 	  onMountComponent: function (debugID) {
 	    checkDebugID(debugID);
 	    markEnd(debugID, 'mount');
->>>>>>> change to bundle.js
 	    emitEvent('onMountComponent', debugID);
 	  },
 	  onBeforeUpdateComponent: function (debugID, element) {
 	    checkDebugID(debugID);
 	    emitEvent('onBeforeUpdateComponent', debugID, element);
-<<<<<<< HEAD
-	  },
-	  onUpdateComponent: function (debugID) {
-	    checkDebugID(debugID);
-=======
 	    markBegin(debugID, 'update');
 	  },
 	  onUpdateComponent: function (debugID) {
 	    checkDebugID(debugID);
 	    markEnd(debugID, 'update');
->>>>>>> change to bundle.js
 	    emitEvent('onUpdateComponent', debugID);
 	  },
 	  onBeforeUnmountComponent: function (debugID) {
 	    checkDebugID(debugID);
 	    emitEvent('onBeforeUnmountComponent', debugID);
-<<<<<<< HEAD
-	  },
-	  onUnmountComponent: function (debugID) {
-	    checkDebugID(debugID);
-=======
 	    markBegin(debugID, 'unmount');
 	  },
 	  onUnmountComponent: function (debugID) {
 	    checkDebugID(debugID);
 	    markEnd(debugID, 'unmount');
->>>>>>> change to bundle.js
 	    emitEvent('onUnmountComponent', debugID);
 	  },
 	  onTestEvent: function () {
@@ -10180,10 +8493,6 @@
 
 	ReactDebugTool.addHook(ReactInvalidSetStateWarningHook);
 	ReactDebugTool.addHook(ReactComponentTreeHook);
-<<<<<<< HEAD
-	ReactDebugTool.addHook(ReactChildrenMutationWarningHook);
-=======
->>>>>>> change to bundle.js
 	var url = ExecutionEnvironment.canUseDOM && window.location.href || '';
 	if (/[?&]react_perf\b/.test(url)) {
 	  ReactDebugTool.beginProfiling();
@@ -10204,11 +8513,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactInvalidSetStateWarningHook
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -10250,11 +8555,7 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactHostOperationHistoryHook
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -10262,17 +8563,8 @@
 	var history = [];
 
 	var ReactHostOperationHistoryHook = {
-<<<<<<< HEAD
-	  onHostOperation: function (debugID, type, payload) {
-	    history.push({
-	      instanceID: debugID,
-	      type: type,
-	      payload: payload
-	    });
-=======
 	  onHostOperation: function (operation) {
 	    history.push(operation);
->>>>>>> change to bundle.js
 	  },
 	  clearHistory: function () {
 	    if (ReactHostOperationHistoryHook._preventClearing) {
@@ -10293,69 +8585,6 @@
 /* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactChildrenMutationWarningHook
-	 */
-
-	'use strict';
-
-	var ReactComponentTreeHook = __webpack_require__(28);
-
-	var warning = __webpack_require__(11);
-
-	function handleElement(debugID, element) {
-	  if (element == null) {
-	    return;
-	  }
-	  if (element._shadowChildren === undefined) {
-	    return;
-	  }
-	  if (element._shadowChildren === element.props.children) {
-	    return;
-	  }
-	  var isMutated = false;
-	  if (Array.isArray(element._shadowChildren)) {
-	    if (element._shadowChildren.length === element.props.children.length) {
-	      for (var i = 0; i < element._shadowChildren.length; i++) {
-	        if (element._shadowChildren[i] !== element.props.children[i]) {
-	          isMutated = true;
-	        }
-	      }
-	    } else {
-	      isMutated = true;
-	    }
-	  }
-	  if (!Array.isArray(element._shadowChildren) || isMutated) {
-	    process.env.NODE_ENV !== 'production' ? warning(false, 'Component\'s children should not be mutated.%s', ReactComponentTreeHook.getStackAddendumByID(debugID)) : void 0;
-	  }
-	}
-
-	var ReactChildrenMutationWarningHook = {
-	  onMountComponent: function (debugID) {
-	    handleElement(debugID, ReactComponentTreeHook.getElement(debugID));
-	  },
-	  onUpdateComponent: function (debugID) {
-	    handleElement(debugID, ReactComponentTreeHook.getElement(debugID));
-	  }
-	};
-
-	module.exports = ReactChildrenMutationWarningHook;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 67 */
-/***/ function(module, exports, __webpack_require__) {
-
-=======
->>>>>>> change to bundle.js
 	'use strict';
 
 	/**
@@ -10369,11 +8598,7 @@
 	 * @typechecks
 	 */
 
-<<<<<<< HEAD
-	var performance = __webpack_require__(68);
-=======
 	var performance = __webpack_require__(67);
->>>>>>> change to bundle.js
 
 	var performanceNow;
 
@@ -10395,11 +8620,7 @@
 	module.exports = performanceNow;
 
 /***/ },
-<<<<<<< HEAD
-/* 68 */
-=======
 /* 67 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10415,11 +8636,7 @@
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 
 	var performance;
 
@@ -10430,11 +8647,7 @@
 	module.exports = performance || {};
 
 /***/ },
-<<<<<<< HEAD
-/* 69 */
-=======
 /* 68 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -10445,28 +8658,17 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule Transaction
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var invariant = __webpack_require__(8);
-
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var invariant = __webpack_require__(8);
 
 	var OBSERVED_ERROR = {};
 
->>>>>>> change to bundle.js
 	/**
 	 * `Transaction` creates a black box that is able to wrap any method such that
 	 * certain invariants are maintained before and after the method is invoked
@@ -10528,11 +8730,7 @@
 	 *
 	 * @class Transaction
 	 */
-<<<<<<< HEAD
-	var Mixin = {
-=======
 	var TransactionImpl = {
->>>>>>> change to bundle.js
 	  /**
 	   * Sets up this instance so that it is prepared for collecting metrics. Does
 	   * so such that this setup method may be used on an instance that is already
@@ -10622,17 +8820,10 @@
 	        // OBSERVED_ERROR state before overwriting it with the real return value
 	        // of initialize -- if it's still set to OBSERVED_ERROR in the finally
 	        // block, it means wrapper.initialize threw.
-<<<<<<< HEAD
-	        this.wrapperInitData[i] = Transaction.OBSERVED_ERROR;
-	        this.wrapperInitData[i] = wrapper.initialize ? wrapper.initialize.call(this) : null;
-	      } finally {
-	        if (this.wrapperInitData[i] === Transaction.OBSERVED_ERROR) {
-=======
 	        this.wrapperInitData[i] = OBSERVED_ERROR;
 	        this.wrapperInitData[i] = wrapper.initialize ? wrapper.initialize.call(this) : null;
 	      } finally {
 	        if (this.wrapperInitData[i] === OBSERVED_ERROR) {
->>>>>>> change to bundle.js
 	          // The initializer for wrapper i threw an error; initialize the
 	          // remaining wrappers but silence any exceptions from them to ensure
 	          // that the first error is the one to bubble up.
@@ -10663,11 +8854,7 @@
 	        // close -- if it's still set to true in the finally block, it means
 	        // wrapper.close threw.
 	        errorThrown = true;
-<<<<<<< HEAD
-	        if (initData !== Transaction.OBSERVED_ERROR && wrapper.close) {
-=======
 	        if (initData !== OBSERVED_ERROR && wrapper.close) {
->>>>>>> change to bundle.js
 	          wrapper.close.call(this, initData);
 	        }
 	        errorThrown = false;
@@ -10686,30 +8873,11 @@
 	  }
 	};
 
-<<<<<<< HEAD
-	var Transaction = {
-
-	  Mixin: Mixin,
-
-	  /**
-	   * Token to look for to determine if an error occurred.
-	   */
-	  OBSERVED_ERROR: {}
-
-	};
-
-	module.exports = Transaction;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
-
-/***/ },
-/* 70 */
-=======
 	module.exports = TransactionImpl;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
 /* 69 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -10720,10 +8888,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getEventTarget
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -10752,11 +8916,7 @@
 	module.exports = getEventTarget;
 
 /***/ },
-<<<<<<< HEAD
-/* 71 */
-=======
 /* 70 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10767,19 +8927,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule isEventSupported
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 
 	var useHasFeature;
 	if (ExecutionEnvironment.canUseDOM) {
@@ -10828,11 +8980,7 @@
 	module.exports = isEventSupported;
 
 /***/ },
-<<<<<<< HEAD
-/* 72 */
-=======
 /* 71 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -10843,10 +8991,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule isTextInputElement
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -10891,13 +9035,8 @@
 	module.exports = isTextInputElement;
 
 /***/ },
-<<<<<<< HEAD
-/* 73 */
-/***/ function(module, exports, __webpack_require__) {
-=======
 /* 72 */
 /***/ function(module, exports) {
->>>>>>> change to bundle.js
 
 	/**
 	 * Copyright 2013-present, Facebook, Inc.
@@ -10907,19 +9046,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DefaultEventPluginOrder
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var keyOf = __webpack_require__(25);
-
-=======
->>>>>>> change to bundle.js
 	/**
 	 * Module that is injectable into `EventPluginHub`, that specifies a
 	 * deterministic ordering of `EventPlugin`s. A convenient way to reason about
@@ -10929,21 +9059,13 @@
 	 * `ResponderEventPlugin` must occur before `SimpleEventPlugin` so that
 	 * preventing default on events is convenient in `SimpleEventPlugin` handlers.
 	 */
-<<<<<<< HEAD
-	var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ SimpleEventPlugin: null }), keyOf({ TapEventPlugin: null }), keyOf({ EnterLeaveEventPlugin: null }), keyOf({ ChangeEventPlugin: null }), keyOf({ SelectEventPlugin: null }), keyOf({ BeforeInputEventPlugin: null })];
-=======
 
 	var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'TapEventPlugin', 'EnterLeaveEventPlugin', 'ChangeEventPlugin', 'SelectEventPlugin', 'BeforeInputEventPlugin'];
->>>>>>> change to bundle.js
 
 	module.exports = DefaultEventPluginOrder;
 
 /***/ },
-<<<<<<< HEAD
-/* 74 */
-=======
 /* 73 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -10954,33 +9076,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule EnterLeaveEventPlugin
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPropagators = __webpack_require__(42);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var SyntheticMouseEvent = __webpack_require__(75);
-
-	var keyOf = __webpack_require__(25);
-
-	var topLevelTypes = EventConstants.topLevelTypes;
-
-	var eventTypes = {
-	  mouseEnter: {
-	    registrationName: keyOf({ onMouseEnter: null }),
-	    dependencies: [topLevelTypes.topMouseOut, topLevelTypes.topMouseOver]
-	  },
-	  mouseLeave: {
-	    registrationName: keyOf({ onMouseLeave: null }),
-	    dependencies: [topLevelTypes.topMouseOut, topLevelTypes.topMouseOver]
-=======
 	var EventPropagators = __webpack_require__(41);
 	var ReactDOMComponentTree = __webpack_require__(34);
 	var SyntheticMouseEvent = __webpack_require__(74);
@@ -10993,7 +9092,6 @@
 	  mouseLeave: {
 	    registrationName: 'onMouseLeave',
 	    dependencies: ['topMouseOut', 'topMouseOver']
->>>>>>> change to bundle.js
 	  }
 	};
 
@@ -11009,17 +9107,10 @@
 	   * the `mouseover` top-level event.
 	   */
 	  extractEvents: function (topLevelType, targetInst, nativeEvent, nativeEventTarget) {
-<<<<<<< HEAD
-	    if (topLevelType === topLevelTypes.topMouseOver && (nativeEvent.relatedTarget || nativeEvent.fromElement)) {
-	      return null;
-	    }
-	    if (topLevelType !== topLevelTypes.topMouseOut && topLevelType !== topLevelTypes.topMouseOver) {
-=======
 	    if (topLevelType === 'topMouseOver' && (nativeEvent.relatedTarget || nativeEvent.fromElement)) {
 	      return null;
 	    }
 	    if (topLevelType !== 'topMouseOut' && topLevelType !== 'topMouseOver') {
->>>>>>> change to bundle.js
 	      // Must not be a mouse in or mouse out - ignoring.
 	      return null;
 	    }
@@ -11040,11 +9131,7 @@
 
 	    var from;
 	    var to;
-<<<<<<< HEAD
-	    if (topLevelType === topLevelTypes.topMouseOut) {
-=======
 	    if (topLevelType === 'topMouseOut') {
->>>>>>> change to bundle.js
 	      from = targetInst;
 	      var related = nativeEvent.relatedTarget || nativeEvent.toElement;
 	      to = related ? ReactDOMComponentTree.getClosestInstanceFromNode(related) : null;
@@ -11082,11 +9169,7 @@
 	module.exports = EnterLeaveEventPlugin;
 
 /***/ },
-<<<<<<< HEAD
-/* 75 */
-=======
 /* 74 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11097,25 +9180,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticMouseEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticUIEvent = __webpack_require__(76);
-	var ViewportMetrics = __webpack_require__(77);
-
-	var getEventModifierState = __webpack_require__(78);
-=======
 	var SyntheticUIEvent = __webpack_require__(75);
 	var ViewportMetrics = __webpack_require__(76);
 
 	var getEventModifierState = __webpack_require__(77);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface MouseEvent
@@ -11173,11 +9245,7 @@
 	module.exports = SyntheticMouseEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 76 */
-=======
 /* 75 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11188,21 +9256,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticUIEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var SyntheticEvent = __webpack_require__(53);
 
-<<<<<<< HEAD
-	var getEventTarget = __webpack_require__(70);
-=======
 	var getEventTarget = __webpack_require__(69);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface UIEvent
@@ -11248,11 +9308,7 @@
 	module.exports = SyntheticUIEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 77 */
-=======
 /* 76 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -11263,10 +9319,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ViewportMetrics
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -11287,11 +9339,7 @@
 	module.exports = ViewportMetrics;
 
 /***/ },
-<<<<<<< HEAD
-/* 78 */
-=======
 /* 77 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -11302,10 +9350,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getEventModifierState
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -11342,11 +9386,7 @@
 	module.exports = getEventModifierState;
 
 /***/ },
-<<<<<<< HEAD
-/* 79 */
-=======
 /* 78 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11357,19 +9397,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule HTMLDOMPropertyConfig
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMProperty = __webpack_require__(37);
-=======
 	var DOMProperty = __webpack_require__(36);
->>>>>>> change to bundle.js
 
 	var MUST_USE_PROPERTY = DOMProperty.injection.MUST_USE_PROPERTY;
 	var HAS_BOOLEAN_VALUE = DOMProperty.injection.HAS_BOOLEAN_VALUE;
@@ -11570,11 +9602,7 @@
 	module.exports = HTMLDOMPropertyConfig;
 
 /***/ },
-<<<<<<< HEAD
-/* 80 */
-=======
 /* 79 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11585,21 +9613,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactComponentBrowserEnvironment
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMChildrenOperations = __webpack_require__(81);
-	var ReactDOMIDOperations = __webpack_require__(93);
-=======
 	var DOMChildrenOperations = __webpack_require__(80);
 	var ReactDOMIDOperations = __webpack_require__(91);
->>>>>>> change to bundle.js
 
 	/**
 	 * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -11617,11 +9636,7 @@
 	module.exports = ReactComponentBrowserEnvironment;
 
 /***/ },
-<<<<<<< HEAD
-/* 81 */
-=======
 /* 80 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -11632,25 +9647,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DOMChildrenOperations
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMLazyTree = __webpack_require__(82);
-	var Danger = __webpack_require__(88);
-	var ReactMultiChildUpdateTypes = __webpack_require__(92);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactInstrumentation = __webpack_require__(62);
-
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(85);
-	var setInnerHTML = __webpack_require__(84);
-	var setTextContent = __webpack_require__(86);
-=======
 	var DOMLazyTree = __webpack_require__(81);
 	var Danger = __webpack_require__(87);
 	var ReactDOMComponentTree = __webpack_require__(34);
@@ -11659,7 +9659,6 @@
 	var createMicrosoftUnsafeLocalFunction = __webpack_require__(84);
 	var setInnerHTML = __webpack_require__(83);
 	var setTextContent = __webpack_require__(85);
->>>>>>> change to bundle.js
 
 	function getNodeAfter(parentNode, node) {
 	  // Special case for text components, which return [open, close] comments
@@ -11752,15 +9751,11 @@
 	  }
 
 	  if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	    ReactInstrumentation.debugTool.onHostOperation(ReactDOMComponentTree.getInstanceFromNode(openingComment)._debugID, 'replace text', stringText);
-=======
 	    ReactInstrumentation.debugTool.onHostOperation({
 	      instanceID: ReactDOMComponentTree.getInstanceFromNode(openingComment)._debugID,
 	      type: 'replace text',
 	      payload: stringText
 	    });
->>>>>>> change to bundle.js
 	  }
 	}
 
@@ -11769,13 +9764,6 @@
 	  dangerouslyReplaceNodeWithMarkup = function (oldChild, markup, prevInstance) {
 	    Danger.dangerouslyReplaceNodeWithMarkup(oldChild, markup);
 	    if (prevInstance._debugID !== 0) {
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(prevInstance._debugID, 'replace with', markup.toString());
-	    } else {
-	      var nextInstance = ReactDOMComponentTree.getInstanceFromNode(markup.node);
-	      if (nextInstance._debugID !== 0) {
-	        ReactInstrumentation.debugTool.onHostOperation(nextInstance._debugID, 'mount', markup.toString());
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: prevInstance._debugID,
 	        type: 'replace with',
@@ -11789,7 +9777,6 @@
 	          type: 'mount',
 	          payload: markup.toString()
 	        });
->>>>>>> change to bundle.js
 	      }
 	    }
 	  };
@@ -11819,36 +9806,6 @@
 	    for (var k = 0; k < updates.length; k++) {
 	      var update = updates[k];
 	      switch (update.type) {
-<<<<<<< HEAD
-	        case ReactMultiChildUpdateTypes.INSERT_MARKUP:
-	          insertLazyTreeChildAt(parentNode, update.content, getNodeAfter(parentNode, update.afterNode));
-	          if (process.env.NODE_ENV !== 'production') {
-	            ReactInstrumentation.debugTool.onHostOperation(parentNodeDebugID, 'insert child', { toIndex: update.toIndex, content: update.content.toString() });
-	          }
-	          break;
-	        case ReactMultiChildUpdateTypes.MOVE_EXISTING:
-	          moveChild(parentNode, update.fromNode, getNodeAfter(parentNode, update.afterNode));
-	          if (process.env.NODE_ENV !== 'production') {
-	            ReactInstrumentation.debugTool.onHostOperation(parentNodeDebugID, 'move child', { fromIndex: update.fromIndex, toIndex: update.toIndex });
-	          }
-	          break;
-	        case ReactMultiChildUpdateTypes.SET_MARKUP:
-	          setInnerHTML(parentNode, update.content);
-	          if (process.env.NODE_ENV !== 'production') {
-	            ReactInstrumentation.debugTool.onHostOperation(parentNodeDebugID, 'replace children', update.content.toString());
-	          }
-	          break;
-	        case ReactMultiChildUpdateTypes.TEXT_CONTENT:
-	          setTextContent(parentNode, update.content);
-	          if (process.env.NODE_ENV !== 'production') {
-	            ReactInstrumentation.debugTool.onHostOperation(parentNodeDebugID, 'replace text', update.content.toString());
-	          }
-	          break;
-	        case ReactMultiChildUpdateTypes.REMOVE_NODE:
-	          removeChild(parentNode, update.fromNode);
-	          if (process.env.NODE_ENV !== 'production') {
-	            ReactInstrumentation.debugTool.onHostOperation(parentNodeDebugID, 'remove child', { fromIndex: update.fromIndex });
-=======
 	        case 'INSERT_MARKUP':
 	          insertLazyTreeChildAt(parentNode, update.content, getNodeAfter(parentNode, update.afterNode));
 	          if (process.env.NODE_ENV !== 'production') {
@@ -11897,7 +9854,6 @@
 	              type: 'remove child',
 	              payload: { fromIndex: update.fromIndex }
 	            });
->>>>>>> change to bundle.js
 	          }
 	          break;
 	      }
@@ -11910,11 +9866,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 82 */
-=======
 /* 81 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11925,27 +9877,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DOMLazyTree
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMNamespaces = __webpack_require__(83);
-	var setInnerHTML = __webpack_require__(84);
-
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(85);
-	var setTextContent = __webpack_require__(86);
-=======
 	var DOMNamespaces = __webpack_require__(82);
 	var setInnerHTML = __webpack_require__(83);
 
 	var createMicrosoftUnsafeLocalFunction = __webpack_require__(84);
 	var setTextContent = __webpack_require__(85);
->>>>>>> change to bundle.js
 
 	var ELEMENT_NODE_TYPE = 1;
 	var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -12048,11 +9988,7 @@
 	module.exports = DOMLazyTree;
 
 /***/ },
-<<<<<<< HEAD
-/* 83 */
-=======
 /* 82 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -12063,10 +9999,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DOMNamespaces
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -12080,11 +10012,7 @@
 	module.exports = DOMNamespaces;
 
 /***/ },
-<<<<<<< HEAD
-/* 84 */
-=======
 /* 83 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12095,30 +10023,17 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule setInnerHTML
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-	var DOMNamespaces = __webpack_require__(83);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
 	var DOMNamespaces = __webpack_require__(82);
->>>>>>> change to bundle.js
 
 	var WHITESPACE_TEST = /^[ \r\n\t\f]/;
 	var NONVISIBLE_TEST = /<(!--|link|noscript|meta|script|style)[ \r\n\t\f\/>]/;
 
-<<<<<<< HEAD
-	var createMicrosoftUnsafeLocalFunction = __webpack_require__(85);
-=======
 	var createMicrosoftUnsafeLocalFunction = __webpack_require__(84);
->>>>>>> change to bundle.js
 
 	// SVG temp container for IE lacking innerHTML
 	var reusableSVGContainer;
@@ -12199,11 +10114,7 @@
 	module.exports = setInnerHTML;
 
 /***/ },
-<<<<<<< HEAD
-/* 85 */
-=======
 /* 84 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -12214,10 +10125,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule createMicrosoftUnsafeLocalFunction
-=======
->>>>>>> change to bundle.js
 	 */
 
 	/* globals MSApp */
@@ -12243,11 +10150,7 @@
 	module.exports = createMicrosoftUnsafeLocalFunction;
 
 /***/ },
-<<<<<<< HEAD
-/* 86 */
-=======
 /* 85 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12258,23 +10161,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule setTextContent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-	var escapeTextContentForBrowser = __webpack_require__(87);
-	var setInnerHTML = __webpack_require__(84);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
 	var escapeTextContentForBrowser = __webpack_require__(86);
 	var setInnerHTML = __webpack_require__(83);
->>>>>>> change to bundle.js
 
 	/**
 	 * Set the textContent property of a node, ensuring that whitespace is preserved
@@ -12301,13 +10194,10 @@
 	if (ExecutionEnvironment.canUseDOM) {
 	  if (!('textContent' in document.documentElement)) {
 	    setTextContent = function (node, text) {
-<<<<<<< HEAD
-=======
 	      if (node.nodeType === 3) {
 	        node.nodeValue = text;
 	        return;
 	      }
->>>>>>> change to bundle.js
 	      setInnerHTML(node, escapeTextContentForBrowser(text));
 	    };
 	  }
@@ -12316,11 +10206,7 @@
 	module.exports = setTextContent;
 
 /***/ },
-<<<<<<< HEAD
-/* 87 */
-=======
 /* 86 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -12356,10 +10242,6 @@
 	 * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 	 * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	 *
-<<<<<<< HEAD
-	 * @providesModule escapeTextContentForBrowser
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -12451,11 +10333,7 @@
 	module.exports = escapeTextContentForBrowser;
 
 /***/ },
-<<<<<<< HEAD
-/* 88 */
-=======
 /* 87 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12466,29 +10344,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule Danger
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var DOMLazyTree = __webpack_require__(82);
-	var ExecutionEnvironment = __webpack_require__(49);
-
-	var createNodesFromMarkup = __webpack_require__(89);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var DOMLazyTree = __webpack_require__(81);
 	var ExecutionEnvironment = __webpack_require__(48);
 
 	var createNodesFromMarkup = __webpack_require__(88);
->>>>>>> change to bundle.js
 	var emptyFunction = __webpack_require__(12);
 	var invariant = __webpack_require__(8);
 
@@ -12521,11 +10386,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 89 */
-=======
 /* 88 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12543,17 +10404,10 @@
 
 	/*eslint-disable fb-www/unsafe-html*/
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-
-	var createArrayFromMixed = __webpack_require__(90);
-	var getMarkupWrap = __webpack_require__(91);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
 
 	var createArrayFromMixed = __webpack_require__(89);
 	var getMarkupWrap = __webpack_require__(90);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 
 	/**
@@ -12621,11 +10475,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 90 */
-=======
 /* 89 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12757,11 +10607,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 91 */
-=======
 /* 90 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -12778,11 +10624,7 @@
 
 	/*eslint-disable fb-www/unsafe-html */
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -12865,48 +10707,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactMultiChildUpdateTypes
-	 */
-
-	'use strict';
-
-	var keyMirror = __webpack_require__(23);
-
-	/**
-	 * When a component's children are updated, a series of update configuration
-	 * objects are created in order to batch and serialize the required changes.
-	 *
-	 * Enumerates all the possible types of update configurations.
-	 *
-	 * @internal
-	 */
-	var ReactMultiChildUpdateTypes = keyMirror({
-	  INSERT_MARKUP: null,
-	  MOVE_EXISTING: null,
-	  REMOVE_NODE: null,
-	  SET_MARKUP: null,
-	  TEXT_CONTENT: null
-	});
-
-	module.exports = ReactMultiChildUpdateTypes;
-
-/***/ },
-/* 93 */
-=======
 /* 91 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -12917,21 +10718,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMIDOperations
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMChildrenOperations = __webpack_require__(81);
-	var ReactDOMComponentTree = __webpack_require__(36);
-=======
 	var DOMChildrenOperations = __webpack_require__(80);
 	var ReactDOMComponentTree = __webpack_require__(34);
->>>>>>> change to bundle.js
 
 	/**
 	 * Operations used to process updates to DOM nodes.
@@ -12953,11 +10745,7 @@
 	module.exports = ReactDOMIDOperations;
 
 /***/ },
-<<<<<<< HEAD
-/* 94 */
-=======
 /* 92 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -12968,49 +10756,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	/* global hasOwnProperty:true */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var AutoFocusUtils = __webpack_require__(95);
-	var CSSPropertyOperations = __webpack_require__(97);
-	var DOMLazyTree = __webpack_require__(82);
-	var DOMNamespaces = __webpack_require__(83);
-	var DOMProperty = __webpack_require__(37);
-	var DOMPropertyOperations = __webpack_require__(105);
-	var EventConstants = __webpack_require__(41);
-	var EventPluginHub = __webpack_require__(43);
-	var EventPluginRegistry = __webpack_require__(44);
-	var ReactBrowserEventEmitter = __webpack_require__(107);
-	var ReactDOMButton = __webpack_require__(110);
-	var ReactDOMComponentFlags = __webpack_require__(38);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactDOMInput = __webpack_require__(112);
-	var ReactDOMOption = __webpack_require__(114);
-	var ReactDOMSelect = __webpack_require__(115);
-	var ReactDOMTextarea = __webpack_require__(116);
-	var ReactInstrumentation = __webpack_require__(62);
-	var ReactMultiChild = __webpack_require__(117);
-	var ReactServerRenderingTransaction = __webpack_require__(129);
-
-	var emptyFunction = __webpack_require__(12);
-	var escapeTextContentForBrowser = __webpack_require__(87);
-	var invariant = __webpack_require__(8);
-	var isEventSupported = __webpack_require__(71);
-	var keyOf = __webpack_require__(25);
-	var shallowEqual = __webpack_require__(124);
-	var validateDOMNesting = __webpack_require__(132);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
@@ -13039,7 +10790,6 @@
 	var isEventSupported = __webpack_require__(70);
 	var shallowEqual = __webpack_require__(123);
 	var validateDOMNesting = __webpack_require__(136);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var Flags = ReactDOMComponentFlags;
@@ -13051,13 +10801,8 @@
 	// For quickly matching children type, to test if can be treated as content.
 	var CONTENT_TYPES = { 'string': true, 'number': true };
 
-<<<<<<< HEAD
-	var STYLE = keyOf({ style: null });
-	var HTML = keyOf({ __html: null });
-=======
 	var STYLE = 'style';
 	var HTML = '__html';
->>>>>>> change to bundle.js
 	var RESERVED_PROPS = {
 	  children: null,
 	  dangerouslySetInnerHTML: null,
@@ -13264,11 +11009,7 @@
 	  switch (inst._tag) {
 	    case 'iframe':
 	    case 'object':
-<<<<<<< HEAD
-	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topLoad, 'load', node)];
-=======
 	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent('topLoad', 'load', node)];
->>>>>>> change to bundle.js
 	      break;
 	    case 'video':
 	    case 'audio':
@@ -13277,24 +11018,11 @@
 	      // Create listener for each media event
 	      for (var event in mediaEvents) {
 	        if (mediaEvents.hasOwnProperty(event)) {
-<<<<<<< HEAD
-	          inst._wrapperState.listeners.push(ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes[event], mediaEvents[event], node));
-=======
 	          inst._wrapperState.listeners.push(ReactBrowserEventEmitter.trapBubbledEvent(event, mediaEvents[event], node));
->>>>>>> change to bundle.js
 	        }
 	      }
 	      break;
 	    case 'source':
-<<<<<<< HEAD
-	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topError, 'error', node)];
-	      break;
-	    case 'img':
-	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topError, 'error', node), ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topLoad, 'load', node)];
-	      break;
-	    case 'form':
-	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topReset, 'reset', node), ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topSubmit, 'submit', node)];
-=======
 	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent('topError', 'error', node)];
 	      break;
 	    case 'img':
@@ -13302,16 +11030,11 @@
 	      break;
 	    case 'form':
 	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent('topReset', 'reset', node), ReactBrowserEventEmitter.trapBubbledEvent('topSubmit', 'submit', node)];
->>>>>>> change to bundle.js
 	      break;
 	    case 'input':
 	    case 'select':
 	    case 'textarea':
-<<<<<<< HEAD
-	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent(EventConstants.topLevelTypes.topInvalid, 'invalid', node)];
-=======
 	      inst._wrapperState.listeners = [ReactBrowserEventEmitter.trapBubbledEvent('topInvalid', 'invalid', node)];
->>>>>>> change to bundle.js
 	      break;
 	  }
 	}
@@ -13341,10 +11064,6 @@
 	  'wbr': true
 	};
 
-<<<<<<< HEAD
-	// NOTE: menuitem's close tag should be omitted, but that causes problems.
-=======
->>>>>>> change to bundle.js
 	var newlineEatingTags = {
 	  'listing': true,
 	  'pre': true,
@@ -13453,12 +11172,6 @@
 	        };
 	        transaction.getReactMountReady().enqueue(trapBubbledEventsLocal, this);
 	        break;
-<<<<<<< HEAD
-	      case 'button':
-	        props = ReactDOMButton.getHostProps(this, props, hostParent);
-	        break;
-=======
->>>>>>> change to bundle.js
 	      case 'input':
 	        ReactDOMInput.mountWrapper(this, props, hostParent);
 	        props = ReactDOMInput.getHostProps(this, props);
@@ -13762,13 +11475,6 @@
 	    var nextProps = this._currentElement.props;
 
 	    switch (this._tag) {
-<<<<<<< HEAD
-	      case 'button':
-	        lastProps = ReactDOMButton.getHostProps(this, lastProps);
-	        nextProps = ReactDOMButton.getHostProps(this, nextProps);
-	        break;
-=======
->>>>>>> change to bundle.js
 	      case 'input':
 	        lastProps = ReactDOMInput.getHostProps(this, lastProps);
 	        nextProps = ReactDOMInput.getHostProps(this, nextProps);
@@ -14039,11 +11745,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 95 */
-=======
 /* 93 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14054,23 +11756,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule AutoFocusUtils
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ReactDOMComponentTree = __webpack_require__(36);
-
-	var focusNode = __webpack_require__(96);
-=======
 	var ReactDOMComponentTree = __webpack_require__(34);
 
 	var focusNode = __webpack_require__(94);
->>>>>>> change to bundle.js
 
 	var AutoFocusUtils = {
 	  focusDOMComponent: function () {
@@ -14081,11 +11773,7 @@
 	module.exports = AutoFocusUtils;
 
 /***/ },
-<<<<<<< HEAD
-/* 96 */
-=======
 /* 94 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -14116,11 +11804,7 @@
 	module.exports = focusNode;
 
 /***/ },
-<<<<<<< HEAD
-/* 97 */
-=======
 /* 95 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14131,24 +11815,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule CSSPropertyOperations
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var CSSProperty = __webpack_require__(98);
-	var ExecutionEnvironment = __webpack_require__(49);
-	var ReactInstrumentation = __webpack_require__(62);
-
-	var camelizeStyleName = __webpack_require__(99);
-	var dangerousStyleValue = __webpack_require__(101);
-	var hyphenateStyleName = __webpack_require__(102);
-	var memoizeStringOnly = __webpack_require__(104);
-=======
 	var CSSProperty = __webpack_require__(96);
 	var ExecutionEnvironment = __webpack_require__(48);
 	var ReactInstrumentation = __webpack_require__(62);
@@ -14157,7 +11827,6 @@
 	var dangerousStyleValue = __webpack_require__(99);
 	var hyphenateStyleName = __webpack_require__(100);
 	var memoizeStringOnly = __webpack_require__(102);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var processStyleName = memoizeStringOnly(function (styleName) {
@@ -14307,15 +11976,11 @@
 	   */
 	  setValueForStyles: function (node, styles, component) {
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(component._debugID, 'update styles', styles);
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: component._debugID,
 	        type: 'update styles',
 	        payload: styles
 	      });
->>>>>>> change to bundle.js
 	    }
 
 	    var style = node.style;
@@ -14353,11 +12018,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 98 */
-=======
 /* 96 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -14368,10 +12029,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule CSSProperty
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -14513,11 +12170,7 @@
 	module.exports = CSSProperty;
 
 /***/ },
-<<<<<<< HEAD
-/* 99 */
-=======
 /* 97 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14533,11 +12186,7 @@
 
 	'use strict';
 
-<<<<<<< HEAD
-	var camelize = __webpack_require__(100);
-=======
 	var camelize = __webpack_require__(98);
->>>>>>> change to bundle.js
 
 	var msPattern = /^-ms-/;
 
@@ -14565,11 +12214,7 @@
 	module.exports = camelizeStyleName;
 
 /***/ },
-<<<<<<< HEAD
-/* 100 */
-=======
 /* 98 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -14605,11 +12250,7 @@
 	module.exports = camelize;
 
 /***/ },
-<<<<<<< HEAD
-/* 101 */
-=======
 /* 99 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14620,19 +12261,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule dangerousStyleValue
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var CSSProperty = __webpack_require__(98);
-=======
 	var CSSProperty = __webpack_require__(96);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -14701,11 +12334,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 102 */
-=======
 /* 100 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -14721,11 +12350,7 @@
 
 	'use strict';
 
-<<<<<<< HEAD
-	var hyphenate = __webpack_require__(103);
-=======
 	var hyphenate = __webpack_require__(101);
->>>>>>> change to bundle.js
 
 	var msPattern = /^ms-/;
 
@@ -14752,11 +12377,7 @@
 	module.exports = hyphenateStyleName;
 
 /***/ },
-<<<<<<< HEAD
-/* 103 */
-=======
 /* 101 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -14793,11 +12414,7 @@
 	module.exports = hyphenate;
 
 /***/ },
-<<<<<<< HEAD
-/* 104 */
-=======
 /* 102 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -14831,11 +12448,7 @@
 	module.exports = memoizeStringOnly;
 
 /***/ },
-<<<<<<< HEAD
-/* 105 */
-=======
 /* 103 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -14846,27 +12459,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule DOMPropertyOperations
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMProperty = __webpack_require__(37);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactInstrumentation = __webpack_require__(62);
-
-	var quoteAttributeValueForBrowser = __webpack_require__(106);
-=======
 	var DOMProperty = __webpack_require__(36);
 	var ReactDOMComponentTree = __webpack_require__(34);
 	var ReactInstrumentation = __webpack_require__(62);
 
 	var quoteAttributeValueForBrowser = __webpack_require__(104);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -15002,15 +12603,11 @@
 	    if (process.env.NODE_ENV !== 'production') {
 	      var payload = {};
 	      payload[name] = value;
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(ReactDOMComponentTree.getInstanceFromNode(node)._debugID, 'update attribute', payload);
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'update attribute',
 	        payload: payload
 	      });
->>>>>>> change to bundle.js
 	    }
 	  },
 
@@ -15027,15 +12624,11 @@
 	    if (process.env.NODE_ENV !== 'production') {
 	      var payload = {};
 	      payload[name] = value;
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(ReactDOMComponentTree.getInstanceFromNode(node)._debugID, 'update attribute', payload);
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'update attribute',
 	        payload: payload
 	      });
->>>>>>> change to bundle.js
 	    }
 	  },
 
@@ -15048,15 +12641,11 @@
 	  deleteValueForAttribute: function (node, name) {
 	    node.removeAttribute(name);
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(ReactDOMComponentTree.getInstanceFromNode(node)._debugID, 'remove attribute', name);
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'remove attribute',
 	        payload: name
 	      });
->>>>>>> change to bundle.js
 	    }
 	  },
 
@@ -15087,15 +12676,11 @@
 	    }
 
 	    if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	      ReactInstrumentation.debugTool.onHostOperation(ReactDOMComponentTree.getInstanceFromNode(node)._debugID, 'remove attribute', name);
-=======
 	      ReactInstrumentation.debugTool.onHostOperation({
 	        instanceID: ReactDOMComponentTree.getInstanceFromNode(node)._debugID,
 	        type: 'remove attribute',
 	        payload: name
 	      });
->>>>>>> change to bundle.js
 	    }
 	  }
 
@@ -15105,11 +12690,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 106 */
-=======
 /* 104 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15120,19 +12701,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule quoteAttributeValueForBrowser
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var escapeTextContentForBrowser = __webpack_require__(87);
-=======
 	var escapeTextContentForBrowser = __webpack_require__(86);
->>>>>>> change to bundle.js
 
 	/**
 	 * Escapes attribute value to prevent scripting attacks.
@@ -15147,11 +12720,7 @@
 	module.exports = quoteAttributeValueForBrowser;
 
 /***/ },
-<<<<<<< HEAD
-/* 107 */
-=======
 /* 105 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15162,32 +12731,18 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactBrowserEventEmitter
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPluginRegistry = __webpack_require__(44);
-	var ReactEventEmitterMixin = __webpack_require__(108);
-	var ViewportMetrics = __webpack_require__(77);
-
-	var getVendorPrefixedEventName = __webpack_require__(109);
-	var isEventSupported = __webpack_require__(71);
-=======
 	var EventPluginRegistry = __webpack_require__(43);
 	var ReactEventEmitterMixin = __webpack_require__(106);
 	var ViewportMetrics = __webpack_require__(76);
 
 	var getVendorPrefixedEventName = __webpack_require__(107);
 	var isEventSupported = __webpack_require__(70);
->>>>>>> change to bundle.js
 
 	/**
 	 * Summary of `ReactBrowserEventEmitter` event handling:
@@ -15405,44 +12960,6 @@
 	    var isListening = getListeningForDocument(mountAt);
 	    var dependencies = EventPluginRegistry.registrationNameDependencies[registrationName];
 
-<<<<<<< HEAD
-	    var topLevelTypes = EventConstants.topLevelTypes;
-	    for (var i = 0; i < dependencies.length; i++) {
-	      var dependency = dependencies[i];
-	      if (!(isListening.hasOwnProperty(dependency) && isListening[dependency])) {
-	        if (dependency === topLevelTypes.topWheel) {
-	          if (isEventSupported('wheel')) {
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'wheel', mountAt);
-	          } else if (isEventSupported('mousewheel')) {
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'mousewheel', mountAt);
-	          } else {
-	            // Firefox needs to capture a different mouse scroll event.
-	            // @see http://www.quirksmode.org/dom/events/tests/scroll.html
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topWheel, 'DOMMouseScroll', mountAt);
-	          }
-	        } else if (dependency === topLevelTypes.topScroll) {
-
-	          if (isEventSupported('scroll', true)) {
-	            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topScroll, 'scroll', mountAt);
-	          } else {
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topScroll, 'scroll', ReactBrowserEventEmitter.ReactEventListener.WINDOW_HANDLE);
-	          }
-	        } else if (dependency === topLevelTypes.topFocus || dependency === topLevelTypes.topBlur) {
-
-	          if (isEventSupported('focus', true)) {
-	            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topFocus, 'focus', mountAt);
-	            ReactBrowserEventEmitter.ReactEventListener.trapCapturedEvent(topLevelTypes.topBlur, 'blur', mountAt);
-	          } else if (isEventSupported('focusin')) {
-	            // IE has `focusin` and `focusout` events which bubble.
-	            // @see http://www.quirksmode.org/blog/archives/2008/04/delegating_the.html
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topFocus, 'focusin', mountAt);
-	            ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(topLevelTypes.topBlur, 'focusout', mountAt);
-	          }
-
-	          // to make sure blur and focus event listeners are only attached once
-	          isListening[topLevelTypes.topBlur] = true;
-	          isListening[topLevelTypes.topFocus] = true;
-=======
 	    for (var i = 0; i < dependencies.length; i++) {
 	      var dependency = dependencies[i];
 	      if (!(isListening.hasOwnProperty(dependency) && isListening[dependency])) {
@@ -15478,7 +12995,6 @@
 	          // to make sure blur and focus event listeners are only attached once
 	          isListening.topBlur = true;
 	          isListening.topFocus = true;
->>>>>>> change to bundle.js
 	        } else if (topEventMapping.hasOwnProperty(dependency)) {
 	          ReactBrowserEventEmitter.ReactEventListener.trapBubbledEvent(dependency, topEventMapping[dependency], mountAt);
 	        }
@@ -15536,11 +13052,7 @@
 	module.exports = ReactBrowserEventEmitter;
 
 /***/ },
-<<<<<<< HEAD
-/* 108 */
-=======
 /* 106 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15551,19 +13063,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactEventEmitterMixin
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventPluginHub = __webpack_require__(43);
-=======
 	var EventPluginHub = __webpack_require__(42);
->>>>>>> change to bundle.js
 
 	function runEventQueueInBatch(events) {
 	  EventPluginHub.enqueueEvents(events);
@@ -15585,11 +13089,7 @@
 	module.exports = ReactEventEmitterMixin;
 
 /***/ },
-<<<<<<< HEAD
-/* 109 */
-=======
 /* 107 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -15600,19 +13100,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getVendorPrefixedEventName
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
->>>>>>> change to bundle.js
 
 	/**
 	 * Generate a mapping of standard vendor prefixes using the defined style property and event name.
@@ -15702,95 +13194,7 @@
 	module.exports = getVendorPrefixedEventName;
 
 /***/ },
-<<<<<<< HEAD
-/* 110 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactDOMButton
-	 */
-
-	'use strict';
-
-	var DisabledInputUtils = __webpack_require__(111);
-
-	/**
-	 * Implements a <button> host component that does not receive mouse events
-	 * when `disabled` is set.
-	 */
-	var ReactDOMButton = {
-	  getHostProps: DisabledInputUtils.getHostProps
-	};
-
-	module.exports = ReactDOMButton;
-
-/***/ },
-/* 111 */
-/***/ function(module, exports) {
-
-	/**
-	 * Copyright 2013-present, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule DisabledInputUtils
-	 */
-
-	'use strict';
-
-	var disableableMouseListenerNames = {
-	  onClick: true,
-	  onDoubleClick: true,
-	  onMouseDown: true,
-	  onMouseMove: true,
-	  onMouseUp: true,
-
-	  onClickCapture: true,
-	  onDoubleClickCapture: true,
-	  onMouseDownCapture: true,
-	  onMouseMoveCapture: true,
-	  onMouseUpCapture: true
-	};
-
-	/**
-	 * Implements a host component that does not receive mouse events
-	 * when `disabled` is set.
-	 */
-	var DisabledInputUtils = {
-	  getHostProps: function (inst, props) {
-	    if (!props.disabled) {
-	      return props;
-	    }
-
-	    // Copy the props, except the mouse listeners
-	    var hostProps = {};
-	    for (var key in props) {
-	      if (!disableableMouseListenerNames[key] && props.hasOwnProperty(key)) {
-	        hostProps[key] = props[key];
-	      }
-	    }
-
-	    return hostProps;
-	  }
-	};
-
-	module.exports = DisabledInputUtils;
-
-/***/ },
-/* 112 */
-=======
 /* 108 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15801,30 +13205,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMInput
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var DisabledInputUtils = __webpack_require__(111);
-	var DOMPropertyOperations = __webpack_require__(105);
-	var LinkedValueUtils = __webpack_require__(113);
-	var ReactDOMComponentTree = __webpack_require__(36);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
 	var DOMPropertyOperations = __webpack_require__(103);
 	var LinkedValueUtils = __webpack_require__(109);
 	var ReactDOMComponentTree = __webpack_require__(34);
->>>>>>> change to bundle.js
 	var ReactUpdates = __webpack_require__(56);
 
 	var invariant = __webpack_require__(8);
@@ -15881,11 +13271,7 @@
 	      // in corner cases such as min or max deriving from value, e.g. Issue #7170)
 	      min: undefined,
 	      max: undefined
-<<<<<<< HEAD
-	    }, DisabledInputUtils.getHostProps(inst, props), {
-=======
 	    }, props, {
->>>>>>> change to bundle.js
 	      defaultChecked: undefined,
 	      defaultValue: undefined,
 	      value: value != null ? value : inst._wrapperState.initialValue,
@@ -16081,11 +13467,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 113 */
-=======
 /* 109 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16096,26 +13478,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule LinkedValueUtils
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var ReactPropTypes = __webpack_require__(31);
-	var ReactPropTypeLocations = __webpack_require__(22);
-	var ReactPropTypesSecret = __webpack_require__(30);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var React = __webpack_require__(2);
 	var ReactPropTypesSecret = __webpack_require__(110);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
@@ -16156,11 +13526,7 @@
 	    }
 	    return new Error('You provided a `checked` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
 	  },
-<<<<<<< HEAD
-	  onChange: ReactPropTypes.func
-=======
 	  onChange: React.PropTypes.func
->>>>>>> change to bundle.js
 	};
 
 	var loggedTypeFailures = {};
@@ -16182,11 +13548,7 @@
 	  checkPropTypes: function (tagName, props, owner) {
 	    for (var propName in propTypes) {
 	      if (propTypes.hasOwnProperty(propName)) {
-<<<<<<< HEAD
-	        var error = propTypes[propName](props, propName, tagName, ReactPropTypeLocations.prop, null, ReactPropTypesSecret);
-=======
 	        var error = propTypes[propName](props, propName, tagName, 'prop', null, ReactPropTypesSecret);
->>>>>>> change to bundle.js
 	      }
 	      if (error instanceof Error && !(error.message in loggedTypeFailures)) {
 	        // Only monitor this failure once because there tends to be a lot of the
@@ -16245,9 +13607,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 114 */
-=======
 /* 110 */
 /***/ function(module, exports) {
 
@@ -16270,7 +13629,6 @@
 
 /***/ },
 /* 111 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16281,25 +13639,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMOption
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var ReactChildren = __webpack_require__(5);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactDOMSelect = __webpack_require__(115);
-=======
 	var React = __webpack_require__(2);
 	var ReactDOMComponentTree = __webpack_require__(34);
 	var ReactDOMSelect = __webpack_require__(112);
->>>>>>> change to bundle.js
 
 	var warning = __webpack_require__(11);
 	var didWarnInvalidOptionChildren = false;
@@ -16309,11 +13657,7 @@
 
 	  // Flatten children and warn if they aren't strings or numbers;
 	  // invalid types are ignored.
-<<<<<<< HEAD
-	  ReactChildren.forEach(children, function (child) {
-=======
 	  React.Children.forEach(children, function (child) {
->>>>>>> change to bundle.js
 	    if (child == null) {
 	      return;
 	    }
@@ -16412,11 +13756,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 115 */
-=======
 /* 112 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16427,24 +13767,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMSelect
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var DisabledInputUtils = __webpack_require__(111);
-	var LinkedValueUtils = __webpack_require__(113);
-	var ReactDOMComponentTree = __webpack_require__(36);
-=======
 	var LinkedValueUtils = __webpack_require__(109);
 	var ReactDOMComponentTree = __webpack_require__(34);
->>>>>>> change to bundle.js
 	var ReactUpdates = __webpack_require__(56);
 
 	var warning = __webpack_require__(11);
@@ -16558,11 +13888,7 @@
 	 */
 	var ReactDOMSelect = {
 	  getHostProps: function (inst, props) {
-<<<<<<< HEAD
-	    return _assign({}, DisabledInputUtils.getHostProps(inst, props), {
-=======
 	    return _assign({}, props, {
->>>>>>> change to bundle.js
 	      onChange: inst._wrapperState.onChange,
 	      value: undefined
 	    });
@@ -16635,11 +13961,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 116 */
-=======
 /* 113 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16650,28 +13972,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMTextarea
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var DisabledInputUtils = __webpack_require__(111);
-	var LinkedValueUtils = __webpack_require__(113);
-	var ReactDOMComponentTree = __webpack_require__(36);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
 	var LinkedValueUtils = __webpack_require__(109);
 	var ReactDOMComponentTree = __webpack_require__(34);
->>>>>>> change to bundle.js
 	var ReactUpdates = __webpack_require__(56);
 
 	var invariant = __webpack_require__(8);
@@ -16711,11 +14020,7 @@
 	    // to only set the value if/when the value differs from the node value (which would
 	    // completely solve this IE9 bug), but Sebastian+Ben seemed to like this solution.
 	    // The value can be a boolean or object so that's why it's forced to be a string.
-<<<<<<< HEAD
-	    var hostProps = _assign({}, DisabledInputUtils.getHostProps(inst, props), {
-=======
 	    var hostProps = _assign({}, props, {
->>>>>>> change to bundle.js
 	      value: undefined,
 	      defaultValue: undefined,
 	      children: '' + inst._wrapperState.initialValue,
@@ -16815,11 +14120,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 117 */
-=======
 /* 114 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16830,29 +14131,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactMultiChild
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var ReactComponentEnvironment = __webpack_require__(118);
-	var ReactInstanceMap = __webpack_require__(119);
-	var ReactInstrumentation = __webpack_require__(62);
-	var ReactMultiChildUpdateTypes = __webpack_require__(92);
-
-	var ReactCurrentOwner = __webpack_require__(10);
-	var ReactReconciler = __webpack_require__(59);
-	var ReactChildReconciler = __webpack_require__(120);
-
-	var emptyFunction = __webpack_require__(12);
-	var flattenChildren = __webpack_require__(128);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var ReactComponentEnvironment = __webpack_require__(115);
@@ -16865,7 +14147,6 @@
 
 	var emptyFunction = __webpack_require__(12);
 	var flattenChildren = __webpack_require__(132);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 
 	/**
@@ -16878,11 +14159,7 @@
 	function makeInsertMarkup(markup, afterNode, toIndex) {
 	  // NOTE: Null values reduce hidden classes.
 	  return {
-<<<<<<< HEAD
-	    type: ReactMultiChildUpdateTypes.INSERT_MARKUP,
-=======
 	    type: 'INSERT_MARKUP',
->>>>>>> change to bundle.js
 	    content: markup,
 	    fromIndex: null,
 	    fromNode: null,
@@ -16901,11 +14178,7 @@
 	function makeMove(child, afterNode, toIndex) {
 	  // NOTE: Null values reduce hidden classes.
 	  return {
-<<<<<<< HEAD
-	    type: ReactMultiChildUpdateTypes.MOVE_EXISTING,
-=======
 	    type: 'MOVE_EXISTING',
->>>>>>> change to bundle.js
 	    content: null,
 	    fromIndex: child._mountIndex,
 	    fromNode: ReactReconciler.getHostNode(child),
@@ -16923,11 +14196,7 @@
 	function makeRemove(child, node) {
 	  // NOTE: Null values reduce hidden classes.
 	  return {
-<<<<<<< HEAD
-	    type: ReactMultiChildUpdateTypes.REMOVE_NODE,
-=======
 	    type: 'REMOVE_NODE',
->>>>>>> change to bundle.js
 	    content: null,
 	    fromIndex: child._mountIndex,
 	    fromNode: node,
@@ -16945,11 +14214,7 @@
 	function makeSetMarkup(markup) {
 	  // NOTE: Null values reduce hidden classes.
 	  return {
-<<<<<<< HEAD
-	    type: ReactMultiChildUpdateTypes.SET_MARKUP,
-=======
 	    type: 'SET_MARKUP',
->>>>>>> change to bundle.js
 	    content: markup,
 	    fromIndex: null,
 	    fromNode: null,
@@ -16967,11 +14232,7 @@
 	function makeTextContent(textContent) {
 	  // NOTE: Null values reduce hidden classes.
 	  return {
-<<<<<<< HEAD
-	    type: ReactMultiChildUpdateTypes.TEXT_CONTENT,
-=======
 	    type: 'TEXT_CONTENT',
->>>>>>> change to bundle.js
 	    content: textContent,
 	    fromIndex: null,
 	    fromNode: null,
@@ -17314,11 +14575,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 118 */
-=======
 /* 115 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17329,20 +14586,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactComponentEnvironment
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -17377,11 +14626,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 119 */
-=======
 /* 116 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -17392,10 +14637,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactInstanceMap
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -17437,11 +14678,7 @@
 	module.exports = ReactInstanceMap;
 
 /***/ },
-<<<<<<< HEAD
-/* 120 */
-=======
 /* 117 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17452,27 +14689,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactChildReconciler
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var ReactReconciler = __webpack_require__(59);
 
-<<<<<<< HEAD
-	var instantiateReactComponent = __webpack_require__(121);
-	var KeyEscapeUtils = __webpack_require__(16);
-	var shouldUpdateReactComponent = __webpack_require__(125);
-	var traverseAllChildren = __webpack_require__(14);
-=======
 	var instantiateReactComponent = __webpack_require__(118);
 	var KeyEscapeUtils = __webpack_require__(128);
 	var shouldUpdateReactComponent = __webpack_require__(124);
 	var traverseAllChildren = __webpack_require__(129);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var ReactComponentTreeHook;
@@ -17483,11 +14709,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-<<<<<<< HEAD
-	  ReactComponentTreeHook = __webpack_require__(28);
-=======
 	  ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	}
 
 	function instantiateChild(childInstances, child, name, selfDebugID) {
@@ -17495,11 +14717,7 @@
 	  var keyUnique = childInstances[name] === undefined;
 	  if (process.env.NODE_ENV !== 'production') {
 	    if (!ReactComponentTreeHook) {
-<<<<<<< HEAD
-	      ReactComponentTreeHook = __webpack_require__(28);
-=======
 	      ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	    }
 	    if (!keyUnique) {
 	      process.env.NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -17619,11 +14837,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 121 */
-=======
 /* 118 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17634,23 +14848,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule instantiateReactComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var ReactCompositeComponent = __webpack_require__(122);
-	var ReactEmptyComponent = __webpack_require__(126);
-	var ReactHostComponent = __webpack_require__(127);
-
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
@@ -17659,7 +14860,6 @@
 	var ReactHostComponent = __webpack_require__(126);
 
 	var getNextDebugID = __webpack_require__(127);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
 
@@ -17667,11 +14867,7 @@
 	var ReactCompositeComponentWrapper = function (element) {
 	  this.construct(element);
 	};
-<<<<<<< HEAD
-	_assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent.Mixin, {
-=======
 	_assign(ReactCompositeComponentWrapper.prototype, ReactCompositeComponent, {
->>>>>>> change to bundle.js
 	  _instantiateReactComponent: instantiateReactComponent
 	});
 
@@ -17696,11 +14892,6 @@
 	  return typeof type === 'function' && typeof type.prototype !== 'undefined' && typeof type.prototype.mountComponent === 'function' && typeof type.prototype.receiveComponent === 'function';
 	}
 
-<<<<<<< HEAD
-	var nextDebugID = 1;
-
-=======
->>>>>>> change to bundle.js
 	/**
 	 * Given a ReactNode, create an instance that will actually be mounted.
 	 *
@@ -17751,11 +14942,7 @@
 	  instance._mountImage = null;
 
 	  if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	    instance._debugID = shouldHaveDebugID ? nextDebugID++ : 0;
-=======
 	    instance._debugID = shouldHaveDebugID ? getNextDebugID() : 0;
->>>>>>> change to bundle.js
 	  }
 
 	  // Internal instances should fully constructed at this point, so they should
@@ -17773,11 +14960,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 122 */
-=======
 /* 119 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -17788,34 +14971,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactCompositeComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var ReactComponentEnvironment = __webpack_require__(118);
-	var ReactCurrentOwner = __webpack_require__(10);
-	var ReactElement = __webpack_require__(9);
-	var ReactErrorUtils = __webpack_require__(46);
-	var ReactInstanceMap = __webpack_require__(119);
-	var ReactInstrumentation = __webpack_require__(62);
-	var ReactNodeTypes = __webpack_require__(123);
-	var ReactPropTypeLocations = __webpack_require__(22);
-	var ReactReconciler = __webpack_require__(59);
-
-	var checkReactTypeSpec = __webpack_require__(29);
-	var emptyObject = __webpack_require__(19);
-	var invariant = __webpack_require__(8);
-	var shallowEqual = __webpack_require__(124);
-	var shouldUpdateReactComponent = __webpack_require__(125);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
@@ -17836,7 +14995,6 @@
 	var invariant = __webpack_require__(8);
 	var shallowEqual = __webpack_require__(123);
 	var shouldUpdateReactComponent = __webpack_require__(124);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var CompositeTypes = {
@@ -17855,11 +15013,7 @@
 
 	function warnIfInvalidElement(Component, element) {
 	  if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	    process.env.NODE_ENV !== 'production' ? warning(element === null || element === false || ReactElement.isValidElement(element), '%s(...): A valid React element (or null) must be returned. You may have ' + 'returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : void 0;
-=======
 	    process.env.NODE_ENV !== 'production' ? warning(element === null || element === false || React.isValidElement(element), '%s(...): A valid React element (or null) must be returned. You may have ' + 'returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : void 0;
->>>>>>> change to bundle.js
 	    process.env.NODE_ENV !== 'production' ? warning(!Component.childContextTypes, '%s(...): childContextTypes cannot be defined on a functional component.', Component.displayName || Component.name || 'Component') : void 0;
 	  }
 	}
@@ -17927,11 +15081,7 @@
 	/**
 	 * @lends {ReactCompositeComponent.prototype}
 	 */
-<<<<<<< HEAD
-	var ReactCompositeComponentMixin = {
-=======
 	var ReactCompositeComponent = {
->>>>>>> change to bundle.js
 
 	  /**
 	   * Base constructor for all composite component.
@@ -18007,11 +15157,7 @@
 	    if (!doConstruct && (inst == null || inst.render == null)) {
 	      renderedElement = inst;
 	      warnIfInvalidElement(Component, renderedElement);
-<<<<<<< HEAD
-	      !(inst === null || inst === false || ReactElement.isValidElement(inst)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s(...): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : _prodInvariant('105', Component.displayName || Component.name || 'Component') : void 0;
-=======
 	      !(inst === null || inst === false || React.isValidElement(inst)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s(...): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', Component.displayName || Component.name || 'Component') : _prodInvariant('105', Component.displayName || Component.name || 'Component') : void 0;
->>>>>>> change to bundle.js
 	      inst = new StatelessComponent(Component);
 	      this._compositeType = CompositeTypes.StatelessFunctional;
 	    } else {
@@ -18301,11 +15447,7 @@
 	    if (process.env.NODE_ENV !== 'production') {
 	      var Component = this._currentElement.type;
 	      if (Component.contextTypes) {
-<<<<<<< HEAD
-	        this._checkContextTypes(Component.contextTypes, maskedContext, ReactPropTypeLocations.context);
-=======
 	        this._checkContextTypes(Component.contextTypes, maskedContext, 'context');
->>>>>>> change to bundle.js
 	      }
 	    }
 	    return maskedContext;
@@ -18337,11 +15479,7 @@
 	    if (childContext) {
 	      !(typeof Component.childContextTypes === 'object') ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().', this.getName() || 'ReactCompositeComponent') : _prodInvariant('107', this.getName() || 'ReactCompositeComponent') : void 0;
 	      if (process.env.NODE_ENV !== 'production') {
-<<<<<<< HEAD
-	        this._checkContextTypes(Component.childContextTypes, childContext, ReactPropTypeLocations.childContext);
-=======
 	        this._checkContextTypes(Component.childContextTypes, childContext, 'childContext');
->>>>>>> change to bundle.js
 	      }
 	      for (var name in childContext) {
 	        !(name in Component.childContextTypes) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): key "%s" is not defined in childContextTypes.', this.getName() || 'ReactCompositeComponent', name) : _prodInvariant('108', this.getName() || 'ReactCompositeComponent', name) : void 0;
@@ -18360,13 +15498,9 @@
 	   * @private
 	   */
 	  _checkContextTypes: function (typeSpecs, values, location) {
-<<<<<<< HEAD
-	    checkReactTypeSpec(typeSpecs, values, location, this.getName(), null, this._debugID);
-=======
 	    if (process.env.NODE_ENV !== 'production') {
 	      checkReactTypeSpec(typeSpecs, values, location, this.getName(), null, this._debugID);
 	    }
->>>>>>> change to bundle.js
 	  },
 
 	  receiveComponent: function (nextElement, transaction, nextContext) {
@@ -18620,16 +15754,6 @@
 	   */
 	  _renderValidatedComponentWithoutOwnerOrContext: function () {
 	    var inst = this._instance;
-<<<<<<< HEAD
-	    var renderedComponent;
-
-	    if (process.env.NODE_ENV !== 'production') {
-	      renderedComponent = measureLifeCyclePerf(function () {
-	        return inst.render();
-	      }, this._debugID, 'render');
-	    } else {
-	      renderedComponent = inst.render();
-=======
 	    var renderedElement;
 
 	    if (process.env.NODE_ENV !== 'production') {
@@ -18638,21 +15762,10 @@
 	      }, this._debugID, 'render');
 	    } else {
 	      renderedElement = inst.render();
->>>>>>> change to bundle.js
 	    }
 
 	    if (process.env.NODE_ENV !== 'production') {
 	      // We allow auto-mocks to proceed as if they're returning null.
-<<<<<<< HEAD
-	      if (renderedComponent === undefined && inst.render._isMockFunction) {
-	        // This is probably bad practice. Consider warning here and
-	        // deprecating this convenience.
-	        renderedComponent = null;
-	      }
-	    }
-
-	    return renderedComponent;
-=======
 	      if (renderedElement === undefined && inst.render._isMockFunction) {
 	        // This is probably bad practice. Consider warning here and
 	        // deprecating this convenience.
@@ -18661,39 +15774,21 @@
 	    }
 
 	    return renderedElement;
->>>>>>> change to bundle.js
 	  },
 
 	  /**
 	   * @private
 	   */
 	  _renderValidatedComponent: function () {
-<<<<<<< HEAD
-	    var renderedComponent;
-	    if (process.env.NODE_ENV !== 'production' || this._compositeType !== CompositeTypes.StatelessFunctional) {
-	      ReactCurrentOwner.current = this;
-	      try {
-	        renderedComponent = this._renderValidatedComponentWithoutOwnerOrContext();
-=======
 	    var renderedElement;
 	    if (process.env.NODE_ENV !== 'production' || this._compositeType !== CompositeTypes.StatelessFunctional) {
 	      ReactCurrentOwner.current = this;
 	      try {
 	        renderedElement = this._renderValidatedComponentWithoutOwnerOrContext();
->>>>>>> change to bundle.js
 	      } finally {
 	        ReactCurrentOwner.current = null;
 	      }
 	    } else {
-<<<<<<< HEAD
-	      renderedComponent = this._renderValidatedComponentWithoutOwnerOrContext();
-	    }
-	    !(
-	    // TODO: An `isValidNode` function would probably be more appropriate
-	    renderedComponent === null || renderedComponent === false || ReactElement.isValidElement(renderedComponent)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.render(): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', this.getName() || 'ReactCompositeComponent') : _prodInvariant('109', this.getName() || 'ReactCompositeComponent') : void 0;
-
-	    return renderedComponent;
-=======
 	      renderedElement = this._renderValidatedComponentWithoutOwnerOrContext();
 	    }
 	    !(
@@ -18701,7 +15796,6 @@
 	    renderedElement === null || renderedElement === false || React.isValidElement(renderedElement)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.render(): A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.', this.getName() || 'ReactCompositeComponent') : _prodInvariant('109', this.getName() || 'ReactCompositeComponent') : void 0;
 
 	    return renderedElement;
->>>>>>> change to bundle.js
 	  },
 
 	  /**
@@ -18769,24 +15863,11 @@
 
 	};
 
-<<<<<<< HEAD
-	var ReactCompositeComponent = {
-
-	  Mixin: ReactCompositeComponentMixin
-
-	};
-
-=======
->>>>>>> change to bundle.js
 	module.exports = ReactCompositeComponent;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 123 */
-=======
 /* 120 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -18797,24 +15878,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactNodeTypes
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var ReactElement = __webpack_require__(9);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var React = __webpack_require__(2);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -18826,11 +15897,7 @@
 	  getType: function (node) {
 	    if (node === null || node === false) {
 	      return ReactNodeTypes.EMPTY;
-<<<<<<< HEAD
-	    } else if (ReactElement.isValidElement(node)) {
-=======
 	    } else if (React.isValidElement(node)) {
->>>>>>> change to bundle.js
 	      if (typeof node.type === 'function') {
 	        return ReactNodeTypes.COMPOSITE;
 	      } else {
@@ -18845,9 +15912,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 124 */
-=======
 /* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -18971,7 +16035,6 @@
 
 /***/ },
 /* 123 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -19043,11 +16106,7 @@
 	module.exports = shallowEqual;
 
 /***/ },
-<<<<<<< HEAD
-/* 125 */
-=======
 /* 124 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -19058,10 +16117,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule shouldUpdateReactComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -19097,11 +16152,7 @@
 	module.exports = shouldUpdateReactComponent;
 
 /***/ },
-<<<<<<< HEAD
-/* 126 */
-=======
 /* 125 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -19112,10 +16163,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactEmptyComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -19139,11 +16186,7 @@
 	module.exports = ReactEmptyComponent;
 
 /***/ },
-<<<<<<< HEAD
-/* 127 */
-=======
 /* 126 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19154,19 +16197,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactHostComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-=======
 	var _prodInvariant = __webpack_require__(35),
->>>>>>> change to bundle.js
 	    _assign = __webpack_require__(4);
 
 	var invariant = __webpack_require__(8);
@@ -19232,9 +16267,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 128 */
-=======
 /* 127 */
 /***/ function(module, exports) {
 
@@ -19574,7 +16606,6 @@
 
 /***/ },
 /* 132 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19585,22 +16616,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule flattenChildren
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var KeyEscapeUtils = __webpack_require__(16);
-	var traverseAllChildren = __webpack_require__(14);
-=======
 	var KeyEscapeUtils = __webpack_require__(128);
 	var traverseAllChildren = __webpack_require__(129);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var ReactComponentTreeHook;
@@ -19611,11 +16633,7 @@
 	  // https://github.com/facebook/react/issues/7240
 	  // Remove the inline requires when we don't need them anymore:
 	  // https://github.com/facebook/react/pull/7178
-<<<<<<< HEAD
-	  ReactComponentTreeHook = __webpack_require__(28);
-=======
 	  ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	}
 
 	/**
@@ -19631,11 +16649,7 @@
 	    var keyUnique = result[name] === undefined;
 	    if (process.env.NODE_ENV !== 'production') {
 	      if (!ReactComponentTreeHook) {
-<<<<<<< HEAD
-	        ReactComponentTreeHook = __webpack_require__(28);
-=======
 	        ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 	      }
 	      if (!keyUnique) {
 	        process.env.NODE_ENV !== 'production' ? warning(false, 'flattenChildren(...): Encountered two children with the same key, ' + '`%s`. Child keys must be unique; when two children share a key, only ' + 'the first child will be used.%s', KeyEscapeUtils.unescape(name), ReactComponentTreeHook.getStackAddendumByID(selfDebugID)) : void 0;
@@ -19672,11 +16686,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 129 */
-=======
 /* 133 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19687,27 +16697,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactServerRenderingTransaction
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var PooledClass = __webpack_require__(6);
-	var Transaction = __webpack_require__(69);
-	var ReactInstrumentation = __webpack_require__(62);
-	var ReactServerUpdateQueue = __webpack_require__(130);
-=======
 	var PooledClass = __webpack_require__(50);
 	var Transaction = __webpack_require__(68);
 	var ReactInstrumentation = __webpack_require__(62);
 	var ReactServerUpdateQueue = __webpack_require__(134);
->>>>>>> change to bundle.js
 
 	/**
 	 * Executed within the scope of the `Transaction` instance. Consider these as
@@ -19774,11 +16773,7 @@
 	  rollback: function () {}
 	};
 
-<<<<<<< HEAD
-	_assign(ReactServerRenderingTransaction.prototype, Transaction.Mixin, Mixin);
-=======
 	_assign(ReactServerRenderingTransaction.prototype, Transaction, Mixin);
->>>>>>> change to bundle.js
 
 	PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 
@@ -19786,11 +16781,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 130 */
-=======
 /* 134 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19801,10 +16792,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactServerUpdateQueue
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -19812,13 +16799,8 @@
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-<<<<<<< HEAD
-	var ReactUpdateQueue = __webpack_require__(131);
-	var Transaction = __webpack_require__(69);
-=======
 	var ReactUpdateQueue = __webpack_require__(135);
 
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	function warnNoop(publicInstance, callerName) {
@@ -19837,11 +16819,6 @@
 	 */
 
 	var ReactServerUpdateQueue = function () {
-<<<<<<< HEAD
-	  /* :: transaction: Transaction; */
-
-=======
->>>>>>> change to bundle.js
 	  function ReactServerUpdateQueue(transaction) {
 	    _classCallCheck(this, ReactServerUpdateQueue);
 
@@ -19948,11 +16925,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 131 */
-=======
 /* 135 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -19963,25 +16936,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactUpdateQueue
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var ReactCurrentOwner = __webpack_require__(10);
-	var ReactInstanceMap = __webpack_require__(119);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var ReactCurrentOwner = __webpack_require__(10);
 	var ReactInstanceMap = __webpack_require__(116);
->>>>>>> change to bundle.js
 	var ReactInstrumentation = __webpack_require__(62);
 	var ReactUpdates = __webpack_require__(56);
 
@@ -20194,11 +17156,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 132 */
-=======
 /* 136 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20209,10 +17167,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule validateDOMNesting
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -20589,11 +17543,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 133 */
-=======
 /* 137 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -20604,23 +17554,14 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMEmptyComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var DOMLazyTree = __webpack_require__(82);
-	var ReactDOMComponentTree = __webpack_require__(36);
-=======
 	var DOMLazyTree = __webpack_require__(81);
 	var ReactDOMComponentTree = __webpack_require__(34);
->>>>>>> change to bundle.js
 
 	var ReactDOMEmptyComponent = function (instantiate) {
 	  // ReactCompositeComponent uses this:
@@ -20666,11 +17607,7 @@
 	module.exports = ReactDOMEmptyComponent;
 
 /***/ },
-<<<<<<< HEAD
-/* 134 */
-=======
 /* 138 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20681,19 +17618,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMTreeTraversal
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-=======
 	var _prodInvariant = __webpack_require__(35);
->>>>>>> change to bundle.js
 
 	var invariant = __webpack_require__(8);
 
@@ -20774,17 +17703,10 @@
 	  }
 	  var i;
 	  for (i = path.length; i-- > 0;) {
-<<<<<<< HEAD
-	    fn(path[i], false, arg);
-	  }
-	  for (i = 0; i < path.length; i++) {
-	    fn(path[i], true, arg);
-=======
 	    fn(path[i], 'captured', arg);
 	  }
 	  for (i = 0; i < path.length; i++) {
 	    fn(path[i], 'bubbled', arg);
->>>>>>> change to bundle.js
 	  }
 	}
 
@@ -20809,17 +17731,10 @@
 	  }
 	  var i;
 	  for (i = 0; i < pathFrom.length; i++) {
-<<<<<<< HEAD
-	    fn(pathFrom[i], true, argFrom);
-	  }
-	  for (i = pathTo.length; i-- > 0;) {
-	    fn(pathTo[i], false, argTo);
-=======
 	    fn(pathFrom[i], 'bubbled', argFrom);
 	  }
 	  for (i = pathTo.length; i-- > 0;) {
 	    fn(pathTo[i], 'captured', argTo);
->>>>>>> change to bundle.js
 	  }
 	}
 
@@ -20833,11 +17748,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 135 */
-=======
 /* 139 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -20848,26 +17759,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMTextComponent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7),
-	    _assign = __webpack_require__(4);
-
-	var DOMChildrenOperations = __webpack_require__(81);
-	var DOMLazyTree = __webpack_require__(82);
-	var ReactDOMComponentTree = __webpack_require__(36);
-
-	var escapeTextContentForBrowser = __webpack_require__(87);
-	var invariant = __webpack_require__(8);
-	var validateDOMNesting = __webpack_require__(132);
-=======
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
@@ -20878,7 +17773,6 @@
 	var escapeTextContentForBrowser = __webpack_require__(86);
 	var invariant = __webpack_require__(8);
 	var validateDOMNesting = __webpack_require__(136);
->>>>>>> change to bundle.js
 
 	/**
 	 * Text nodes violate a couple assumptions that React makes about components:
@@ -21023,11 +17917,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 136 */
-=======
 /* 140 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21038,10 +17928,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDefaultBatchingStrategy
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -21049,11 +17935,7 @@
 	var _assign = __webpack_require__(4);
 
 	var ReactUpdates = __webpack_require__(56);
-<<<<<<< HEAD
-	var Transaction = __webpack_require__(69);
-=======
 	var Transaction = __webpack_require__(68);
->>>>>>> change to bundle.js
 
 	var emptyFunction = __webpack_require__(12);
 
@@ -21075,11 +17957,7 @@
 	  this.reinitializeTransaction();
 	}
 
-<<<<<<< HEAD
-	_assign(ReactDefaultBatchingStrategyTransaction.prototype, Transaction.Mixin, {
-=======
 	_assign(ReactDefaultBatchingStrategyTransaction.prototype, Transaction, {
->>>>>>> change to bundle.js
 	  getTransactionWrappers: function () {
 	    return TRANSACTION_WRAPPERS;
 	  }
@@ -21101,15 +17979,9 @@
 
 	    // The code is written this way to avoid extra allocations
 	    if (alreadyBatchingUpdates) {
-<<<<<<< HEAD
-	      callback(a, b, c, d, e);
-	    } else {
-	      transaction.perform(callback, null, a, b, c, d, e);
-=======
 	      return callback(a, b, c, d, e);
 	    } else {
 	      return transaction.perform(callback, null, a, b, c, d, e);
->>>>>>> change to bundle.js
 	    }
 	  }
 	};
@@ -21117,11 +17989,7 @@
 	module.exports = ReactDefaultBatchingStrategy;
 
 /***/ },
-<<<<<<< HEAD
-/* 137 */
-=======
 /* 141 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21132,26 +18000,12 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactEventListener
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var _assign = __webpack_require__(4);
 
-<<<<<<< HEAD
-	var EventListener = __webpack_require__(138);
-	var ExecutionEnvironment = __webpack_require__(49);
-	var PooledClass = __webpack_require__(6);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactUpdates = __webpack_require__(56);
-
-	var getEventTarget = __webpack_require__(70);
-	var getUnboundedScrollPosition = __webpack_require__(139);
-=======
 	var EventListener = __webpack_require__(142);
 	var ExecutionEnvironment = __webpack_require__(48);
 	var PooledClass = __webpack_require__(50);
@@ -21160,7 +18014,6 @@
 
 	var getEventTarget = __webpack_require__(69);
 	var getUnboundedScrollPosition = __webpack_require__(143);
->>>>>>> change to bundle.js
 
 	/**
 	 * Find the deepest React component completely containing the root of the
@@ -21242,21 +18095,12 @@
 	   *
 	   * @param {string} topLevelType Record from `EventConstants`.
 	   * @param {string} handlerBaseName Event name (e.g. "click").
-<<<<<<< HEAD
-	   * @param {object} handle Element on which to attach listener.
-=======
 	   * @param {object} element Element on which to attach listener.
->>>>>>> change to bundle.js
 	   * @return {?object} An object with a remove function which will forcefully
 	   *                  remove the listener.
 	   * @internal
 	   */
-<<<<<<< HEAD
-	  trapBubbledEvent: function (topLevelType, handlerBaseName, handle) {
-	    var element = handle;
-=======
 	  trapBubbledEvent: function (topLevelType, handlerBaseName, element) {
->>>>>>> change to bundle.js
 	    if (!element) {
 	      return null;
 	    }
@@ -21268,21 +18112,12 @@
 	   *
 	   * @param {string} topLevelType Record from `EventConstants`.
 	   * @param {string} handlerBaseName Event name (e.g. "click").
-<<<<<<< HEAD
-	   * @param {object} handle Element on which to attach listener.
-=======
 	   * @param {object} element Element on which to attach listener.
->>>>>>> change to bundle.js
 	   * @return {?object} An object with a remove function which will forcefully
 	   *                  remove the listener.
 	   * @internal
 	   */
-<<<<<<< HEAD
-	  trapCapturedEvent: function (topLevelType, handlerBaseName, handle) {
-	    var element = handle;
-=======
 	  trapCapturedEvent: function (topLevelType, handlerBaseName, element) {
->>>>>>> change to bundle.js
 	    if (!element) {
 	      return null;
 	    }
@@ -21313,11 +18148,7 @@
 	module.exports = ReactEventListener;
 
 /***/ },
-<<<<<<< HEAD
-/* 138 */
-=======
 /* 142 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -21406,11 +18237,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 139 */
-=======
 /* 143 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -21453,11 +18280,7 @@
 	module.exports = getUnboundedScrollPosition;
 
 /***/ },
-<<<<<<< HEAD
-/* 140 */
-=======
 /* 144 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21468,24 +18291,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactInjection
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMProperty = __webpack_require__(37);
-	var EventPluginHub = __webpack_require__(43);
-	var EventPluginUtils = __webpack_require__(45);
-	var ReactComponentEnvironment = __webpack_require__(118);
-	var ReactClass = __webpack_require__(21);
-	var ReactEmptyComponent = __webpack_require__(126);
-	var ReactBrowserEventEmitter = __webpack_require__(107);
-	var ReactHostComponent = __webpack_require__(127);
-=======
 	var DOMProperty = __webpack_require__(36);
 	var EventPluginHub = __webpack_require__(42);
 	var EventPluginUtils = __webpack_require__(44);
@@ -21493,15 +18302,10 @@
 	var ReactEmptyComponent = __webpack_require__(125);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactHostComponent = __webpack_require__(126);
->>>>>>> change to bundle.js
 	var ReactUpdates = __webpack_require__(56);
 
 	var ReactInjection = {
 	  Component: ReactComponentEnvironment.injection,
-<<<<<<< HEAD
-	  Class: ReactClass.injection,
-=======
->>>>>>> change to bundle.js
 	  DOMProperty: DOMProperty.injection,
 	  EmptyComponent: ReactEmptyComponent.injection,
 	  EventPluginHub: EventPluginHub.injection,
@@ -21514,11 +18318,7 @@
 	module.exports = ReactInjection;
 
 /***/ },
-<<<<<<< HEAD
-/* 141 */
-=======
 /* 145 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21529,10 +18329,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactReconcileTransaction
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -21540,21 +18336,12 @@
 	var _assign = __webpack_require__(4);
 
 	var CallbackQueue = __webpack_require__(57);
-<<<<<<< HEAD
-	var PooledClass = __webpack_require__(6);
-	var ReactBrowserEventEmitter = __webpack_require__(107);
-	var ReactInputSelection = __webpack_require__(142);
-	var ReactInstrumentation = __webpack_require__(62);
-	var Transaction = __webpack_require__(69);
-	var ReactUpdateQueue = __webpack_require__(131);
-=======
 	var PooledClass = __webpack_require__(50);
 	var ReactBrowserEventEmitter = __webpack_require__(105);
 	var ReactInputSelection = __webpack_require__(146);
 	var ReactInstrumentation = __webpack_require__(62);
 	var Transaction = __webpack_require__(68);
 	var ReactUpdateQueue = __webpack_require__(135);
->>>>>>> change to bundle.js
 
 	/**
 	 * Ensures that, when possible, the selection range (currently selected text
@@ -21706,11 +18493,7 @@
 	  }
 	};
 
-<<<<<<< HEAD
-	_assign(ReactReconcileTransaction.prototype, Transaction.Mixin, Mixin);
-=======
 	_assign(ReactReconcileTransaction.prototype, Transaction, Mixin);
->>>>>>> change to bundle.js
 
 	PooledClass.addPoolingTo(ReactReconcileTransaction);
 
@@ -21718,11 +18501,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 142 */
-=======
 /* 146 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21733,27 +18512,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactInputSelection
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ReactDOMSelection = __webpack_require__(143);
-
-	var containsNode = __webpack_require__(145);
-	var focusNode = __webpack_require__(96);
-	var getActiveElement = __webpack_require__(148);
-=======
 	var ReactDOMSelection = __webpack_require__(147);
 
 	var containsNode = __webpack_require__(149);
 	var focusNode = __webpack_require__(94);
 	var getActiveElement = __webpack_require__(152);
->>>>>>> change to bundle.js
 
 	function isInDocument(node) {
 	  return containsNode(document.documentElement, node);
@@ -21862,11 +18629,7 @@
 	module.exports = ReactInputSelection;
 
 /***/ },
-<<<<<<< HEAD
-/* 143 */
-=======
 /* 147 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21877,23 +18640,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMSelection
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ExecutionEnvironment = __webpack_require__(49);
-
-	var getNodeForCharacterOffset = __webpack_require__(144);
-=======
 	var ExecutionEnvironment = __webpack_require__(48);
 
 	var getNodeForCharacterOffset = __webpack_require__(148);
->>>>>>> change to bundle.js
 	var getTextContentAccessor = __webpack_require__(51);
 
 	/**
@@ -22092,11 +18845,7 @@
 	module.exports = ReactDOMSelection;
 
 /***/ },
-<<<<<<< HEAD
-/* 144 */
-=======
 /* 148 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -22107,10 +18856,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getNodeForCharacterOffset
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -22178,11 +18923,7 @@
 	module.exports = getNodeForCharacterOffset;
 
 /***/ },
-<<<<<<< HEAD
-/* 145 */
-=======
 /* 149 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22198,11 +18939,7 @@
 	 * 
 	 */
 
-<<<<<<< HEAD
-	var isTextNode = __webpack_require__(146);
-=======
 	var isTextNode = __webpack_require__(150);
->>>>>>> change to bundle.js
 
 	/*eslint-disable no-bitwise */
 
@@ -22230,11 +18967,7 @@
 	module.exports = containsNode;
 
 /***/ },
-<<<<<<< HEAD
-/* 146 */
-=======
 /* 150 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22250,11 +18983,7 @@
 	 * @typechecks
 	 */
 
-<<<<<<< HEAD
-	var isNode = __webpack_require__(147);
-=======
 	var isNode = __webpack_require__(151);
->>>>>>> change to bundle.js
 
 	/**
 	 * @param {*} object The object to check.
@@ -22267,11 +18996,7 @@
 	module.exports = isTextNode;
 
 /***/ },
-<<<<<<< HEAD
-/* 147 */
-=======
 /* 151 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22298,11 +19023,7 @@
 	module.exports = isNode;
 
 /***/ },
-<<<<<<< HEAD
-/* 148 */
-=======
 /* 152 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22341,11 +19062,7 @@
 	module.exports = getActiveElement;
 
 /***/ },
-<<<<<<< HEAD
-/* 149 */
-=======
 /* 153 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -22356,10 +19073,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SVGDOMPropertyConfig
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -22655,11 +19368,7 @@
 	module.exports = SVGDOMPropertyConfig;
 
 /***/ },
-<<<<<<< HEAD
-/* 150 */
-=======
 /* 154 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22670,29 +19379,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SelectEventPlugin
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var EventConstants = __webpack_require__(41);
-	var EventPropagators = __webpack_require__(42);
-	var ExecutionEnvironment = __webpack_require__(49);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactInputSelection = __webpack_require__(142);
-	var SyntheticEvent = __webpack_require__(53);
-
-	var getActiveElement = __webpack_require__(148);
-	var isTextInputElement = __webpack_require__(72);
-	var keyOf = __webpack_require__(25);
-	var shallowEqual = __webpack_require__(124);
-
-	var topLevelTypes = EventConstants.topLevelTypes;
-=======
 	var EventPropagators = __webpack_require__(41);
 	var ExecutionEnvironment = __webpack_require__(48);
 	var ReactDOMComponentTree = __webpack_require__(34);
@@ -22702,24 +19392,16 @@
 	var getActiveElement = __webpack_require__(152);
 	var isTextInputElement = __webpack_require__(71);
 	var shallowEqual = __webpack_require__(123);
->>>>>>> change to bundle.js
 
 	var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
 
 	var eventTypes = {
 	  select: {
 	    phasedRegistrationNames: {
-<<<<<<< HEAD
-	      bubbled: keyOf({ onSelect: null }),
-	      captured: keyOf({ onSelectCapture: null })
-	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topContextMenu, topLevelTypes.topFocus, topLevelTypes.topKeyDown, topLevelTypes.topKeyUp, topLevelTypes.topMouseDown, topLevelTypes.topMouseUp, topLevelTypes.topSelectionChange]
-=======
 	      bubbled: 'onSelect',
 	      captured: 'onSelectCapture'
 	    },
 	    dependencies: ['topBlur', 'topContextMenu', 'topFocus', 'topKeyDown', 'topKeyUp', 'topMouseDown', 'topMouseUp', 'topSelectionChange']
->>>>>>> change to bundle.js
 	  }
 	};
 
@@ -22731,10 +19413,6 @@
 	// Track whether a listener exists for this plugin. If none exist, we do
 	// not extract events. See #3639.
 	var hasListener = false;
-<<<<<<< HEAD
-	var ON_SELECT_KEY = keyOf({ onSelect: null });
-=======
->>>>>>> change to bundle.js
 
 	/**
 	 * Get an object which is a unique representation of the current selection.
@@ -22830,22 +19508,14 @@
 
 	    switch (topLevelType) {
 	      // Track the input node that has focus.
-<<<<<<< HEAD
-	      case topLevelTypes.topFocus:
-=======
 	      case 'topFocus':
->>>>>>> change to bundle.js
 	        if (isTextInputElement(targetNode) || targetNode.contentEditable === 'true') {
 	          activeElement = targetNode;
 	          activeElementInst = targetInst;
 	          lastSelection = null;
 	        }
 	        break;
-<<<<<<< HEAD
-	      case topLevelTypes.topBlur:
-=======
 	      case 'topBlur':
->>>>>>> change to bundle.js
 	        activeElement = null;
 	        activeElementInst = null;
 	        lastSelection = null;
@@ -22853,19 +19523,11 @@
 
 	      // Don't fire the event while the user is dragging. This matches the
 	      // semantics of the native select event.
-<<<<<<< HEAD
-	      case topLevelTypes.topMouseDown:
-	        mouseDown = true;
-	        break;
-	      case topLevelTypes.topContextMenu:
-	      case topLevelTypes.topMouseUp:
-=======
 	      case 'topMouseDown':
 	        mouseDown = true;
 	        break;
 	      case 'topContextMenu':
 	      case 'topMouseUp':
->>>>>>> change to bundle.js
 	        mouseDown = false;
 	        return constructSelectEvent(nativeEvent, nativeEventTarget);
 
@@ -22878,22 +19540,13 @@
 	      // keyup, but we check on keydown as well in the case of holding down a
 	      // key, when multiple keydown events are fired but only one keyup is.
 	      // This is also our approach for IE handling, for the reason above.
-<<<<<<< HEAD
-	      case topLevelTypes.topSelectionChange:
-=======
 	      case 'topSelectionChange':
->>>>>>> change to bundle.js
 	        if (skipSelectionChangeEvent) {
 	          break;
 	        }
 	      // falls through
-<<<<<<< HEAD
-	      case topLevelTypes.topKeyDown:
-	      case topLevelTypes.topKeyUp:
-=======
 	      case 'topKeyDown':
 	      case 'topKeyUp':
->>>>>>> change to bundle.js
 	        return constructSelectEvent(nativeEvent, nativeEventTarget);
 	    }
 
@@ -22901,11 +19554,7 @@
 	  },
 
 	  didPutListener: function (inst, registrationName, listener) {
-<<<<<<< HEAD
-	    if (registrationName === ON_SELECT_KEY) {
-=======
 	    if (registrationName === 'onSelect') {
->>>>>>> change to bundle.js
 	      hasListener = true;
 	    }
 	  }
@@ -22914,11 +19563,7 @@
 	module.exports = SelectEventPlugin;
 
 /***/ },
-<<<<<<< HEAD
-/* 151 */
-=======
 /* 155 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22929,489 +19574,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SimpleEventPlugin
-=======
 	 * 
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var EventConstants = __webpack_require__(41);
-	var EventListener = __webpack_require__(138);
-	var EventPropagators = __webpack_require__(42);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var SyntheticAnimationEvent = __webpack_require__(152);
-	var SyntheticClipboardEvent = __webpack_require__(153);
-	var SyntheticEvent = __webpack_require__(53);
-	var SyntheticFocusEvent = __webpack_require__(154);
-	var SyntheticKeyboardEvent = __webpack_require__(155);
-	var SyntheticMouseEvent = __webpack_require__(75);
-	var SyntheticDragEvent = __webpack_require__(158);
-	var SyntheticTouchEvent = __webpack_require__(159);
-	var SyntheticTransitionEvent = __webpack_require__(160);
-	var SyntheticUIEvent = __webpack_require__(76);
-	var SyntheticWheelEvent = __webpack_require__(161);
-
-	var emptyFunction = __webpack_require__(12);
-	var getEventCharCode = __webpack_require__(156);
-	var invariant = __webpack_require__(8);
-	var keyOf = __webpack_require__(25);
-
-	var topLevelTypes = EventConstants.topLevelTypes;
-
-	var eventTypes = {
-	  abort: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onAbort: true }),
-	      captured: keyOf({ onAbortCapture: true })
-	    }
-	  },
-	  animationEnd: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onAnimationEnd: true }),
-	      captured: keyOf({ onAnimationEndCapture: true })
-	    }
-	  },
-	  animationIteration: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onAnimationIteration: true }),
-	      captured: keyOf({ onAnimationIterationCapture: true })
-	    }
-	  },
-	  animationStart: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onAnimationStart: true }),
-	      captured: keyOf({ onAnimationStartCapture: true })
-	    }
-	  },
-	  blur: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onBlur: true }),
-	      captured: keyOf({ onBlurCapture: true })
-	    }
-	  },
-	  canPlay: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCanPlay: true }),
-	      captured: keyOf({ onCanPlayCapture: true })
-	    }
-	  },
-	  canPlayThrough: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCanPlayThrough: true }),
-	      captured: keyOf({ onCanPlayThroughCapture: true })
-	    }
-	  },
-	  click: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onClick: true }),
-	      captured: keyOf({ onClickCapture: true })
-	    }
-	  },
-	  contextMenu: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onContextMenu: true }),
-	      captured: keyOf({ onContextMenuCapture: true })
-	    }
-	  },
-	  copy: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCopy: true }),
-	      captured: keyOf({ onCopyCapture: true })
-	    }
-	  },
-	  cut: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onCut: true }),
-	      captured: keyOf({ onCutCapture: true })
-	    }
-	  },
-	  doubleClick: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDoubleClick: true }),
-	      captured: keyOf({ onDoubleClickCapture: true })
-	    }
-	  },
-	  drag: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDrag: true }),
-	      captured: keyOf({ onDragCapture: true })
-	    }
-	  },
-	  dragEnd: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragEnd: true }),
-	      captured: keyOf({ onDragEndCapture: true })
-	    }
-	  },
-	  dragEnter: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragEnter: true }),
-	      captured: keyOf({ onDragEnterCapture: true })
-	    }
-	  },
-	  dragExit: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragExit: true }),
-	      captured: keyOf({ onDragExitCapture: true })
-	    }
-	  },
-	  dragLeave: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragLeave: true }),
-	      captured: keyOf({ onDragLeaveCapture: true })
-	    }
-	  },
-	  dragOver: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragOver: true }),
-	      captured: keyOf({ onDragOverCapture: true })
-	    }
-	  },
-	  dragStart: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDragStart: true }),
-	      captured: keyOf({ onDragStartCapture: true })
-	    }
-	  },
-	  drop: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDrop: true }),
-	      captured: keyOf({ onDropCapture: true })
-	    }
-	  },
-	  durationChange: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onDurationChange: true }),
-	      captured: keyOf({ onDurationChangeCapture: true })
-	    }
-	  },
-	  emptied: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onEmptied: true }),
-	      captured: keyOf({ onEmptiedCapture: true })
-	    }
-	  },
-	  encrypted: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onEncrypted: true }),
-	      captured: keyOf({ onEncryptedCapture: true })
-	    }
-	  },
-	  ended: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onEnded: true }),
-	      captured: keyOf({ onEndedCapture: true })
-	    }
-	  },
-	  error: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onError: true }),
-	      captured: keyOf({ onErrorCapture: true })
-	    }
-	  },
-	  focus: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onFocus: true }),
-	      captured: keyOf({ onFocusCapture: true })
-	    }
-	  },
-	  input: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onInput: true }),
-	      captured: keyOf({ onInputCapture: true })
-	    }
-	  },
-	  invalid: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onInvalid: true }),
-	      captured: keyOf({ onInvalidCapture: true })
-	    }
-	  },
-	  keyDown: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onKeyDown: true }),
-	      captured: keyOf({ onKeyDownCapture: true })
-	    }
-	  },
-	  keyPress: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onKeyPress: true }),
-	      captured: keyOf({ onKeyPressCapture: true })
-	    }
-	  },
-	  keyUp: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onKeyUp: true }),
-	      captured: keyOf({ onKeyUpCapture: true })
-	    }
-	  },
-	  load: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onLoad: true }),
-	      captured: keyOf({ onLoadCapture: true })
-	    }
-	  },
-	  loadedData: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onLoadedData: true }),
-	      captured: keyOf({ onLoadedDataCapture: true })
-	    }
-	  },
-	  loadedMetadata: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onLoadedMetadata: true }),
-	      captured: keyOf({ onLoadedMetadataCapture: true })
-	    }
-	  },
-	  loadStart: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onLoadStart: true }),
-	      captured: keyOf({ onLoadStartCapture: true })
-	    }
-	  },
-	  // Note: We do not allow listening to mouseOver events. Instead, use the
-	  // onMouseEnter/onMouseLeave created by `EnterLeaveEventPlugin`.
-	  mouseDown: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onMouseDown: true }),
-	      captured: keyOf({ onMouseDownCapture: true })
-	    }
-	  },
-	  mouseMove: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onMouseMove: true }),
-	      captured: keyOf({ onMouseMoveCapture: true })
-	    }
-	  },
-	  mouseOut: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onMouseOut: true }),
-	      captured: keyOf({ onMouseOutCapture: true })
-	    }
-	  },
-	  mouseOver: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onMouseOver: true }),
-	      captured: keyOf({ onMouseOverCapture: true })
-	    }
-	  },
-	  mouseUp: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onMouseUp: true }),
-	      captured: keyOf({ onMouseUpCapture: true })
-	    }
-	  },
-	  paste: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onPaste: true }),
-	      captured: keyOf({ onPasteCapture: true })
-	    }
-	  },
-	  pause: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onPause: true }),
-	      captured: keyOf({ onPauseCapture: true })
-	    }
-	  },
-	  play: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onPlay: true }),
-	      captured: keyOf({ onPlayCapture: true })
-	    }
-	  },
-	  playing: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onPlaying: true }),
-	      captured: keyOf({ onPlayingCapture: true })
-	    }
-	  },
-	  progress: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onProgress: true }),
-	      captured: keyOf({ onProgressCapture: true })
-	    }
-	  },
-	  rateChange: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onRateChange: true }),
-	      captured: keyOf({ onRateChangeCapture: true })
-	    }
-	  },
-	  reset: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onReset: true }),
-	      captured: keyOf({ onResetCapture: true })
-	    }
-	  },
-	  scroll: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onScroll: true }),
-	      captured: keyOf({ onScrollCapture: true })
-	    }
-	  },
-	  seeked: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onSeeked: true }),
-	      captured: keyOf({ onSeekedCapture: true })
-	    }
-	  },
-	  seeking: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onSeeking: true }),
-	      captured: keyOf({ onSeekingCapture: true })
-	    }
-	  },
-	  stalled: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onStalled: true }),
-	      captured: keyOf({ onStalledCapture: true })
-	    }
-	  },
-	  submit: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onSubmit: true }),
-	      captured: keyOf({ onSubmitCapture: true })
-	    }
-	  },
-	  suspend: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onSuspend: true }),
-	      captured: keyOf({ onSuspendCapture: true })
-	    }
-	  },
-	  timeUpdate: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTimeUpdate: true }),
-	      captured: keyOf({ onTimeUpdateCapture: true })
-	    }
-	  },
-	  touchCancel: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTouchCancel: true }),
-	      captured: keyOf({ onTouchCancelCapture: true })
-	    }
-	  },
-	  touchEnd: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTouchEnd: true }),
-	      captured: keyOf({ onTouchEndCapture: true })
-	    }
-	  },
-	  touchMove: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTouchMove: true }),
-	      captured: keyOf({ onTouchMoveCapture: true })
-	    }
-	  },
-	  touchStart: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTouchStart: true }),
-	      captured: keyOf({ onTouchStartCapture: true })
-	    }
-	  },
-	  transitionEnd: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onTransitionEnd: true }),
-	      captured: keyOf({ onTransitionEndCapture: true })
-	    }
-	  },
-	  volumeChange: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onVolumeChange: true }),
-	      captured: keyOf({ onVolumeChangeCapture: true })
-	    }
-	  },
-	  waiting: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onWaiting: true }),
-	      captured: keyOf({ onWaitingCapture: true })
-	    }
-	  },
-	  wheel: {
-	    phasedRegistrationNames: {
-	      bubbled: keyOf({ onWheel: true }),
-	      captured: keyOf({ onWheelCapture: true })
-	    }
-	  }
-	};
-
-	var topLevelEventsToDispatchConfig = {
-	  topAbort: eventTypes.abort,
-	  topAnimationEnd: eventTypes.animationEnd,
-	  topAnimationIteration: eventTypes.animationIteration,
-	  topAnimationStart: eventTypes.animationStart,
-	  topBlur: eventTypes.blur,
-	  topCanPlay: eventTypes.canPlay,
-	  topCanPlayThrough: eventTypes.canPlayThrough,
-	  topClick: eventTypes.click,
-	  topContextMenu: eventTypes.contextMenu,
-	  topCopy: eventTypes.copy,
-	  topCut: eventTypes.cut,
-	  topDoubleClick: eventTypes.doubleClick,
-	  topDrag: eventTypes.drag,
-	  topDragEnd: eventTypes.dragEnd,
-	  topDragEnter: eventTypes.dragEnter,
-	  topDragExit: eventTypes.dragExit,
-	  topDragLeave: eventTypes.dragLeave,
-	  topDragOver: eventTypes.dragOver,
-	  topDragStart: eventTypes.dragStart,
-	  topDrop: eventTypes.drop,
-	  topDurationChange: eventTypes.durationChange,
-	  topEmptied: eventTypes.emptied,
-	  topEncrypted: eventTypes.encrypted,
-	  topEnded: eventTypes.ended,
-	  topError: eventTypes.error,
-	  topFocus: eventTypes.focus,
-	  topInput: eventTypes.input,
-	  topInvalid: eventTypes.invalid,
-	  topKeyDown: eventTypes.keyDown,
-	  topKeyPress: eventTypes.keyPress,
-	  topKeyUp: eventTypes.keyUp,
-	  topLoad: eventTypes.load,
-	  topLoadedData: eventTypes.loadedData,
-	  topLoadedMetadata: eventTypes.loadedMetadata,
-	  topLoadStart: eventTypes.loadStart,
-	  topMouseDown: eventTypes.mouseDown,
-	  topMouseMove: eventTypes.mouseMove,
-	  topMouseOut: eventTypes.mouseOut,
-	  topMouseOver: eventTypes.mouseOver,
-	  topMouseUp: eventTypes.mouseUp,
-	  topPaste: eventTypes.paste,
-	  topPause: eventTypes.pause,
-	  topPlay: eventTypes.play,
-	  topPlaying: eventTypes.playing,
-	  topProgress: eventTypes.progress,
-	  topRateChange: eventTypes.rateChange,
-	  topReset: eventTypes.reset,
-	  topScroll: eventTypes.scroll,
-	  topSeeked: eventTypes.seeked,
-	  topSeeking: eventTypes.seeking,
-	  topStalled: eventTypes.stalled,
-	  topSubmit: eventTypes.submit,
-	  topSuspend: eventTypes.suspend,
-	  topTimeUpdate: eventTypes.timeUpdate,
-	  topTouchCancel: eventTypes.touchCancel,
-	  topTouchEnd: eventTypes.touchEnd,
-	  topTouchMove: eventTypes.touchMove,
-	  topTouchStart: eventTypes.touchStart,
-	  topTransitionEnd: eventTypes.transitionEnd,
-	  topVolumeChange: eventTypes.volumeChange,
-	  topWaiting: eventTypes.waiting,
-	  topWheel: eventTypes.wheel
-	};
-
-	for (var type in topLevelEventsToDispatchConfig) {
-	  topLevelEventsToDispatchConfig[type].dependencies = [type];
-	}
-
-	var ON_CLICK_KEY = keyOf({ onClick: null });
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var EventListener = __webpack_require__(142);
@@ -23469,7 +19636,6 @@
 	  topLevelEventsToDispatchConfig[topEvent] = type;
 	});
 
->>>>>>> change to bundle.js
 	var onClickListeners = {};
 
 	function getDictionaryKey(inst) {
@@ -23478,8 +19644,6 @@
 	  return '.' + inst._rootNodeID;
 	}
 
-<<<<<<< HEAD
-=======
 	function isInteractive(tag) {
 	  return tag === 'button' || tag === 'input' || tag === 'select' || tag === 'textarea';
 	}
@@ -23496,7 +19660,6 @@
 	  return false;
 	}
 
->>>>>>> change to bundle.js
 	var SimpleEventPlugin = {
 
 	  eventTypes: eventTypes,
@@ -23508,36 +19671,6 @@
 	    }
 	    var EventConstructor;
 	    switch (topLevelType) {
-<<<<<<< HEAD
-	      case topLevelTypes.topAbort:
-	      case topLevelTypes.topCanPlay:
-	      case topLevelTypes.topCanPlayThrough:
-	      case topLevelTypes.topDurationChange:
-	      case topLevelTypes.topEmptied:
-	      case topLevelTypes.topEncrypted:
-	      case topLevelTypes.topEnded:
-	      case topLevelTypes.topError:
-	      case topLevelTypes.topInput:
-	      case topLevelTypes.topInvalid:
-	      case topLevelTypes.topLoad:
-	      case topLevelTypes.topLoadedData:
-	      case topLevelTypes.topLoadedMetadata:
-	      case topLevelTypes.topLoadStart:
-	      case topLevelTypes.topPause:
-	      case topLevelTypes.topPlay:
-	      case topLevelTypes.topPlaying:
-	      case topLevelTypes.topProgress:
-	      case topLevelTypes.topRateChange:
-	      case topLevelTypes.topReset:
-	      case topLevelTypes.topSeeked:
-	      case topLevelTypes.topSeeking:
-	      case topLevelTypes.topStalled:
-	      case topLevelTypes.topSubmit:
-	      case topLevelTypes.topSuspend:
-	      case topLevelTypes.topTimeUpdate:
-	      case topLevelTypes.topVolumeChange:
-	      case topLevelTypes.topWaiting:
-=======
 	      case 'topAbort':
 	      case 'topCanPlay':
 	      case 'topCanPlayThrough':
@@ -23566,16 +19699,11 @@
 	      case 'topTimeUpdate':
 	      case 'topVolumeChange':
 	      case 'topWaiting':
->>>>>>> change to bundle.js
 	        // HTML Events
 	        // @see http://www.w3.org/TR/html5/index.html#events-0
 	        EventConstructor = SyntheticEvent;
 	        break;
-<<<<<<< HEAD
-	      case topLevelTypes.topKeyPress:
-=======
 	      case 'topKeyPress':
->>>>>>> change to bundle.js
 	        // Firefox creates a keypress event for function keys too. This removes
 	        // the unwanted keypress events. Enter is however both printable and
 	        // non-printable. One would expect Tab to be as well (but it isn't).
@@ -23583,17 +19711,6 @@
 	          return null;
 	        }
 	      /* falls through */
-<<<<<<< HEAD
-	      case topLevelTypes.topKeyDown:
-	      case topLevelTypes.topKeyUp:
-	        EventConstructor = SyntheticKeyboardEvent;
-	        break;
-	      case topLevelTypes.topBlur:
-	      case topLevelTypes.topFocus:
-	        EventConstructor = SyntheticFocusEvent;
-	        break;
-	      case topLevelTypes.topClick:
-=======
 	      case 'topKeyDown':
 	      case 'topKeyUp':
 	        EventConstructor = SyntheticKeyboardEvent;
@@ -23603,57 +19720,12 @@
 	        EventConstructor = SyntheticFocusEvent;
 	        break;
 	      case 'topClick':
->>>>>>> change to bundle.js
 	        // Firefox creates a click event on right mouse clicks. This removes the
 	        // unwanted click events.
 	        if (nativeEvent.button === 2) {
 	          return null;
 	        }
 	      /* falls through */
-<<<<<<< HEAD
-	      case topLevelTypes.topContextMenu:
-	      case topLevelTypes.topDoubleClick:
-	      case topLevelTypes.topMouseDown:
-	      case topLevelTypes.topMouseMove:
-	      case topLevelTypes.topMouseOut:
-	      case topLevelTypes.topMouseOver:
-	      case topLevelTypes.topMouseUp:
-	        EventConstructor = SyntheticMouseEvent;
-	        break;
-	      case topLevelTypes.topDrag:
-	      case topLevelTypes.topDragEnd:
-	      case topLevelTypes.topDragEnter:
-	      case topLevelTypes.topDragExit:
-	      case topLevelTypes.topDragLeave:
-	      case topLevelTypes.topDragOver:
-	      case topLevelTypes.topDragStart:
-	      case topLevelTypes.topDrop:
-	        EventConstructor = SyntheticDragEvent;
-	        break;
-	      case topLevelTypes.topTouchCancel:
-	      case topLevelTypes.topTouchEnd:
-	      case topLevelTypes.topTouchMove:
-	      case topLevelTypes.topTouchStart:
-	        EventConstructor = SyntheticTouchEvent;
-	        break;
-	      case topLevelTypes.topAnimationEnd:
-	      case topLevelTypes.topAnimationIteration:
-	      case topLevelTypes.topAnimationStart:
-	        EventConstructor = SyntheticAnimationEvent;
-	        break;
-	      case topLevelTypes.topTransitionEnd:
-	        EventConstructor = SyntheticTransitionEvent;
-	        break;
-	      case topLevelTypes.topScroll:
-	        EventConstructor = SyntheticUIEvent;
-	        break;
-	      case topLevelTypes.topWheel:
-	        EventConstructor = SyntheticWheelEvent;
-	        break;
-	      case topLevelTypes.topCopy:
-	      case topLevelTypes.topCut:
-	      case topLevelTypes.topPaste:
-=======
 	      case 'topDoubleClick':
 	      case 'topMouseDown':
 	      case 'topMouseMove':
@@ -23701,7 +19773,6 @@
 	      case 'topCopy':
 	      case 'topCut':
 	      case 'topPaste':
->>>>>>> change to bundle.js
 	        EventConstructor = SyntheticClipboardEvent;
 	        break;
 	    }
@@ -23716,12 +19787,8 @@
 	    // non-interactive elements, which means delegated click listeners do not
 	    // fire. The workaround for this bug involves attaching an empty click
 	    // listener on the target node.
-<<<<<<< HEAD
-	    if (registrationName === ON_CLICK_KEY) {
-=======
 	    // http://www.quirksmode.org/blog/archives/2010/09/click_event_del.html
 	    if (registrationName === 'onClick' && !isInteractive(inst._tag)) {
->>>>>>> change to bundle.js
 	      var key = getDictionaryKey(inst);
 	      var node = ReactDOMComponentTree.getNodeFromInstance(inst);
 	      if (!onClickListeners[key]) {
@@ -23731,11 +19798,7 @@
 	  },
 
 	  willDeleteListener: function (inst, registrationName) {
-<<<<<<< HEAD
-	    if (registrationName === ON_CLICK_KEY) {
-=======
 	    if (registrationName === 'onClick' && !isInteractive(inst._tag)) {
->>>>>>> change to bundle.js
 	      var key = getDictionaryKey(inst);
 	      onClickListeners[key].remove();
 	      delete onClickListeners[key];
@@ -23748,11 +19811,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 152 */
-=======
 /* 156 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -23763,10 +19822,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticAnimationEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -23799,11 +19854,7 @@
 	module.exports = SyntheticAnimationEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 153 */
-=======
 /* 157 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -23814,10 +19865,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticClipboardEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -23849,11 +19896,7 @@
 	module.exports = SyntheticClipboardEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 154 */
-=======
 /* 158 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -23864,19 +19907,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticFocusEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticUIEvent = __webpack_require__(76);
-=======
 	var SyntheticUIEvent = __webpack_require__(75);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface FocusEvent
@@ -23901,11 +19936,7 @@
 	module.exports = SyntheticFocusEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 155 */
-=======
 /* 159 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -23916,27 +19947,15 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticKeyboardEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticUIEvent = __webpack_require__(76);
-
-	var getEventCharCode = __webpack_require__(156);
-	var getEventKey = __webpack_require__(157);
-	var getEventModifierState = __webpack_require__(78);
-=======
 	var SyntheticUIEvent = __webpack_require__(75);
 
 	var getEventCharCode = __webpack_require__(160);
 	var getEventKey = __webpack_require__(161);
 	var getEventModifierState = __webpack_require__(77);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface KeyboardEvent
@@ -24005,11 +20024,7 @@
 	module.exports = SyntheticKeyboardEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 156 */
-=======
 /* 160 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -24020,10 +20035,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getEventCharCode
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -24067,11 +20078,7 @@
 	module.exports = getEventCharCode;
 
 /***/ },
-<<<<<<< HEAD
-/* 157 */
-=======
 /* 161 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -24082,19 +20089,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getEventKey
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var getEventCharCode = __webpack_require__(156);
-=======
 	var getEventCharCode = __webpack_require__(160);
->>>>>>> change to bundle.js
 
 	/**
 	 * Normalization of deprecated HTML5 `key` values
@@ -24185,11 +20184,7 @@
 	module.exports = getEventKey;
 
 /***/ },
-<<<<<<< HEAD
-/* 158 */
-=======
 /* 162 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -24200,19 +20195,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticDragEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticMouseEvent = __webpack_require__(75);
-=======
 	var SyntheticMouseEvent = __webpack_require__(74);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface DragEvent
@@ -24237,11 +20224,7 @@
 	module.exports = SyntheticDragEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 159 */
-=======
 /* 163 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -24252,23 +20235,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticTouchEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticUIEvent = __webpack_require__(76);
-
-	var getEventModifierState = __webpack_require__(78);
-=======
 	var SyntheticUIEvent = __webpack_require__(75);
 
 	var getEventModifierState = __webpack_require__(77);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface TouchEvent
@@ -24300,11 +20273,7 @@
 	module.exports = SyntheticTouchEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 160 */
-=======
 /* 164 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -24315,10 +20284,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticTransitionEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
@@ -24351,11 +20316,7 @@
 	module.exports = SyntheticTransitionEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 161 */
-=======
 /* 165 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -24366,19 +20327,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule SyntheticWheelEvent
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var SyntheticMouseEvent = __webpack_require__(75);
-=======
 	var SyntheticMouseEvent = __webpack_require__(74);
->>>>>>> change to bundle.js
 
 	/**
 	 * @interface WheelEvent
@@ -24421,11 +20374,7 @@
 	module.exports = SyntheticWheelEvent;
 
 /***/ },
-<<<<<<< HEAD
-/* 162 */
-=======
 /* 166 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -24436,39 +20385,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactMount
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var DOMLazyTree = __webpack_require__(82);
-	var DOMProperty = __webpack_require__(37);
-	var ReactBrowserEventEmitter = __webpack_require__(107);
-	var ReactCurrentOwner = __webpack_require__(10);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactDOMContainerInfo = __webpack_require__(163);
-	var ReactDOMFeatureFlags = __webpack_require__(164);
-	var ReactElement = __webpack_require__(9);
-	var ReactFeatureFlags = __webpack_require__(58);
-	var ReactInstanceMap = __webpack_require__(119);
-	var ReactInstrumentation = __webpack_require__(62);
-	var ReactMarkupChecksum = __webpack_require__(165);
-	var ReactReconciler = __webpack_require__(59);
-	var ReactUpdateQueue = __webpack_require__(131);
-	var ReactUpdates = __webpack_require__(56);
-
-	var emptyObject = __webpack_require__(19);
-	var instantiateReactComponent = __webpack_require__(121);
-	var invariant = __webpack_require__(8);
-	var setInnerHTML = __webpack_require__(84);
-	var shouldUpdateReactComponent = __webpack_require__(125);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var DOMLazyTree = __webpack_require__(81);
@@ -24492,7 +20412,6 @@
 	var invariant = __webpack_require__(8);
 	var setInnerHTML = __webpack_require__(83);
 	var shouldUpdateReactComponent = __webpack_require__(124);
->>>>>>> change to bundle.js
 	var warning = __webpack_require__(11);
 
 	var ATTR_NAME = DOMProperty.ID_ATTRIBUTE_NAME;
@@ -24555,11 +20474,7 @@
 	function mountComponentIntoNode(wrapperInstance, container, transaction, shouldReuseMarkup, context) {
 	  var markerName;
 	  if (ReactFeatureFlags.logTopLevelRenders) {
-<<<<<<< HEAD
-	    var wrappedElement = wrapperInstance._currentElement.props;
-=======
 	    var wrappedElement = wrapperInstance._currentElement.props.child;
->>>>>>> change to bundle.js
 	    var type = wrappedElement.type;
 	    markerName = 'React mount: ' + (typeof type === 'string' ? type : type.displayName || type.name);
 	    console.time(markerName);
@@ -24697,15 +20612,9 @@
 	  TopLevelWrapper.displayName = 'TopLevelWrapper';
 	}
 	TopLevelWrapper.prototype.render = function () {
-<<<<<<< HEAD
-	  // this.props is actually a ReactElement
-	  return this.props;
-	};
-=======
 	  return this.props.child;
 	};
 	TopLevelWrapper.isReactTopLevelWrapper = true;
->>>>>>> change to bundle.js
 
 	/**
 	 * Mounting is the process of initializing a React component by creating its
@@ -24815,21 +20724,13 @@
 
 	  _renderSubtreeIntoContainer: function (parentComponent, nextElement, container, callback) {
 	    ReactUpdateQueue.validateCallback(callback, 'ReactDOM.render');
-<<<<<<< HEAD
-	    !ReactElement.isValidElement(nextElement) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactDOM.render(): Invalid component element.%s', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' :
-=======
 	    !React.isValidElement(nextElement) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'ReactDOM.render(): Invalid component element.%s', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' :
->>>>>>> change to bundle.js
 	    // Check if it quacks like an element
 	    nextElement != null && nextElement.props !== undefined ? ' This may be caused by unintentionally loading two independent ' + 'copies of React.' : '') : _prodInvariant('39', typeof nextElement === 'string' ? ' Instead of passing a string like \'div\', pass ' + 'React.createElement(\'div\') or <div />.' : typeof nextElement === 'function' ? ' Instead of passing a class like Foo, pass ' + 'React.createElement(Foo) or <Foo />.' : nextElement != null && nextElement.props !== undefined ? ' This may be caused by unintentionally loading two independent ' + 'copies of React.' : '') : void 0;
 
 	    process.env.NODE_ENV !== 'production' ? warning(!container || !container.tagName || container.tagName.toUpperCase() !== 'BODY', 'render(): Rendering components directly into document.body is ' + 'discouraged, since its children are often manipulated by third-party ' + 'scripts and browser extensions. This may lead to subtle ' + 'reconciliation issues. Try rendering into a container element created ' + 'for your app.') : void 0;
 
-<<<<<<< HEAD
-	    var nextWrappedElement = ReactElement(TopLevelWrapper, null, null, null, null, null, nextElement);
-=======
 	    var nextWrappedElement = React.createElement(TopLevelWrapper, { child: nextElement });
->>>>>>> change to bundle.js
 
 	    var nextContext;
 	    if (parentComponent) {
@@ -24843,11 +20744,7 @@
 
 	    if (prevComponent) {
 	      var prevWrappedElement = prevComponent._currentElement;
-<<<<<<< HEAD
-	      var prevElement = prevWrappedElement.props;
-=======
 	      var prevElement = prevWrappedElement.props.child;
->>>>>>> change to bundle.js
 	      if (shouldUpdateReactComponent(prevElement, nextElement)) {
 	        var publicInst = prevComponent._renderedComponent.getPublicInstance();
 	        var updatedCallback = callback && function () {
@@ -25006,15 +20903,11 @@
 	    if (process.env.NODE_ENV !== 'production') {
 	      var hostNode = ReactDOMComponentTree.getInstanceFromNode(container.firstChild);
 	      if (hostNode._debugID !== 0) {
-<<<<<<< HEAD
-	        ReactInstrumentation.debugTool.onHostOperation(hostNode._debugID, 'mount', markup.toString());
-=======
 	        ReactInstrumentation.debugTool.onHostOperation({
 	          instanceID: hostNode._debugID,
 	          type: 'mount',
 	          payload: markup.toString()
 	        });
->>>>>>> change to bundle.js
 	      }
 	    }
 	  }
@@ -25024,11 +20917,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 163 */
-=======
 /* 167 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -25039,19 +20928,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMContainerInfo
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var validateDOMNesting = __webpack_require__(132);
-=======
 	var validateDOMNesting = __webpack_require__(136);
->>>>>>> change to bundle.js
 
 	var DOC_NODE_TYPE = 9;
 
@@ -25074,11 +20955,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 164 */
-=======
 /* 168 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -25089,31 +20966,19 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMFeatureFlags
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
 	var ReactDOMFeatureFlags = {
-<<<<<<< HEAD
-	  useCreateElement: true
-=======
 	  useCreateElement: true,
 	  useFiber: false
->>>>>>> change to bundle.js
 	};
 
 	module.exports = ReactDOMFeatureFlags;
 
 /***/ },
-<<<<<<< HEAD
-/* 165 */
-=======
 /* 169 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -25124,19 +20989,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactMarkupChecksum
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var adler32 = __webpack_require__(166);
-=======
 	var adler32 = __webpack_require__(170);
->>>>>>> change to bundle.js
 
 	var TAG_END = /\/?>/;
 	var COMMENT_START = /^<\!\-\-/;
@@ -25175,11 +21032,7 @@
 	module.exports = ReactMarkupChecksum;
 
 /***/ },
-<<<<<<< HEAD
-/* 166 */
-=======
 /* 170 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -25190,10 +21043,6 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule adler32
-=======
->>>>>>> change to bundle.js
 	 * 
 	 */
 
@@ -25231,9 +21080,6 @@
 	module.exports = adler32;
 
 /***/ },
-<<<<<<< HEAD
-/* 167 */
-=======
 /* 171 */
 /***/ function(module, exports) {
 
@@ -25253,7 +21099,6 @@
 
 /***/ },
 /* 172 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -25264,23 +21109,10 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule findDOMNode
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var _prodInvariant = __webpack_require__(7);
-
-	var ReactCurrentOwner = __webpack_require__(10);
-	var ReactDOMComponentTree = __webpack_require__(36);
-	var ReactInstanceMap = __webpack_require__(119);
-
-	var getHostComponentFromComposite = __webpack_require__(168);
-=======
 	var _prodInvariant = __webpack_require__(35);
 
 	var ReactCurrentOwner = __webpack_require__(10);
@@ -25288,7 +21120,6 @@
 	var ReactInstanceMap = __webpack_require__(116);
 
 	var getHostComponentFromComposite = __webpack_require__(173);
->>>>>>> change to bundle.js
 	var invariant = __webpack_require__(8);
 	var warning = __webpack_require__(11);
 
@@ -25332,11 +21163,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 168 */
-=======
 /* 173 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -25347,19 +21174,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule getHostComponentFromComposite
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ReactNodeTypes = __webpack_require__(123);
-=======
 	var ReactNodeTypes = __webpack_require__(120);
->>>>>>> change to bundle.js
 
 	function getHostComponentFromComposite(inst) {
 	  var type;
@@ -25378,11 +21197,7 @@
 	module.exports = getHostComponentFromComposite;
 
 /***/ },
-<<<<<<< HEAD
-/* 169 */
-=======
 /* 174 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -25393,29 +21208,16 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	* @providesModule renderSubtreeIntoContainer
-	*/
-
-	'use strict';
-
-	var ReactMount = __webpack_require__(162);
-=======
 	 */
 
 	'use strict';
 
 	var ReactMount = __webpack_require__(166);
->>>>>>> change to bundle.js
 
 	module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ },
-<<<<<<< HEAD
-/* 170 */
-=======
 /* 175 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -25426,23 +21228,13 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMUnknownPropertyHook
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var DOMProperty = __webpack_require__(37);
-	var EventPluginRegistry = __webpack_require__(44);
-	var ReactComponentTreeHook = __webpack_require__(28);
-=======
 	var DOMProperty = __webpack_require__(36);
 	var EventPluginRegistry = __webpack_require__(43);
 	var ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 
 	var warning = __webpack_require__(11);
 
@@ -25542,11 +21334,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 171 */
-=======
 /* 176 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -25557,19 +21345,11 @@
 	 * LICENSE file in the root directory of this source tree. An additional grant
 	 * of patent rights can be found in the PATENTS file in the same directory.
 	 *
-<<<<<<< HEAD
-	 * @providesModule ReactDOMNullInputValuePropHook
-=======
->>>>>>> change to bundle.js
 	 */
 
 	'use strict';
 
-<<<<<<< HEAD
-	var ReactComponentTreeHook = __webpack_require__(28);
-=======
 	var ReactComponentTreeHook = __webpack_require__(26);
->>>>>>> change to bundle.js
 
 	var warning = __webpack_require__(11);
 
@@ -25602,9 +21382,6 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 172 */
-=======
 /* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -25704,7 +21481,6 @@
 
 /***/ },
 /* 178 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25712,11 +21488,7 @@
 	exports.__esModule = true;
 	exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.RouterContext = exports.createRoutes = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
 
-<<<<<<< HEAD
-	var _RouteUtils = __webpack_require__(173);
-=======
 	var _RouteUtils = __webpack_require__(179);
->>>>>>> change to bundle.js
 
 	Object.defineProperty(exports, 'createRoutes', {
 	  enumerable: true,
@@ -25725,11 +21497,7 @@
 	  }
 	});
 
-<<<<<<< HEAD
-	var _PropTypes = __webpack_require__(174);
-=======
 	var _PropTypes = __webpack_require__(180);
->>>>>>> change to bundle.js
 
 	Object.defineProperty(exports, 'locationShape', {
 	  enumerable: true,
@@ -25744,11 +21512,7 @@
 	  }
 	});
 
-<<<<<<< HEAD
-	var _PatternUtils = __webpack_require__(175);
-=======
 	var _PatternUtils = __webpack_require__(181);
->>>>>>> change to bundle.js
 
 	Object.defineProperty(exports, 'formatPattern', {
 	  enumerable: true,
@@ -25757,65 +21521,6 @@
 	  }
 	});
 
-<<<<<<< HEAD
-	var _Router2 = __webpack_require__(177);
-
-	var _Router3 = _interopRequireDefault(_Router2);
-
-	var _Link2 = __webpack_require__(193);
-
-	var _Link3 = _interopRequireDefault(_Link2);
-
-	var _IndexLink2 = __webpack_require__(194);
-
-	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
-
-	var _withRouter2 = __webpack_require__(195);
-
-	var _withRouter3 = _interopRequireDefault(_withRouter2);
-
-	var _IndexRedirect2 = __webpack_require__(197);
-
-	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
-
-	var _IndexRoute2 = __webpack_require__(199);
-
-	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
-
-	var _Redirect2 = __webpack_require__(198);
-
-	var _Redirect3 = _interopRequireDefault(_Redirect2);
-
-	var _Route2 = __webpack_require__(200);
-
-	var _Route3 = _interopRequireDefault(_Route2);
-
-	var _RouterContext2 = __webpack_require__(189);
-
-	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
-
-	var _match2 = __webpack_require__(201);
-
-	var _match3 = _interopRequireDefault(_match2);
-
-	var _useRouterHistory2 = __webpack_require__(214);
-
-	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
-
-	var _applyRouterMiddleware2 = __webpack_require__(215);
-
-	var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
-
-	var _browserHistory2 = __webpack_require__(216);
-
-	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
-
-	var _hashHistory2 = __webpack_require__(224);
-
-	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
-
-	var _createMemoryHistory2 = __webpack_require__(203);
-=======
 	var _Router2 = __webpack_require__(183);
 
 	var _Router3 = _interopRequireDefault(_Router2);
@@ -25873,7 +21578,6 @@
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 
 	var _createMemoryHistory2 = __webpack_require__(209);
->>>>>>> change to bundle.js
 
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 
@@ -25906,11 +21610,7 @@
 	exports.createMemoryHistory = _createMemoryHistory3.default;
 
 /***/ },
-<<<<<<< HEAD
-/* 173 */
-=======
 /* 179 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26008,11 +21708,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 174 */
-=======
 /* 180 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26045,11 +21741,7 @@
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 175 */
-=======
 /* 181 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26061,11 +21753,7 @@
 	exports.getParams = getParams;
 	exports.formatPattern = formatPattern;
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-=======
 	var _invariant = __webpack_require__(182);
->>>>>>> change to bundle.js
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -26295,11 +21983,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 176 */
-=======
 /* 182 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -26357,11 +22041,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 177 */
-=======
 /* 183 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26370,11 +22050,7 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-=======
 	var _invariant = __webpack_require__(182);
->>>>>>> change to bundle.js
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -26382,23 +22058,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _createTransitionManager2 = __webpack_require__(178);
-
-	var _createTransitionManager3 = _interopRequireDefault(_createTransitionManager2);
-
-	var _InternalPropTypes = __webpack_require__(188);
-
-	var _RouterContext = __webpack_require__(189);
-
-	var _RouterContext2 = _interopRequireDefault(_RouterContext);
-
-	var _RouteUtils = __webpack_require__(173);
-
-	var _RouterUtils = __webpack_require__(192);
-
-	var _routerWarning = __webpack_require__(179);
-=======
 	var _createTransitionManager2 = __webpack_require__(184);
 
 	var _createTransitionManager3 = _interopRequireDefault(_createTransitionManager2);
@@ -26414,7 +22073,6 @@
 	var _RouterUtils = __webpack_require__(198);
 
 	var _routerWarning = __webpack_require__(185);
->>>>>>> change to bundle.js
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
@@ -26564,11 +22222,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 178 */
-=======
 /* 184 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -26579,27 +22233,6 @@
 
 	exports.default = createTransitionManager;
 
-<<<<<<< HEAD
-	var _routerWarning = __webpack_require__(179);
-
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-	var _computeChangedRoutes2 = __webpack_require__(181);
-
-	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
-
-	var _TransitionUtils = __webpack_require__(182);
-
-	var _isActive2 = __webpack_require__(184);
-
-	var _isActive3 = _interopRequireDefault(_isActive2);
-
-	var _getComponents = __webpack_require__(185);
-
-	var _getComponents2 = _interopRequireDefault(_getComponents);
-
-	var _matchRoutes = __webpack_require__(187);
-=======
 	var _routerWarning = __webpack_require__(185);
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
@@ -26619,7 +22252,6 @@
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 
 	var _matchRoutes = __webpack_require__(193);
->>>>>>> change to bundle.js
 
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
@@ -26871,11 +22503,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 179 */
-=======
 /* 185 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26884,11 +22512,7 @@
 	exports.default = routerWarning;
 	exports._resetWarned = _resetWarned;
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-=======
 	var _warning = __webpack_require__(186);
->>>>>>> change to bundle.js
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -26920,11 +22544,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 180 */
-=======
 /* 186 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -26991,22 +22611,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 181 */
-=======
 /* 187 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _PatternUtils = __webpack_require__(175);
-=======
 	var _PatternUtils = __webpack_require__(181);
->>>>>>> change to bundle.js
 
 	function routeParamsChanged(route, prevState, nextState) {
 	  if (!route.path) return false;
@@ -27081,11 +22693,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 182 */
-=======
 /* 188 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27095,11 +22703,7 @@
 	exports.runChangeHooks = runChangeHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 
-<<<<<<< HEAD
-	var _AsyncUtils = __webpack_require__(183);
-=======
 	var _AsyncUtils = __webpack_require__(189);
->>>>>>> change to bundle.js
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -27249,11 +22853,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 183 */
-=======
 /* 189 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27346,11 +22946,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 184 */
-=======
 /* 190 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27361,11 +22957,7 @@
 
 	exports.default = isActive;
 
-<<<<<<< HEAD
-	var _PatternUtils = __webpack_require__(175);
-=======
 	var _PatternUtils = __webpack_require__(181);
->>>>>>> change to bundle.js
 
 	function deepEqual(a, b) {
 	  if (a == b) return true;
@@ -27511,26 +23103,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 185 */
-=======
 /* 191 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _AsyncUtils = __webpack_require__(183);
-
-	var _PromiseUtils = __webpack_require__(186);
-=======
 	var _AsyncUtils = __webpack_require__(189);
 
 	var _PromiseUtils = __webpack_require__(192);
->>>>>>> change to bundle.js
 
 	function getComponentsForRoute(nextState, route, callback) {
 	  if (route.component || route.components) {
@@ -27566,11 +23148,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 186 */
-=======
 /* 192 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27582,11 +23160,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 187 */
-=======
 /* 193 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27599,19 +23173,6 @@
 
 	exports.default = matchRoutes;
 
-<<<<<<< HEAD
-	var _AsyncUtils = __webpack_require__(183);
-
-	var _PromiseUtils = __webpack_require__(186);
-
-	var _PatternUtils = __webpack_require__(175);
-
-	var _routerWarning = __webpack_require__(179);
-
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-	var _RouteUtils = __webpack_require__(173);
-=======
 	var _AsyncUtils = __webpack_require__(189);
 
 	var _PromiseUtils = __webpack_require__(192);
@@ -27623,7 +23184,6 @@
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
 	var _RouteUtils = __webpack_require__(179);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27859,11 +23419,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 188 */
-=======
 /* 194 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27900,11 +23456,7 @@
 	var routes = exports.routes = oneOfType([route, arrayOf(route)]);
 
 /***/ },
-<<<<<<< HEAD
-/* 189 */
-=======
 /* 195 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -27915,11 +23467,7 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-=======
 	var _invariant = __webpack_require__(182);
->>>>>>> change to bundle.js
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -27927,15 +23475,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _getRouteParams = __webpack_require__(190);
-
-	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
-
-	var _ContextUtils = __webpack_require__(191);
-
-	var _RouteUtils = __webpack_require__(173);
-=======
 	var _getRouteParams = __webpack_require__(196);
 
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
@@ -27943,7 +23482,6 @@
 	var _ContextUtils = __webpack_require__(197);
 
 	var _RouteUtils = __webpack_require__(179);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28057,22 +23595,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 190 */
-=======
 /* 196 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _PatternUtils = __webpack_require__(175);
-=======
 	var _PatternUtils = __webpack_require__(181);
->>>>>>> change to bundle.js
 
 	/**
 	 * Extracts an object of params the given route cares about from
@@ -28096,11 +23626,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 191 */
-=======
 /* 197 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28226,11 +23752,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 192 */
-=======
 /* 198 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -28263,11 +23785,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 193 */
-=======
 /* 199 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28280,15 +23798,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _PropTypes = __webpack_require__(174);
-
-	var _ContextUtils = __webpack_require__(191);
-=======
 	var _invariant = __webpack_require__(182);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
@@ -28296,7 +23805,6 @@
 	var _PropTypes = __webpack_require__(180);
 
 	var _ContextUtils = __webpack_require__(197);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28441,11 +23949,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 194 */
-=======
 /* 200 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28458,11 +23962,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _Link = __webpack_require__(193);
-=======
 	var _Link = __webpack_require__(199);
->>>>>>> change to bundle.js
 
 	var _Link2 = _interopRequireDefault(_Link);
 
@@ -28482,11 +23982,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 195 */
-=======
 /* 201 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28497,11 +23993,7 @@
 
 	exports.default = withRouter;
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-=======
 	var _invariant = __webpack_require__(182);
->>>>>>> change to bundle.js
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -28509,15 +24001,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _hoistNonReactStatics = __webpack_require__(196);
-
-	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
-
-	var _ContextUtils = __webpack_require__(191);
-
-	var _PropTypes = __webpack_require__(174);
-=======
 	var _hoistNonReactStatics = __webpack_require__(202);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
@@ -28525,7 +24008,6 @@
 	var _ContextUtils = __webpack_require__(197);
 
 	var _PropTypes = __webpack_require__(180);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28578,11 +24060,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 196 */
-=======
 /* 202 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	/**
@@ -28638,11 +24116,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 197 */
-=======
 /* 203 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28653,21 +24127,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _routerWarning = __webpack_require__(179);
-
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _Redirect = __webpack_require__(198);
-
-	var _Redirect2 = _interopRequireDefault(_Redirect);
-
-	var _InternalPropTypes = __webpack_require__(188);
-=======
 	var _routerWarning = __webpack_require__(185);
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
@@ -28681,7 +24140,6 @@
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 
 	var _InternalPropTypes = __webpack_require__(194);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28728,11 +24186,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 198 */
-=======
 /* 204 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28743,17 +24197,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _RouteUtils = __webpack_require__(173);
-
-	var _PatternUtils = __webpack_require__(175);
-
-	var _InternalPropTypes = __webpack_require__(188);
-=======
 	var _invariant = __webpack_require__(182);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
@@ -28763,7 +24206,6 @@
 	var _PatternUtils = __webpack_require__(181);
 
 	var _InternalPropTypes = __webpack_require__(194);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28853,11 +24295,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 199 */
-=======
 /* 205 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28868,19 +24306,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _routerWarning = __webpack_require__(179);
-
-	var _routerWarning2 = _interopRequireDefault(_routerWarning);
-
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _RouteUtils = __webpack_require__(173);
-
-	var _InternalPropTypes = __webpack_require__(188);
-=======
 	var _routerWarning = __webpack_require__(185);
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
@@ -28892,7 +24317,6 @@
 	var _RouteUtils = __webpack_require__(179);
 
 	var _InternalPropTypes = __webpack_require__(194);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28938,11 +24362,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 200 */
-=======
 /* 206 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -28953,15 +24373,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _RouteUtils = __webpack_require__(173);
-
-	var _InternalPropTypes = __webpack_require__(188);
-=======
 	var _invariant = __webpack_require__(182);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
@@ -28969,7 +24380,6 @@
 	var _RouteUtils = __webpack_require__(179);
 
 	var _InternalPropTypes = __webpack_require__(194);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29016,11 +24426,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 201 */
-=======
 /* 207 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29029,25 +24435,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _Actions = __webpack_require__(202);
-
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _createMemoryHistory = __webpack_require__(203);
-
-	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
-
-	var _createTransitionManager = __webpack_require__(178);
-
-	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
-
-	var _RouteUtils = __webpack_require__(173);
-
-	var _RouterUtils = __webpack_require__(192);
-=======
 	var _Actions = __webpack_require__(208);
 
 	var _invariant = __webpack_require__(182);
@@ -29065,7 +24452,6 @@
 	var _RouteUtils = __webpack_require__(179);
 
 	var _RouterUtils = __webpack_require__(198);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29118,11 +24504,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 202 */
-=======
 /* 208 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29149,11 +24531,7 @@
 	var POP = exports.POP = 'POP';
 
 /***/ },
-<<<<<<< HEAD
-/* 203 */
-=======
 /* 209 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29161,17 +24539,6 @@
 	exports.__esModule = true;
 	exports.default = createMemoryHistory;
 
-<<<<<<< HEAD
-	var _useQueries = __webpack_require__(204);
-
-	var _useQueries2 = _interopRequireDefault(_useQueries);
-
-	var _useBasename = __webpack_require__(210);
-
-	var _useBasename2 = _interopRequireDefault(_useBasename);
-
-	var _createMemoryHistory = __webpack_require__(211);
-=======
 	var _useQueries = __webpack_require__(210);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
@@ -29181,7 +24548,6 @@
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
 	var _createMemoryHistory = __webpack_require__(217);
->>>>>>> change to bundle.js
 
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
@@ -29201,11 +24567,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 204 */
-=======
 /* 210 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29214,17 +24576,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _queryString = __webpack_require__(205);
-
-	var _runTransitionHook = __webpack_require__(207);
-
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-
-	var _LocationUtils = __webpack_require__(208);
-
-	var _PathUtils = __webpack_require__(209);
-=======
 	var _queryString = __webpack_require__(211);
 
 	var _runTransitionHook = __webpack_require__(213);
@@ -29234,7 +24585,6 @@
 	var _LocationUtils = __webpack_require__(214);
 
 	var _PathUtils = __webpack_require__(215);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29343,19 +24693,11 @@
 	exports.default = useQueries;
 
 /***/ },
-<<<<<<< HEAD
-/* 205 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var strictUriEncode = __webpack_require__(206);
-=======
 /* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	var strictUriEncode = __webpack_require__(212);
->>>>>>> change to bundle.js
 	var objectAssign = __webpack_require__(4);
 
 	function encode(value, opts) {
@@ -29455,11 +24797,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 206 */
-=======
 /* 212 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29471,22 +24809,14 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 207 */
-=======
 /* 213 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-=======
 	var _warning = __webpack_require__(186);
->>>>>>> change to bundle.js
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -29508,11 +24838,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 208 */
-=======
 /* 214 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29524,19 +24850,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _warning = __webpack_require__(180);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	var _PathUtils = __webpack_require__(209);
-
-	var _Actions = __webpack_require__(202);
-=======
 	var _invariant = __webpack_require__(182);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
@@ -29548,7 +24861,6 @@
 	var _PathUtils = __webpack_require__(215);
 
 	var _Actions = __webpack_require__(208);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29624,11 +24936,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 209 */
-=======
 /* 215 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29636,11 +24944,7 @@
 	exports.__esModule = true;
 	exports.createPath = exports.parsePath = exports.getQueryStringValueFromPath = exports.stripQueryStringValueFromPath = exports.addQueryStringValueToPath = undefined;
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-=======
 	var _warning = __webpack_require__(186);
->>>>>>> change to bundle.js
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -29739,11 +25043,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 210 */
-=======
 /* 216 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29752,19 +25052,11 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _runTransitionHook = __webpack_require__(207);
-
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-
-	var _PathUtils = __webpack_require__(209);
-=======
 	var _runTransitionHook = __webpack_require__(213);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
 	var _PathUtils = __webpack_require__(215);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29865,11 +25157,7 @@
 	exports.default = useBasename;
 
 /***/ },
-<<<<<<< HEAD
-/* 211 */
-=======
 /* 217 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29878,25 +25166,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _LocationUtils = __webpack_require__(208);
-
-	var _PathUtils = __webpack_require__(209);
-
-	var _createHistory = __webpack_require__(212);
-
-	var _createHistory2 = _interopRequireDefault(_createHistory);
-
-	var _Actions = __webpack_require__(202);
-=======
 	var _warning = __webpack_require__(186);
 
 	var _warning2 = _interopRequireDefault(_warning);
@@ -29914,7 +25183,6 @@
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
 	var _Actions = __webpack_require__(208);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30035,30 +25303,13 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 212 */
-=======
 /* 218 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _AsyncUtils = __webpack_require__(213);
-
-	var _PathUtils = __webpack_require__(209);
-
-	var _runTransitionHook = __webpack_require__(207);
-
-	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
-
-	var _Actions = __webpack_require__(202);
-
-	var _LocationUtils = __webpack_require__(208);
-=======
 	var _AsyncUtils = __webpack_require__(219);
 
 	var _PathUtils = __webpack_require__(215);
@@ -30070,7 +25321,6 @@
 	var _Actions = __webpack_require__(208);
 
 	var _LocationUtils = __webpack_require__(214);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30234,11 +25484,7 @@
 	exports.default = createHistory;
 
 /***/ },
-<<<<<<< HEAD
-/* 213 */
-=======
 /* 219 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30299,11 +25545,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 214 */
-=======
 /* 220 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30311,19 +25553,11 @@
 	exports.__esModule = true;
 	exports.default = useRouterHistory;
 
-<<<<<<< HEAD
-	var _useQueries = __webpack_require__(204);
-
-	var _useQueries2 = _interopRequireDefault(_useQueries);
-
-	var _useBasename = __webpack_require__(210);
-=======
 	var _useQueries = __webpack_require__(210);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
 	var _useBasename = __webpack_require__(216);
->>>>>>> change to bundle.js
 
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
@@ -30338,11 +25572,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 215 */
-=======
 /* 221 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -30355,19 +25585,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _RouterContext = __webpack_require__(189);
-
-	var _RouterContext2 = _interopRequireDefault(_RouterContext);
-
-	var _routerWarning = __webpack_require__(179);
-=======
 	var _RouterContext = __webpack_require__(195);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
 	var _routerWarning = __webpack_require__(185);
->>>>>>> change to bundle.js
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
@@ -30413,30 +25635,18 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 216 */
-=======
 /* 222 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _createBrowserHistory = __webpack_require__(217);
-
-	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
-
-	var _createRouterHistory = __webpack_require__(223);
-=======
 	var _createBrowserHistory = __webpack_require__(223);
 
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
 	var _createRouterHistory = __webpack_require__(229);
->>>>>>> change to bundle.js
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -30446,11 +25656,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 217 */
-=======
 /* 223 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -30459,25 +25665,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _ExecutionEnvironment = __webpack_require__(218);
-
-	var _BrowserProtocol = __webpack_require__(219);
-
-	var BrowserProtocol = _interopRequireWildcard(_BrowserProtocol);
-
-	var _RefreshProtocol = __webpack_require__(222);
-
-	var RefreshProtocol = _interopRequireWildcard(_RefreshProtocol);
-
-	var _DOMUtils = __webpack_require__(220);
-
-	var _createHistory = __webpack_require__(212);
-=======
 	var _invariant = __webpack_require__(182);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
@@ -30495,7 +25682,6 @@
 	var _DOMUtils = __webpack_require__(226);
 
 	var _createHistory = __webpack_require__(218);
->>>>>>> change to bundle.js
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -30569,11 +25755,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 218 */
-=======
 /* 224 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30582,11 +25764,7 @@
 	var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 /***/ },
-<<<<<<< HEAD
-/* 219 */
-=======
 /* 225 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30594,17 +25772,6 @@
 	exports.__esModule = true;
 	exports.go = exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getUserConfirmation = exports.getCurrentLocation = undefined;
 
-<<<<<<< HEAD
-	var _LocationUtils = __webpack_require__(208);
-
-	var _DOMUtils = __webpack_require__(220);
-
-	var _DOMStateStorage = __webpack_require__(221);
-
-	var _PathUtils = __webpack_require__(209);
-
-	var _ExecutionEnvironment = __webpack_require__(218);
-=======
 	var _LocationUtils = __webpack_require__(214);
 
 	var _DOMUtils = __webpack_require__(226);
@@ -30614,7 +25781,6 @@
 	var _PathUtils = __webpack_require__(215);
 
 	var _ExecutionEnvironment = __webpack_require__(224);
->>>>>>> change to bundle.js
 
 	var PopStateEvent = 'popstate';
 	var HashChangeEvent = 'hashchange';
@@ -30701,11 +25867,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 220 */
-=======
 /* 226 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30750,11 +25912,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 221 */
-=======
 /* 227 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -30762,11 +25920,7 @@
 	exports.__esModule = true;
 	exports.readState = exports.saveState = undefined;
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-=======
 	var _warning = __webpack_require__(186);
->>>>>>> change to bundle.js
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -30849,11 +26003,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 222 */
-=======
 /* 228 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30861,11 +26011,7 @@
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 
-<<<<<<< HEAD
-	var _BrowserProtocol = __webpack_require__(219);
-=======
 	var _BrowserProtocol = __webpack_require__(225);
->>>>>>> change to bundle.js
 
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -30880,15 +26026,9 @@
 	  }
 	});
 
-<<<<<<< HEAD
-	var _LocationUtils = __webpack_require__(208);
-
-	var _PathUtils = __webpack_require__(209);
-=======
 	var _LocationUtils = __webpack_require__(214);
 
 	var _PathUtils = __webpack_require__(215);
->>>>>>> change to bundle.js
 
 	var getCurrentLocation = exports.getCurrentLocation = function getCurrentLocation() {
 	  return (0, _LocationUtils.createLocation)(window.location);
@@ -30905,11 +26045,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 223 */
-=======
 /* 229 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30922,11 +26058,7 @@
 	  return history;
 	};
 
-<<<<<<< HEAD
-	var _useRouterHistory = __webpack_require__(214);
-=======
 	var _useRouterHistory = __webpack_require__(220);
->>>>>>> change to bundle.js
 
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 
@@ -30937,30 +26069,18 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 224 */
-=======
 /* 230 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _createHashHistory = __webpack_require__(225);
-
-	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
-
-	var _createRouterHistory = __webpack_require__(223);
-=======
 	var _createHashHistory = __webpack_require__(231);
 
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
 	var _createRouterHistory = __webpack_require__(229);
->>>>>>> change to bundle.js
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -30970,11 +26090,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 225 */
-=======
 /* 231 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -30983,25 +26099,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	var _invariant = __webpack_require__(176);
-
-	var _invariant2 = _interopRequireDefault(_invariant);
-
-	var _ExecutionEnvironment = __webpack_require__(218);
-
-	var _DOMUtils = __webpack_require__(220);
-
-	var _HashProtocol = __webpack_require__(226);
-
-	var HashProtocol = _interopRequireWildcard(_HashProtocol);
-
-	var _createHistory = __webpack_require__(212);
-=======
 	var _warning = __webpack_require__(186);
 
 	var _warning2 = _interopRequireDefault(_warning);
@@ -31019,7 +26116,6 @@
 	var HashProtocol = _interopRequireWildcard(_HashProtocol);
 
 	var _createHistory = __webpack_require__(218);
->>>>>>> change to bundle.js
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -31147,11 +26243,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 226 */
-=======
 /* 232 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -31159,11 +26251,7 @@
 	exports.__esModule = true;
 	exports.replaceLocation = exports.pushLocation = exports.startListener = exports.getCurrentLocation = exports.go = exports.getUserConfirmation = undefined;
 
-<<<<<<< HEAD
-	var _BrowserProtocol = __webpack_require__(219);
-=======
 	var _BrowserProtocol = __webpack_require__(225);
->>>>>>> change to bundle.js
 
 	Object.defineProperty(exports, 'getUserConfirmation', {
 	  enumerable: true,
@@ -31178,19 +26266,6 @@
 	  }
 	});
 
-<<<<<<< HEAD
-	var _warning = __webpack_require__(180);
-
-	var _warning2 = _interopRequireDefault(_warning);
-
-	var _LocationUtils = __webpack_require__(208);
-
-	var _DOMUtils = __webpack_require__(220);
-
-	var _DOMStateStorage = __webpack_require__(221);
-
-	var _PathUtils = __webpack_require__(209);
-=======
 	var _warning = __webpack_require__(186);
 
 	var _warning2 = _interopRequireDefault(_warning);
@@ -31202,7 +26277,6 @@
 	var _DOMStateStorage = __webpack_require__(227);
 
 	var _PathUtils = __webpack_require__(215);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31311,11 +26385,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 227 */
-=======
 /* 233 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31328,19 +26398,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _NavLink = __webpack_require__(228);
-
-	var _NavLink2 = _interopRequireDefault(_NavLink);
-
-	var _reactRouter = __webpack_require__(172);
-=======
 	var _NavLink = __webpack_require__(234);
 
 	var _NavLink2 = _interopRequireDefault(_NavLink);
 
 	var _reactRouter = __webpack_require__(178);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31405,11 +26467,7 @@
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 228 */
-=======
 /* 234 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31425,11 +26483,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactRouter = __webpack_require__(172);
-=======
 	var _reactRouter = __webpack_require__(178);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31441,11 +26495,7 @@
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 229 */
-=======
 /* 235 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31454,11 +26504,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _rcCalendar = __webpack_require__(230);
-=======
 	var _rcCalendar = __webpack_require__(236);
->>>>>>> change to bundle.js
 
 	var _rcCalendar2 = _interopRequireDefault(_rcCalendar);
 
@@ -31466,19 +26512,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactDom = __webpack_require__(34);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _NavLink = __webpack_require__(228);
-=======
 	var _reactDom = __webpack_require__(32);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	var _NavLink = __webpack_require__(234);
->>>>>>> change to bundle.js
 
 	var _NavLink2 = _interopRequireDefault(_NavLink);
 
@@ -31518,14 +26556,8 @@
 	  }
 	});
 
-	// ReactDOM.render(<Calendar />, container);
-
 /***/ },
-<<<<<<< HEAD
-/* 230 */
-=======
 /* 236 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31534,11 +26566,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _Calendar = __webpack_require__(231);
-=======
 	var _Calendar = __webpack_require__(237);
->>>>>>> change to bundle.js
 
 	var _Calendar2 = _interopRequireDefault(_Calendar);
 
@@ -31548,11 +26576,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 231 */
-=======
 /* 237 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31561,11 +26585,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _extends2 = __webpack_require__(232);
-=======
 	var _extends2 = __webpack_require__(238);
->>>>>>> change to bundle.js
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
@@ -31573,41 +26593,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactDom = __webpack_require__(34);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _KeyCode = __webpack_require__(270);
-
-	var _KeyCode2 = _interopRequireDefault(_KeyCode);
-
-	var _DateTable = __webpack_require__(271);
-
-	var _DateTable2 = _interopRequireDefault(_DateTable);
-
-	var _CalendarHeader = __webpack_require__(432);
-
-	var _CalendarHeader2 = _interopRequireDefault(_CalendarHeader);
-
-	var _CalendarFooter = __webpack_require__(443);
-
-	var _CalendarFooter2 = _interopRequireDefault(_CalendarFooter);
-
-	var _CalendarMixin = __webpack_require__(447);
-
-	var _CalendarMixin2 = _interopRequireDefault(_CalendarMixin);
-
-	var _CommonMixin = __webpack_require__(448);
-
-	var _CommonMixin2 = _interopRequireDefault(_CommonMixin);
-
-	var _DateInput = __webpack_require__(450);
-
-	var _DateInput2 = _interopRequireDefault(_DateInput);
-
-	var _index = __webpack_require__(431);
-=======
 	var _reactDom = __webpack_require__(32);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -31641,7 +26626,6 @@
 	var _DateInput2 = _interopRequireDefault(_DateInput);
 
 	var _index = __webpack_require__(437);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -31935,22 +26919,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 232 */
-=======
 /* 238 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _assign = __webpack_require__(233);
-=======
 	var _assign = __webpack_require__(239);
->>>>>>> change to bundle.js
 
 	var _assign2 = _interopRequireDefault(_assign);
 
@@ -31971,37 +26947,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 233 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(234), __esModule: true };
-
-/***/ },
-/* 234 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(235);
-	module.exports = __webpack_require__(238).Object.assign;
-
-/***/ },
-/* 235 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(236);
-
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(251)});
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global    = __webpack_require__(237)
-	  , core      = __webpack_require__(238)
-	  , ctx       = __webpack_require__(239)
-	  , hide      = __webpack_require__(241)
-=======
 /* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32031,7 +26976,6 @@
 	  , core      = __webpack_require__(244)
 	  , ctx       = __webpack_require__(245)
 	  , hide      = __webpack_require__(247)
->>>>>>> change to bundle.js
 	  , PROTOTYPE = 'prototype';
 
 	var $export = function(type, name, source){
@@ -32091,11 +27035,7 @@
 	module.exports = $export;
 
 /***/ },
-<<<<<<< HEAD
-/* 237 */
-=======
 /* 243 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -32104,30 +27044,18 @@
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-<<<<<<< HEAD
-/* 238 */
-=======
 /* 244 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '2.4.0'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-<<<<<<< HEAD
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// optional / simple context binding
-	var aFunction = __webpack_require__(240);
-=======
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
 	var aFunction = __webpack_require__(246);
->>>>>>> change to bundle.js
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -32148,11 +27076,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 240 */
-=======
 /* 246 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -32161,21 +27085,12 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP         = __webpack_require__(242)
-	  , createDesc = __webpack_require__(250);
-	module.exports = __webpack_require__(246) ? function(object, key, value){
-=======
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var dP         = __webpack_require__(248)
 	  , createDesc = __webpack_require__(256);
 	module.exports = __webpack_require__(252) ? function(object, key, value){
->>>>>>> change to bundle.js
 	  return dP.f(object, key, createDesc(1, value));
 	} : function(object, key, value){
 	  object[key] = value;
@@ -32183,17 +27098,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var anObject       = __webpack_require__(243)
-	  , IE8_DOM_DEFINE = __webpack_require__(245)
-	  , toPrimitive    = __webpack_require__(249)
-	  , dP             = Object.defineProperty;
-
-	exports.f = __webpack_require__(246) ? Object.defineProperty : function defineProperty(O, P, Attributes){
-=======
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32203,7 +27107,6 @@
 	  , dP             = Object.defineProperty;
 
 	exports.f = __webpack_require__(252) ? Object.defineProperty : function defineProperty(O, P, Attributes){
->>>>>>> change to bundle.js
 	  anObject(O);
 	  P = toPrimitive(P, true);
 	  anObject(Attributes);
@@ -32216,28 +27119,17 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(244);
-=======
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(250);
->>>>>>> change to bundle.js
 	module.exports = function(it){
 	  if(!isObject(it))throw TypeError(it + ' is not an object!');
 	  return it;
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 244 */
-=======
 /* 250 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -32245,21 +27137,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = !__webpack_require__(246) && !__webpack_require__(247)(function(){
-	  return Object.defineProperty(__webpack_require__(248)('div'), 'a', {get: function(){ return 7; }}).a != 7;
-	});
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Thank's IE8 for his funny defineProperty
-	module.exports = !__webpack_require__(247)(function(){
-=======
 /* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32273,16 +27150,11 @@
 
 	// Thank's IE8 for his funny defineProperty
 	module.exports = !__webpack_require__(253)(function(){
->>>>>>> change to bundle.js
 	  return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 247 */
-=======
 /* 253 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -32294,19 +27166,11 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var isObject = __webpack_require__(244)
-	  , document = __webpack_require__(237).document
-=======
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var isObject = __webpack_require__(250)
 	  , document = __webpack_require__(243).document
->>>>>>> change to bundle.js
 	  // in old IE typeof document.createElement is 'object'
 	  , is = isObject(document) && isObject(document.createElement);
 	module.exports = function(it){
@@ -32314,19 +27178,11 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.1 ToPrimitive(input [, PreferredType])
-	var isObject = __webpack_require__(244);
-=======
 /* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.1 ToPrimitive(input [, PreferredType])
 	var isObject = __webpack_require__(250);
->>>>>>> change to bundle.js
 	// instead of the ES6 spec version, we didn't implement @@toPrimitive case
 	// and the second argument - flag - preferred type is a string
 	module.exports = function(it, S){
@@ -32339,11 +27195,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 250 */
-=======
 /* 256 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(bitmap, value){
@@ -32356,26 +27208,11 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 251 */
-=======
 /* 257 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// 19.1.2.1 Object.assign(target, source, ...)
-<<<<<<< HEAD
-	var getKeys  = __webpack_require__(252)
-	  , gOPS     = __webpack_require__(267)
-	  , pIE      = __webpack_require__(268)
-	  , toObject = __webpack_require__(269)
-	  , IObject  = __webpack_require__(256)
-	  , $assign  = Object.assign;
-
-	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = !$assign || __webpack_require__(247)(function(){
-=======
 	var getKeys  = __webpack_require__(258)
 	  , gOPS     = __webpack_require__(273)
 	  , pIE      = __webpack_require__(274)
@@ -32385,7 +27222,6 @@
 
 	// should work with symbols and should have deterministic property order (V8 bug)
 	module.exports = !$assign || __webpack_require__(253)(function(){
->>>>>>> change to bundle.js
 	  var A = {}
 	    , B = {}
 	    , S = Symbol()
@@ -32410,36 +27246,18 @@
 	} : $assign;
 
 /***/ },
-<<<<<<< HEAD
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-	var $keys       = __webpack_require__(253)
-	  , enumBugKeys = __webpack_require__(266);
-=======
 /* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 / 15.2.3.14 Object.keys(O)
 	var $keys       = __webpack_require__(259)
 	  , enumBugKeys = __webpack_require__(272);
->>>>>>> change to bundle.js
 
 	module.exports = Object.keys || function keys(O){
 	  return $keys(O, enumBugKeys);
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var has          = __webpack_require__(254)
-	  , toIObject    = __webpack_require__(255)
-	  , arrayIndexOf = __webpack_require__(259)(false)
-	  , IE_PROTO     = __webpack_require__(263)('IE_PROTO');
-=======
 /* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32447,7 +27265,6 @@
 	  , toIObject    = __webpack_require__(261)
 	  , arrayIndexOf = __webpack_require__(265)(false)
 	  , IE_PROTO     = __webpack_require__(269)('IE_PROTO');
->>>>>>> change to bundle.js
 
 	module.exports = function(object, names){
 	  var O      = toIObject(object)
@@ -32463,11 +27280,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 254 */
-=======
 /* 260 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	var hasOwnProperty = {}.hasOwnProperty;
@@ -32476,49 +27289,28 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// to indexed object, toObject with fallback for non-array-like ES3 strings
-	var IObject = __webpack_require__(256)
-	  , defined = __webpack_require__(258);
-=======
 /* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// to indexed object, toObject with fallback for non-array-like ES3 strings
 	var IObject = __webpack_require__(262)
 	  , defined = __webpack_require__(264);
->>>>>>> change to bundle.js
 	module.exports = function(it){
 	  return IObject(defined(it));
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 256 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for non-array-like ES3 and non-enumerable old V8 strings
-	var cof = __webpack_require__(257);
-=======
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for non-array-like ES3 and non-enumerable old V8 strings
 	var cof = __webpack_require__(263);
->>>>>>> change to bundle.js
 	module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
 	  return cof(it) == 'String' ? it.split('') : Object(it);
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 257 */
-=======
 /* 263 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -32528,11 +27320,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 258 */
-=======
 /* 264 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -32542,24 +27330,14 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 259 */
-=======
 /* 265 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	// false -> Array#indexOf
 	// true  -> Array#includes
-<<<<<<< HEAD
-	var toIObject = __webpack_require__(255)
-	  , toLength  = __webpack_require__(260)
-	  , toIndex   = __webpack_require__(262);
-=======
 	var toIObject = __webpack_require__(261)
 	  , toLength  = __webpack_require__(266)
 	  , toIndex   = __webpack_require__(268);
->>>>>>> change to bundle.js
 	module.exports = function(IS_INCLUDES){
 	  return function($this, el, fromIndex){
 	    var O      = toIObject($this)
@@ -32578,30 +27356,18 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.15 ToLength
-	var toInteger = __webpack_require__(261)
-=======
 /* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.15 ToLength
 	var toInteger = __webpack_require__(267)
->>>>>>> change to bundle.js
 	  , min       = Math.min;
 	module.exports = function(it){
 	  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 261 */
-=======
 /* 267 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	// 7.1.4 ToInteger
@@ -32612,17 +27378,10 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 262 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(261)
-=======
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(267)
->>>>>>> change to bundle.js
 	  , max       = Math.max
 	  , min       = Math.min;
 	module.exports = function(index, length){
@@ -32631,35 +27390,20 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var shared = __webpack_require__(264)('keys')
-	  , uid    = __webpack_require__(265);
-=======
 /* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var shared = __webpack_require__(270)('keys')
 	  , uid    = __webpack_require__(271);
->>>>>>> change to bundle.js
 	module.exports = function(key){
 	  return shared[key] || (shared[key] = uid(key));
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global = __webpack_require__(237)
-=======
 /* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var global = __webpack_require__(243)
->>>>>>> change to bundle.js
 	  , SHARED = '__core-js_shared__'
 	  , store  = global[SHARED] || (global[SHARED] = {});
 	module.exports = function(key){
@@ -32667,11 +27411,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 265 */
-=======
 /* 271 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	var id = 0
@@ -32681,11 +27421,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 266 */
-=======
 /* 272 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	// IE 8- don't enum bug keys
@@ -32694,49 +27430,29 @@
 	).split(',');
 
 /***/ },
-<<<<<<< HEAD
-/* 267 */
-=======
 /* 273 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	exports.f = Object.getOwnPropertySymbols;
 
 /***/ },
-<<<<<<< HEAD
-/* 268 */
-=======
 /* 274 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	exports.f = {}.propertyIsEnumerable;
 
 /***/ },
-<<<<<<< HEAD
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(258);
-=======
 /* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
 	var defined = __webpack_require__(264);
->>>>>>> change to bundle.js
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 270 */
-=======
 /* 276 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33261,11 +27977,7 @@
 	module.exports = KeyCode;
 
 /***/ },
-<<<<<<< HEAD
-/* 271 */
-=======
 /* 277 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33274,17 +27986,6 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _classCallCheck2 = __webpack_require__(272);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(273);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(309);
-=======
 	var _classCallCheck2 = __webpack_require__(278);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -33294,7 +27995,6 @@
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
 	var _inherits2 = __webpack_require__(315);
->>>>>>> change to bundle.js
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -33302,19 +28002,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _DateTHead = __webpack_require__(317);
-
-	var _DateTHead2 = _interopRequireDefault(_DateTHead);
-
-	var _DateTBody = __webpack_require__(430);
-=======
 	var _DateTHead = __webpack_require__(323);
 
 	var _DateTHead2 = _interopRequireDefault(_DateTHead);
 
 	var _DateTBody = __webpack_require__(436);
->>>>>>> change to bundle.js
 
 	var _DateTBody2 = _interopRequireDefault(_DateTBody);
 
@@ -33346,11 +28038,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 272 */
-=======
 /* 278 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -33364,22 +28052,14 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 273 */
-=======
 /* 279 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _typeof2 = __webpack_require__(274);
-=======
 	var _typeof2 = __webpack_require__(280);
->>>>>>> change to bundle.js
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -33394,30 +28074,18 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 274 */
-=======
 /* 280 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _iterator = __webpack_require__(275);
-
-	var _iterator2 = _interopRequireDefault(_iterator);
-
-	var _symbol = __webpack_require__(295);
-=======
 	var _iterator = __webpack_require__(281);
 
 	var _iterator2 = _interopRequireDefault(_iterator);
 
 	var _symbol = __webpack_require__(301);
->>>>>>> change to bundle.js
 
 	var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -33432,30 +28100,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(276), __esModule: true };
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(277);
-	__webpack_require__(290);
-	module.exports = __webpack_require__(294).f('iterator');
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var $at  = __webpack_require__(278)(true);
-
-	// 21.1.3.27 String.prototype[@@iterator]()
-	__webpack_require__(279)(String, 'String', function(iterated){
-=======
 /* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33478,7 +28122,6 @@
 
 	// 21.1.3.27 String.prototype[@@iterator]()
 	__webpack_require__(285)(String, 'String', function(iterated){
->>>>>>> change to bundle.js
 	  this._t = String(iterated); // target
 	  this._i = 0;                // next index
 	// 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -33493,19 +28136,11 @@
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var toInteger = __webpack_require__(261)
-	  , defined   = __webpack_require__(258);
-=======
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var toInteger = __webpack_require__(267)
 	  , defined   = __webpack_require__(264);
->>>>>>> change to bundle.js
 	// true  -> String#at
 	// false -> String#codePointAt
 	module.exports = function(TO_STRING){
@@ -33523,22 +28158,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var LIBRARY        = __webpack_require__(280)
-	  , $export        = __webpack_require__(236)
-	  , redefine       = __webpack_require__(281)
-	  , hide           = __webpack_require__(241)
-	  , has            = __webpack_require__(254)
-	  , Iterators      = __webpack_require__(282)
-	  , $iterCreate    = __webpack_require__(283)
-	  , setToStringTag = __webpack_require__(287)
-	  , getPrototypeOf = __webpack_require__(289)
-	  , ITERATOR       = __webpack_require__(288)('iterator')
-=======
 /* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33553,7 +28172,6 @@
 	  , setToStringTag = __webpack_require__(293)
 	  , getPrototypeOf = __webpack_require__(295)
 	  , ITERATOR       = __webpack_require__(294)('iterator')
->>>>>>> change to bundle.js
 	  , BUGGY          = !([].keys && 'next' in [].keys()) // Safari has buggy iterators w/o `next`
 	  , FF_ITERATOR    = '@@iterator'
 	  , KEYS           = 'keys'
@@ -33615,25 +28233,12 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 280 */
-=======
 /* 286 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = true;
 
 /***/ },
-<<<<<<< HEAD
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(241);
-
-/***/ },
-/* 282 */
-=======
 /* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33641,25 +28246,11 @@
 
 /***/ },
 /* 288 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ },
-<<<<<<< HEAD
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var create         = __webpack_require__(284)
-	  , descriptor     = __webpack_require__(250)
-	  , setToStringTag = __webpack_require__(287)
-	  , IteratorPrototype = {};
-
-	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-	__webpack_require__(241)(IteratorPrototype, __webpack_require__(288)('iterator'), function(){ return this; });
-=======
 /* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33671,7 +28262,6 @@
 
 	// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
 	__webpack_require__(247)(IteratorPrototype, __webpack_require__(294)('iterator'), function(){ return this; });
->>>>>>> change to bundle.js
 
 	module.exports = function(Constructor, NAME, next){
 	  Constructor.prototype = create(IteratorPrototype, {next: descriptor(1, next)});
@@ -33679,16 +28269,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 284 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	var anObject    = __webpack_require__(243)
-	  , dPs         = __webpack_require__(285)
-	  , enumBugKeys = __webpack_require__(266)
-	  , IE_PROTO    = __webpack_require__(263)('IE_PROTO')
-=======
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33697,28 +28277,19 @@
 	  , dPs         = __webpack_require__(291)
 	  , enumBugKeys = __webpack_require__(272)
 	  , IE_PROTO    = __webpack_require__(269)('IE_PROTO')
->>>>>>> change to bundle.js
 	  , Empty       = function(){ /* empty */ }
 	  , PROTOTYPE   = 'prototype';
 
 	// Create object with fake `null` prototype: use iframe Object with cleared prototype
 	var createDict = function(){
 	  // Thrash, waste and sodomy: IE GC bug
-<<<<<<< HEAD
-	  var iframe = __webpack_require__(248)('iframe')
-=======
 	  var iframe = __webpack_require__(254)('iframe')
->>>>>>> change to bundle.js
 	    , i      = enumBugKeys.length
 	    , lt     = '<'
 	    , gt     = '>'
 	    , iframeDocument;
 	  iframe.style.display = 'none';
-<<<<<<< HEAD
-	  __webpack_require__(286).appendChild(iframe);
-=======
 	  __webpack_require__(292).appendChild(iframe);
->>>>>>> change to bundle.js
 	  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
 	  // createDict = iframe.contentWindow.Object;
 	  // html.removeChild(iframe);
@@ -33745,16 +28316,6 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 285 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var dP       = __webpack_require__(242)
-	  , anObject = __webpack_require__(243)
-	  , getKeys  = __webpack_require__(252);
-
-	module.exports = __webpack_require__(246) ? Object.defineProperties : function defineProperties(O, Properties){
-=======
 /* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33763,7 +28324,6 @@
 	  , getKeys  = __webpack_require__(258);
 
 	module.exports = __webpack_require__(252) ? Object.defineProperties : function defineProperties(O, Properties){
->>>>>>> change to bundle.js
 	  anObject(O);
 	  var keys   = getKeys(Properties)
 	    , length = keys.length
@@ -33774,20 +28334,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 286 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(237).document && document.documentElement;
-
-/***/ },
-/* 287 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var def = __webpack_require__(242).f
-	  , has = __webpack_require__(254)
-	  , TAG = __webpack_require__(288)('toStringTag');
-=======
 /* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33800,28 +28346,18 @@
 	var def = __webpack_require__(248).f
 	  , has = __webpack_require__(260)
 	  , TAG = __webpack_require__(294)('toStringTag');
->>>>>>> change to bundle.js
 
 	module.exports = function(it, tag, stat){
 	  if(it && !has(it = stat ? it : it.prototype, TAG))def(it, TAG, {configurable: true, value: tag});
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 288 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var store      = __webpack_require__(264)('wks')
-	  , uid        = __webpack_require__(265)
-	  , Symbol     = __webpack_require__(237).Symbol
-=======
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var store      = __webpack_require__(270)('wks')
 	  , uid        = __webpack_require__(271)
 	  , Symbol     = __webpack_require__(243).Symbol
->>>>>>> change to bundle.js
 	  , USE_SYMBOL = typeof Symbol == 'function';
 
 	var $exports = module.exports = function(name){
@@ -33832,15 +28368,6 @@
 	$exports.store = store;
 
 /***/ },
-<<<<<<< HEAD
-/* 289 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-	var has         = __webpack_require__(254)
-	  , toObject    = __webpack_require__(269)
-	  , IE_PROTO    = __webpack_require__(263)('IE_PROTO')
-=======
 /* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33848,7 +28375,6 @@
 	var has         = __webpack_require__(260)
 	  , toObject    = __webpack_require__(275)
 	  , IE_PROTO    = __webpack_require__(269)('IE_PROTO')
->>>>>>> change to bundle.js
 	  , ObjectProto = Object.prototype;
 
 	module.exports = Object.getPrototypeOf || function(O){
@@ -33860,16 +28386,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 290 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(291);
-	var global        = __webpack_require__(237)
-	  , hide          = __webpack_require__(241)
-	  , Iterators     = __webpack_require__(282)
-	  , TO_STRING_TAG = __webpack_require__(288)('toStringTag');
-=======
 /* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33878,7 +28394,6 @@
 	  , hide          = __webpack_require__(247)
 	  , Iterators     = __webpack_require__(288)
 	  , TO_STRING_TAG = __webpack_require__(294)('toStringTag');
->>>>>>> change to bundle.js
 
 	for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
 	  var NAME       = collections[i]
@@ -33889,16 +28404,6 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 291 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var addToUnscopables = __webpack_require__(292)
-	  , step             = __webpack_require__(293)
-	  , Iterators        = __webpack_require__(282)
-	  , toIObject        = __webpack_require__(255);
-=======
 /* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -33907,17 +28412,12 @@
 	  , step             = __webpack_require__(299)
 	  , Iterators        = __webpack_require__(288)
 	  , toIObject        = __webpack_require__(261);
->>>>>>> change to bundle.js
 
 	// 22.1.3.4 Array.prototype.entries()
 	// 22.1.3.13 Array.prototype.keys()
 	// 22.1.3.29 Array.prototype.values()
 	// 22.1.3.30 Array.prototype[@@iterator]()
-<<<<<<< HEAD
-	module.exports = __webpack_require__(279)(Array, 'Array', function(iterated, kind){
-=======
 	module.exports = __webpack_require__(285)(Array, 'Array', function(iterated, kind){
->>>>>>> change to bundle.js
 	  this._t = toIObject(iterated); // target
 	  this._i = 0;                   // next index
 	  this._k = kind;                // kind
@@ -33943,21 +28443,13 @@
 	addToUnscopables('entries');
 
 /***/ },
-<<<<<<< HEAD
-/* 292 */
-=======
 /* 298 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(){ /* empty */ };
 
 /***/ },
-<<<<<<< HEAD
-/* 293 */
-=======
 /* 299 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(done, value){
@@ -33965,31 +28457,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 294 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports.f = __webpack_require__(288);
-
-/***/ },
-/* 295 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(296), __esModule: true };
-
-/***/ },
-/* 296 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(297);
-	__webpack_require__(306);
-	__webpack_require__(307);
-	__webpack_require__(308);
-	module.exports = __webpack_require__(238).Symbol;
-
-/***/ },
-/* 297 */
-=======
 /* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34013,38 +28480,10 @@
 
 /***/ },
 /* 303 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	// ECMAScript 6 symbols shim
-<<<<<<< HEAD
-	var global         = __webpack_require__(237)
-	  , has            = __webpack_require__(254)
-	  , DESCRIPTORS    = __webpack_require__(246)
-	  , $export        = __webpack_require__(236)
-	  , redefine       = __webpack_require__(281)
-	  , META           = __webpack_require__(298).KEY
-	  , $fails         = __webpack_require__(247)
-	  , shared         = __webpack_require__(264)
-	  , setToStringTag = __webpack_require__(287)
-	  , uid            = __webpack_require__(265)
-	  , wks            = __webpack_require__(288)
-	  , wksExt         = __webpack_require__(294)
-	  , wksDefine      = __webpack_require__(299)
-	  , keyOf          = __webpack_require__(300)
-	  , enumKeys       = __webpack_require__(301)
-	  , isArray        = __webpack_require__(302)
-	  , anObject       = __webpack_require__(243)
-	  , toIObject      = __webpack_require__(255)
-	  , toPrimitive    = __webpack_require__(249)
-	  , createDesc     = __webpack_require__(250)
-	  , _create        = __webpack_require__(284)
-	  , gOPNExt        = __webpack_require__(303)
-	  , $GOPD          = __webpack_require__(305)
-	  , $DP            = __webpack_require__(242)
-	  , $keys          = __webpack_require__(252)
-=======
 	var global         = __webpack_require__(243)
 	  , has            = __webpack_require__(260)
 	  , DESCRIPTORS    = __webpack_require__(252)
@@ -34070,7 +28509,6 @@
 	  , $GOPD          = __webpack_require__(311)
 	  , $DP            = __webpack_require__(248)
 	  , $keys          = __webpack_require__(258)
->>>>>>> change to bundle.js
 	  , gOPD           = $GOPD.f
 	  , dP             = $DP.f
 	  , gOPN           = gOPNExt.f
@@ -34193,19 +28631,11 @@
 
 	  $GOPD.f = $getOwnPropertyDescriptor;
 	  $DP.f   = $defineProperty;
-<<<<<<< HEAD
-	  __webpack_require__(304).f = gOPNExt.f = $getOwnPropertyNames;
-	  __webpack_require__(268).f  = $propertyIsEnumerable;
-	  __webpack_require__(267).f = $getOwnPropertySymbols;
-
-	  if(DESCRIPTORS && !__webpack_require__(280)){
-=======
 	  __webpack_require__(310).f = gOPNExt.f = $getOwnPropertyNames;
 	  __webpack_require__(274).f  = $propertyIsEnumerable;
 	  __webpack_require__(273).f = $getOwnPropertySymbols;
 
 	  if(DESCRIPTORS && !__webpack_require__(286)){
->>>>>>> change to bundle.js
 	    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
 	  }
 
@@ -34280,11 +28710,7 @@
 	});
 
 	// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-<<<<<<< HEAD
-	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(241)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-=======
 	$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(247)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
->>>>>>> change to bundle.js
 	// 19.4.3.5 Symbol.prototype[@@toStringTag]
 	setToStringTag($Symbol, 'Symbol');
 	// 20.2.1.9 Math[@@toStringTag]
@@ -34293,15 +28719,6 @@
 	setToStringTag(global.JSON, 'JSON', true);
 
 /***/ },
-<<<<<<< HEAD
-/* 298 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var META     = __webpack_require__(265)('meta')
-	  , isObject = __webpack_require__(244)
-	  , has      = __webpack_require__(254)
-	  , setDesc  = __webpack_require__(242).f
-=======
 /* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34309,16 +28726,11 @@
 	  , isObject = __webpack_require__(250)
 	  , has      = __webpack_require__(260)
 	  , setDesc  = __webpack_require__(248).f
->>>>>>> change to bundle.js
 	  , id       = 0;
 	var isExtensible = Object.isExtensible || function(){
 	  return true;
 	};
-<<<<<<< HEAD
-	var FREEZE = !__webpack_require__(247)(function(){
-=======
 	var FREEZE = !__webpack_require__(253)(function(){
->>>>>>> change to bundle.js
 	  return isExtensible(Object.preventExtensions({}));
 	});
 	var setMeta = function(it){
@@ -34365,16 +28777,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 299 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var global         = __webpack_require__(237)
-	  , core           = __webpack_require__(238)
-	  , LIBRARY        = __webpack_require__(280)
-	  , wksExt         = __webpack_require__(294)
-	  , defineProperty = __webpack_require__(242).f;
-=======
 /* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34383,26 +28785,17 @@
 	  , LIBRARY        = __webpack_require__(286)
 	  , wksExt         = __webpack_require__(300)
 	  , defineProperty = __webpack_require__(248).f;
->>>>>>> change to bundle.js
 	module.exports = function(name){
 	  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
 	  if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 300 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var getKeys   = __webpack_require__(252)
-	  , toIObject = __webpack_require__(255);
-=======
 /* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var getKeys   = __webpack_require__(258)
 	  , toIObject = __webpack_require__(261);
->>>>>>> change to bundle.js
 	module.exports = function(object, el){
 	  var O      = toIObject(object)
 	    , keys   = getKeys(O)
@@ -34413,15 +28806,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 301 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// all enumerable object keys, includes symbols
-	var getKeys = __webpack_require__(252)
-	  , gOPS    = __webpack_require__(267)
-	  , pIE     = __webpack_require__(268);
-=======
 /* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34429,7 +28813,6 @@
 	var getKeys = __webpack_require__(258)
 	  , gOPS    = __webpack_require__(273)
 	  , pIE     = __webpack_require__(274);
->>>>>>> change to bundle.js
 	module.exports = function(it){
 	  var result     = getKeys(it)
 	    , getSymbols = gOPS.f;
@@ -34443,39 +28826,22 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 302 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 7.2.2 IsArray(argument)
-	var cof = __webpack_require__(257);
-=======
 /* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.2.2 IsArray(argument)
 	var cof = __webpack_require__(263);
->>>>>>> change to bundle.js
 	module.exports = Array.isArray || function isArray(arg){
 	  return cof(arg) == 'Array';
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 303 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-	var toIObject = __webpack_require__(255)
-	  , gOPN      = __webpack_require__(304).f
-=======
 /* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 	var toIObject = __webpack_require__(261)
 	  , gOPN      = __webpack_require__(310).f
->>>>>>> change to bundle.js
 	  , toString  = {}.toString;
 
 	var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -34495,41 +28861,18 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-	var $keys      = __webpack_require__(253)
-	  , hiddenKeys = __webpack_require__(266).concat('length', 'prototype');
-=======
 /* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 	var $keys      = __webpack_require__(259)
 	  , hiddenKeys = __webpack_require__(272).concat('length', 'prototype');
->>>>>>> change to bundle.js
 
 	exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O){
 	  return $keys(O, hiddenKeys);
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 305 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pIE            = __webpack_require__(268)
-	  , createDesc     = __webpack_require__(250)
-	  , toIObject      = __webpack_require__(255)
-	  , toPrimitive    = __webpack_require__(249)
-	  , has            = __webpack_require__(254)
-	  , IE8_DOM_DEFINE = __webpack_require__(245)
-	  , gOPD           = Object.getOwnPropertyDescriptor;
-
-	exports.f = __webpack_require__(246) ? gOPD : function getOwnPropertyDescriptor(O, P){
-=======
 /* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34542,7 +28885,6 @@
 	  , gOPD           = Object.getOwnPropertyDescriptor;
 
 	exports.f = __webpack_require__(252) ? gOPD : function getOwnPropertyDescriptor(O, P){
->>>>>>> change to bundle.js
 	  O = toIObject(O);
 	  P = toPrimitive(P, true);
 	  if(IE8_DOM_DEFINE)try {
@@ -34552,31 +28894,12 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 306 */
-=======
 /* 312 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	
 
 /***/ },
-<<<<<<< HEAD
-/* 307 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(299)('asyncIterator');
-
-/***/ },
-/* 308 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(299)('observable');
-
-/***/ },
-/* 309 */
-=======
 /* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34590,24 +28913,12 @@
 
 /***/ },
 /* 315 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _setPrototypeOf = __webpack_require__(310);
-
-	var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
-
-	var _create = __webpack_require__(314);
-
-	var _create2 = _interopRequireDefault(_create);
-
-	var _typeof2 = __webpack_require__(274);
-=======
 	var _setPrototypeOf = __webpack_require__(316);
 
 	var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
@@ -34617,7 +28928,6 @@
 	var _create2 = _interopRequireDefault(_create);
 
 	var _typeof2 = __webpack_require__(280);
->>>>>>> change to bundle.js
 
 	var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -34640,30 +28950,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(311), __esModule: true };
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(312);
-	module.exports = __webpack_require__(238).Object.setPrototypeOf;
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.19 Object.setPrototypeOf(O, proto)
-	var $export = __webpack_require__(236);
-	$export($export.S, 'Object', {setPrototypeOf: __webpack_require__(313).set});
-
-/***/ },
-/* 313 */
-=======
 /* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34686,18 +28972,12 @@
 
 /***/ },
 /* 319 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	// Works with __proto__ only. Old v8 can't work with null proto objects.
 	/* eslint-disable no-proto */
-<<<<<<< HEAD
-	var isObject = __webpack_require__(244)
-	  , anObject = __webpack_require__(243);
-=======
 	var isObject = __webpack_require__(250)
 	  , anObject = __webpack_require__(249);
->>>>>>> change to bundle.js
 	var check = function(O, proto){
 	  anObject(O);
 	  if(!isObject(proto) && proto !== null)throw TypeError(proto + ": can't set as prototype!");
@@ -34706,11 +28986,7 @@
 	  set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
 	    function(test, buggy, set){
 	      try {
-<<<<<<< HEAD
-	        set = __webpack_require__(239)(Function.call, __webpack_require__(305).f(Object.prototype, '__proto__').set, 2);
-=======
 	        set = __webpack_require__(245)(Function.call, __webpack_require__(311).f(Object.prototype, '__proto__').set, 2);
->>>>>>> change to bundle.js
 	        set(test, []);
 	        buggy = !(test instanceof Array);
 	      } catch(e){ buggy = true; }
@@ -34725,19 +29001,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 314 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(315), __esModule: true };
-
-/***/ },
-/* 315 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(316);
-	var $Object = __webpack_require__(238).Object;
-=======
 /* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34749,23 +29012,11 @@
 
 	__webpack_require__(322);
 	var $Object = __webpack_require__(244).Object;
->>>>>>> change to bundle.js
 	module.exports = function create(P, D){
 	  return $Object.create(P, D);
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 316 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $export = __webpack_require__(236)
-	// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-	$export($export.S, 'Object', {create: __webpack_require__(284)});
-
-/***/ },
-/* 317 */
-=======
 /* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -34775,7 +29026,6 @@
 
 /***/ },
 /* 323 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34784,17 +29034,6 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _classCallCheck2 = __webpack_require__(272);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(273);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(309);
-=======
 	var _classCallCheck2 = __webpack_require__(278);
 
 	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -34804,7 +29043,6 @@
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
 	var _inherits2 = __webpack_require__(315);
->>>>>>> change to bundle.js
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -34812,19 +29050,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _DateConstants = __webpack_require__(318);
-
-	var _DateConstants2 = _interopRequireDefault(_DateConstants);
-
-	var _moment = __webpack_require__(319);
-=======
 	var _DateConstants = __webpack_require__(324);
 
 	var _DateConstants2 = _interopRequireDefault(_DateConstants);
 
 	var _moment = __webpack_require__(325);
->>>>>>> change to bundle.js
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -34904,11 +29134,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 318 */
-=======
 /* 324 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34923,11 +29149,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 319 */
-=======
 /* 325 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {//! moment.js
@@ -36741,11 +30963,7 @@
 	            module && module.exports) {
 	        try {
 	            oldLocale = globalLocale._abbr;
-<<<<<<< HEAD
-	            __webpack_require__(321)("./" + name);
-=======
 	            __webpack_require__(327)("./" + name);
->>>>>>> change to bundle.js
 	            // because defineLocale currently also sets the global locale, we
 	            // want to undo that for lazy loaded locales
 	            getSetGlobalLocale(oldLocale);
@@ -39233,17 +33451,10 @@
 
 	})));
 
-<<<<<<< HEAD
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(320)(module)))
-
-/***/ },
-/* 320 */
-=======
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(326)(module)))
 
 /***/ },
 /* 326 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -39259,228 +33470,6 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 321 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./af": 322,
-		"./af.js": 322,
-		"./ar": 323,
-		"./ar-dz": 324,
-		"./ar-dz.js": 324,
-		"./ar-ly": 325,
-		"./ar-ly.js": 325,
-		"./ar-ma": 326,
-		"./ar-ma.js": 326,
-		"./ar-sa": 327,
-		"./ar-sa.js": 327,
-		"./ar-tn": 328,
-		"./ar-tn.js": 328,
-		"./ar.js": 323,
-		"./az": 329,
-		"./az.js": 329,
-		"./be": 330,
-		"./be.js": 330,
-		"./bg": 331,
-		"./bg-x": 332,
-		"./bg-x.js": 332,
-		"./bg.js": 331,
-		"./bn": 333,
-		"./bn.js": 333,
-		"./bo": 334,
-		"./bo.js": 334,
-		"./br": 335,
-		"./br.js": 335,
-		"./bs": 336,
-		"./bs.js": 336,
-		"./ca": 337,
-		"./ca.js": 337,
-		"./cs": 338,
-		"./cs.js": 338,
-		"./cv": 339,
-		"./cv.js": 339,
-		"./cy": 340,
-		"./cy.js": 340,
-		"./da": 341,
-		"./da.js": 341,
-		"./de": 342,
-		"./de-at": 343,
-		"./de-at.js": 343,
-		"./de.js": 342,
-		"./dv": 344,
-		"./dv.js": 344,
-		"./el": 345,
-		"./el.js": 345,
-		"./en-au": 346,
-		"./en-au.js": 346,
-		"./en-ca": 347,
-		"./en-ca.js": 347,
-		"./en-gb": 348,
-		"./en-gb.js": 348,
-		"./en-ie": 349,
-		"./en-ie.js": 349,
-		"./en-nz": 350,
-		"./en-nz.js": 350,
-		"./eo": 351,
-		"./eo.js": 351,
-		"./es": 352,
-		"./es-do": 353,
-		"./es-do.js": 353,
-		"./es.js": 352,
-		"./et": 354,
-		"./et.js": 354,
-		"./eu": 355,
-		"./eu.js": 355,
-		"./fa": 356,
-		"./fa.js": 356,
-		"./fi": 357,
-		"./fi.js": 357,
-		"./fo": 358,
-		"./fo.js": 358,
-		"./fr": 359,
-		"./fr-ca": 360,
-		"./fr-ca.js": 360,
-		"./fr-ch": 361,
-		"./fr-ch.js": 361,
-		"./fr.js": 359,
-		"./fy": 362,
-		"./fy.js": 362,
-		"./gd": 363,
-		"./gd.js": 363,
-		"./gl": 364,
-		"./gl.js": 364,
-		"./he": 365,
-		"./he.js": 365,
-		"./hi": 366,
-		"./hi.js": 366,
-		"./hr": 367,
-		"./hr.js": 367,
-		"./hu": 368,
-		"./hu.js": 368,
-		"./hy-am": 369,
-		"./hy-am.js": 369,
-		"./id": 370,
-		"./id.js": 370,
-		"./is": 371,
-		"./is.js": 371,
-		"./it": 372,
-		"./it.js": 372,
-		"./ja": 373,
-		"./ja.js": 373,
-		"./jv": 374,
-		"./jv.js": 374,
-		"./ka": 375,
-		"./ka.js": 375,
-		"./kk": 376,
-		"./kk.js": 376,
-		"./km": 377,
-		"./km.js": 377,
-		"./ko": 378,
-		"./ko.js": 378,
-		"./ky": 379,
-		"./ky.js": 379,
-		"./lb": 380,
-		"./lb.js": 380,
-		"./lo": 381,
-		"./lo.js": 381,
-		"./lt": 382,
-		"./lt.js": 382,
-		"./lv": 383,
-		"./lv.js": 383,
-		"./me": 384,
-		"./me.js": 384,
-		"./mi": 385,
-		"./mi.js": 385,
-		"./mk": 386,
-		"./mk.js": 386,
-		"./ml": 387,
-		"./ml.js": 387,
-		"./mr": 388,
-		"./mr.js": 388,
-		"./ms": 389,
-		"./ms-my": 390,
-		"./ms-my.js": 390,
-		"./ms.js": 389,
-		"./my": 391,
-		"./my.js": 391,
-		"./nb": 392,
-		"./nb.js": 392,
-		"./ne": 393,
-		"./ne.js": 393,
-		"./nl": 394,
-		"./nl-be": 395,
-		"./nl-be.js": 395,
-		"./nl.js": 394,
-		"./nn": 396,
-		"./nn.js": 396,
-		"./pa-in": 397,
-		"./pa-in.js": 397,
-		"./pl": 398,
-		"./pl.js": 398,
-		"./pt": 399,
-		"./pt-br": 400,
-		"./pt-br.js": 400,
-		"./pt.js": 399,
-		"./ro": 401,
-		"./ro.js": 401,
-		"./ru": 402,
-		"./ru.js": 402,
-		"./se": 403,
-		"./se.js": 403,
-		"./si": 404,
-		"./si.js": 404,
-		"./sk": 405,
-		"./sk.js": 405,
-		"./sl": 406,
-		"./sl.js": 406,
-		"./sq": 407,
-		"./sq.js": 407,
-		"./sr": 408,
-		"./sr-cyrl": 409,
-		"./sr-cyrl.js": 409,
-		"./sr.js": 408,
-		"./ss": 410,
-		"./ss.js": 410,
-		"./sv": 411,
-		"./sv.js": 411,
-		"./sw": 412,
-		"./sw.js": 412,
-		"./ta": 413,
-		"./ta.js": 413,
-		"./te": 414,
-		"./te.js": 414,
-		"./tet": 415,
-		"./tet.js": 415,
-		"./th": 416,
-		"./th.js": 416,
-		"./tl-ph": 417,
-		"./tl-ph.js": 417,
-		"./tlh": 418,
-		"./tlh.js": 418,
-		"./tr": 419,
-		"./tr.js": 419,
-		"./tzl": 420,
-		"./tzl.js": 420,
-		"./tzm": 421,
-		"./tzm-latn": 422,
-		"./tzm-latn.js": 422,
-		"./tzm.js": 421,
-		"./uk": 423,
-		"./uk.js": 423,
-		"./uz": 424,
-		"./uz.js": 424,
-		"./vi": 425,
-		"./vi.js": 425,
-		"./x-pseudo": 426,
-		"./x-pseudo.js": 426,
-		"./zh-cn": 427,
-		"./zh-cn.js": 427,
-		"./zh-hk": 428,
-		"./zh-hk.js": 428,
-		"./zh-tw": 429,
-		"./zh-tw.js": 429
-=======
 /* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -39701,7 +33690,6 @@
 		"./zh-hk.js": 434,
 		"./zh-tw": 435,
 		"./zh-tw.js": 435
->>>>>>> change to bundle.js
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -39714,19 +33702,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-<<<<<<< HEAD
-	webpackContext.id = 321;
-
-
-/***/ },
-/* 322 */
-=======
 	webpackContext.id = 327;
 
 
 /***/ },
 /* 328 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -39734,11 +33714,7 @@
 	//! author : Werner Mollentze : https://github.com/wernerm
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -39808,11 +33784,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 323 */
-=======
 /* 329 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -39822,11 +33794,7 @@
 	//! author : forabi https://github.com/forabi
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -39963,11 +33931,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 324 */
-=======
 /* 330 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -39975,11 +33939,7 @@
 	//! author : Noureddine LOUAHEDJ : https://github.com/noureddineme
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40035,11 +33995,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 325 */
-=======
 /* 331 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40047,11 +34003,7 @@
 	//! author : Ali Hmer: https://github.com/kikoanis
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40174,11 +34126,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 326 */
-=======
 /* 332 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40187,11 +34135,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40247,11 +34191,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 327 */
-=======
 /* 333 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40259,11 +34199,7 @@
 	//! author : Suhail Alkowaileet : https://github.com/xsoh
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40365,11 +34301,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 328 */
-=======
 /* 334 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40377,11 +34309,7 @@
 	//! author : Nader Toukabri : https://github.com/naderio
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40437,11 +34365,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 329 */
-=======
 /* 335 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40449,11 +34373,7 @@
 	//! author : topchiyev : https://github.com/topchiyev
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40555,11 +34475,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 330 */
-=======
 /* 336 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40569,11 +34485,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40702,11 +34614,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 331 */
-=======
 /* 337 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40714,11 +34622,7 @@
 	//! author : Krasen Borisov : https://github.com/kraz
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40805,20 +34709,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 332 */
-=======
 /* 338 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40833,11 +34729,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 333 */
-=======
 /* 339 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40845,11 +34737,7 @@
 	//! author : Kaushik Gandhi : https://github.com/kaushikgandhi
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -40965,11 +34853,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 334 */
-=======
 /* 340 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -40977,11 +34861,7 @@
 	//! author : Thupten N. Chakrishar : https://github.com/vajradog
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41097,11 +34977,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 335 */
-=======
 /* 341 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41109,11 +34985,7 @@
 	//! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41218,11 +35090,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 336 */
-=======
 /* 342 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41231,11 +35099,7 @@
 	//! based on (hr) translation by Bojan Marković
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41374,11 +35238,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 337 */
-=======
 /* 343 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41386,11 +35246,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41468,11 +35324,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 338 */
-=======
 /* 344 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41480,11 +35332,7 @@
 	//! author : petrbela : https://github.com/petrbela
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41653,11 +35501,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 339 */
-=======
 /* 345 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41665,11 +35509,7 @@
 	//! author : Anatoly Mironov : https://github.com/mirontoli
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41729,11 +35569,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 340 */
-=======
 /* 346 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41742,11 +35578,7 @@
 	//! author : https://github.com/ryangreaves
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41823,11 +35655,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 341 */
-=======
 /* 347 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41835,11 +35663,7 @@
 	//! author : Ulrik Nielsen : https://github.com/mrbase
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41896,11 +35720,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 342 */
-=======
 /* 348 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -41910,11 +35730,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -41987,11 +35803,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 343 */
-=======
 /* 349 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42002,11 +35814,7 @@
 	//! author : Mikolaj Dadela : https://github.com/mik01aj
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42079,11 +35887,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 344 */
-=======
 /* 350 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42091,11 +35895,7 @@
 	//! author : Jawish Hameed : https://github.com/jawish
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42192,11 +35992,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 345 */
-=======
 /* 351 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42204,11 +36000,7 @@
 	//! author : Aggelos Karalias : https://github.com/mehiel
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42303,11 +36095,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 346 */
-=======
 /* 352 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42315,11 +36103,7 @@
 	//! author : Jared Morse : https://github.com/jarcoal
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42383,11 +36167,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 347 */
-=======
 /* 353 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42395,11 +36175,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42459,11 +36235,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 348 */
-=======
 /* 354 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42471,11 +36243,7 @@
 	//! author : Chris Gedrim : https://github.com/chrisgedrim
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42539,11 +36307,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 349 */
-=======
 /* 355 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42551,11 +36315,7 @@
 	//! author : Chris Cartlidge : https://github.com/chriscartlidge
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42619,11 +36379,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 350 */
-=======
 /* 356 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42631,11 +36387,7 @@
 	//! author : Luke McGregor : https://github.com/lukemcgregor
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42699,11 +36451,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 351 */
-=======
 /* 357 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42713,11 +36461,7 @@
 	//!          Se ne, bonvolu korekti kaj avizi min por ke mi povas lerni!
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42785,11 +36529,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 352 */
-=======
 /* 358 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42797,11 +36537,7 @@
 	//! author : Julio Napurí : https://github.com/julionc
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42879,22 +36615,14 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 353 */
-=======
 /* 359 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
 	//! locale : Spanish (Dominican Republic) [es-do]
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -42972,11 +36700,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 354 */
-=======
 /* 360 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -42985,11 +36709,7 @@
 	//! improvements : Illimar Tambek : https://github.com/ragulka
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43065,11 +36785,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 355 */
-=======
 /* 361 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43077,11 +36793,7 @@
 	//! author : Eneko Illarramendi : https://github.com/eillarra
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43144,11 +36856,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 356 */
-=======
 /* 362 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43156,11 +36864,7 @@
 	//! author : Ebrahim Byagowi : https://github.com/ebraminio
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43264,11 +36968,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 357 */
-=======
 /* 363 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43276,11 +36976,7 @@
 	//! author : Tarmo Aidantausta : https://github.com/bleadof
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43384,11 +37080,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 358 */
-=======
 /* 364 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43396,11 +37088,7 @@
 	//! author : Ragnar Johannesen : https://github.com/ragnar123
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43457,11 +37145,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 359 */
-=======
 /* 365 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43469,11 +37153,7 @@
 	//! author : John Fischer : https://github.com/jfroffice
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43534,11 +37214,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 360 */
-=======
 /* 366 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43546,11 +37222,7 @@
 	//! author : Jonathan Abourbih : https://github.com/jonbca
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43607,11 +37279,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 361 */
-=======
 /* 367 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43619,11 +37287,7 @@
 	//! author : Gaspard Bucher : https://github.com/gaspard
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43684,11 +37348,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 362 */
-=======
 /* 368 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43696,11 +37356,7 @@
 	//! author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43770,11 +37426,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 363 */
-=======
 /* 369 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43782,11 +37434,7 @@
 	//! author : Jon Ashdown : https://github.com/jonashdown
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43859,11 +37507,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 364 */
-=======
 /* 370 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43871,11 +37515,7 @@
 	//! author : Juan G. Hurtado : https://github.com/juanghurtado
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -43949,11 +37589,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 365 */
-=======
 /* 371 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -43963,11 +37599,7 @@
 	//! author : Tal Ater : https://github.com/TalAter
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44061,11 +37693,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 366 */
-=======
 /* 372 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44073,11 +37701,7 @@
 	//! author : Mayank Singhal : https://github.com/mayanksinghal
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44198,11 +37822,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 367 */
-=======
 /* 373 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44210,11 +37830,7 @@
 	//! author : Bojan Marković : https://github.com/bmarkovic
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44356,11 +37972,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 368 */
-=======
 /* 374 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44368,11 +37980,7 @@
 	//! author : Adam Brunner : https://github.com/adambrunner
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44478,11 +38086,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 369 */
-=======
 /* 375 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44490,11 +38094,7 @@
 	//! author : Armendarabyan : https://github.com/armendarabyan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44586,11 +38186,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 370 */
-=======
 /* 376 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44599,11 +38195,7 @@
 	//! reference: http://id.wikisource.org/wiki/Pedoman_Umum_Ejaan_Bahasa_Indonesia_yang_Disempurnakan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44682,11 +38274,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 371 */
-=======
 /* 377 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44694,11 +38282,7 @@
 	//! author : Hinrik Örn Sigurðsson : https://github.com/hinrik
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44822,11 +38406,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 372 */
-=======
 /* 378 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44835,11 +38415,7 @@
 	//! author: Mattia Larentis: https://github.com/nostalgiaz
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44905,11 +38481,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 373 */
-=======
 /* 379 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -44917,11 +38489,7 @@
 	//! author : LI Long : https://github.com/baryon
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -44994,11 +38562,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 374 */
-=======
 /* 380 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45007,11 +38571,7 @@
 	//! reference: http://jv.wikipedia.org/wiki/Basa_Jawa
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45090,11 +38650,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 375 */
-=======
 /* 381 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45102,11 +38658,7 @@
 	//! author : Irakli Janiashvili : https://github.com/irakli-janiashvili
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45192,11 +38744,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 376 */
-=======
 /* 382 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45204,11 +38752,7 @@
 	//! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45292,11 +38836,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 377 */
-=======
 /* 383 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45304,11 +38844,7 @@
 	//! author : Kruy Vanna : https://github.com/kruyvanna
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45363,11 +38899,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 378 */
-=======
 /* 384 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45376,11 +38908,7 @@
 	//! author : Jeeeyul Lee <jeeeyul@gmail.com>
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45441,11 +38969,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 379 */
-=======
 /* 385 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45453,11 +38977,7 @@
 	//! author : Chyngyz Arystan uulu : https://github.com/chyngyz
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45542,11 +39062,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 380 */
-=======
 /* 386 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45555,11 +39071,7 @@
 	//! author : David Raison : https://github.com/kwisatz
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45692,11 +39204,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 381 */
-=======
 /* 387 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45704,11 +39212,7 @@
 	//! author : Ryan Hart : https://github.com/ryanhart2
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45775,11 +39279,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 382 */
-=======
 /* 388 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45787,11 +39287,7 @@
 	//! author : Mindaugas Mozūras : https://github.com/mmozuras
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -45905,11 +39401,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 383 */
-=======
 /* 389 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -45918,11 +39410,7 @@
 	//! author : Jānis Elmeris : https://github.com/JanisE
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46015,11 +39503,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 384 */
-=======
 /* 390 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46027,11 +39511,7 @@
 	//! author : Miodrag Nikač <miodrag@restartit.me> : https://github.com/miodragnikac
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46139,11 +39619,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 385 */
-=======
 /* 391 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46151,11 +39627,7 @@
 	//! author : John Corrigan <robbiecloset@gmail.com> : https://github.com/johnideal
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46216,11 +39688,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 386 */
-=======
 /* 392 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46228,11 +39696,7 @@
 	//! author : Borislav Mickov : https://github.com/B0k0
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46319,11 +39783,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 387 */
-=======
 /* 393 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46331,11 +39791,7 @@
 	//! author : Floyd Pink : https://github.com/floydpink
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46413,11 +39869,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 388 */
-=======
 /* 394 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46426,11 +39878,7 @@
 	//! author : Vivek Athalye : https://github.com/vnathalye
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46585,11 +40033,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 389 */
-=======
 /* 395 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46597,11 +40041,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46680,11 +40120,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 390 */
-=======
 /* 396 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46693,11 +40129,7 @@
 	//! author : Weldan Jamili : https://github.com/weldan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46776,11 +40208,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 391 */
-=======
 /* 397 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46790,11 +40218,7 @@
 	//! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46885,11 +40309,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 392 */
-=======
 /* 398 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46898,11 +40318,7 @@
 	//!           Sigurd Gartmann : https://github.com/sigurdga
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -46961,11 +40377,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 393 */
-=======
 /* 399 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -46973,11 +40385,7 @@
 	//! author : suvash : https://github.com/suvash
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47097,11 +40505,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 394 */
-=======
 /* 400 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47110,11 +40514,7 @@
 	//! author : Jacob Middag : https://github.com/middagj
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47196,11 +40596,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 395 */
-=======
 /* 401 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47209,11 +40605,7 @@
 	//! author : Jacob Middag : https://github.com/middagj
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47295,11 +40687,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 396 */
-=======
 /* 402 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47307,11 +40695,7 @@
 	//! author : https://github.com/mechuwind
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47368,11 +40752,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 397 */
-=======
 /* 403 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47380,11 +40760,7 @@
 	//! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47505,11 +40881,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 398 */
-=======
 /* 404 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47517,11 +40889,7 @@
 	//! author : Rafal Hirsz : https://github.com/evoL
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47623,11 +40991,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 399 */
-=======
 /* 405 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47635,11 +40999,7 @@
 	//! author : Jefferson : https://github.com/jalex79
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47701,11 +41061,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 400 */
-=======
 /* 406 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47713,11 +41069,7 @@
 	//! author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47775,11 +41127,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 401 */
-=======
 /* 407 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47788,11 +41136,7 @@
 	//! author : Valentin Agachi : https://github.com/avaly
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -47863,11 +41207,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 402 */
-=======
 /* 408 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -47877,11 +41217,7 @@
 	//! author : Коренберг Марк : https://github.com/socketpair
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48059,11 +41395,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 403 */
-=======
 /* 409 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48071,11 +41403,7 @@
 	//! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48133,11 +41461,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 404 */
-=======
 /* 410 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48145,11 +41469,7 @@
 	//! author : Sampath Sitinamaluwa : https://github.com/sampathsris
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48217,11 +41537,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 405 */
-=======
 /* 411 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48230,11 +41546,7 @@
 	//! based on work of petrbela : https://github.com/petrbela
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48380,11 +41692,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 406 */
-=======
 /* 412 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48392,11 +41700,7 @@
 	//! author : Robert Sedovšek : https://github.com/sedovsek
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48555,11 +41859,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 407 */
-=======
 /* 413 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48569,11 +41869,7 @@
 	//! author : Oerd Cukalla : https://github.com/oerd
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48638,11 +41934,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 408 */
-=======
 /* 414 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48650,11 +41942,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48761,11 +42049,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 409 */
-=======
 /* 415 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48773,11 +42057,7 @@
 	//! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48884,11 +42164,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 410 */
-=======
 /* 416 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48896,11 +42172,7 @@
 	//! author : Nicolai Davies<mail@nicolai.io> : https://github.com/nicolaidavies
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -48986,11 +42258,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 411 */
-=======
 /* 417 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -48998,11 +42266,7 @@
 	//! author : Jens Alm : https://github.com/ulmus
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49068,11 +42332,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 412 */
-=======
 /* 418 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49080,11 +42340,7 @@
 	//! author : Fahad Kassim : https://github.com/fadsel
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49140,11 +42396,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 413 */
-=======
 /* 419 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49152,11 +42404,7 @@
 	//! author : Arjunkumar Krishnamoorthy : https://github.com/tk120404
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49283,11 +42531,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 414 */
-=======
 /* 420 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49295,11 +42539,7 @@
 	//! author : Krishna Chaitanya Thota : https://github.com/kcthota
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49385,11 +42625,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 415 */
-=======
 /* 421 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49398,11 +42634,7 @@
 	//! author : Onorio De J. Afonso : https://github.com/marobo
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49466,11 +42698,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 416 */
-=======
 /* 422 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49478,11 +42706,7 @@
 	//! author : Kridsada Thanabulpong : https://github.com/sirn
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49546,11 +42770,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 417 */
-=======
 /* 423 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49558,11 +42778,7 @@
 	//! author : Dan Hagman : https://github.com/hagmandan
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49621,11 +42837,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 418 */
-=======
 /* 424 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49633,11 +42845,7 @@
 	//! author : Dominika Kruk : https://github.com/amaranthrose
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49754,11 +42962,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 419 */
-=======
 /* 425 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49767,11 +42971,7 @@
 	//!           Burak Yiğit Kaya: https://github.com/BYK
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49857,11 +43057,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 420 */
-=======
 /* 426 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49870,11 +43066,7 @@
 	//! author : Iustì Canun
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -49961,11 +43153,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 421 */
-=======
 /* 427 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -49973,11 +43161,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50032,11 +43216,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 422 */
-=======
 /* 428 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50044,11 +43224,7 @@
 	//! author : Abdel Said : https://github.com/abdelsaid
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50103,11 +43279,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 423 */
-=======
 /* 429 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50116,11 +43288,7 @@
 	//! Author : Menelion Elensúle : https://github.com/Oire
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50262,11 +43430,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 424 */
-=======
 /* 430 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50274,11 +43438,7 @@
 	//! author : Sardor Muminov : https://github.com/muminoff
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50333,11 +43493,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 425 */
-=======
 /* 431 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50345,11 +43501,7 @@
 	//! author : Bang Nguyen : https://github.com/bangnk
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50425,11 +43577,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 426 */
-=======
 /* 432 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50437,11 +43585,7 @@
 	//! author : Andrew Hood : https://github.com/andrewhood125
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50506,11 +43650,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 427 */
-=======
 /* 433 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50519,11 +43659,7 @@
 	//! author : Zeno Zeng : https://github.com/zenozeng
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50646,11 +43782,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 428 */
-=======
 /* 434 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50660,11 +43792,7 @@
 	//! author : Konstantin : https://github.com/skfd
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50764,11 +43892,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 429 */
-=======
 /* 435 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	//! moment.js locale configuration
@@ -50777,11 +43901,7 @@
 	//! author : Chris Lam : https://github.com/hehachris
 
 	;(function (global, factory) {
-<<<<<<< HEAD
-	    true ? factory(__webpack_require__(319)) :
-=======
 	    true ? factory(__webpack_require__(325)) :
->>>>>>> change to bundle.js
 	   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
 	   factory(global.moment)
 	}(this, (function (moment) { 'use strict';
@@ -50881,11 +44001,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 430 */
-=======
 /* 436 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50898,19 +44014,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _DateConstants = __webpack_require__(318);
-
-	var _DateConstants2 = _interopRequireDefault(_DateConstants);
-
-	var _util = __webpack_require__(431);
-=======
 	var _DateConstants = __webpack_require__(324);
 
 	var _DateConstants2 = _interopRequireDefault(_DateConstants);
 
 	var _util = __webpack_require__(437);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -51142,11 +44250,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 431 */
-=======
 /* 437 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51155,11 +44259,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _extends2 = __webpack_require__(232);
-=======
 	var _extends2 = __webpack_require__(238);
->>>>>>> change to bundle.js
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
@@ -51172,11 +44272,7 @@
 	exports.isTimeValid = isTimeValid;
 	exports.isAllowedDate = isAllowedDate;
 
-<<<<<<< HEAD
-	var _moment = __webpack_require__(319);
-=======
 	var _moment = __webpack_require__(325);
->>>>>>> change to bundle.js
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -51263,11 +44359,7 @@
 	}
 
 /***/ },
-<<<<<<< HEAD
-/* 432 */
-=======
 /* 438 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51280,17 +44372,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _MonthPanel = __webpack_require__(433);
-
-	var _MonthPanel2 = _interopRequireDefault(_MonthPanel);
-
-	var _YearPanel = __webpack_require__(434);
-
-	var _YearPanel2 = _interopRequireDefault(_YearPanel);
-
-	var _mapSelf = __webpack_require__(442);
-=======
 	var _MonthPanel = __webpack_require__(439);
 
 	var _MonthPanel2 = _interopRequireDefault(_MonthPanel);
@@ -51300,7 +44381,6 @@
 	var _YearPanel2 = _interopRequireDefault(_YearPanel);
 
 	var _mapSelf = __webpack_require__(448);
->>>>>>> change to bundle.js
 
 	var _mapSelf2 = _interopRequireDefault(_mapSelf);
 
@@ -51480,11 +44560,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 433 */
-=======
 /* 439 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51497,19 +44573,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _YearPanel = __webpack_require__(434);
-
-	var _YearPanel2 = _interopRequireDefault(_YearPanel);
-
-	var _MonthTable = __webpack_require__(441);
-=======
 	var _YearPanel = __webpack_require__(440);
 
 	var _YearPanel2 = _interopRequireDefault(_YearPanel);
 
 	var _MonthTable = __webpack_require__(447);
->>>>>>> change to bundle.js
 
 	var _MonthTable2 = _interopRequireDefault(_MonthTable);
 
@@ -51662,11 +44730,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 434 */
-=======
 /* 440 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51675,21 +44739,6 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(272);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(273);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(309);
-=======
 	var _defineProperty2 = __webpack_require__(441);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
@@ -51703,7 +44752,6 @@
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
 	var _inherits2 = __webpack_require__(315);
->>>>>>> change to bundle.js
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -51711,19 +44759,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _classnames = __webpack_require__(439);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _DecadePanel = __webpack_require__(440);
-=======
 	var _classnames = __webpack_require__(445);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _DecadePanel = __webpack_require__(446);
->>>>>>> change to bundle.js
 
 	var _DecadePanel2 = _interopRequireDefault(_DecadePanel);
 
@@ -51950,22 +44990,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 435 */
-=======
 /* 441 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	exports.__esModule = true;
 
-<<<<<<< HEAD
-	var _defineProperty = __webpack_require__(436);
-=======
 	var _defineProperty = __webpack_require__(442);
->>>>>>> change to bundle.js
 
 	var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -51987,19 +45019,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 436 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(437), __esModule: true };
-
-/***/ },
-/* 437 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(438);
-	var $Object = __webpack_require__(238).Object;
-=======
 /* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -52011,23 +45030,11 @@
 
 	__webpack_require__(444);
 	var $Object = __webpack_require__(244).Object;
->>>>>>> change to bundle.js
 	module.exports = function defineProperty(it, key, desc){
 	  return $Object.defineProperty(it, key, desc);
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 438 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var $export = __webpack_require__(236);
-	// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-	$export($export.S + $export.F * !__webpack_require__(246), 'Object', {defineProperty: __webpack_require__(242).f});
-
-/***/ },
-/* 439 */
-=======
 /* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -52037,7 +45044,6 @@
 
 /***/ },
 /* 445 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -52091,11 +45097,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 440 */
-=======
 /* 446 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52104,21 +45106,6 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(272);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(273);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(309);
-=======
 	var _defineProperty2 = __webpack_require__(441);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
@@ -52132,7 +45119,6 @@
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
 	var _inherits2 = __webpack_require__(315);
->>>>>>> change to bundle.js
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -52140,11 +45126,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _classnames = __webpack_require__(439);
-=======
 	var _classnames = __webpack_require__(445);
->>>>>>> change to bundle.js
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -52319,11 +45301,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 441 */
-=======
 /* 447 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52332,21 +45310,6 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _classCallCheck2 = __webpack_require__(272);
-
-	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-	var _possibleConstructorReturn2 = __webpack_require__(273);
-
-	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-	var _inherits2 = __webpack_require__(309);
-=======
 	var _defineProperty2 = __webpack_require__(441);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
@@ -52360,7 +45323,6 @@
 	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
 	var _inherits2 = __webpack_require__(315);
->>>>>>> change to bundle.js
 
 	var _inherits3 = _interopRequireDefault(_inherits2);
 
@@ -52368,19 +45330,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _classnames = __webpack_require__(439);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _index = __webpack_require__(431);
-=======
 	var _classnames = __webpack_require__(445);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _index = __webpack_require__(437);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -52536,11 +45490,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 442 */
-=======
 /* 448 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52557,11 +45507,7 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 443 */
-=======
 /* 449 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52570,19 +45516,11 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-
-	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
-
-	var _extends2 = __webpack_require__(232);
-=======
 	var _defineProperty2 = __webpack_require__(441);
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 	var _extends2 = __webpack_require__(238);
->>>>>>> change to bundle.js
 
 	var _extends3 = _interopRequireDefault(_extends2);
 
@@ -52590,29 +45528,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactDom = __webpack_require__(34);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _mapSelf = __webpack_require__(442);
-
-	var _mapSelf2 = _interopRequireDefault(_mapSelf);
-
-	var _classnames = __webpack_require__(439);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _TodayButton = __webpack_require__(444);
-
-	var _TodayButton2 = _interopRequireDefault(_TodayButton);
-
-	var _OkButton = __webpack_require__(445);
-
-	var _OkButton2 = _interopRequireDefault(_OkButton);
-
-	var _TimePickerButton = __webpack_require__(446);
-=======
 	var _reactDom = __webpack_require__(32);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
@@ -52634,7 +45549,6 @@
 	var _OkButton2 = _interopRequireDefault(_OkButton);
 
 	var _TimePickerButton = __webpack_require__(452);
->>>>>>> change to bundle.js
 
 	var _TimePickerButton2 = _interopRequireDefault(_TimePickerButton);
 
@@ -52712,11 +45626,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 444 */
-=======
 /* 450 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52730,11 +45640,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _util = __webpack_require__(431);
-=======
 	var _util = __webpack_require__(437);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -52766,11 +45672,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 445 */
-=======
 /* 451 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -52809,11 +45711,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 446 */
-=======
 /* 452 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52822,11 +45720,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-=======
 	var _defineProperty2 = __webpack_require__(441);
->>>>>>> change to bundle.js
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -52836,11 +45730,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _classnames2 = __webpack_require__(439);
-=======
 	var _classnames2 = __webpack_require__(445);
->>>>>>> change to bundle.js
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
@@ -52874,11 +45764,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 447 */
-=======
 /* 453 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52887,11 +45773,7 @@
 	  value: true
 	});
 
-<<<<<<< HEAD
-	var _defineProperty2 = __webpack_require__(435);
-=======
 	var _defineProperty2 = __webpack_require__(441);
->>>>>>> change to bundle.js
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
@@ -52899,17 +45781,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _classnames = __webpack_require__(439);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _moment = __webpack_require__(319);
-
-	var _moment2 = _interopRequireDefault(_moment);
-
-	var _index = __webpack_require__(431);
-=======
 	var _classnames = __webpack_require__(445);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
@@ -52919,7 +45790,6 @@
 	var _moment2 = _interopRequireDefault(_moment);
 
 	var _index = __webpack_require__(437);
->>>>>>> change to bundle.js
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -53033,11 +45903,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 448 */
-=======
 /* 454 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53048,11 +45914,7 @@
 
 	var _react = __webpack_require__(1);
 
-<<<<<<< HEAD
-	var _en_US = __webpack_require__(449);
-=======
 	var _en_US = __webpack_require__(455);
->>>>>>> change to bundle.js
 
 	var _en_US2 = _interopRequireDefault(_en_US);
 
@@ -53117,11 +45979,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 449 */
-=======
 /* 455 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53160,11 +46018,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 450 */
-=======
 /* 456 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53177,19 +46031,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _reactDom = __webpack_require__(34);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	var _moment = __webpack_require__(319);
-=======
 	var _reactDom = __webpack_require__(32);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	var _moment = __webpack_require__(325);
->>>>>>> change to bundle.js
 
 	var _moment2 = _interopRequireDefault(_moment);
 
@@ -53323,17 +46169,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-<<<<<<< HEAD
-/* 451 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-=======
 /* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
->>>>>>> change to bundle.js
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -53343,164 +46182,176 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = _react2.default.createClass({
-<<<<<<< HEAD
-	  displayName: 'Entry',
-
-	  getInitialState: function getInitialState() {
-	    return {
-	      type: 'test',
-	      series: '',
-	      notes: '',
-	      posture: ''
-	    };
-	  },
-
-	  handleChange: function handleChange(event) {
-	    // event.preventDefault()
-	    console.log('event.target.value', event.target.value);
-	    this.setState({ type: event.target.value });
-	  },
-
-	  handleSubmit: function handleSubmit(event) {
-	    event.preventDefault();
-
-	    console.log('i was submitted');
-	    this.setState({ type: 'my type state just changed!!!' });
-	    console.log('this.state', this.state);
-
-	    var data = {
-	      type: this.state.type,
-	      // date: this.state.date,
-	      series: this.state.series,
-	      notes: this.state.notes,
-	      photo: this.state.photo,
-	      posture: this.state.posture
-	    };
-
-	    // submit form via ajax
-	    // $.ajax({
-	    //   type: 'POST',
-	    //   utl: '/api/entries',
-	    //   data: data
-	    // })
-	    // .done(function(data) {
-	    //   self.clearForm()
-	    // })
-	    // .fail(function() {
-	    //   console.log('Failed to send');
-	    // })
-	  },
+	// export default React.createClass ({
+	var BasicInputBox = _react2.default.createClass({
+	  displayName: 'BasicInputBox',
 
 	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      { className: 'input-field col s12' },
 	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        this.props.params.entry
-	      ),
-	      _react2.default.createElement(
-	        'form',
-	        { onSubmit: this.handleSubmit },
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
 	        _react2.default.createElement(
-	          'label',
-	          null,
-	          this.state.type
+	          'option',
+	          { value: '', disabled: true },
+	          'Type'
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'input-field col s12' },
-	          _react2.default.createElement(
-	            'select',
-	            { value: this.state.type, onChange: this.handleChange },
-	            _react2.default.createElement(
-	              'option',
-	              { value: '', disabled: true },
-	              'Type'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'New Moon' },
-	              'New Moon'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'Full Moon' },
-	              'Full Moon'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'Rest' },
-	              'Rest'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'Practice' },
-	              'Practice'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'label',
-	            null,
-	            'Type'
-	          )
-	        ),
-	        _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
-=======
-	  displayName: "Entry",
-
-	  // var Type = React.createClass ({
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "div",
-	      { className: "input-field col s12" },
-	      _react2.default.createElement(
-	        "select",
-	        { value: this.props.label },
-	        _react2.default.createElement(
-	          "option",
-	          { value: "", disabled: true },
-	          "Type"
+	          'option',
+	          { value: 'New Moon' },
+	          'New Moon'
 	        ),
 	        _react2.default.createElement(
-	          "option",
-	          { value: "New Moon" },
-	          "New Moon"
+	          'option',
+	          { value: 'Full Moon' },
+	          'Full Moon'
 	        ),
 	        _react2.default.createElement(
-	          "option",
-	          { value: "Full Moon" },
-	          "Full Moon"
+	          'option',
+	          { value: 'Rest' },
+	          'Rest'
 	        ),
 	        _react2.default.createElement(
-	          "option",
-	          { value: "Rest" },
-	          "Rest"
-	        ),
-	        _react2.default.createElement(
-	          "option",
-	          { value: "Practice" },
-	          "Practice"
+	          'option',
+	          { value: 'Practice' },
+	          'Practice'
 	        )
 	      ),
 	      _react2.default.createElement(
-	        "label",
+	        'label',
 	        null,
-	        "Type"
->>>>>>> change to bundle.js
+	        this.props.label
 	      )
 	    );
 	  }
 	});
 
-<<<<<<< HEAD
-/***/ },
-/* 452 */
-=======
+	var CommentBox = _react2.default.createClass({
+	  displayName: 'CommentBox',
+
+	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'input-field col s12' },
+	      _react2.default.createElement(
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'suna' },
+	          'Sun A'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'sunb' },
+	          'Sun B'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: '3' },
+	          '3'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'label',
+	        null,
+	        'How far did you get?'
+	      )
+	    );
+	  }
+	});
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Entry',
+
+	  // var Contact = React.createClass({
+	  getInitialState: function getInitialState() {
+	    return {};
+	  },
+
+	  submit: function submit(e) {
+	    var self;
+
+	    e.preventDefault();
+	    self = this;
+
+	    console.log(this.state);
+
+	    var data = {
+	      name: this.state.name,
+	      email: this.state.email,
+	      comment: this.state.comment
+	    };
+
+	    console.log('data is', data);
+
+	    // Submit form via jQuery/AJAX
+	    // $.ajax({
+	    //   type: 'POST',
+	    //   url: '/some/url',
+	    //   data: data
+	    // })
+	    // .done(function(data) {
+	    //   self.clearForm()
+	    // })
+	    // .fail(function(jqXhr) {
+	    //   console.log('failed to register');
+	    // });
+	  },
+
+	  clearForm: function clearForm() {
+	    this.setState({
+	      name: "",
+	      email: "",
+	      comment: ""
+	    });
+	  },
+
+	  nameChange: function nameChange(e) {
+	    this.setState({ name: e.target.value });
+	  },
+
+	  emailChange: function emailChange(e) {
+	    this.setState({ email: e.target.value });
+	  },
+
+	  commentChange: function commentChange(e) {
+	    this.setState({ comment: e.target.value });
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'form',
+	      { onSubmit: this.submit },
+	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
+	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
+	      _react2.default.createElement(
+	        'button',
+	        { type: 'submit' },
+	        'Submit'
+	      )
+	    );
+	  }
+	});
+
 	// export default React.createClass({
 	// getInitialState: function() {
 	//   return {
@@ -53621,7 +46472,6 @@
 
 /***/ },
 /* 458 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53648,43 +46498,25 @@
 	});
 
 /***/ },
-<<<<<<< HEAD
-/* 453 */
-=======
 /* 459 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-=======
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
->>>>>>> change to bundle.js
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _axios = __webpack_require__(454);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	var _reactCookie = __webpack_require__(479);
-
-	var _reactCookie2 = _interopRequireDefault(_reactCookie);
-
-=======
 	var _axios = __webpack_require__(460);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
->>>>>>> change to bundle.js
+	var _reactCookie = __webpack_require__(485);
+
+	var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53693,24 +46525,12 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-<<<<<<< HEAD
-=======
-	var postures = ['Bakasana', 'Malasana', 'Utanasana', 'Chaturunga Dandasana'].map(function (name, index) {
-	  return _react2.default.createElement(
-	    'option',
-	    { key: index },
-	    name
-	  );
-	});
-
->>>>>>> change to bundle.js
 	var Photos = function (_React$Component) {
 	  _inherits(Photos, _React$Component);
 
 	  function Photos(props) {
 	    _classCallCheck(this, Photos);
 
-<<<<<<< HEAD
 	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
 
 	    _this.state = { postures: [], photos: [] };
@@ -53727,33 +46547,10 @@
 	    }).catch(function (err) {
 	      return console.error(err);
 	    });
-=======
-	    // const postures = axios()
-	    // const postures = [`Bakasana`, `Malasana`, `Utanasana`, `Chaturunga Dandasana`]
-
-	    // this.props = { postures: postures }
-
-	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
-
-	    _this.state = {
-	      posture: ''
-	    };
-
-	    _this.handlePosture = _this.handlePosture.bind(_this);
-
-	    // const RenderPostures = () => {
-	    //
-	    //   return postures.map((name, index) => {
-	    //     return <option key={index}>{name}</option>
-	    //   })
-	    // }
-
->>>>>>> change to bundle.js
 	    return _this;
 	  }
 
 	  _createClass(Photos, [{
-<<<<<<< HEAD
 	    key: 'getPhotos',
 	    value: function getPhotos(list) {
 	      var elements = list.map(function (photo, index) {
@@ -53781,16 +46578,10 @@
 	      var posture = $('#autocomplete-input').val();
 
 	      this.getEntries(userId, posture);
-=======
-	    key: 'handlePosture',
-	    value: function handlePosture(e) {
-	      this.setState({ posture: e.target.value });
->>>>>>> change to bundle.js
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-<<<<<<< HEAD
 	      var _this3 = this;
 
 	      $(document).ready(function () {
@@ -53799,13 +46590,10 @@
 	        });
 	      });
 
-=======
->>>>>>> change to bundle.js
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(
-<<<<<<< HEAD
 	          'label',
 	          { htmlFor: 'autocomplete-input' },
 	          'Posture'
@@ -53821,11 +46609,6 @@
 	          'div',
 	          { className: 'row' },
 	          this.state.photos
-=======
-	          'select',
-	          { value: this.state.posture, onChange: this.handlePosture.bind(this) },
-	          postures
->>>>>>> change to bundle.js
 	        )
 	      );
 	    }
@@ -53834,19 +46617,7 @@
 	  return Photos;
 	}(_react2.default.Component);
 
-<<<<<<< HEAD
 	module.exports = Photos;
-
-/***/ },
-/* 454 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(455);
-
-/***/ },
-/* 455 */
-=======
-	exports.default = Photos;
 
 /***/ },
 /* 460 */
@@ -53856,20 +46627,13 @@
 
 /***/ },
 /* 461 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-	var bind = __webpack_require__(457);
-	var Axios = __webpack_require__(458);
-=======
 	var utils = __webpack_require__(462);
 	var bind = __webpack_require__(463);
 	var Axios = __webpack_require__(464);
->>>>>>> change to bundle.js
 
 	/**
 	 * Create an instance of Axios
@@ -53902,25 +46666,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-<<<<<<< HEAD
-	axios.Cancel = __webpack_require__(476);
-	axios.CancelToken = __webpack_require__(477);
-	axios.isCancel = __webpack_require__(473);
-=======
 	axios.Cancel = __webpack_require__(482);
 	axios.CancelToken = __webpack_require__(483);
 	axios.isCancel = __webpack_require__(479);
->>>>>>> change to bundle.js
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-<<<<<<< HEAD
-	axios.spread = __webpack_require__(478);
-=======
 	axios.spread = __webpack_require__(484);
->>>>>>> change to bundle.js
 
 	module.exports = axios;
 
@@ -53929,20 +46683,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 456 */
-=======
 /* 462 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var bind = __webpack_require__(457);
-=======
 	var bind = __webpack_require__(463);
->>>>>>> change to bundle.js
 
 	/*global toString:true*/
 
@@ -54242,11 +46988,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 457 */
-=======
 /* 463 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54263,30 +47005,17 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 458 */
-=======
 /* 464 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var defaults = __webpack_require__(459);
-	var utils = __webpack_require__(456);
-	var InterceptorManager = __webpack_require__(470);
-	var dispatchRequest = __webpack_require__(471);
-	var isAbsoluteURL = __webpack_require__(474);
-	var combineURLs = __webpack_require__(475);
-=======
 	var defaults = __webpack_require__(465);
 	var utils = __webpack_require__(462);
 	var InterceptorManager = __webpack_require__(476);
 	var dispatchRequest = __webpack_require__(477);
 	var isAbsoluteURL = __webpack_require__(480);
 	var combineURLs = __webpack_require__(481);
->>>>>>> change to bundle.js
 
 	/**
 	 * Create a new instance of Axios
@@ -54367,22 +47096,13 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 459 */
-=======
 /* 465 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-	var normalizeHeaderName = __webpack_require__(460);
-=======
 	var utils = __webpack_require__(462);
 	var normalizeHeaderName = __webpack_require__(466);
->>>>>>> change to bundle.js
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -54399,17 +47119,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-<<<<<<< HEAD
-	    adapter = __webpack_require__(461);
-	  } else if (typeof process !== 'undefined') {
-	    // For node use HTTP adapter
-	    adapter = __webpack_require__(461);
-=======
 	    adapter = __webpack_require__(467);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
 	    adapter = __webpack_require__(467);
->>>>>>> change to bundle.js
 	  }
 	  return adapter;
 	}
@@ -54476,20 +47189,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 460 */
-=======
 /* 466 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -54502,24 +47207,11 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 461 */
-=======
 /* 467 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-	var settle = __webpack_require__(462);
-	var buildURL = __webpack_require__(465);
-	var parseHeaders = __webpack_require__(466);
-	var isURLSameOrigin = __webpack_require__(467);
-	var createError = __webpack_require__(463);
-	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(468);
-=======
 	var utils = __webpack_require__(462);
 	var settle = __webpack_require__(468);
 	var buildURL = __webpack_require__(471);
@@ -54527,7 +47219,6 @@
 	var isURLSameOrigin = __webpack_require__(473);
 	var createError = __webpack_require__(469);
 	var btoa = (typeof window !== 'undefined' && window.btoa) || __webpack_require__(474);
->>>>>>> change to bundle.js
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -54623,11 +47314,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-<<<<<<< HEAD
-	      var cookies = __webpack_require__(469);
-=======
 	      var cookies = __webpack_require__(475);
->>>>>>> change to bundle.js
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -54704,20 +47391,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-<<<<<<< HEAD
-/* 462 */
-=======
 /* 468 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var createError = __webpack_require__(463);
-=======
 	var createError = __webpack_require__(469);
->>>>>>> change to bundle.js
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -54743,20 +47422,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 463 */
-=======
 /* 469 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var enhanceError = __webpack_require__(464);
-=======
 	var enhanceError = __webpack_require__(470);
->>>>>>> change to bundle.js
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -54774,11 +47445,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 464 */
-=======
 /* 470 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54803,20 +47470,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 465 */
-=======
 /* 471 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -54885,20 +47544,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 466 */
-=======
 /* 472 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	/**
 	 * Parse headers into an object
@@ -54936,20 +47587,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 467 */
-=======
 /* 473 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -55018,11 +47661,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 468 */
-=======
 /* 474 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55064,20 +47703,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 469 */
-=======
 /* 475 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -55131,20 +47762,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 470 */
-=======
 /* 476 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -55197,26 +47820,15 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 471 */
-=======
 /* 477 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-	var transformData = __webpack_require__(472);
-	var isCancel = __webpack_require__(473);
-	var defaults = __webpack_require__(459);
-=======
 	var utils = __webpack_require__(462);
 	var transformData = __webpack_require__(478);
 	var isCancel = __webpack_require__(479);
 	var defaults = __webpack_require__(465);
->>>>>>> change to bundle.js
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -55293,20 +47905,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 472 */
-=======
 /* 478 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var utils = __webpack_require__(456);
-=======
 	var utils = __webpack_require__(462);
->>>>>>> change to bundle.js
 
 	/**
 	 * Transform the data for a request or a response
@@ -55327,11 +47931,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 473 */
-=======
 /* 479 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55342,11 +47942,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 474 */
-=======
 /* 480 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55366,11 +47962,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 475 */
-=======
 /* 481 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55388,11 +47980,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 476 */
-=======
 /* 482 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55417,20 +48005,12 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 477 */
-=======
 /* 483 */
->>>>>>> change to bundle.js
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-<<<<<<< HEAD
-	var Cancel = __webpack_require__(476);
-=======
 	var Cancel = __webpack_require__(482);
->>>>>>> change to bundle.js
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -55488,11 +48068,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 478 */
-=======
 /* 484 */
->>>>>>> change to bundle.js
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55524,12 +48100,11 @@
 	};
 
 
-<<<<<<< HEAD
 /***/ },
-/* 479 */
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var cookie = __webpack_require__(480);
+	var cookie = __webpack_require__(486);
 
 	if (typeof Object.assign != 'function') {
 	  Object.assign = function(target) {
@@ -55679,7 +48254,7 @@
 
 
 /***/ },
-/* 480 */
+/* 486 */
 /***/ function(module, exports) {
 
 	/*!
@@ -55840,7 +48415,5 @@
 	}
 
 
-=======
->>>>>>> change to bundle.js
 /***/ }
 /******/ ]);
