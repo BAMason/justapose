@@ -76,7 +76,6 @@ router.delete(`/:id`, (req, res, next) => {
 
 /* LIST */
 router.get(`/`, (req, res, next) => {
-  console.log('i got here');
   db.listEntries()
   .then((entries) => res.json(entries))
   .catch((err) => next(err));

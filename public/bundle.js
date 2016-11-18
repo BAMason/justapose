@@ -26529,13 +26529,11 @@
 	_axios2.default.get('/api/entries').then(function (data) {
 
 	  var dates = [];
+
 	  var dataArr = data.data;
 	  console.log('data array', dataArr);
-	  console.log('data array 0', dataArr[0]);
-	  console.log('data array 0 date is', dataArr[0].date);
-	  console.log('data array 1 date is', dataArr[1].date);
 	  for (var i = 0; i < dataArr.length; i++) {
-	    dates.push(dataArr[i].date);
+	    undefined.dates.push(dataArr[i].date);
 	  }
 	  console.log('dates', dates);
 	}).catch(function (err) {
@@ -26544,20 +26542,8 @@
 
 	exports.default = _react2.default.createClass({
 	  displayName: 'Calendar',
-
-
-	  // $.ajax({
-	  //   method: GET,
-	  //   url: '/entries',
-	  // })
-	  // .success(function(data) {
-	  //   console.log('success', data);
-	  // })
-	  // .fail(() => {
-	  //   console.log('i failed');
-	  // })
-
 	  render: function render() {
+	    entries();
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -46213,170 +46199,9 @@
 
 	'use strict';
 
-<<<<<<< HEAD
 	var utils = __webpack_require__(459);
 	var bind = __webpack_require__(460);
 	var Axios = __webpack_require__(461);
-=======
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Home',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'Home'
-	    );
-	  }
-	});
-
-/***/ },
-/* 459 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _axios = __webpack_require__(460);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	var _reactCookie = __webpack_require__(485);
-
-	var _reactCookie2 = _interopRequireDefault(_reactCookie);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Photos = function (_React$Component) {
-	  _inherits(Photos, _React$Component);
-
-	  function Photos(props) {
-	    _classCallCheck(this, Photos);
-
-	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
-
-	    _this.state = { postures: [], photos: [] };
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
-
-	    var dataObj = {};
-
-	    _axios2.default.get('/api/postures').then(function (data) {
-	      data.data.forEach(function (each) {
-	        dataObj[each.name] = null;
-	      });
-	    }).then(function () {
-	      _this.setState({ postures: dataObj });
-	    }).catch(function (err) {
-	      return console.error(err);
-	    });
-	    return _this;
-	  }
-
-	  _createClass(Photos, [{
-	    key: 'getPhotos',
-	    value: function getPhotos(list) {
-	      var elements = list.map(function (photo, index) {
-	        return _react2.default.createElement('img', { key: index, src: photo.photo, alt: photo.name, className: 'col s12' });
-	      });
-	      this.setState({ photos: elements });
-	    }
-	  }, {
-	    key: 'getEntries',
-	    value: function getEntries(uID, pose) {
-	      var _this2 = this;
-
-	      _axios2.default.get('/api/entries').then(function (data) {
-	        return data.data.filter(function (each) {
-	          return each.user_id === uID && each.name === pose;
-	        });
-	      }).then(function (matches) {
-	        _this2.getPhotos(matches);
-	      });
-	    }
-	  }, {
-	    key: 'handleSubmit',
-	    value: function handleSubmit(event) {
-	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
-	      var posture = $('#autocomplete-input').val();
-
-	      this.getEntries(userId, posture);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var _this3 = this;
-
-	      $(document).ready(function () {
-	        $('input.autocomplete').autocomplete({
-	          data: _this3.state.postures
-	        });
-	      });
-
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'label',
-	          { htmlFor: 'autocomplete-input' },
-	          'Posture'
-	        ),
-	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.handleSubmit, className: 'btn buttons' },
-	          'Get Photos'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          this.state.photos
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Photos;
-	}(_react2.default.Component);
-
-	module.exports = Photos;
-
-/***/ },
-/* 460 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(461);
-
-/***/ },
-/* 461 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var utils = __webpack_require__(462);
-	var bind = __webpack_require__(463);
-	var Axios = __webpack_require__(464);
->>>>>>> 5b66e364b3e6ca9dcb57e4e98c4985efcc5e589e
 
 	/**
 	 * Create an instance of Axios
@@ -48277,7 +48102,7 @@
 	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'button',
-	          { onClick: this.handleSubmit, className: 'btn' },
+	          { onClick: this.handleSubmit, className: 'btn buttons' },
 	          'Get Photos'
 	        ),
 	        _react2.default.createElement(
