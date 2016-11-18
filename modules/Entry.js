@@ -57,9 +57,14 @@ class Entry extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    // get user_id from session info
-    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user.id;
+    let userId;
 
+    // get user_id from session info (handle passport heroku vs localhost array weirdness)
+    const session = JSON.parse(window.atob(cookie.load(`session`))).passport;
+    if (session.user.length) { userId = session.user[0].id; }
+    else { userId = session.user.id; }
+
+    console.log(userId);
     if (userId) {
       // get form entries
       const formData = new FormData();
