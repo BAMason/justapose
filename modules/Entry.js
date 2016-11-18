@@ -58,7 +58,7 @@ class Entry extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     // get user_id from session info
-    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user[0].id;
+    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user.id;
 
     if (userId) {
       // get form entries
