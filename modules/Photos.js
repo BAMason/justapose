@@ -38,7 +38,13 @@ class Photos extends React.Component {
   }
 
   handleSubmit(event) {
-    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user[0].id;
+    let userId;
+
+    // get user_id from session info (handle passport heroku vs localhost array weirdness)
+    const session = JSON.parse(window.atob(cookie.load(`session`))).passport;
+    if (session.user.length) { userId = session.user[0].id; }
+    else { userId = session.user.id; }
+
     const posture = $(`#autocomplete-input`).val();
 
     this.getEntries(userId, posture);

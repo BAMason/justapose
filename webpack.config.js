@@ -1,5 +1,6 @@
 'use strict';
 const webpack = require(`webpack`);
+const path = require(`path`);
 
 module.exports = {
   entry: `./index.js`,
@@ -18,6 +19,10 @@ module.exports = {
         loader: `babel-loader?presets[]=es2015&presets[]=react`,
       },
     ],
+  },
+
+  resolveLoader: {
+    root: path.join(__dirname, `node_modules`),
   },
 
   plugins: process.env.NODE_ENV === `production` ? [

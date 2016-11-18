@@ -66,11 +66,11 @@
 
 	var _Entry2 = _interopRequireDefault(_Entry);
 
-	var _Home = __webpack_require__(483);
+	var _Home = __webpack_require__(485);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Photos = __webpack_require__(484);
+	var _Photos = __webpack_require__(486);
 
 	var _Photos2 = _interopRequireDefault(_Photos);
 
@@ -83,11 +83,8 @@
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	    _react2.default.createElement(
-	      _reactRouter.Route,
-	      { path: '/calendar', component: _Calendar2.default },
-	      _react2.default.createElement(_reactRouter.Route, { path: '/calendar/:entry', component: _Entry2.default })
-	    ),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/calendar', component: _Calendar2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/calendar/:entry', component: _Entry2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '/photos', component: _Photos2.default })
 	  )
 	), document.getElementById('app'));
@@ -26547,30 +26544,12 @@
 	    return _react2.default.createElement(
 	      'div',
 	      null,
+	      _react2.default.createElement(_rcCalendar2.default, null),
 	      _react2.default.createElement(
-	        'h2',
-	        { className: 'calendarTitle' },
-	        'Calendar'
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_rcCalendar2.default, null)
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        _react2.default.createElement(
-	          'li',
-	          null,
-	          _react2.default.createElement(
-	            _NavLink2.default,
-	            { to: '/calendar/entry' },
-	            'Calendar Entry'
-	          )
-	        )
-	      ),
-	      this.props.children
+	        _NavLink2.default,
+	        { to: '/calendar/entry', className: 'btn' },
+	        'New Entry'
+	      )
 	    );
 	  }
 	});
@@ -47674,335 +47653,6 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(32);
-
-	var _reactDom2 = _interopRequireDefault(_reactDom);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// export default React.createClass ({
-	var BasicInputBox = _react2.default.createClass({
-	  displayName: 'BasicInputBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: '', disabled: true },
-	          'Type'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'New Moon' },
-	          'New Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Full Moon' },
-	          'Full Moon'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Rest' },
-	          'Rest'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'Practice' },
-	          'Practice'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        this.props.label
-	      )
-	    );
-	  }
-	});
-
-	var CommentBox = _react2.default.createClass({
-	  displayName: 'CommentBox',
-
-	  render: function render() {
-
-	    $(document).ready(function () {
-	      $('select').material_select();
-	    });
-
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'input-field col s12' },
-	      _react2.default.createElement(
-	        'select',
-	        { onChange: this.props.valChange, value: this.props.val },
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'suna' },
-	          'Sun A'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: 'sunb' },
-	          'Sun B'
-	        ),
-	        _react2.default.createElement(
-	          'option',
-	          { value: '3' },
-	          '3'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'label',
-	        null,
-	        'How far did you get?'
-	      )
-	    );
-	  }
-	});
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Entry',
-
-	  // var Contact = React.createClass({
-	  getInitialState: function getInitialState() {
-	    return {};
-	  },
-
-	  submit: function submit(e) {
-	    var self;
-
-	    e.preventDefault();
-	    self = this;
-
-	    console.log(this.state);
-
-	    var data = {
-	      name: this.state.name,
-	      email: this.state.email,
-	      comment: this.state.comment
-	    };
-
-	    console.log('data is', data);
-
-	    // Submit form via jQuery/AJAX
-	    // $.ajax({
-	    //   type: 'POST',
-	    //   url: '/some/url',
-	    //   data: data
-	    // })
-	    // .done(function(data) {
-	    //   self.clearForm()
-	    // })
-	    // .fail(function(jqXhr) {
-	    //   console.log('failed to register');
-	    // });
-	  },
-
-	  clearForm: function clearForm() {
-	    this.setState({
-	      name: "",
-	      email: "",
-	      comment: ""
-	    });
-	  },
-
-	  nameChange: function nameChange(e) {
-	    this.setState({ name: e.target.value });
-	  },
-
-	  emailChange: function emailChange(e) {
-	    this.setState({ email: e.target.value });
-	  },
-
-	  commentChange: function commentChange(e) {
-	    this.setState({ comment: e.target.value });
-	  },
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'form',
-	      { onSubmit: this.submit },
-	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
-	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
-	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
-	      )
-	    );
-	  }
-	});
-
-	// export default React.createClass({
-	// getInitialState: function() {
-	//   return {
-	//     type: 'test',
-	//     series: '',
-	//     notes: '',
-	//     posture: ''
-	//       }
-	// },
-	//
-	// handleChange: function(event) {
-	//   // event.preventDefault()
-	//   console.log('event.target.value', event.target.value);
-	//   this.setState({type: event.target.value})
-	// },
-	//
-	// handleSubmit:function (event) {
-	//   event.preventDefault()
-	//
-	//   console.log('i was submitted')
-	//   this.setState({type: 'my type state just changed!!!'})
-	//   console.log('this.state', this.state);
-	//
-	//   let data = {
-	//     type: this.state.type,
-	//     // date: this.state.date,
-	//     series: this.state.series,
-	//     notes: this.state.notes,
-	//     photo: this.state.photo,
-	//     posture: this.state.posture
-	//   }
-	//
-	//   // submit form via ajax
-	//   // $.ajax({
-	//   //   type: 'POST',
-	//   //   utl: '/api/entries',
-	//   //   data: data
-	//   // })
-	//   // .done(function(data) {
-	//   //   self.clearForm()
-	//   // })
-	//   // .fail(function() {
-	//   //   console.log('Failed to send');
-	//   // })
-	//
-	// },
-	//
-	//   render:function() {
-	//     return (
-	//       <div>
-	//         <h2>{this.props.params.entry}</h2>
-	//       <form onSubmit={this.handleSubmit}>
-	//         <label>{this.state.type}</label>
-	//         <div className="input-field col s12">
-	//           <select value={this.state.type} onChange={this.handleChange}>
-	//             <option value="" disabled>Type</option>
-	//             <option value="New Moon">New Moon</option>
-	//             <option value="Full Moon">Full Moon</option>
-	//             <option value="Rest">Rest</option>
-	//             <option value="Practice">Practice</option>
-	//           </select>
-	//           <label>Type</label>
-	//         </div>
-	// {/*
-	//         <div className="row">
-	//           <div className="input-field col s12">
-	//             <input value="Need a date" readOnly={true} id="date" type="text" className="validate"/>
-	//             <label className="active" htmlFor="date">Date</label>
-	//           </div>
-	//         </div>
-	//
-	//         <div className="input-field col s12">
-	//           <select  value={this.state.series} onChange={this.handleChange}>
-	//             <option value="suna">Sun A</option>
-	//             <option value="sunb">Sun B</option>
-	//             <option value="3">3</option>
-	//           </select>
-	//           <label>How far did you get?</label>
-	//         </div>
-	//
-	//         <div className="row col s12">
-	//               <div className="row">
-	//                 <div className="input-field col s12">
-	//                   <textarea value={this.state.notes} onChange={this.handleChange} id="notes" className="materialize-textarea"></textarea>
-	//                   <label htmlFor="notes">Notes</label>
-	//                 </div>
-	//               </div>
-	//           </div>
-	//
-	//             <div className="file-field input-field">
-	//               <div className="btn">
-	//                 <span>Photo</span>
-	//                 <input type="file" accept="image/*" capture="camera"/>
-	//               </div>
-	//               <div className="file-path-wrapper">
-	//                 <input className="file-path validate" type="text"/>
-	//               </div>
-	//             </div>
-	//
-	//           <div className="input-field col s12">
-	//             <select value={this.state.posture} onChange={this.handleChange}>
-	//               <option value="posture">Posture</option>
-	//               <option value="bakasana">Bakasana</option>
-	//               <option value="2">Option 2</option>
-	//               <option value="3">Option 3</option>
-	//             </select>
-	//             <label>Posture</label>
-	//           </div> */}
-	//
-	//           <input type="submit" value="Submit" />
-	//
-	//         </form>
-	//
-	//       </div>
-	//     )
-	//   }
-	// })
-
-/***/ },
-/* 483 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	  displayName: 'Home',
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      'Home'
-	    );
-	  }
-	});
-
-/***/ },
-/* 484 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
@@ -48013,7 +47663,7 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _reactCookie = __webpack_require__(485);
+	var _reactCookie = __webpack_require__(483);
 
 	var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
@@ -48023,61 +47673,113 @@
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /* eslint-disable max-len, camelcase */
 
-	var Photos = function (_React$Component) {
-	  _inherits(Photos, _React$Component);
+	// import ReactDOM from 'react-dom';
 
-	  function Photos(props) {
-	    _classCallCheck(this, Photos);
 
-	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
+	var Entry = function (_React$Component) {
+	  _inherits(Entry, _React$Component);
 
-	    _this.state = { postures: [], photos: [] };
+	  function Entry(props) {
+	    _classCallCheck(this, Entry);
+
+	    var _this = _possibleConstructorReturn(this, (Entry.__proto__ || Object.getPrototypeOf(Entry)).call(this, props));
+
+	    _this.state = { postures: [], data: [], types: [] };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 
 	    var dataObj = {};
+	    var poses = {};
 
+	    // populate typeahead with list of posture names
 	    _axios2.default.get('/api/postures').then(function (data) {
 	      data.data.forEach(function (each) {
 	        dataObj[each.name] = null;
+	        poses[each.name] = each.id;
 	      });
 	    }).then(function () {
-	      _this.setState({ postures: dataObj });
+	      _this.setState({ data: dataObj, postures: poses });
 	    }).catch(function (err) {
 	      return console.error(err);
+	    });
+
+	    // populate dropdown with list of type names
+	    _axios2.default.get('/api/types').then(function (data) {
+	      return data.data.map(function (each) {
+	        return _react2.default.createElement(
+	          'option',
+	          { key: each.id },
+	          each.name
+	        );
+	      });
+	    }).then(function (elements) {
+	      _this.setState({ types: elements });
+	    }).catch(function (error) {
+	      return console.error(error);
 	    });
 	    return _this;
 	  }
 
-	  _createClass(Photos, [{
-	    key: 'getPhotos',
-	    value: function getPhotos(list) {
-	      var elements = list.map(function (photo, index) {
-	        return _react2.default.createElement('img', { key: index, src: photo.photo, alt: photo.name, className: 'col s12' });
-	      });
-	      this.setState({ photos: elements });
-	    }
-	  }, {
-	    key: 'getEntries',
-	    value: function getEntries(uID, pose) {
-	      var _this2 = this;
-
-	      _axios2.default.get('/api/entries').then(function (data) {
-	        return data.data.filter(function (each) {
-	          return each.user_id === uID && each.name === pose;
+	  _createClass(Entry, [{
+	    key: 'sendData',
+	    value: function sendData(input) {
+	      // convert type name to type id then submit!
+	      _axios2.default.get('/api/types').then(function (data) {
+	        data.data.forEach(function (type) {
+	          if (type.name === input.get('type_id')) {
+	            input.set('type_id', type.id);
+	          }
 	        });
-	      }).then(function (matches) {
-	        _this2.getPhotos(matches);
+	      }).then(function () {
+	        _axios2.default.post('/api/entries', input).then(function () {
+	          return console.warn('great success');
+	        }).catch(function () {
+	          return console.warn('oh noes');
+	        });
 	      });
 	    }
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(event) {
-	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
-	      var posture = $('#autocomplete-input').val();
+	      var _this2 = this;
 
-	      this.getEntries(userId, posture);
+	      event.preventDefault();
+	      var userId = void 0;
+
+	      // get user_id from session info (handle passport heroku vs localhost array weirdness)
+	      var session = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport;
+	      if (session.user.length) {
+	        userId = session.user[0].id;
+	      } else {
+	        userId = session.user.id;
+	      }
+
+	      console.log(userId);
+	      if (userId) {
+	        (function () {
+	          // get form entries
+	          var formData = new FormData();
+	          formData.append('user_id', userId);
+	          if ($('#photo')[0].files[0]) {
+	            formData.append('photo', $('#photo')[0].files[0]);
+	          }
+	          $('#form').serializeArray().forEach(function (input) {
+	            return formData.append(input.name, input.value);
+	          });
+
+	          // convert posture name to posture id
+	          var pId = formData.get('posture_id');
+	          if (pId) {
+	            formData.set('posture_id', _this2.state.postures[pId]);
+	          } else {
+	            formData.delete('posture_id');
+	          }
+	          _this2.sendData(formData);
+	        })();
+	      } else {
+	        console.error('You must be logged in!');
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -48085,45 +47787,153 @@
 	      var _this3 = this;
 
 	      $(document).ready(function () {
+	        $('select').material_select();
 	        $('input.autocomplete').autocomplete({
-	          data: _this3.state.postures
+	          data: _this3.state.data
 	        });
 	      });
 
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'container' },
 	        _react2.default.createElement(
-	          'label',
-	          { htmlFor: 'autocomplete-input' },
-	          'Posture'
-	        ),
-	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'button',
-	          { onClick: this.handleSubmit, className: 'btn buttons' },
-	          'Get Photos'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
-	          this.state.photos
+	          'form',
+	          { onSubmit: this.handleSubmit, className: 'row container', id: 'form', name: 'form' },
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'type_id' },
+	            'Entry Type'
+	          ),
+	          _react2.default.createElement(
+	            'select',
+	            { id: 'type_id', name: 'type_id', className: 'col s12' },
+	            this.state.types
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'sun_a', name: 'sun_a' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'sun_a' },
+	              'Sun A'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'sun_b', name: 'sun_b' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'sun_b' },
+	              'Sun B'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'standing', name: 'standing' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'standing' },
+	              'Standing'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'primary', name: 'primary' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'primary' },
+	              'Primary'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'secondary', name: 'secondary' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'secondary' },
+	              'Secondary'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'backbends', name: 'backbends' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'backbends' },
+	              'Backbends'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'finishing', name: 'finishing' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'finishing' },
+	              'Finishing'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'checkbox', id: 'closing', name: 'closing' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'closing' },
+	              'Closing'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12 btn', type: 'file', accept: 'image/*', capture: 'camera', id: 'photo', name: 'photo' })
+	          ),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'autocomplete-input' },
+	            'Posture'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12 autocomplete', type: 'text', id: 'autocomplete-input', name: 'posture_id' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'notes' },
+	              'Notes'
+	            ),
+	            _react2.default.createElement('input', { className: 'col s12', type: 'text', id: 'notes', name: 'notes' })
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn waves-effect waves-light', type: 'submit', name: 'submit' },
+	            'Submit'
+	          )
 	        )
 	      );
 	    }
 	  }]);
 
-	  return Photos;
+	  return Entry;
 	}(_react2.default.Component);
 
-	module.exports = Photos;
+	module.exports = Entry;
 
 /***/ },
-/* 485 */
+/* 483 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var cookie = __webpack_require__(486);
+	var cookie = __webpack_require__(484);
 
 	if (typeof Object.assign != 'function') {
 	  Object.assign = function(target) {
@@ -48273,7 +48083,7 @@
 
 
 /***/ },
-/* 486 */
+/* 484 */
 /***/ function(module, exports) {
 
 	/*!
@@ -48433,6 +48243,164 @@
 	  }
 	}
 
+
+/***/ },
+/* 485 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Home',
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      'Home'
+	    );
+	  }
+	});
+
+/***/ },
+/* 486 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _axios = __webpack_require__(457);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _reactCookie = __webpack_require__(483);
+
+	var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Photos = function (_React$Component) {
+	  _inherits(Photos, _React$Component);
+
+	  function Photos(props) {
+	    _classCallCheck(this, Photos);
+
+	    var _this = _possibleConstructorReturn(this, (Photos.__proto__ || Object.getPrototypeOf(Photos)).call(this, props));
+
+	    _this.state = { postures: [], photos: [] };
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+
+	    var dataObj = {};
+
+	    _axios2.default.get('/api/postures').then(function (data) {
+	      data.data.forEach(function (each) {
+	        dataObj[each.name] = null;
+	      });
+	    }).then(function () {
+	      _this.setState({ postures: dataObj });
+	    }).catch(function (err) {
+	      return console.error(err);
+	    });
+	    return _this;
+	  }
+
+	  _createClass(Photos, [{
+	    key: 'getPhotos',
+	    value: function getPhotos(list) {
+	      var elements = list.map(function (photo, index) {
+	        return _react2.default.createElement('img', { key: index, src: photo.photo, alt: photo.name, className: 'col s12' });
+	      });
+	      this.setState({ photos: elements });
+	    }
+	  }, {
+	    key: 'getEntries',
+	    value: function getEntries(uID, pose) {
+	      var _this2 = this;
+
+	      _axios2.default.get('/api/entries').then(function (data) {
+	        return data.data.filter(function (each) {
+	          return each.user_id === uID && each.name === pose;
+	        });
+	      }).then(function (matches) {
+	        _this2.getPhotos(matches);
+	      });
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(event) {
+	      var userId = void 0;
+
+	      // get user_id from session info (handle passport heroku vs localhost array weirdness)
+	      var session = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport;
+	      if (session.user.length) {
+	        userId = session.user[0].id;
+	      } else {
+	        userId = session.user.id;
+	      }
+
+	      var posture = $('#autocomplete-input').val();
+
+	      this.getEntries(userId, posture);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this3 = this;
+
+	      $(document).ready(function () {
+	        $('input.autocomplete').autocomplete({
+	          data: _this3.state.postures
+	        });
+	      });
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'label',
+	          { htmlFor: 'autocomplete-input' },
+	          'Posture'
+	        ),
+	        _react2.default.createElement('input', { type: 'text', id: 'autocomplete-input', className: 'autocomplete' }),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement(
+	          'button',
+	          { onClick: this.handleSubmit, className: 'btn buttons' },
+	          'Get Photos'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          this.state.photos
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Photos;
+	}(_react2.default.Component);
+
+	module.exports = Photos;
 
 /***/ }
 /******/ ]);
