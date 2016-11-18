@@ -31,7 +31,7 @@ const listEntries = () => {
   .innerJoin(`types`, `types.id`, `entries.type_id`)
   .select([`entries.id`, `entries.user_id`, `types.name`, `sun_a`,
     `sun_b`, `standing`, `primary`, `secondary`, `backbends`, `finishing`,
-    `closing`, `photo`, `postures.name`, `notes`])
+    `closing`, `photo`, `postures.name`, `notes`, `entries.updated_at`])
   .orderBy(`entries.created_at`, `asc`);
 };
 

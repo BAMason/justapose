@@ -2,32 +2,52 @@ import Calendar from 'rc-calendar';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import NavLink from './NavLink'
-import axios from 'axios'
+import axios from 'axios';
+import cookie from 'react-cookie';
+import moment from 'moment';
 
-axios.get('/api/entries')
-.then((data) => {
+export default class Entries extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { entries: [] }
 
-  let dates = []
+    axios.get(`/api/entries`)
+    .then(data => {
+      return data.data.map(each => {
+        return <entry key={each.id}>
 
-  let dataArr = data.data
-  console.log('data array', dataArr);
-  for (var i = 0; i < dataArr.length; i++) {
-    this.dates.push(dataArr[i].date)
+          <div className="row">
+            <div className="col s12 m6">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">{each.name}</span>
+                  <p>Notes: {each.notes}</p>
+                  <br/>
+                  <p>{moment(each.updated_at).format('MMMM Do YYYY')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </entry>
+      })
+    })
+    .then((data) => {
+      this.setState({ entries: data });
+      console.log(`this.state.entries`, this.state.entries);
+    })
+    .catch((err) => console.error(err));
   }
-  console.log('dates', dates);
-})
-.catch((err) => {
-  console.log('err', err);;
-})
 
-export default React.createClass({
   render() {
     entries()
     return (
       <div>
-        <Calendar />
-        <NavLink to="/calendar/entry" className="btn">New Entry</NavLink>
+        <div>{this.state.entries}</div>
+        <ul>
+          <li><NavLink to="/calendar/entry">Calendar Entry</NavLink></li>
+        </ul>
       </div>
-    );
-  },
-});
+    )
+  }
+}

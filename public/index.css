@@ -36,7 +36,6 @@ a {
 }
 
 .rc-calendar-selected-day {
-    /*background-color: blue;*/
     border-radius: 50px;
     border: 2px solid #444453;
 }
@@ -64,4 +63,8 @@ a {
 .navbar-color {
   background-color: #444453
   !important;
+}
+
+.card .card-content {
+  background-color: #868C69;;
 }

@@ -62,7 +62,11 @@
 
 	var _Calendar2 = _interopRequireDefault(_Calendar);
 
+<<<<<<< HEAD
 	var _Entry = __webpack_require__(482);
+=======
+	var _Entry = __webpack_require__(484);
+>>>>>>> list_entries1
 
 	var _Entry2 = _interopRequireDefault(_Entry);
 
@@ -26427,7 +26431,7 @@
 	          _react2.default.createElement(
 	            _NavLink2.default,
 	            { to: '/calendar' },
-	            'Calendar'
+	            'Entries'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26501,6 +26505,8 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _rcCalendar = __webpack_require__(236);
 
 	var _rcCalendar2 = _interopRequireDefault(_rcCalendar);
@@ -26521,6 +26527,7 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
+<<<<<<< HEAD
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	_axios2.default.get('/api/entries').then(function (data) {
@@ -26553,6 +26560,115 @@
 	    );
 	  }
 	});
+=======
+	var _reactCookie = __webpack_require__(482);
+
+	var _reactCookie2 = _interopRequireDefault(_reactCookie);
+
+	var _moment = __webpack_require__(325);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Entries = function (_React$Component) {
+	  _inherits(Entries, _React$Component);
+
+	  function Entries(props) {
+	    _classCallCheck(this, Entries);
+
+	    var _this = _possibleConstructorReturn(this, (Entries.__proto__ || Object.getPrototypeOf(Entries)).call(this, props));
+
+	    _this.state = { entries: [] };
+
+	    _axios2.default.get('/api/entries').then(function (data) {
+	      return data.data.map(function (each) {
+	        return _react2.default.createElement(
+	          'entry',
+	          { key: each.id },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col s12 m6' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card blue-grey darken-1' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'card-content white-text' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'card-title' },
+	                    each.name
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Notes: ',
+	                    each.notes
+	                  ),
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    (0, _moment2.default)(each.updated_at).format('MMMM Do YYYY')
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        );
+	      });
+	    }).then(function (data) {
+	      _this.setState({ entries: data });
+	      console.log('this.state.entries', _this.state.entries);
+	    }).catch(function (err) {
+	      return console.error(err);
+	    });
+	    return _this;
+	  }
+
+	  _createClass(Entries, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          this.state.entries
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _NavLink2.default,
+	              { to: '/calendar/entry' },
+	              'Calendar Entry'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Entries;
+	}(_react2.default.Component);
+
+	exports.default = Entries;
+>>>>>>> list_entries1
 
 /***/ },
 /* 236 */
@@ -47649,6 +47765,7 @@
 
 /***/ },
 /* 482 */
+<<<<<<< HEAD
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47934,6 +48051,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var cookie = __webpack_require__(484);
+=======
+/***/ function(module, exports, __webpack_require__) {
+
+	var cookie = __webpack_require__(483);
+>>>>>>> list_entries1
 
 	if (typeof Object.assign != 'function') {
 	  Object.assign = function(target) {
@@ -48083,7 +48205,11 @@
 
 
 /***/ },
+<<<<<<< HEAD
 /* 484 */
+=======
+/* 483 */
+>>>>>>> list_entries1
 /***/ function(module, exports) {
 
 	/*!
@@ -48245,6 +48371,311 @@
 
 
 /***/ },
+<<<<<<< HEAD
+=======
+/* 484 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(32);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// export default React.createClass ({
+	var BasicInputBox = _react2.default.createClass({
+	  displayName: 'BasicInputBox',
+
+	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'input-field col s12' },
+	      _react2.default.createElement(
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
+	        _react2.default.createElement(
+	          'option',
+	          { value: '', disabled: true },
+	          'Type'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'New Moon' },
+	          'New Moon'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Full Moon' },
+	          'Full Moon'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Rest' },
+	          'Rest'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'Practice' },
+	          'Practice'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'label',
+	        null,
+	        this.props.label
+	      )
+	    );
+	  }
+	});
+
+	var CommentBox = _react2.default.createClass({
+	  displayName: 'CommentBox',
+
+	  render: function render() {
+
+	    $(document).ready(function () {
+	      $('select').material_select();
+	    });
+
+	    return _react2.default.createElement(
+	      'div',
+	      { className: 'input-field col s12' },
+	      _react2.default.createElement(
+	        'select',
+	        { onChange: this.props.valChange, value: this.props.val },
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'suna' },
+	          'Sun A'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: 'sunb' },
+	          'Sun B'
+	        ),
+	        _react2.default.createElement(
+	          'option',
+	          { value: '3' },
+	          '3'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'label',
+	        null,
+	        'How far did you get?'
+	      )
+	    );
+	  }
+	});
+
+	exports.default = _react2.default.createClass({
+	  displayName: 'Entry',
+
+	  // var Contact = React.createClass({
+	  getInitialState: function getInitialState() {
+	    return {};
+	  },
+
+	  submit: function submit(e) {
+	    var self;
+
+	    e.preventDefault();
+	    self = this;
+
+	    console.log(this.state);
+
+	    var data = {
+	      name: this.state.name,
+	      email: this.state.email,
+	      comment: this.state.comment
+	    };
+
+	    console.log('data is', data);
+
+	    // Submit form via jQuery/AJAX
+	    // $.ajax({
+	    //   type: 'POST',
+	    //   url: '/some/url',
+	    //   data: data
+	    // })
+	    // .done(function(data) {
+	    //   self.clearForm()
+	    // })
+	    // .fail(function(jqXhr) {
+	    //   console.log('failed to register');
+	    // });
+	  },
+
+	  clearForm: function clearForm() {
+	    this.setState({
+	      name: "",
+	      email: "",
+	      comment: ""
+	    });
+	  },
+
+	  nameChange: function nameChange(e) {
+	    this.setState({ name: e.target.value });
+	  },
+
+	  emailChange: function emailChange(e) {
+	    this.setState({ email: e.target.value });
+	  },
+
+	  commentChange: function commentChange(e) {
+	    this.setState({ comment: e.target.value });
+	  },
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'form',
+	      { onSubmit: this.submit },
+	      _react2.default.createElement(BasicInputBox, { label: 'Name:', valChange: this.nameChange, val: this.state.name }),
+	      _react2.default.createElement(CommentBox, { valChange: this.commentChange, val: this.state.comment }),
+	      _react2.default.createElement(
+	        'button',
+	        { type: 'submit' },
+	        'Submit'
+	      )
+	    );
+	  }
+	});
+
+	// export default React.createClass({
+	// getInitialState: function() {
+	//   return {
+	//     type: 'test',
+	//     series: '',
+	//     notes: '',
+	//     posture: ''
+	//       }
+	// },
+	//
+	// handleChange: function(event) {
+	//   // event.preventDefault()
+	//   console.log('event.target.value', event.target.value);
+	//   this.setState({type: event.target.value})
+	// },
+	//
+	// handleSubmit:function (event) {
+	//   event.preventDefault()
+	//
+	//   console.log('i was submitted')
+	//   this.setState({type: 'my type state just changed!!!'})
+	//   console.log('this.state', this.state);
+	//
+	//   let data = {
+	//     type: this.state.type,
+	//     // date: this.state.date,
+	//     series: this.state.series,
+	//     notes: this.state.notes,
+	//     photo: this.state.photo,
+	//     posture: this.state.posture
+	//   }
+	//
+	//   // submit form via ajax
+	//   // $.ajax({
+	//   //   type: 'POST',
+	//   //   utl: '/api/entries',
+	//   //   data: data
+	//   // })
+	//   // .done(function(data) {
+	//   //   self.clearForm()
+	//   // })
+	//   // .fail(function() {
+	//   //   console.log('Failed to send');
+	//   // })
+	//
+	// },
+	//
+	//   render:function() {
+	//     return (
+	//       <div>
+	//         <h2>{this.props.params.entry}</h2>
+	//       <form onSubmit={this.handleSubmit}>
+	//         <label>{this.state.type}</label>
+	//         <div className="input-field col s12">
+	//           <select value={this.state.type} onChange={this.handleChange}>
+	//             <option value="" disabled>Type</option>
+	//             <option value="New Moon">New Moon</option>
+	//             <option value="Full Moon">Full Moon</option>
+	//             <option value="Rest">Rest</option>
+	//             <option value="Practice">Practice</option>
+	//           </select>
+	//           <label>Type</label>
+	//         </div>
+	// {/*
+	//         <div className="row">
+	//           <div className="input-field col s12">
+	//             <input value="Need a date" readOnly={true} id="date" type="text" className="validate"/>
+	//             <label className="active" htmlFor="date">Date</label>
+	//           </div>
+	//         </div>
+	//
+	//         <div className="input-field col s12">
+	//           <select  value={this.state.series} onChange={this.handleChange}>
+	//             <option value="suna">Sun A</option>
+	//             <option value="sunb">Sun B</option>
+	//             <option value="3">3</option>
+	//           </select>
+	//           <label>How far did you get?</label>
+	//         </div>
+	//
+	//         <div className="row col s12">
+	//               <div className="row">
+	//                 <div className="input-field col s12">
+	//                   <textarea value={this.state.notes} onChange={this.handleChange} id="notes" className="materialize-textarea"></textarea>
+	//                   <label htmlFor="notes">Notes</label>
+	//                 </div>
+	//               </div>
+	//           </div>
+	//
+	//             <div className="file-field input-field">
+	//               <div className="btn">
+	//                 <span>Photo</span>
+	//                 <input type="file" accept="image/*" capture="camera"/>
+	//               </div>
+	//               <div className="file-path-wrapper">
+	//                 <input className="file-path validate" type="text"/>
+	//               </div>
+	//             </div>
+	//
+	//           <div className="input-field col s12">
+	//             <select value={this.state.posture} onChange={this.handleChange}>
+	//               <option value="posture">Posture</option>
+	//               <option value="bakasana">Bakasana</option>
+	//               <option value="2">Option 2</option>
+	//               <option value="3">Option 3</option>
+	//             </select>
+	//             <label>Posture</label>
+	//           </div> */}
+	//
+	//           <input type="submit" value="Submit" />
+	//
+	//         </form>
+	//
+	//       </div>
+	//     )
+	//   }
+	// })
+
+/***/ },
+>>>>>>> list_entries1
 /* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -48287,7 +48718,11 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
+<<<<<<< HEAD
 	var _reactCookie = __webpack_require__(483);
+=======
+	var _reactCookie = __webpack_require__(482);
+>>>>>>> list_entries1
 
 	var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
@@ -48348,6 +48783,7 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(event) {
+<<<<<<< HEAD
 	      var userId = void 0;
 
 	      // get user_id from session info (handle passport heroku vs localhost array weirdness)
@@ -48358,6 +48794,9 @@
 	        userId = session.user.id;
 	      }
 
+=======
+	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
+>>>>>>> list_entries1
 	      var posture = $('#autocomplete-input').val();
 
 	      this.getEntries(userId, posture);
