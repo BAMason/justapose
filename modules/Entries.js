@@ -40,13 +40,9 @@ export default class Entries extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <div>{this.state.entries}</div>
-        <ul>
-          <li><NavLink to="/entries/entry">Entries</NavLink></li>
-        </ul>
-      </div>
-    )
+    return <div>
+      <div>{this.state.entries}</div>
+      <NavLink to="/entries/entry" className="btn buttons">New Entry</NavLink>
+    </div>;
   }
 }
