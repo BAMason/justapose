@@ -15,7 +15,7 @@ class Entries extends React.Component {
 
     console.log();
 
-    axios.get(`/api/entires`)
+    axios.get(`/api/entries`)
     .then((data) => {
       console.log(`entries-data`, data)
       // data.data.forEach((each) => { dataObj[each.name] = null; });

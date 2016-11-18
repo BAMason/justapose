@@ -26547,7 +26547,7 @@
 
 	    console.log();
 
-	    _axios2.default.get('/api/entires').then(function (data) {
+	    _axios2.default.get('/api/entries').then(function (data) {
 	      console.log('entries-data', data);
 	      // data.data.forEach((each) => { dataObj[each.name] = null; });
 	    })
