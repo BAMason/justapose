@@ -46166,12 +46166,13 @@
 
 	    var _this = _possibleConstructorReturn(this, (Entry.__proto__ || Object.getPrototypeOf(Entry)).call(this, props));
 
-	    _this.state = { postures: [], data: [] };
+	    _this.state = { postures: [], data: [], types: [] };
 	    _this.handleSubmit = _this.handleSubmit.bind(_this);
 
 	    var dataObj = {};
 	    var poses = {};
 
+	    // populate typeahead with list of posture names
 	    _axios2.default.get('/api/postures').then(function (data) {
 	      data.data.forEach(function (each) {
 	        dataObj[each.name] = null;
@@ -46182,27 +46183,34 @@
 	    }).catch(function (err) {
 	      return console.error(err);
 	    });
+
+	    // populate dropdown with list of type names
+	    _axios2.default.get('/api/types').then(function (data) {
+	      return data.data.map(function (each) {
+	        return _react2.default.createElement(
+	          'option',
+	          { key: each.id },
+	          each.name
+	        );
+	      });
+	    }).then(function (elements) {
+	      _this.setState({ types: elements });
+	    }).catch(function (error) {
+	      return console.error(error);
+	    });
 	    return _this;
 	  }
 
 	  _createClass(Entry, [{
 	    key: 'sendData',
 	    value: function sendData(input) {
-	      console.log('formpost: ', input.posture_id);
-	      var posture_id = this.state.postures[input.posture_id];
-	      console.log('postid', posture_id);
-	      var type_id = void 0;
-
+	      // convert type name to type id then submit!
 	      _axios2.default.get('/api/types').then(function (data) {
 	        data.data.forEach(function (type) {
-	          if (type.name === input.type_id) {
-	            type_id = type.id;
+	          if (type.name === input.get('type_id')) {
+	            input.set('type_id', type.id);
 	          }
-	          console.log('newtypeid', type_id);
 	        });
-	      }).then(function () {
-	        input.append('type_id', type_id);
-	        input.append('posture_id', posture_id);
 	      }).then(function () {
 	        _axios2.default.post('/api/entries', input).then(function () {
 	          return console.warn('great success');
@@ -46214,28 +46222,46 @@
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(event) {
+	      var _this2 = this;
+
 	      event.preventDefault();
-	      var formData = new FormData();
+	      // get user_id from session info
 	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
-	      $('#form').serializeArray().forEach(function (input) {
-	        return formData.append(input.name, input.value);
-	      });
 
 	      if (userId) {
-	        formData.append('user_id', userId);
-	        formData.append('file', $('#photo')[0].files[0]); // $(`#photo`)[0].files[0];
-	        this.sendData(formData);
+	        (function () {
+	          // get form entries
+	          var formData = new FormData();
+	          formData.append('user_id', userId);
+	          if ($('#photo')[0].files[0]) {
+	            formData.append('photo', $('#photo')[0].files[0]);
+	          }
+	          $('#form').serializeArray().forEach(function (input) {
+	            return formData.append(input.name, input.value);
+	          });
+
+	          // convert posture name to posture id
+	          var pId = formData.get('posture_id');
+	          if (pId) {
+	            formData.set('posture_id', _this2.state.postures[pId]);
+	          } else {
+	            formData.delete('posture_id');
+	          }
+	          _this2.sendData(formData);
+	        })();
+	      } else {
+	        console.error('You must be logged in!');
 	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
+	      var _this3 = this;
 
 	      $(document).ready(function () {
 	        $('select').material_select();
 	        $('input.autocomplete').autocomplete({
-	          data: _this2.state.data
+	          data: _this3.state.data
 	        });
 	      });
 
@@ -46253,16 +46279,7 @@
 	          _react2.default.createElement(
 	            'select',
 	            { id: 'type_id', name: 'type_id', className: 'col s12' },
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'Rest' },
-	              'Rest'
-	            ),
-	            _react2.default.createElement(
-	              'option',
-	              { value: 'Practice' },
-	              'Practice'
-	            )
+	            this.state.types
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -46358,6 +46375,16 @@
 	            'div',
 	            { className: 'row' },
 	            _react2.default.createElement('input', { className: 'col s12 autocomplete', type: 'text', id: 'autocomplete-input', name: 'posture_id' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement('input', { className: 'col s12', type: 'text', id: 'notes', name: 'notes' }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'notes' },
+	              'Notes'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'button',

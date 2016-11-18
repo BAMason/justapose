@@ -8,12 +8,13 @@ import cookie from 'react-cookie';
 class Entry extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { postures: [], data: [] };
+    this.state = { postures: [], data: [], types: [] };
     this.handleSubmit = this.handleSubmit.bind(this);
 
     const dataObj = {};
     const poses = {};
 
+    // populate typeahead with list of posture names
     axios.get(`/api/postures`)
     .then((data) => {
       data.data.forEach((each) => {
@@ -25,24 +26,27 @@ class Entry extends React.Component {
       this.setState({ data: dataObj, postures: poses });
     })
     .catch((err) => console.error(err));
+
+    // populate dropdown with list of type names
+    axios.get(`/api/types`)
+    .then((data) => {
+      return data.data.map((each) => {
+        return <option key={each.id}>{each.name}</option>;
+      });
+    })
+    .then((elements) => {
+      this.setState({ types: elements });
+    })
+    .catch((error) => console.error(error));
   }
 
   sendData(input) {
-    console.log(`formpost: `, input.posture_id);
-
-    console.log(`postid`, posture_id);
-    let type_id;
-
+    // convert type name to type id then submit!
     axios.get(`/api/types`)
     .then((data) => {
       data.data.forEach((type) => {
-        if (type.name === input.type_id) { type_id = type.id; }
-        console.log(`newtypeid`, type_id);
+        if (type.name === input.get(`type_id`)) { input.set(`type_id`, type.id); }
       });
-    })
-    .then(() => {
-      input.append(`type_id`, type_id);
-      input.append(`posture_id`, posture_id);
     })
     .then(() => {
       axios.post(`/api/entries`, input)
@@ -53,15 +57,27 @@ class Entry extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData();
+    // get user_id from session info
     const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user[0].id;
-    $(`#form`).serializeArray().forEach((input) => formData.append(input.name, input.value));
 
     if (userId) {
+      // get form entries
+      const formData = new FormData();
       formData.append(`user_id`, userId);
-      formData.append(`file`, $(`#photo`)[0].files[0]); // $(`#photo`)[0].files[0];
+      if ($(`#photo`)[0].files[0]) {
+        formData.append(`photo`, $(`#photo`)[0].files[0]);
+      }
+      $(`#form`).serializeArray().forEach((input) => formData.append(input.name, input.value));
+
+      // convert posture name to posture id
+      const pId = formData.get(`posture_id`);
+      if (pId) {
+        formData.set(`posture_id`, this.state.postures[pId]);
+      }
+      else { (formData.delete(`posture_id`)); }
       this.sendData(formData);
     }
+    else { console.error(`You must be logged in!`); }
   }
 
   render() {
@@ -76,8 +92,7 @@ class Entry extends React.Component {
       <form onSubmit={this.handleSubmit} className="row container" id="form" name="form">
         <label htmlFor="type_id">Entry Type</label>
         <select id="type_id" name="type_id" className="col s12">
-          <option value="Rest">Rest</option>
-          <option value="Practice">Practice</option>
+          {this.state.types}
         </select>
         <div className="row">
           <input className="col s12" type="checkbox" id="sun_a" name="sun_a"/>
@@ -117,6 +132,10 @@ class Entry extends React.Component {
         <label htmlFor="autocomplete-input">Posture</label>
         <div className="row">
           <input className="col s12 autocomplete" type="text" id="autocomplete-input" name="posture_id"/>
+        </div>
+        <div className="row">
+          <label htmlFor="notes">Notes</label>
+          <input className="col s12" type="text" id="notes" name="notes"/>
         </div>
         <button className="btn waves-effect waves-light" type="submit" name="submit">Submit</button>
       </form>

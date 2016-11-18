@@ -23,7 +23,6 @@ router.post(`/`, (req, res, next) => {
   };
 
   form.parse(req, (err, fields, files) => {
-    console.log(`formidable`, fields, files);
     if (err) { next(err); }
     if (files.photo) {
       cloudinary.uploader.upload(files.photo.path, (result) => {
