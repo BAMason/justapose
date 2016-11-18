@@ -15,7 +15,6 @@ const router = express.Router();
 
 /* CREATE */
 router.post(`/`, (req, res, next) => {
-  console.log(`reqbody`, req.body);
   const form = new formidable.IncomingForm();
   const save = (newEntry) => {
     db.createEntry(newEntry)

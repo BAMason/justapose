@@ -28,29 +28,25 @@ class Entry extends React.Component {
   }
 
   sendData(input) {
-    const posture_id = this.state.postures[input.posture_id];
+    console.log(`formpost: `, input.posture_id);
+
+    console.log(`postid`, posture_id);
     let type_id;
 
     axios.get(`/api/types`)
     .then((data) => {
       data.data.forEach((type) => {
         if (type.name === input.type_id) { type_id = type.id; }
+        console.log(`newtypeid`, type_id);
       });
     })
     .then(() => {
-      input.type_id = type_id;
-      input.posture_id = posture_id;
+      input.append(`type_id`, type_id);
+      input.append(`posture_id`, posture_id);
     })
     .then(() => {
-      console.log(`pre axios input`, input);
       axios.post(`/api/entries`, input)
-      axios({
-        method: `post`,
-        url: `/api/entries`,
-        data: input,
-        // headers: { 'Content-Type': `multipart/form-data` },
-      })
-      .then(() => console.log(`great success`))
+      .then(() => console.warn(`great success`))
       .catch(() => console.warn(`oh noes`));
     });
   }
@@ -59,11 +55,11 @@ class Entry extends React.Component {
     event.preventDefault();
     const formData = new FormData();
     const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user[0].id;
-    const data = $(`#form`).serializeArray();
+    $(`#form`).serializeArray().forEach((input) => formData.append(input.name, input.value));
+
     if (userId) {
-      formData.user_id = userId;
-      data.forEach((field) => { formData[field.name] = field.value; });
-      formData.photo = $(`#photo`).prop(`files`)[0];
+      formData.append(`user_id`, userId);
+      formData.append(`file`, $(`#photo`)[0].files[0]); // $(`#photo`)[0].files[0];
       this.sendData(formData);
     }
   }

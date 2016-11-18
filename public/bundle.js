@@ -46188,7 +46188,9 @@
 	  _createClass(Entry, [{
 	    key: 'sendData',
 	    value: function sendData(input) {
+	      console.log('formpost: ', input.posture_id);
 	      var posture_id = this.state.postures[input.posture_id];
+	      console.log('postid', posture_id);
 	      var type_id = void 0;
 
 	      _axios2.default.get('/api/types').then(function (data) {
@@ -46196,19 +46198,14 @@
 	          if (type.name === input.type_id) {
 	            type_id = type.id;
 	          }
+	          console.log('newtypeid', type_id);
 	        });
 	      }).then(function () {
-	        input.type_id = type_id;
-	        input.posture_id = posture_id;
+	        input.append('type_id', type_id);
+	        input.append('posture_id', posture_id);
 	      }).then(function () {
-	        console.log('pre axios input', input);
-	        _axios2.default.post('/api/entries', input);
-	        (0, _axios2.default)({
-	          method: 'post',
-	          url: '/api/entries',
-	          data: input
-	        }).then(function () {
-	          return console.log('great success');
+	        _axios2.default.post('/api/entries', input).then(function () {
+	          return console.warn('great success');
 	        }).catch(function () {
 	          return console.warn('oh noes');
 	        });
@@ -46220,13 +46217,13 @@
 	      event.preventDefault();
 	      var formData = new FormData();
 	      var userId = JSON.parse(window.atob(_reactCookie2.default.load('session'))).passport.user[0].id;
-	      var data = $('#form').serializeArray();
+	      $('#form').serializeArray().forEach(function (input) {
+	        return formData.append(input.name, input.value);
+	      });
+
 	      if (userId) {
-	        formData.user_id = userId;
-	        data.forEach(function (field) {
-	          formData[field.name] = field.value;
-	        });
-	        formData.photo = $('#photo').prop('files')[0];
+	        formData.append('user_id', userId);
+	        formData.append('file', $('#photo')[0].files[0]); // $(`#photo`)[0].files[0];
 	        this.sendData(formData);
 	      }
 	    }
