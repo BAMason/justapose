@@ -37,7 +37,7 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2>Calendar</h2>
+        <h2 className="calendarTitle">Calendar</h2>
         <div><Calendar /></div>
         <ul>
           <li><NavLink to="/calendar/entry">Calendar Entry</NavLink></li>

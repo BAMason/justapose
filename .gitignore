@@ -33,3 +33,4 @@ npm-debug.log
 
 #bundle, remove for production
 ./public/bundle.js
+./public/DFbundle.js
