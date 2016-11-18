@@ -38,7 +38,7 @@ class Photos extends React.Component {
   }
 
   handleSubmit(event) {
-    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user[0].id;
+    const userId = JSON.parse(window.atob(cookie.load(`session`))).passport.user.id;
     const posture = $(`#autocomplete-input`).val();
 
     this.getEntries(userId, posture);
