@@ -50,7 +50,7 @@ class Entry extends React.Component {
     })
     .then(() => {
       axios.post(`/api/entries`, input)
-      .then(() => console.warn(`great success`))
+      .then(() => window.location.assign(`/entries`))
       .catch(() => console.warn(`oh noes`));
     });
   }
@@ -64,7 +64,6 @@ class Entry extends React.Component {
     if (session.user.length) { userId = session.user[0].id; }
     else { userId = session.user.id; }
 
-    console.log(userId);
     if (userId) {
       // get form entries
       const formData = new FormData();
