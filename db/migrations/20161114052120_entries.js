@@ -16,7 +16,7 @@ exports.up = (knex) => {
       table.boolean(`finishing`).notNullable().defaultTo(false);
       table.boolean(`closing`).notNullable().defaultTo(false);
       table.string(`photo`);
-      table.integer(`posture_id`).notNullable().references(`postures.id`);
+      table.integer(`posture_id`).references(`postures.id`);
       table.text(`notes`);
       table.timestamps(true, true);
     });
