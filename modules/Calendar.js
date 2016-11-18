@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 import NavLink from './NavLink'
 import axios from 'axios';
 import cookie from 'react-cookie';
+import moment from 'moment';
+
+
 
 export default class Entries extends React.Component {
   constructor(props) {
@@ -13,7 +16,22 @@ export default class Entries extends React.Component {
     axios.get(`/api/entries`)
     .then(data => {
       return data.data.map(each => {
-        return <entry key={each.id}>{each.name}</entry>
+        return <entry key={each.id}>
+
+          <div className="row">
+            <div className="col s12 m6">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">{each.name}</span>
+                  <p>Notes: {each.notes}</p>
+                  <br/>
+                  <p>{moment(each.updated_at).format('MMMM Do YYYY')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </entry>
       })
     })
     .then((data) => {

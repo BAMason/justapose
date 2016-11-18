@@ -26430,7 +26430,7 @@
 	          _react2.default.createElement(
 	            _NavLink2.default,
 	            { to: '/calendar' },
-	            'Calendar'
+	            'Entries'
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -26530,6 +26530,10 @@
 
 	var _reactCookie2 = _interopRequireDefault(_reactCookie);
 
+	var _moment = __webpack_require__(325);
+
+	var _moment2 = _interopRequireDefault(_moment);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26553,7 +26557,39 @@
 	        return _react2.default.createElement(
 	          'entry',
 	          { key: each.id },
-	          each.name
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'col s12 m6' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'card blue-grey darken-1' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'card-content white-text' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'card-title' },
+	                    each.name
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Notes: ',
+	                    each.notes
+	                  ),
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    (0, _moment2.default)(each.updated_at).format('MMMM Do YYYY')
+	                  )
+	                )
+	              )
+	            )
+	          )
 	        );
 	      });
 	    }).then(function (data) {

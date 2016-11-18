@@ -8,7 +8,7 @@ export default React.createClass({
       <div>
         <ul role="nav" className="main-nav">
           <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
-          <li><NavLink to="/calendar">Calendar</NavLink></li>
+          <li><NavLink to="/calendar">Entries</NavLink></li>
           <li><NavLink to="/photos">Photos</NavLink></li>
           <li>{<a href="/api/auth/google">Google Login</a>}</li>
           <li>{<a href="/api/auth/logout">Logout</a>}</li>
