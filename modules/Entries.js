@@ -40,12 +40,11 @@ export default class Entries extends React.Component {
   }
 
   render() {
-    entries()
     return (
       <div>
         <div>{this.state.entries}</div>
         <ul>
-          <li><NavLink to="/calendar/entry">Calendar Entry</NavLink></li>
+          <li><NavLink to="/entries/entry">Entries</NavLink></li>
         </ul>
       </div>
     )
